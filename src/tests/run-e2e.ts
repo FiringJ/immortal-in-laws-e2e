@@ -7,6 +7,9 @@
  *   - assert: "自然语言断言"    → 视觉模型验证截图
  */
 
+// 加载根目录 .env.local，给 Midscene 提供模型配置。
+require('../../setup-env.js');
+
 import * as fs from 'fs';
 import * as path from 'path';
 import * as yaml from 'js-yaml';

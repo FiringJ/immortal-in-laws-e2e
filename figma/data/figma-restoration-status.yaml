@@ -1,12 +1,14 @@
 generatedFrom: figma/data/figma-page-mapping.json
 updatedAt: 2026-03-01
 workflow:
+  - 先到项目仓库 immortal-in-laws 中，根据 route / wxssPath 确认对应页面 wxss 的真实文件路径
   - 使用 Figma MCP get_design_context 获取当前页面标注
-  - 修改对应页面 wxss
+  - 修改 immortal-in-laws 项目仓库中对应页面的 wxss
   - 使用 get_screenshot + 实现截图做视觉校对
 statuses:
   completed: 已完成基于 Figma MCP 的样式还原和视觉校对
   pending: 尚未完成还原或校对，属于后续待处理页面
+  skipped: 当前阶段先跳过，后续再决定是否恢复处理
 pages:
   - route: pages/index/index
     figmaName: 神仙亲家-首页1
@@ -18,8 +20,8 @@ pages:
     figmaName: 神仙亲家-登录注册-消息1
     nodeId: "381:1258"
     wxssPath: pages/login/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: skipped
+    notes: 当前阶段先跳过，后续如有需要再恢复处理
   - route: pages/message/index
     figmaName: 神仙亲家-消息1
     nodeId: "463:136"
@@ -30,62 +32,62 @@ pages:
     figmaName: 神仙亲家-首页-对方资料1
     nodeId: "110:21"
     wxssPath: pages/guest-detail/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: completed
+    notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对
   - route: pages/filter/index
     figmaName: 神仙亲家-首页-精准查找1
     nodeId: "124:1699"
     wxssPath: pages/filter/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: completed
+    notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉/功能校对，含自定义地区选择器验证
   - route: pages/filter-result/index
     figmaName: 神仙亲家-首页-精准查找2
     nodeId: "124:2484"
     wxssPath: pages/filter-result/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: completed
+    notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉/功能校对，含结果卡结构、条件设置闭环和会员 CTA 校验
   - route: pages/history/index
     figmaName: 神仙亲家-首页-历史推荐1
     nodeId: "129:146"
     wxssPath: pages/history/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: completed
+    notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对；本轮补齐了顶部筛选箭头、卡片内边距、锁条图标与位置、底部会员栏层次，并新增 history-probe 短路径验证
   - route: pages/chat/index
     figmaName: 神仙亲家-消息-聊天室1
     nodeId: "159:1169"
     wxssPath: pages/chat/index.wxss
     status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    notes: 已完成顶部资料卡、嘉宾摘要卡、底部操作栏和输入区的首轮 Figma 还原，并通过会员态 OS 验证确认输入区与发送态可用；当前仍未完成的点是首屏实际视口仍未包含 Figma 中的白色嘉宾摘要卡，以及现有 E2E 设备层缺少真正的长按能力，导致黑色悬浮菜单无法做完整 OS 断言
   - route: pages/profile/index
     figmaName: 神仙亲家-我的-会员未开通1
     nodeId: "211:80"
     wxssPath: pages/profile/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: completed
+    notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对；本轮补齐了顶部右侧浮层操作入口、资料卡比例，并通过 profile-flow-probe 验证到预览/编辑链路
   - route: pages/profile-edit/index
     figmaName: 神仙亲家-我的-相亲资料1
     nodeId: "175:1082"
     wxssPath: pages/profile-edit/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: completed
+    notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对；本轮重做了照片区、联系方式/基本信息/更多信息等分组卡结构，补齐相亲编号，并通过 profile-flow-probe 验证
   - route: pages/profile-preview/index
     figmaName: 神仙亲家-我的-预览资料1
     nodeId: "183:1603"
     wxssPath: pages/profile-preview/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: completed
+    notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对；本轮重做了顶部身份卡、主信息区、分割线节奏和底部双按钮，并通过 profile-flow-probe 验证
   - route: pages/member-center/index
     figmaName: 神仙亲家-我的-黄金会员1
     nodeId: "211:1708"
     wxssPath: pages/member-center/index.wxss
     status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    notes: 主体已完成基于 Figma 多 frame 的样式还原、代码构建和 OS 级视觉/功能校对；但顶部滚动条样式、开通至尊会员可享受板块样式、对比元素位置仍有残余视觉差异，后续需回补精修
   - route: pages/exposure/index
     figmaName: 神仙亲家-首页-超级曝光-开通页1
     nodeId: "382:118"
     wxssPath: pages/exposure/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: completed
+    notes: 已完成首页入口到超级曝光开通页的语义修正：首页顶部超级曝光卡片明确进入开通页，首页曝光区查看全部进入功能页；并通过 exposure-probe 完成 OS 级视觉校对
   - route: pages/settings/index
     figmaName: 神仙亲家-我的-设置1
     nodeId: "188:392"
