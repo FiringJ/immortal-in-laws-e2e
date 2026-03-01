@@ -1,0 +1,40 @@
+node_modules/
+
+# TypeScript 编译产物
+**/*.js
+!jest.config.js
+!setup-env.js
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 截图和运行产物
+screenshots/
+
+# Midscene 运行报告
+midscene_run/
+
+# 覆盖率
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+.cursor/
+
+# 系统文件
+.DS_Store
+*.swp
+*.swo
+*~
+
+# 构建
+dist/
+build/
+
+# 日志
+*.log
+logs/

@@ -1,0 +1,124 @@
+generatedFrom: figma/data/figma-page-mapping.json
+updatedAt: 2026-03-01
+workflow:
+  - 使用 Figma MCP get_design_context 获取当前页面标注
+  - 修改对应页面 wxss
+  - 使用 get_screenshot + 实现截图做视觉校对
+statuses:
+  completed: 已完成基于 Figma MCP 的样式还原和视觉校对
+  pending: 尚未完成还原或校对，属于后续待处理页面
+pages:
+  - route: pages/index/index
+    figmaName: 神仙亲家-首页1
+    nodeId: "103:1082"
+    wxssPath: pages/index/index.wxss
+    status: completed
+    notes: 已完成基于 Figma MCP 的样式还原和视觉校对
+  - route: pages/login/index
+    figmaName: 神仙亲家-登录注册-消息1
+    nodeId: "381:1258"
+    wxssPath: pages/login/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/message/index
+    figmaName: 神仙亲家-消息1
+    nodeId: "463:136"
+    wxssPath: pages/message/index.wxss
+    status: completed
+    notes: figma-page-mapping.json 备注为已修复，先作为已完成页面保留
+  - route: pages/guest-detail/index
+    figmaName: 神仙亲家-首页-对方资料1
+    nodeId: "110:21"
+    wxssPath: pages/guest-detail/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/filter/index
+    figmaName: 神仙亲家-首页-精准查找1
+    nodeId: "124:1699"
+    wxssPath: pages/filter/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/filter-result/index
+    figmaName: 神仙亲家-首页-精准查找2
+    nodeId: "124:2484"
+    wxssPath: pages/filter-result/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/history/index
+    figmaName: 神仙亲家-首页-历史推荐1
+    nodeId: "129:146"
+    wxssPath: pages/history/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/chat/index
+    figmaName: 神仙亲家-消息-聊天室1
+    nodeId: "159:1169"
+    wxssPath: pages/chat/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/profile/index
+    figmaName: 神仙亲家-我的-会员未开通1
+    nodeId: "211:80"
+    wxssPath: pages/profile/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/profile-edit/index
+    figmaName: 神仙亲家-我的-相亲资料1
+    nodeId: "175:1082"
+    wxssPath: pages/profile-edit/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/profile-preview/index
+    figmaName: 神仙亲家-我的-预览资料1
+    nodeId: "183:1603"
+    wxssPath: pages/profile-preview/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/member-center/index
+    figmaName: 神仙亲家-我的-黄金会员1
+    nodeId: "211:1708"
+    wxssPath: pages/member-center/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/exposure/index
+    figmaName: 神仙亲家-首页-超级曝光-开通页1
+    nodeId: "382:118"
+    wxssPath: pages/exposure/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/settings/index
+    figmaName: 神仙亲家-我的-设置1
+    nodeId: "188:392"
+    wxssPath: pages/settings/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/beans/index
+    figmaName: 神仙亲家-我的-设置-红豆1
+    nodeId: "270:74"
+    wxssPath: pages/beans/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/realname-auth/index
+    figmaName: 神仙亲家-我的-实名认证1
+    nodeId: "236:553"
+    wxssPath: pages/realname-auth/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/invite/index
+    figmaName: 神仙亲家-我的-邀请家人帮孩子找对象1
+    nodeId: "333:139"
+    wxssPath: pages/invite/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/settings-blocked/index
+    figmaName: 神仙亲家-我的-设置-屏蔽的人1
+    nodeId: "149:3005"
+    wxssPath: pages/settings-blocked/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
+  - route: pages/settings-orders/index
+    figmaName: 神仙亲家-我的-设置-订单记录1
+    nodeId: "198:1183"
+    wxssPath: pages/settings-orders/index.wxss
+    status: pending
+    notes: 待按 Figma MCP 重新拉取标注并校对
