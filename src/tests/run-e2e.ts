@@ -1,7 +1,6 @@
 /**
- * E2E 统一执行引擎 — 纯 Computer Use
- * 读取 cases.yaml 中的自然语言测试用例，动态生成 Jest 测试
- * 不依赖 miniprogram-automator，所有操作通过 nut.js + 视觉 Agent
+ * E2E 命令式执行器
+ * 读取 cases.yaml 中的自然语言测试用例，按顺序执行并输出结果
  *
  * YAML 步骤类型：
  *   - act: "自然语言操作指令"   → 视觉模型决策 + nut.js 执行
@@ -12,7 +11,6 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as yaml from 'js-yaml';
 import { initE2E } from '../core/e2e-setup';
-import type { E2EContext } from '../core/e2e-setup';
 import type { ObservableE2E } from '../core/e2e-helpers';
 
 // ─── 类型定义 ───
@@ -79,50 +77,52 @@ async function runSteps(e2e: ObservableE2E, steps: Step[]): Promise<void> {
   }
 }
 
-// ─── 动态生成测试 ───
+async function run(): Promise<void> {
+  const ctx = await initE2E();
+  if (ctx.skipE2E) {
+    throw new Error('E2E 已跳过：请先确认开发者工具窗口可见');
+  }
 
-describe('E2E 视觉 Agent 测试', () => {
-  let ctx: E2EContext;
-
-  beforeAll(async () => {
-    ctx = await initE2E();
-  }, 30000);
+  let passed = 0;
+  let failed = 0;
 
   for (const suite of casesFile.suites) {
     if (!matchesFilter(suite.name, E2E_SUITE)) continue;
 
-    describe(suite.name, () => {
-      for (const testCase of suite.cases) {
-        if (!matchesFilter(testCase.name, E2E_CASE)) continue;
+    console.log(`\n[E2E] ===== Suite: ${suite.name} =====`);
 
-        // 计算超时：setup + case steps，每步 30s + 30s 缓冲
-        const setupSteps = (testCase.setup || suite.setup || []).length;
-        const totalSteps = setupSteps + testCase.steps.length;
-        const timeout = totalSteps * 30000 + 30000;
+    for (const testCase of suite.cases) {
+      if (!matchesFilter(testCase.name, E2E_CASE)) continue;
 
-        // maxSteps 优先级：case > suite > global
-        const maxSteps = testCase.maxSteps ?? suite.maxSteps ?? DEFAULT_MAX_STEPS;
+      const maxSteps = testCase.maxSteps ?? suite.maxSteps ?? DEFAULT_MAX_STEPS;
+      ctx.agent.opts.replanningCycleLimit = maxSteps;
 
-        it(testCase.name, async () => {
-          if (ctx.skipE2E) {
-            throw new Error('E2E 已跳过：请先确认开发者工具窗口可见');
-          }
+      console.log(`\n[E2E] >>> Case: ${testCase.name}`);
 
-          // 动态设置当前 case 的 replanningCycleLimit
-          ctx.agent.opts.replanningCycleLimit = maxSteps;
-
-          const e2e = ctx.observable(testCase.name);
-
-          // 执行 setup 步骤（case 级优先，否则用 suite 级）
-          const setup = testCase.setup || suite.setup;
-          if (setup) {
-            await runSteps(e2e, setup);
-          }
-
-          // 执行 case 步骤
-          await runSteps(e2e, testCase.steps);
-        }, timeout);
+      try {
+        const e2e = ctx.observable(testCase.name);
+        const setup = testCase.setup || suite.setup;
+        if (setup) await runSteps(e2e, setup);
+        await runSteps(e2e, testCase.steps);
+        passed++;
+        console.log(`[E2E] PASS ${suite.name} / ${testCase.name}`);
+      } catch (err) {
+        failed++;
+        const message = err instanceof Error ? err.message : String(err);
+        console.error(`[E2E] FAIL ${suite.name} / ${testCase.name}`);
+        console.error(`[E2E] ${message}`);
       }
-    });
+    }
   }
+
+  console.log(`\n[E2E] Summary: passed=${passed} failed=${failed}`);
+  if (failed > 0) {
+    process.exitCode = 1;
+  }
+}
+
+run().catch((err) => {
+  const message = err instanceof Error ? err.stack || err.message : String(err);
+  console.error(`[E2E] Fatal: ${message}`);
+  process.exit(1);
 });

@@ -10,7 +10,7 @@
     "resolveJsonModule": true,
     "noEmit": false,
     "baseUrl": ".",
-    "types": ["jest", "node"]
+    "types": ["node"]
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules"]

@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "神仙亲家小程序 E2E 与 Figma MCP 页面样式还原工具",
   "scripts": {
-    "test": "jest --config=jest.config.js --runInBand --forceExit",
-    "test:e2e": "NODE_OPTIONS='--experimental-vm-modules' jest --config=jest.config.js --runInBand --forceExit",
-    "test:calibrate": "tsx src/tools/debug-calibrate.ts",
+    "test": "npm run verify:typecheck",
+    "verify:typecheck": "tsc --noEmit",
+    "verify:e2e": "tsx src/tests/run-e2e.ts",
+    "verify:calibrate": "tsx src/tools/debug-calibrate.ts",
+    "verify:all": "npm run verify:typecheck && npm run verify:e2e",
     "mcp:server": "tsx src/tools/e2e-mcp-server.ts",
     "figma:pages": "tsx figma/data/figma-mcp-pages-list.ts"
   },
@@ -17,13 +19,10 @@
   },
   "devDependencies": {
     "@midscene/core": "^1.4.7",
-    "@types/jest": "^29.5.12",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^25.3.0",
     "dotenv": "^17.3.1",
-    "jest": "^29.7.0",
     "js-yaml": "^4.1.0",
-    "ts-jest": "^29.1.2",
     "tsx": "^4.19.0",
     "typescript": "^5.0.0"
   }

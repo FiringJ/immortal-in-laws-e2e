@@ -10,11 +10,14 @@
 ```bash
 npm install
 
+# 类型检查
+npm run verify:typecheck
+
 # 运行 YAML 驱动的 E2E
-npm test
+npm run verify:e2e
 
 # 坐标校准
-npm run test:calibrate
+npm run verify:calibrate
 
 # 启动 E2E MCP Server
 npm run mcp:server
@@ -34,7 +37,7 @@ npm run figma:pages
 
 ```text
 src/core   E2E 核心能力
-src/tests  Jest 测试入口和 YAML 用例
+src/tests  命令式 E2E 执行脚本和 YAML 用例
 src/tools  校准和 MCP server
 figma/docs Figma MCP 说明和视觉对比页
 figma/data 页面映射、状态台账、页面清单脚本
