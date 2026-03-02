@@ -56,7 +56,7 @@
 
 0. **先看状态台账**：页面基线和当前完成情况统一记录在 `figma/data/figma-restoration-status.yaml`。后续只对其中 `status: pending` 的页面继续做还原和校对；完成后把对应页面改为 `completed`。
 
-1. **页面与节点映射**：`figma/data/figma-page-mapping.json` 中已维护各页面路由与 Figma `fileKey`、`nodeId` 的对应关系。**fileKey 以 mapping 为准**（当前为 `EpzS4EPvKTGBUIpwc5uPkp`）；若你的设计文件链接是其他 fileKey，请修改 mapping 中的 `fileKey`。
+1. **页面与节点映射**：`figma/data/figma-page-mapping.json` 中已维护各页面路由与 Figma `fileKey`、`nodeId` 的对应关系。**fileKey 以 mapping 为准**（当前为 `WTgcdFVxfCUU2RRtR6ArKq`）；若你的设计文件链接是其他 fileKey，请修改 mapping 中的 `fileKey`。
 2. **逐页拉取标注**：对每个需要修复的页面，调用 **get_design_context**：
    - `fileKey`: 从 `figma-page-mapping.json` 的 `fileKey` 字段取
    - `nodeId`: 从 mapping 中该页面对应的 `nodeId` 取（如 `110:21`）

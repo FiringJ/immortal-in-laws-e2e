@@ -1,5 +1,5 @@
 generatedFrom: figma/data/figma-page-mapping.json
-updatedAt: 2026-03-01
+updatedAt: '2026-03-01'
 workflow:
   - 先到项目仓库 immortal-in-laws 中，根据 route / wxssPath 确认对应页面 wxss 的真实文件路径
   - 使用 Figma MCP get_design_context 获取当前页面标注
@@ -9,118 +9,165 @@ statuses:
   completed: 已完成基于 Figma MCP 的样式还原和视觉校对
   pending: 尚未完成还原或校对，属于后续待处理页面
   skipped: 当前阶段先跳过，后续再决定是否恢复处理
+  blocked: 因相同 blocker 连续失败达到阈值而暂时冻结，需 reset 后再恢复自动循环
 pages:
   - route: pages/index/index
     figmaName: 神仙亲家-首页1
-    nodeId: "103:1082"
+    nodeId: '103:1082'
     wxssPath: pages/index/index.wxss
     status: completed
     notes: 已完成基于 Figma MCP 的样式还原和视觉校对
   - route: pages/login/index
     figmaName: 神仙亲家-登录注册-消息1
-    nodeId: "381:1258"
+    nodeId: '381:1258'
     wxssPath: pages/login/index.wxss
     status: skipped
     notes: 当前阶段先跳过，后续如有需要再恢复处理
   - route: pages/message/index
     figmaName: 神仙亲家-消息1
-    nodeId: "463:136"
+    nodeId: '463:136'
     wxssPath: pages/message/index.wxss
     status: completed
     notes: figma-page-mapping.json 备注为已修复，先作为已完成页面保留
   - route: pages/guest-detail/index
     figmaName: 神仙亲家-首页-对方资料1
-    nodeId: "110:21"
+    nodeId: '110:21'
     wxssPath: pages/guest-detail/index.wxss
     status: completed
     notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对
   - route: pages/filter/index
     figmaName: 神仙亲家-首页-精准查找1
-    nodeId: "124:1699"
+    nodeId: '124:1699'
     wxssPath: pages/filter/index.wxss
     status: completed
     notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉/功能校对，含自定义地区选择器验证
   - route: pages/filter-result/index
     figmaName: 神仙亲家-首页-精准查找2
-    nodeId: "124:2484"
+    nodeId: '124:2484'
     wxssPath: pages/filter-result/index.wxss
     status: completed
     notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉/功能校对，含结果卡结构、条件设置闭环和会员 CTA 校验
   - route: pages/history/index
     figmaName: 神仙亲家-首页-历史推荐1
-    nodeId: "129:146"
+    nodeId: '129:146'
     wxssPath: pages/history/index.wxss
     status: completed
     notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对；本轮补齐了顶部筛选箭头、卡片内边距、锁条图标与位置、底部会员栏层次，并新增 history-probe 短路径验证
   - route: pages/chat/index
     figmaName: 神仙亲家-消息-聊天室1
-    nodeId: "159:1169"
+    nodeId: '159:1169'
     wxssPath: pages/chat/index.wxss
-    status: pending
-    notes: 已完成顶部资料卡、嘉宾摘要卡、底部操作栏和输入区的首轮 Figma 还原，并通过会员态 OS 验证确认输入区与发送态可用；当前仍未完成的点是首屏实际视口仍未包含 Figma 中的白色嘉宾摘要卡，以及现有 E2E 设备层缺少真正的长按能力，导致黑色悬浮菜单无法做完整 OS 断言
+    status: blocked
+    notes: 已完成会员态交互、弹窗、长按菜单等 OS 验证；但首屏白色嘉宾摘要卡在实际视口中的位置与 Figma 仍反复不一致，先冻结为 blocked，待专门重构首屏布局后 reset
+    lastAttemptAt: '2026-03-01T16:57:22.934Z'
+    consecutiveFailures: 2
+    lastBlocker: 首屏实际视口仍无法稳定对齐 Figma 白色嘉宾摘要卡位置
+    blockedAt: '2026-03-01T16:57:22.934Z'
   - route: pages/profile/index
     figmaName: 神仙亲家-我的-会员未开通1
-    nodeId: "211:80"
+    nodeId: '211:80'
     wxssPath: pages/profile/index.wxss
     status: completed
     notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对；本轮补齐了顶部右侧浮层操作入口、资料卡比例，并通过 profile-flow-probe 验证到预览/编辑链路
   - route: pages/profile-edit/index
     figmaName: 神仙亲家-我的-相亲资料1
-    nodeId: "175:1082"
+    nodeId: '175:1082'
     wxssPath: pages/profile-edit/index.wxss
     status: completed
     notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对；本轮重做了照片区、联系方式/基本信息/更多信息等分组卡结构，补齐相亲编号，并通过 profile-flow-probe 验证
   - route: pages/profile-preview/index
     figmaName: 神仙亲家-我的-预览资料1
-    nodeId: "183:1603"
+    nodeId: '183:1603'
     wxssPath: pages/profile-preview/index.wxss
     status: completed
     notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对；本轮重做了顶部身份卡、主信息区、分割线节奏和底部双按钮，并通过 profile-flow-probe 验证
   - route: pages/member-center/index
     figmaName: 神仙亲家-我的-黄金会员1
-    nodeId: "211:1708"
+    nodeId: '211:1708'
     wxssPath: pages/member-center/index.wxss
-    status: pending
-    notes: 主体已完成基于 Figma 多 frame 的样式还原、代码构建和 OS 级视觉/功能校对；但顶部滚动条样式、开通至尊会员可享受板块样式、对比元素位置仍有残余视觉差异，后续需回补精修
+    status: blocked
+    notes: 主体和功能已多轮校对完成，但顶部滚动条样式、开通至尊会员可享受板块样式、对比元素位置仍被多次指出，先冻结为 blocked，待集中精修后 reset
+    lastAttemptAt: '2026-03-01T16:58:17.409Z'
+    consecutiveFailures: 2
+    lastBlocker: 顶部滚动条样式、至尊权益区和对比元素位置残余视觉差异反复出现
+    blockedAt: '2026-03-01T16:58:17.409Z'
   - route: pages/exposure/index
     figmaName: 神仙亲家-首页-超级曝光-开通页1
-    nodeId: "382:118"
+    nodeId: '382:118'
     wxssPath: pages/exposure/index.wxss
     status: completed
     notes: 已完成首页入口到超级曝光开通页的语义修正：首页顶部超级曝光卡片明确进入开通页，首页曝光区查看全部进入功能页；并通过 exposure-probe 完成 OS 级视觉校对
   - route: pages/settings/index
     figmaName: 神仙亲家-我的-设置1
-    nodeId: "188:392"
+    nodeId: '188:392'
     wxssPath: pages/settings/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: completed
+    notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对；本轮收齐了卡片节奏、列表行高、注销/暂停区样式，并通过 settings-probe 验证顶部、底部和打招呼语弹层
+    lastAttemptAt: '2026-03-01T17:09:00.046Z'
+    consecutiveFailures: 0
   - route: pages/beans/index
     figmaName: 神仙亲家-我的-设置-红豆1
-    nodeId: "270:74"
+    nodeId: '270:74'
     wxssPath: pages/beans/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: blocked
+    notes: >-
+      Automation blocked by sandbox permissions before app-repo edits; see
+      agent-memory/restoration-runs/2026-03-02-beans-loop.md
+    lastAttemptAt: '2026-03-01T17:31:10.553Z'
+    consecutiveFailures: 2
+    lastBlocker: sandbox lacks write access to /Users/firingj/Projects/immortal-in-laws app repo
+    blockedAt: '2026-03-01T17:31:10.553Z'
   - route: pages/realname-auth/index
     figmaName: 神仙亲家-我的-实名认证1
-    nodeId: "236:553"
+    nodeId: '236:553'
     wxssPath: pages/realname-auth/index.wxss
-    status: pending
+    status: blocked
     notes: 待按 Figma MCP 重新拉取标注并校对
+    lastAttemptAt: '2026-03-01T19:28:26.062Z'
+    lastBlocker: >-
+      sandbox lacks write access to /Users/firingj/Projects/immortal-in-laws app repo; cannot apply app-only edits,
+      build, or OS probe
+    consecutiveFailures: 2
+    blockedAt: '2026-03-01T19:28:26.062Z'
   - route: pages/invite/index
     figmaName: 神仙亲家-我的-邀请家人帮孩子找对象1
-    nodeId: "333:139"
+    nodeId: '333:139'
     wxssPath: pages/invite/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: blocked
+    notes: >-
+      Automation blocked again before app-repo edits; repeated sandbox write-permission blocker on pages/invite/index.
+      See agent-memory/restoration-runs/2026-03-02-invite-loop.md
+    lastAttemptAt: '2026-03-01T21:28:12.419Z'
+    lastBlocker: >-
+      sandbox lacks write access to /Users/firingj/Projects/immortal-in-laws app repo; cannot apply app-only edits,
+      build, or OS probe
+    consecutiveFailures: 2
+    blockedAt: '2026-03-01T21:28:12.419Z'
   - route: pages/settings-blocked/index
     figmaName: 神仙亲家-我的-设置-屏蔽的人1
-    nodeId: "149:3005"
+    nodeId: '149:3005'
     wxssPath: pages/settings-blocked/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: blocked
+    notes: >-
+      Automation blocked before Figma fetch or app edits; app repo is read-only in this sandbox for
+      pages/settings-blocked/index. See agent-memory/restoration-runs/2026-03-02-settings-blocked-loop.md
+    lastAttemptAt: '2026-03-01T22:28:40.591Z'
+    consecutiveFailures: 2
+    lastBlocker: >-
+      sandbox lacks write access to /Users/firingj/Projects/immortal-in-laws app repo; cannot apply app-only edits,
+      build, or OS probe
+    blockedAt: '2026-03-01T22:28:40.591Z'
   - route: pages/settings-orders/index
     figmaName: 神仙亲家-我的-设置-订单记录1
-    nodeId: "198:1183"
+    nodeId: '198:1183'
     wxssPath: pages/settings-orders/index.wxss
-    status: pending
-    notes: 待按 Figma MCP 重新拉取标注并校对
+    status: blocked
+    notes: >-
+      Automation blocked before Figma fetch or app edits; app repo is read-only in this sandbox for
+      pages/settings-orders/index. See agent-memory/restoration-runs/2026-03-02-settings-orders-loop.md
+    lastAttemptAt: '2026-03-01T23:28:56.600Z'
+    consecutiveFailures: 2
+    lastBlocker: >-
+      sandbox lacks write access to /Users/firingj/Projects/immortal-in-laws app repo; cannot apply app-only edits,
+      build, or OS probe
+    blockedAt: '2026-03-01T23:28:56.600Z'

@@ -28,7 +28,7 @@ type Size = { width: number; height: number };
 type DeviceAction = any;
 
 import {
-  mouse, Point, keyboard,
+  mouse, Point, keyboard, Button,
 } from '@nut-tree/nut-js';
 
 export interface DeviceConfig {
@@ -172,6 +172,15 @@ for w in list {
     console.log(`[Device] tap (${x},${y}) → screen (${sx},${sy})`);
     await mouse.setPosition(new Point(sx, sy));
     await mouse.leftClick();
+  }
+
+  async longPressAt(x: number, y: number, durationMs: number = 900): Promise<void> {
+    const { sx, sy } = await this.toScreen(x, y);
+    console.log(`[Device] longPress (${x},${y}) ${durationMs}ms → screen (${sx},${sy})`);
+    await mouse.setPosition(new Point(sx, sy));
+    await mouse.pressButton(Button.LEFT);
+    await new Promise((r) => setTimeout(r, durationMs));
+    await mouse.releaseButton(Button.LEFT);
   }
 
   /**

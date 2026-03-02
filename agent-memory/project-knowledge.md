@@ -8,6 +8,9 @@
 ## Figma Restoration Rules
 
 - Read mapping/status in the E2E repo first, but edit source code only in the app repo.
+- The shared Figma MCP file key for the current restoration loop is `WTgcdFVxfCUU2RRtR6ArKq`. If run logs and mapping disagree, treat mapping as the source of truth and update it immediately before continuing.
+- Ralph loop pages should not stay in endless `pending` retry. Record run outcomes with `npm run loop:mark`; the same blocker repeated twice should move the page to `blocked` until someone explicitly resets it.
+- `npm run loop:mark` writes the shared YAML status file. Do not run multiple `loop:mark` commands in parallel for different pages, or later writes can overwrite earlier status changes.
 - For WeChat Mini Program pages, prefer editing `.ts`, `.wxml`, `.wxss`; never hand-edit generated `.js` unless no source exists.
 - If `.ts` changes, run `npm run build` in the app repo before trusting simulator output.
 - Do not mark a page `completed` when there are known visual gaps or missing post-change OS evidence.
@@ -54,8 +57,14 @@
   - avoid vague AI instructions on the first conversation row
   - a double-tap can open chat and immediately jump again into the guest profile page by hitting the header card on the second tap
   - capture the first stable chat screen before attempting optional long-press validation
-  - current OS automation cannot truly simulate `bindlongpress`; repeated AI attempts degrade to tap behavior
-  - if long-press UI must be validated, either extend the device layer with a hold gesture or validate that part manually
+  - the E2E device layer now exposes a real hold gesture via `MiniProgramDevice.longPressAt(...)`, and the MCP server also exposes `long_press`
+  - the stable chat validation path is:
+    - tap the top-left back point twice to unwind guest-detail/chat pages back to a tab page
+    - tap the bottom `消息` tab directly
+    - assert the message list page before tapping the first conversation row
+    - use direct button centers for `交换微信 / 拨打电话 / 发送照片`
+    - use the latest outgoing green bubble center for long-press validation
+  - on chat modals, hide the bottom fixed action bar while the modal is open; otherwise WeChat Mini Program fixed-layer composition can make the base action bar overlap the sheet
 
 ## Exposure Entry Rules
 
@@ -105,7 +114,10 @@
 - When navigation is conditional or flaky, record that condition in the run log instead of pretending navigation is deterministic.
 - On the search flow, prefer validating the forward loop `result -> 条件设置 -> filter -> 立即搜索 -> result`; it is more stable than relying on OS back during simulator churn.
 - On complex pages that are already open in the simulator, short in-page validation sequences are often more reliable than long AI-driven entry chains.
+- On chat-page validation specifically, direct coordinate taps are more stable than AI tap planning for bottom action pills and the first conversation row.
 - When the home page has a fixed bottom status banner, tab-bar taps can miss if the y coordinate is too high. For probe scripts, a lower tap near the bottom safe area and a double tap is more reliable for `我的`.
 - For the `我的 -> 预览资料 -> 相亲资料` trio, a dedicated probe path is now available:
   - `/Users/firingj/Projects/immortal-in-laws-e2e/src/tools/profile-flow-probe.ts`
   - use it instead of ad-hoc manual validation so the three-page chain gets the same screenshots every round
+- For `pages/settings/index`, use `/Users/firingj/Projects/immortal-in-laws-e2e/src/tools/settings-probe.ts`.
+  - entering settings from `我的` is more stable with a direct device tap on the settings icon than an AI `act("点击设置")`; the latter can over-tap and immediately drill into `隐私政策摘要`.

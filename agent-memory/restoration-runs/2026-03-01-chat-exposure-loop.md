@@ -82,3 +82,36 @@
 
 - `pages/chat/index`: keep `pending`
 - `pages/exposure/index`: update to `completed`
+
+## Follow-up: Chat Member Interaction Loop
+
+- Added real long-press support to the E2E device layer:
+  - `/Users/firingj/Projects/immortal-in-laws-e2e/src/core/miniprogram-device.ts`
+  - `/Users/firingj/Projects/immortal-in-laws-e2e/src/tools/e2e-mcp-server.ts`
+- Reworked `pages/chat/index` interaction states:
+  - action pill state now distinguishes `交换微信 / 申请中 / 微信联系`
+  - added dedicated `chat-call-modal`
+  - refit `chat-wechat-input-modal`, `chat-wechat-copy-modal`, `chat-photo-modal` closer to Figma
+  - hide the bottom fixed action bar while chat modals are open to avoid WeChat fixed-layer overlap
+- Rebuilt the chat probe into a deterministic path:
+  - direct back-point unwind
+  - direct `消息` tab tap
+  - assert message list page
+  - direct first-conversation tap
+  - direct action-pill taps
+  - direct long-press on the latest green outgoing bubble
+- Latest OS validation passed for:
+  - unlocked chat first screen
+  - 微信确认弹窗
+  - 联系方式弹窗（当前数据分支为 `暂未获取到号码 / 数据加载中...`）
+  - 照片资料弹窗
+  - 黑色长按菜单 `删除 / 撤回 / 复制`
+- Latest screenshots:
+  - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-01T16-03-54__chat_probe__1__chat_top.png`
+  - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-01T16-04-12__chat_probe__2__chat_wechat_modal.png`
+  - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-01T16-04-26__chat_probe__3__chat_call_modal.png`
+  - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-01T16-04-41__chat_probe__4__chat_photo_modal.png`
+  - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-01T16-05-01__chat_probe__6__chat_context_menu.png`
+- Result:
+  - interaction verification is now complete
+  - keep `pages/chat/index` as `pending` only for the remaining first-viewport summary-card visual gap

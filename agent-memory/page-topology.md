@@ -44,9 +44,20 @@
 - `pages/profile/index`
   - card CTA `预览资料` -> `pages/profile-preview/index`
   - card CTA `编辑资料` -> `pages/profile-edit/index`
+  - `其他功能` 区域中的 `设置` -> `pages/settings/index`
   - tapping the profile card outside the edit CTA should also follow the preview flow by product intent
 - `pages/profile-preview/index`
   - top `编辑资料` pill -> `pages/profile-edit/index`
   - bottom fixed red CTA `编辑资料` -> `pages/profile-edit/index`
 - `pages/profile-edit/index`
   - belongs to the same profile-maintenance flow as `pages/profile/index` and `pages/profile-preview/index`
+
+## Settings
+
+- `pages/settings/index`
+  - `红豆` -> `pages/beans/index`
+  - `开启实名相亲` 在未实名时会弹确认框，并可去 `pages/realname-auth/index`
+  - `屏蔽的人` -> `pages/settings-blocked/index`
+  - `订单记录` -> `pages/settings-orders/index`
+  - `用户协议 / 隐私政策 / 隐私政策摘要 / 个人信息收集清单 / 第三方共享个人信息清单 / 信息真实性承诺 / 申请注销账号` -> `pages/settings-doc/index?...`
+  - `打招呼语` 是页内底部弹层，不跳路由

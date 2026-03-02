@@ -9,7 +9,11 @@
     "verify:calibrate": "tsx src/tools/debug-calibrate.ts",
     "verify:all": "npm run verify:typecheck && npm run verify:e2e",
     "mcp:server": "tsx src/tools/e2e-mcp-server.ts",
-    "figma:pages": "tsx figma/data/figma-mcp-pages-list.ts"
+    "figma:pages": "tsx figma/data/figma-mcp-pages-list.ts",
+    "loop:next": "tsx src/tools/restoration-loop-runner.ts",
+    "loop:next:json": "tsx src/tools/restoration-loop-runner.ts --json",
+    "loop:mark": "tsx src/tools/restoration-loop-mark.ts",
+    "notify:feishu": "tsx src/tools/send-feishu-webhook.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.27.1",

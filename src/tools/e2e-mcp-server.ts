@@ -7,6 +7,7 @@
  * - ai_act: 用自然语言指令操作模拟器（视觉定位 + 点击/输入/滚动）
  * - ai_assert: 用自然语言断言当前画面状态
  * - tap: 直接点击模拟器指定坐标
+ * - long_press: 在指定坐标执行长按
  * - scroll: 滚动模拟器
  */
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
@@ -120,6 +121,24 @@ server.tool(
     await new Promise(r => setTimeout(r, 500));
     const shotPath = saveScreenshot(await device.screenshotBase64(), `tap_${x}_${y}`);
     return { content: [{ type: 'text', text: `已点击 (${x}, ${y})\n截图: ${shotPath}` }] };
+  }
+);
+
+// Tool: long_press
+server.tool(
+  'long_press',
+  '在模拟器指定坐标执行长按（相对于模拟器窗口左上角的逻辑坐标）',
+  {
+    x: z.number().describe('X 坐标（相对模拟器窗口）'),
+    y: z.number().describe('Y 坐标（相对模拟器窗口）'),
+    durationMs: z.number().min(300).max(5000).optional().describe('长按时长（毫秒），默认900'),
+  },
+  async ({ x, y, durationMs }) => {
+    const { device } = await ensureInit();
+    await device.longPressAt(x, y, durationMs || 900);
+    await new Promise(r => setTimeout(r, 500));
+    const shotPath = saveScreenshot(await device.screenshotBase64(), `long_press_${x}_${y}`);
+    return { content: [{ type: 'text', text: `已长按 (${x}, ${y}) ${durationMs || 900}ms\n截图: ${shotPath}` }] };
   }
 );
 
