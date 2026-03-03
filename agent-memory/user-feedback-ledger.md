@@ -92,3 +92,12 @@
     - `/Users/firingj/Projects/immortal-in-laws/components/pages/guest-detail/credibility-card/index.wxss`
   - Validation:
     - 本轮受 Figma MCP 额度限制，已按已获取标注完成代码对齐，待额度恢复后补截图复核
+
+- Scope: `pages/index/index`（首页推荐加载）
+  - Feedback:
+    - 至尊会员账号首页无嘉宾数据并提示“加载失败”（`recordId=recvbyoCJArWi7`）
+  - Status: fixed
+  - Code:
+    - `/Users/firingj/Projects/immortal-in-laws/services/guest.ts`
+  - Validation:
+    - `npm run type-check`（通过）
