@@ -1,3 +1,7 @@
+logs/
+*.log
+.env
+.env.local
 node_modules/
 
 # TypeScript 编译产物
@@ -38,3 +42,11 @@ build/
 # 日志
 *.log
 logs/
+docs/
+
+# Daemon PID
+*.pid
+
+# PM2
+ecosystem.config.js
+.pm2/

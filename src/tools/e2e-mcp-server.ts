@@ -23,6 +23,7 @@ try { require('dotenv').config({ path: path.resolve(__dirname, '../../.env.local
 
 const SCREENSHOT_DIR = path.resolve(__dirname, '../../screenshots');
 if (!fs.existsSync(SCREENSHOT_DIR)) fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
+const DAEMON_BASE_URL = `http://localhost:${process.env.DAEMON_PORT || '3000'}`;
 
 let device: MiniProgramDevice;
 let agent: Agent;
@@ -156,6 +157,110 @@ server.tool(
     await new Promise(r => setTimeout(r, 500));
     const shotPath = saveScreenshot(await device.screenshotBase64(), `scroll_${direction}`);
     return { content: [{ type: 'text', text: `已滚动 ${direction} (幅度${amount || 2})\n截图: ${shotPath}` }] };
+  }
+);
+
+// Tool: get_task
+server.tool(
+  'get_task',
+  '从 Daemon 预览下一个待处理任务（Daemon 现已自动执行，接口仅用于查看）',
+  {},
+  async () => {
+    try {
+      const response = await fetch(`${DAEMON_BASE_URL}/task/next`);
+      const data = await response.json() as {
+        success?: boolean;
+        task?: {
+          task?: string;
+          source?: string;
+          userId?: string;
+          status?: string;
+        };
+      };
+      
+      if (data.success && data.task) {
+        const task = data.task;
+        return {
+          content: [{
+            type: 'text',
+            text: `预览到任务:\n任务: ${task.task}\n来源: ${task.source || 'unknown'}\n用户: ${task.userId || 'unknown'}\n状态: ${task.status || 'unknown'}`
+          }]
+        };
+      } else {
+        return {
+          content: [{
+            type: 'text',
+            text: '当前没有待处理任务'
+          }]
+        };
+      }
+    } catch (error: any) {
+      return {
+        content: [{
+          type: 'text',
+          text: `获取任务失败: ${error.message}\n请确保 Daemon 正在运行 (${DAEMON_BASE_URL})`
+        }]
+      };
+    }
+  }
+);
+
+// Tool: check_queue
+server.tool(
+  'check_queue',
+  '查看 Daemon 任务队列状态',
+  {},
+  async () => {
+    try {
+      const response = await fetch(`${DAEMON_BASE_URL}/queue`);
+      const data = await response.json() as {
+        success?: boolean;
+        queueSize?: number;
+        tasks?: Array<{
+          task?: string;
+          source?: string;
+        }>;
+      };
+      
+      if (data.success) {
+        const queueSize = data.queueSize || 0;
+        const tasks = data.tasks || [];
+        
+        if (queueSize === 0) {
+          return {
+            content: [{
+              type: 'text',
+              text: '任务队列为空'
+            }]
+          };
+        }
+        
+        const taskList = tasks.map((t: any, i: number) => 
+          `${i + 1}. ${t.task} (来源: ${t.source || 'unknown'})`
+        ).join('\n');
+        
+        return {
+          content: [{
+            type: 'text',
+            text: `任务队列状态:\n队列大小: ${queueSize}\n\n待处理任务:\n${taskList}`
+          }]
+        };
+      } else {
+        return {
+          content: [{
+            type: 'text',
+            text: '获取队列状态失败'
+          }]
+        };
+      }
+    } catch (error: any) {
+      return {
+        content: [{
+          type: 'text',
+          text: `获取队列状态失败: ${error.message}\n请确保 Daemon 正在运行 (${DAEMON_BASE_URL})`
+        }]
+      };
+    }
   }
 );
 
