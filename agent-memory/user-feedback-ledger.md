@@ -44,3 +44,51 @@
     - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-01T16-04-26__chat_probe__3__chat_call_modal.png`
     - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-01T16-04-41__chat_probe__4__chat_photo_modal.png`
     - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-01T16-05-01__chat_probe__6__chat_context_menu.png`
+
+## 2026-03-04
+
+- Scope: `pages/guest-detail/index`（底部操作栏）
+  - Feedback:
+    - 拨打电话按钮颜色需要对齐 Figma
+    - 收藏按钮和拨打电话按钮前图标缺失
+  - Status: fixed
+  - Code:
+    - `/Users/firingj/Projects/immortal-in-laws/components/pages/guest-detail/guest-detail-bottom-bar/index.wxss`
+  - Validation:
+    - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-03T16-48-02__guest_detail_credibility_probe__0__guest_detail_top_after_ui_fix.png`
+
+- Scope: `pages/guest-detail/index`（实名卡 + 举报/屏蔽区）
+  - Feedback:
+    - 举报、屏蔽按钮前需要补齐图标
+    - 家长已实名认证区域需要还原 UI 稿
+  - Status: fixed
+  - Code:
+    - `/Users/firingj/Projects/immortal-in-laws/components/pages/guest-detail/credibility-card/index.wxml`
+    - `/Users/firingj/Projects/immortal-in-laws/components/pages/guest-detail/credibility-card/index.wxss`
+  - Validation:
+    - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-03T16-48-17__guest_detail_credibility_probe__0__guest_detail_credibility_after_ui_fix.png`
+
+- Scope: `pages/guest-detail/index`（举报弹窗）
+  - Feedback:
+    - 点击举报按钮后的弹窗样式需按 Figma `node-id=139:753` 优化
+  - Status: fixed
+  - Code:
+    - `/Users/firingj/Projects/immortal-in-laws/components/action-sheet/index.wxml`
+    - `/Users/firingj/Projects/immortal-in-laws/components/action-sheet/index.wxss`
+    - `/Users/firingj/Projects/immortal-in-laws/components/action-sheet/index.ts`
+  - Validation:
+    - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-03T16-57-17__guest_detail_report_modal_probe__1__after_act.png`
+    - `/Users/firingj/Projects/immortal-in-laws-e2e/screenshots/2026-03-03T16-57-18__guest_detail_report_modal_probe__1__guest_detail_report_modal_after_ui_fix.png`
+
+- Scope: `pages/guest-detail/index`（返回按钮 + 实名认证卡细节 + IP 归属地间距）
+  - Feedback:
+    - 相亲资料页左上角返回按钮需还原 Figma 样式
+    - 家长已实名认证区域需重点校准样式
+    - IP 归属地位置需保持上下间距
+  - Status: fixed
+  - Code:
+    - `/Users/firingj/Projects/immortal-in-laws/pages/guest-detail/index.wxss`
+    - `/Users/firingj/Projects/immortal-in-laws/components/pages/guest-detail/credibility-card/index.wxml`
+    - `/Users/firingj/Projects/immortal-in-laws/components/pages/guest-detail/credibility-card/index.wxss`
+  - Validation:
+    - 本轮受 Figma MCP 额度限制，已按已获取标注完成代码对齐，待额度恢复后补截图复核
