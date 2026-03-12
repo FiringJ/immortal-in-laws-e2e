@@ -1,4 +1,4 @@
-require('../../setup-env.js');
+require('../../../setup-env.js');
 
 import fs from 'fs';
 import path from 'path';
@@ -85,7 +85,7 @@ function buildHints(nextPage: RestorationPage | null): string[] {
   ];
 
   if (nextPage?.route === 'pages/chat/index') {
-    hints.push('Chat page has deterministic probe support in src/tools/chat-probe.ts.');
+    hints.push('Chat page has deterministic probe support in src/tools/probes/chat-probe.ts.');
     hints.push('Chat still has a first-viewport summary-card visual gap; do not mark completed until that is closed.');
   }
 

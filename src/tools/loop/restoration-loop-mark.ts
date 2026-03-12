@@ -1,4 +1,4 @@
-require('../../setup-env.js');
+require('../../../setup-env.js');
 
 import fs from 'fs';
 import path from 'path';

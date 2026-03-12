@@ -74,7 +74,7 @@ curl http://localhost:3000/tasks
   "mcpServers": {
     "e2e-agent": {
       "command": "npx",
-      "args": ["tsx", "src/tools/e2e-mcp-server.ts"]
+      "args": ["tsx", "src/tools/mcp/e2e-mcp-server.ts"]
     },
     "figma": {
       "url": "https://mcp.figma.com/mcp",
@@ -309,7 +309,7 @@ CURSOR_AGENT_BIN=cursor-agent
 - [Daemon 架构说明](src/daemon/README.md) - 详细架构和 API 文档
 - [飞书机器人配置](docs/FEISHU_SETUP.md) - 如何配置飞书机器人接收消息
 - [飞书文档抓取指南](docs/飞书文档抓取指南.md) - 如何抓取 Wiki/多维表格问题列表
-- [E2E MCP Server](src/tools/e2e-mcp-server.ts) - E2E 工具实现
+- [E2E MCP Server](src/tools/mcp/e2e-mcp-server.ts) - E2E 工具实现
 
 ## 许可证
 

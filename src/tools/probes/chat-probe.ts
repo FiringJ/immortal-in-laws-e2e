@@ -1,6 +1,6 @@
-require('../../setup-env.js');
+require('../../../setup-env.js');
 
-import { initE2E } from '../core/e2e-setup';
+import { initE2E } from '../../core/e2e-setup';
 
 const MESSAGE_TAB_POINT = { x: 186, y: 831 };
 const FIRST_CONVERSATION_POINT = { x: 147, y: 448 };

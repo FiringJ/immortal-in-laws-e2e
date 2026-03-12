@@ -1,6 +1,6 @@
-require('../../setup-env.js');
+require('../../../setup-env.js');
 
-import { initE2E } from '../core/e2e-setup';
+import { initE2E } from '../../core/e2e-setup';
 
 const SUPREME_TAB_POINT = { x: 226, y: 120 };
 

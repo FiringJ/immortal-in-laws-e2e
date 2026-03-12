@@ -1,10 +1,10 @@
-require('../../setup-env.js');
+require('../../../setup-env.js');
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { initE2E } from '../core/e2e-setup';
+import { initE2E } from '../../core/e2e-setup';
 
-const SCREENSHOT_DIR = path.resolve(__dirname, '../../screenshots');
+const SCREENSHOT_DIR = path.resolve(__dirname, '../../../screenshots');
 
 const POINTS = {
   backArrow: { x: 40, y: 108 },

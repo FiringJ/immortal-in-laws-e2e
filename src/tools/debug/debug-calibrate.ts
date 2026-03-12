@@ -1,7 +1,7 @@
 /**
  * E2E 坐标校准调试工具
  *
- * 用法：npx tsx src/tools/debug-calibrate.ts
+ * 用法：npx tsx src/tools/debug/debug-calibrate.ts
  *
  * 功能：
  * 1. 查找模拟器窗口，输出窗口信息
@@ -16,7 +16,7 @@ import { execSync } from 'child_process';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const SCREENSHOT_DIR = path.resolve(__dirname, '../../screenshots');
+const SCREENSHOT_DIR = path.resolve(__dirname, '../../../screenshots');
 
 function ensureDir() {
   if (!fs.existsSync(SCREENSHOT_DIR)) fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });

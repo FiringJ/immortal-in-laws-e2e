@@ -14,14 +14,14 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
 import { Agent } from '@midscene/core';
-import { MiniProgramDevice } from '../core/miniprogram-device';
+import { MiniProgramDevice } from '../../core/miniprogram-device';
 import * as fs from 'fs';
 import * as path from 'path';
 
 // dotenv
-try { require('dotenv').config({ path: path.resolve(__dirname, '../../.env.local') }); } catch {}
+try { require('dotenv').config({ path: path.resolve(__dirname, '../../../.env.local') }); } catch {}
 
-const SCREENSHOT_DIR = path.resolve(__dirname, '../../screenshots');
+const SCREENSHOT_DIR = path.resolve(__dirname, '../../../screenshots');
 if (!fs.existsSync(SCREENSHOT_DIR)) fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
 const DAEMON_BASE_URL = `http://localhost:${process.env.DAEMON_PORT || '3000'}`;
 

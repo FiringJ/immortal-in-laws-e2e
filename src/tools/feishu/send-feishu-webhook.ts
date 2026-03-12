@@ -1,4 +1,4 @@
-require('../../setup-env.js');
+require('../../../setup-env.js');
 
 type Args = {
   title: string;

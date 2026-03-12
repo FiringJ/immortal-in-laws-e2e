@@ -1,6 +1,6 @@
-require('../../setup-env.js');
+require('../../../setup-env.js');
 
-import { initE2E } from '../core/e2e-setup';
+import { initE2E } from '../../core/e2e-setup';
 
 const PROFILE_TAB_POINT = { x: 317, y: 822 };
 const PROFILE_SETTINGS_POINT = { x: 294, y: 771 };

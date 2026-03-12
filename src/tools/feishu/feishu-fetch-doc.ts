@@ -19,7 +19,7 @@ export {};
  *
  * 用法：
  *   npm run feishu:fetch -- "<URL>" [--with-attachments]
- *   或 npx tsx src/tools/feishu-fetch-doc.ts "<URL>"
+ *   或 npx tsx src/tools/feishu/feishu-fetch-doc.ts "<URL>"
  *
  * 输出：文档纯文本内容（stdout），便于管道或程序读取。
  * --with-attachments：对附件字段尝试获取临时下载链接并输出（需 drive:drive:readonly 权限）

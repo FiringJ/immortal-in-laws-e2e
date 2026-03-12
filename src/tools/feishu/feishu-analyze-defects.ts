@@ -192,7 +192,7 @@ function main() {
 
     const fetchResult = spawnSync(
       'node',
-      ['--import', 'tsx', 'src/tools/feishu-fetch-doc.ts', inputUrl],
+      ['--import', 'tsx', 'src/tools/feishu/feishu-fetch-doc.ts', inputUrl],
       { cwd: process.cwd(), env: childEnv, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 },
     );
 
