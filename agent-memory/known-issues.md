@@ -31,5 +31,7 @@
   - When this happens, treat it as an OS-validation blocker until WeChat DevTools is visible as a separable simulator window again.
 - Some Codex sandbox runs can read `/Users/firingj/Projects/immortal-in-laws` but cannot write to it. When that happens, Ralph loop pages that require app-repo edits, builds, and OS probes must be marked failed/blocked instead of retrying in the tracker repo.
 - In the current sandbox, `tsx` CLI can fail with `listen EPERM` on its IPC pipe. For loop utilities in this repo, `node --import tsx ...` is the reliable fallback.
+- Figma MCP asset URLs can return SVG files that use `var(--fill-0, ...)` / `var(--stroke-0, ...)`. If converting to PNG offline, replace `var(...)` with fallback colors first, otherwise white details (icons/arrow strokes) can disappear.
 - On message-list validation, an AI tap on the first conversation can accidentally become a double-tap. The first tap opens chat, and the second tap can land on the chat header card and jump again into the guest profile page.
 - Broad AI-driven assertions on chat can still perturb the page state. For the chat route, prefer direct coordinate actions plus targeted assertions after the page is already stable.
+- In WeChat Mini Program, native `button` applies default pseudo-style and layout behavior (including implicit max-width/line-height side effects in custom dialogs). For pixel-fidelity modals on `guest-detail`, prefer `view` as CTA container unless `open-type` is required.

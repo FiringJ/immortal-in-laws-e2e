@@ -1,5 +1,5 @@
 generatedFrom: figma/data/figma-page-mapping.json
-updatedAt: '2026-03-01'
+updatedAt: '2026-03-08'
 workflow:
   - 先到项目仓库 immortal-in-laws 中，根据 route / wxssPath 确认对应页面 wxss 的真实文件路径
   - 使用 Figma MCP get_design_context 获取当前页面标注
@@ -16,7 +16,9 @@ pages:
     nodeId: '103:1082'
     wxssPath: pages/index/index.wxss
     status: completed
-    notes: 已完成基于 Figma MCP 的样式还原和视觉校对
+    notes: 首页待支付订单底部横幅按 Figma 227:1409 重做；完成编译与 home-status-banner-probe 校验（2026-03-05）。
+    lastAttemptAt: '2026-03-04T18:44:25.837Z'
+    consecutiveFailures: 0
   - route: pages/login/index
     figmaName: 神仙亲家-登录注册-消息1
     nodeId: '381:1258'
@@ -33,14 +35,25 @@ pages:
     figmaName: 神仙亲家-首页-对方资料1
     nodeId: '110:21'
     wxssPath: pages/guest-detail/index.wxss
-    status: completed
-    notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对
+    status: pending
+    notes: >-
+      2026-03-08: guest-detail unfavorite modal updated to node 154:1684 (custom page-scoped dialog, copy aligned to
+      Figma); OS validation blocked until the WeChat simulator is detached as a separate visible window. See
+      agent-memory/restoration-runs/2026-03-08-guest-detail-unfavorite-modal.md
+    lastAttemptAt: '2026-03-08T03:57:48.152Z'
+    lastBlocker: WeChat simulator window not detached/visible; favorite-visual-coordinate-probe skipped before screenshot capture
+    consecutiveFailures: 1
   - route: pages/filter/index
     figmaName: 神仙亲家-首页-精准查找1
     nodeId: '124:1699'
     wxssPath: pages/filter/index.wxss
-    status: completed
-    notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉/功能校对，含自定义地区选择器验证
+    status: pending
+    notes: >-
+      2026-03-09: range-picker spacing rechecked with real simulator screenshots; scaling the range-picker-view proved
+      effective for the year picker, but the overall filter page remains pending. See
+      agent-memory/restoration-runs/2026-03-08-filter-range-picker-polish.md
+    lastAttemptAt: '2026-03-08T16:07:52.582Z'
+    consecutiveFailures: 0
   - route: pages/filter-result/index
     figmaName: 神仙亲家-首页-精准查找2
     nodeId: '124:2484'
@@ -57,18 +70,23 @@ pages:
     figmaName: 神仙亲家-消息-聊天室1
     nodeId: '159:1169'
     wxssPath: pages/chat/index.wxss
-    status: blocked
-    notes: 已完成会员态交互、弹窗、长按菜单等 OS 验证；但首屏白色嘉宾摘要卡在实际视口中的位置与 Figma 仍反复不一致，先冻结为 blocked，待专门重构首屏布局后 reset
-    lastAttemptAt: '2026-03-01T16:57:22.934Z'
-    consecutiveFailures: 2
-    lastBlocker: 首屏实际视口仍无法稳定对齐 Figma 白色嘉宾摘要卡位置
-    blockedAt: '2026-03-01T16:57:22.934Z'
+    status: pending
+    notes: >-
+      2026-03-08: footer/read-state polish and context-menu reposition shipped; app type-check/build passed. OS
+      validation still blocked by simulator starting on settings-blocked modal, home banner shifting message-tab hit
+      area, and intermittent loss of the detached simulator window during follow-up probes.
+    lastAttemptAt: '2026-03-08T08:21:59.786Z'
+    consecutiveFailures: 0
   - route: pages/profile/index
     figmaName: 神仙亲家-我的-会员未开通1
     nodeId: '211:80'
     wxssPath: pages/profile/index.wxss
-    status: completed
-    notes: 已完成基于 Figma MCP 的样式还原、代码构建和 OS 级视觉校对；本轮补齐了顶部右侧浮层操作入口、资料卡比例，并通过 profile-flow-probe 验证到预览/编辑链路
+    status: pending
+    notes: >-
+      2026-03-08: profile spacing and member-banner overlap polish landed for nodes 333:170 / 333:366 / 333:401 /
+      333:412 / 211:609; app type-check passed, but OS validation remains pending until the WeChat simulator is detached
+      as a separate visible window. See agent-memory/restoration-runs/2026-03-08-profile-style-polish.md
+    lastAttemptAt: '2026-03-08T04:27:49.702Z'
   - route: pages/profile-edit/index
     figmaName: 神仙亲家-我的-相亲资料1
     nodeId: '175:1082'
@@ -86,17 +104,23 @@ pages:
     nodeId: '211:1708'
     wxssPath: pages/member-center/index.wxss
     status: blocked
-    notes: 主体和功能已多轮校对完成，但顶部滚动条样式、开通至尊会员可享受板块样式、对比元素位置仍被多次指出，先冻结为 blocked，待集中精修后 reset
-    lastAttemptAt: '2026-03-01T16:58:17.409Z'
+    notes: >-
+      2026-03-08: gold/supreme tab polish landed in app repo; build and type-check passed, but OS validation is blocked
+      until the WeChat simulator is detached as a separate visible window. See
+      agent-memory/restoration-runs/2026-03-08-member-center-style-polish.md
+    lastAttemptAt: '2026-03-07T20:14:05.171Z'
     consecutiveFailures: 2
-    lastBlocker: 顶部滚动条样式、至尊权益区和对比元素位置残余视觉差异反复出现
-    blockedAt: '2026-03-01T16:58:17.409Z'
+    lastBlocker: WeChat simulator window not detached/visible; member-center-probe skipped before screenshot capture
+    blockedAt: '2026-03-07T20:14:05.171Z'
   - route: pages/exposure/index
     figmaName: 神仙亲家-首页-超级曝光-开通页1
     nodeId: '382:118'
     wxssPath: pages/exposure/index.wxss
-    status: completed
-    notes: 已完成首页入口到超级曝光开通页的语义修正：首页顶部超级曝光卡片明确进入开通页，首页曝光区查看全部进入功能页；并通过 exposure-probe 完成 OS 级视觉校对
+    status: pending
+    notes: '2026-03-06: exposure guide特权区改为结构化布局并去除底部渐隐；已构建通过，待模拟器窗口恢复后补OS截图校对。'
+    lastAttemptAt: '2026-03-05T18:03:10.738Z'
+    lastBlocker: 'E2E skipped: WeChat simulator window not detached/visible'
+    consecutiveFailures: 1
   - route: pages/settings/index
     figmaName: 神仙亲家-我的-设置1
     nodeId: '188:392'
@@ -111,12 +135,14 @@ pages:
     wxssPath: pages/beans/index.wxss
     status: blocked
     notes: >-
-      Automation blocked by sandbox permissions before app-repo edits; see
-      agent-memory/restoration-runs/2026-03-02-beans-loop.md
-    lastAttemptAt: '2026-03-01T17:31:10.553Z'
+      2026-03-08: rebuilt beans home, beans-record, and beans-rule from Figma nodes 270:74 / 185:969 / 185:1110;
+      type-check and build passed, but simulator-window validation is blocked.
+    lastAttemptAt: '2026-03-08T04:01:11.237Z'
     consecutiveFailures: 2
-    lastBlocker: sandbox lacks write access to /Users/firingj/Projects/immortal-in-laws app repo
-    blockedAt: '2026-03-01T17:31:10.553Z'
+    lastBlocker: >-
+      initE2E cannot find a detached visible WeChat simulator window; app changes and build completed but OS-level
+      validation is still blocked
+    blockedAt: '2026-03-08T04:01:11.237Z'
   - route: pages/realname-auth/index
     figmaName: 神仙亲家-我的-实名认证1
     nodeId: '236:553'

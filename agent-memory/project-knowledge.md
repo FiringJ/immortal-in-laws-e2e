@@ -18,6 +18,10 @@
 ## Mini Program Runtime Quirks
 
 - Native `button` elements often inject default width, padding, and border behavior. For Figma fidelity, prefer `view` wrappers for CTA layout unless native button semantics are required.
+- The app repo now exposes a global `.miniapp-button-reset` utility in `/Users/firingj/Projects/immortal-in-laws/app.wxss`.
+  Use it only when a real native `button` is still required (for example `open-type`, form submit, or loading/disabled state). For pure visual CTA blocks, keep preferring `view`.
+- Under app-level `style: "v2"`, the injected selector `wx-button:not([size=mini])` can beat a plain `.className` rule on width and auto margins.
+  When styling a real mini-program button, prefer `button.className` (or `button.className:not([size='mini'])`) instead of only `.className`.
 - Native `picker` can destabilize visible layout when used directly as a styled flex item. Prefer separating visible UI from interaction, or use a custom bottom sheet with `picker-view` when fidelity matters.
 - Simulator state can jump back to the home page after rebuilds or hot reload. Always re-check the actual current page before assuming validation context.
 - During OS validation with WeChat DevTools, `Command + R` is not a reliable substitute for project compile. Use the DevTools compile shortcut (`Command + B`) when WXML/WXSS/JSON changes do not appear in the simulator.
@@ -28,6 +32,9 @@
 - Home quick action `精准查找` is conditional by product logic:
   - if saved filter requirements exist, it can enter `pages/filter-result/index`
   - otherwise it enters `pages/filter/index`
+- `pages/filter/index` year/height requirements no longer use native `picker`.
+  - The route now uses a page-scoped custom bottom sheet so it can honor the PRD's dynamic end-column constraints and the Figma visual treatment.
+  - On the real simulator, changing the child `.range-picker-item` height alone is not reliable for vertical density tuning; scaling `.range-picker-view` itself is the more dependable way to loosen/tighten visible row spacing.
 - `pages/filter-result/index` top-right `条件设置` returns to `pages/filter/index`
 - `pages/filter/index` search CTA should enter `pages/filter-result/index` without `加载失败`
 - For Figma fidelity, `pages/filter-result/index` needs a dedicated result-card scene:
@@ -73,6 +80,9 @@
   - top quick-action card `超级曝光` -> `/pages/exposure/index?showGuide=true`
   - exposure preview section `查看全部` -> `/pages/exposure/index?showGuide=false`
 - This keeps the Figma-mapped opening page on the primary home entry while preserving a direct route into the functional control page.
+- Exposure guide restoration note:
+  - `guide-privileges.png` contains built-in bottom fade and is no longer suitable as the single source for the privilege block.
+  - Prefer structured WXML layout for the privilege grid and CTA (`查看全部特权介绍`) to avoid gradient clipping regressions.
 
 ## Member Center Design Mapping
 
@@ -106,6 +116,18 @@
   - assert the `黄金会员 / 至尊会员` tabs
   - switch tabs with direct device taps
   - capture long-page sections with fixed-count device scrolls instead of AI natural-language scrolling
+
+## Profile Edit Design Mapping
+
+- On `pages/profile-edit/index`, the user-shared Figma node `175:1929` for the photo-guide modal is only the dimmed overlay/background rectangle.
+- The actual guide-sheet content for that modal is split across sibling nodes:
+  - title `175:1946`
+  - subtitle `175:1947`
+  - positive example row `175:1948` / slice `175:2012`
+  - negative example row slice `175:2013`
+  - primary CTA `175:1930`
+  - cancel text `175:1936`
+- For this design file, inspect sibling nodes before assuming a modal link points to the renderable container.
 
 ## Validation Rules
 
