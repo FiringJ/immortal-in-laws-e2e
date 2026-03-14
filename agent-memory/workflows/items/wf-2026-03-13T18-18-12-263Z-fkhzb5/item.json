@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-263Z-fkhzb5",
   "kind": "bug",
-  "title": "编辑资料页：上传无人脸的头像，目前点击“确认上传”会报错英文提示（图 2），正确提示应 如图 1 所示",
+  "title": "编辑资料页上传无人脸头像时出现英文错误提示，应显示中文合规提示",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_c8b0ad4d605c\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-09\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n编辑资料页：上传无人脸的头像，目前点击“确认上传”会报错英文提示（图 2），正确提示应 如图 1 所示\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_c8b0ad4d605c/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_c8b0ad4d605c/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.263Z",
-  "updatedAt": "2026-03-13T18:18:12.263Z",
+  "updatedAt": "2026-03-14T12:25:38.065Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T12-20-08-717Z-shq35v",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T12:20:08.717Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-fkhzb5/triage.md",
+      "taskId": "2026-03-14T12-20-08-718Z-tfneed",
+      "startedAt": "2026-03-14T12:20:08.721Z",
+      "completedAt": "2026-03-14T12:25:38.062Z",
+      "summary": "**Outcome**\n- 已完成分诊产物，结论为 `readiness: ready`、`source_quality: medium`、`next_action: generate_plan`，文件在 `/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-fkhzb5/triage.md:1`。\n- 本阶段未改动产品代码，只做了问题清洗、上下文补齐和可实施性判断。\n\n**Findings**\n- 缺陷核心已明确：`pages/profile-edit/index` 上传“无人脸”照片后，当前会泄露英文默认错误 `Photo upload failed, please try again`；PRD 要求应提示 `照片不符合要求，请点击更换`，并进入无效照片态。\n- 前端页面其实已有目标 UI：`pages/profile-edit/index.wxml` 已支持 `photoStatus === 'invalid'` 时显示中文提示并禁用 `确认上传`；风险点在 `pages/profile-edit/index.ts` 的错误归一化不够稳，只按部分错误码判定，其他情况会透传后端原始 message。\n- 后端默认错误码 `ErrPhotoUploadFailed` 的注册文案正是英文；而聊天页 `pages/chat/index.ts` 已有更稳健的“错误码 + 关键词”兜底实现，可作为后续修复参考。\n- 缺少“图1”预期截图和失败接口真实 `code/message`，但 PRD 与现有代码已足够定义正确行为，因此不阻塞进入计划阶段。\n\n**Changed Files**\n- `/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-fkhzb5/triage.md:1`\n\n**Commands Run**\n- 使用了 `rg`、`sed`、`find`、`nl` 检查 tracker 上下文、附件、前端上传链路、后端错误码与服务实现。\n- 使用了图片查看工具检查附件 `/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_c8b0ad4d605c/image.png`。\n\n**Verification**\n- 已验证 `triage.md` 存在且包含要求的固定头部结构。\n- readiness 判定：`ready`；建议下一阶段直接进入 `generate_plan`。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-20-08-718Z-tfneed/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-20-08-718Z-tfneed/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-20-08-718Z-tfneed/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-fkhzb5/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-fkhzb5/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-fkhzb5/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-fkhzb5/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-fkhzb5/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T12-20-08-718Z-tfneed"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_c8b0ad4d605c",
@@ -46,5 +66,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.263Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "编辑资料页上传无人脸头像时出现英文错误提示，应显示中文合规提示",
+    "summary": "- 问题页面为 `pages/profile-edit/index` 的孩子照片上传弹窗。",
+    "updatedAt": "2026-03-14T12:25:38.064Z"
   }
 }

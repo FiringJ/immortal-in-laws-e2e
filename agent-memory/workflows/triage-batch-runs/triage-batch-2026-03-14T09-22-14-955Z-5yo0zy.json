@@ -4,8 +4,8 @@
   "status": "running",
   "createdAt": "2026-03-14T09:22:14.955Z",
   "candidateCount": 141,
-  "readyCount": 13,
-  "needsHumanCount": 2,
+  "readyCount": 41,
+  "needsHumanCount": 9,
   "failedCount": 0,
   "skippedCount": 6,
   "entries": [
@@ -271,9 +271,11 @@
       "createdAt": "2026-03-13T18:18:12.235Z",
       "externalIssueId": "bug_af36e396753f",
       "externalStatus": "新增",
-      "status": "running",
+      "status": "ready",
       "startedAt": "2026-03-14T10:48:41.709Z",
-      "taskId": "2026-03-14T10-48-41-708Z-qaz7la"
+      "taskId": "2026-03-14T10-48-41-708Z-qaz7la",
+      "completedAt": "2026-03-14T10:55:31.917Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-237Z-kjqci2",
@@ -282,7 +284,11 @@
       "createdAt": "2026-03-13T18:18:12.237Z",
       "externalIssueId": "bug_2bb8fdcdff88",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T10:55:31.921Z",
+      "taskId": "2026-03-14T10-55-31-918Z-b29oai",
+      "completedAt": "2026-03-14T11:00:53.393Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-240Z-arhiw3",
@@ -291,7 +297,11 @@
       "createdAt": "2026-03-13T18:18:12.240Z",
       "externalIssueId": "bug_35384028f48c",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T11:00:53.397Z",
+      "taskId": "2026-03-14T11-00-53-394Z-6u66kv",
+      "completedAt": "2026-03-14T11:06:45.463Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-241Z-zbhbl8",
@@ -300,7 +310,11 @@
       "createdAt": "2026-03-13T18:18:12.241Z",
       "externalIssueId": "bug_ad91d21f5069",
       "externalStatus": "待发版验证",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T11:06:45.469Z",
+      "taskId": "2026-03-14T11-06-45-464Z-apm016",
+      "completedAt": "2026-03-14T11:14:06.135Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-243Z-5n1f42",
@@ -309,7 +323,11 @@
       "createdAt": "2026-03-13T18:18:12.243Z",
       "externalIssueId": "bug_5e0d51145e36",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "needs_human",
+      "startedAt": "2026-03-14T11:14:06.144Z",
+      "taskId": "2026-03-14T11-14-06-140Z-hk8cc7",
+      "completedAt": "2026-03-14T11:20:09.233Z",
+      "triageStatus": "needs_human"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-246Z-ydd9br",
@@ -318,7 +336,11 @@
       "createdAt": "2026-03-13T18:18:12.246Z",
       "externalIssueId": "bug_157abc4b4612",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T11:20:09.236Z",
+      "taskId": "2026-03-14T11-20-09-235Z-4qdx1y",
+      "completedAt": "2026-03-14T11:25:24.691Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-249Z-gt1q5e",
@@ -327,7 +349,11 @@
       "createdAt": "2026-03-13T18:18:12.249Z",
       "externalIssueId": "bug_e64aa58c4dd6",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T11:25:24.695Z",
+      "taskId": "2026-03-14T11-25-24-692Z-lnqmgx",
+      "completedAt": "2026-03-14T11:30:30.734Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-251Z-s8pasv",
@@ -336,7 +362,11 @@
       "createdAt": "2026-03-13T18:18:12.251Z",
       "externalIssueId": "bug_4a582a6d3339",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T11:30:30.737Z",
+      "taskId": "2026-03-14T11-30-30-735Z-5xsehn",
+      "completedAt": "2026-03-14T11:36:43.291Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-252Z-miva3e",
@@ -345,7 +375,11 @@
       "createdAt": "2026-03-13T18:18:12.252Z",
       "externalIssueId": "bug_2e1530e4ebc9",
       "externalStatus": "待发版验证",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T11:36:43.293Z",
+      "taskId": "2026-03-14T11-36-43-292Z-rlzm0s",
+      "completedAt": "2026-03-14T11:46:05.333Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-258Z-y0j3um",
@@ -354,7 +388,11 @@
       "createdAt": "2026-03-13T18:18:12.258Z",
       "externalIssueId": "bug_162fc54a2ea9",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "needs_human",
+      "startedAt": "2026-03-14T11:46:05.336Z",
+      "taskId": "2026-03-14T11-46-05-334Z-8bibgs",
+      "completedAt": "2026-03-14T11:52:40.517Z",
+      "triageStatus": "needs_human"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-259Z-writ33",
@@ -363,7 +401,11 @@
       "createdAt": "2026-03-13T18:18:12.259Z",
       "externalIssueId": "bug_27dd952691b3",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T11:52:40.519Z",
+      "taskId": "2026-03-14T11-52-40-518Z-dl9xdh",
+      "completedAt": "2026-03-14T11:57:11.390Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-260Z-ssg263",
@@ -372,7 +414,11 @@
       "createdAt": "2026-03-13T18:18:12.260Z",
       "externalIssueId": "bug_ce6c773dbadf",
       "externalStatus": "待发版验证",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T11:57:11.393Z",
+      "taskId": "2026-03-14T11-57-11-391Z-7mroi0",
+      "completedAt": "2026-03-14T12:01:24.979Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-261Z-yqukke",
@@ -381,7 +427,11 @@
       "createdAt": "2026-03-13T18:18:12.261Z",
       "externalIssueId": "bug_16c405698ee2",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T12:01:24.981Z",
+      "taskId": "2026-03-14T12-01-24-980Z-jou1t2",
+      "completedAt": "2026-03-14T12:07:28.500Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-262Z-6c0c3s",
@@ -390,7 +440,11 @@
       "createdAt": "2026-03-13T18:18:12.262Z",
       "externalIssueId": "bug_d1fd9fefe899",
       "externalStatus": "待发版验证",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T12:07:28.503Z",
+      "taskId": "2026-03-14T12-07-28-501Z-wa2dy6",
+      "completedAt": "2026-03-14T12:14:23.466Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-263Z-as0phw",
@@ -399,7 +453,11 @@
       "createdAt": "2026-03-13T18:18:12.263Z",
       "externalIssueId": "bug_110da6b2392e",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "needs_human",
+      "startedAt": "2026-03-14T12:14:23.468Z",
+      "taskId": "2026-03-14T12-14-23-467Z-bxa03c",
+      "completedAt": "2026-03-14T12:20:08.717Z",
+      "triageStatus": "needs_human"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-263Z-fkhzb5",
@@ -408,7 +466,11 @@
       "createdAt": "2026-03-13T18:18:12.263Z",
       "externalIssueId": "bug_c8b0ad4d605c",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T12:20:08.719Z",
+      "taskId": "2026-03-14T12-20-08-718Z-tfneed",
+      "completedAt": "2026-03-14T12:25:38.068Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-270Z-p4emb4",
@@ -417,7 +479,11 @@
       "createdAt": "2026-03-13T18:18:12.270Z",
       "externalIssueId": "bug_8d618b6c9f9b",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T12:25:38.071Z",
+      "taskId": "2026-03-14T12-25-38-069Z-7hc4r8",
+      "completedAt": "2026-03-14T12:34:26.490Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-271Z-uz8rs7",
@@ -426,7 +492,11 @@
       "createdAt": "2026-03-13T18:18:12.271Z",
       "externalIssueId": "bug_1882b361f30f",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T12:34:26.491Z",
+      "taskId": "2026-03-14T12-34-26-490Z-sj1dph",
+      "completedAt": "2026-03-14T12:39:11.209Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-272Z-cvdk0f",
@@ -435,7 +505,11 @@
       "createdAt": "2026-03-13T18:18:12.272Z",
       "externalIssueId": "bug_69f52e9040b0",
       "externalStatus": "待发版验证",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T12:39:11.211Z",
+      "taskId": "2026-03-14T12-39-11-210Z-u92hyu",
+      "completedAt": "2026-03-14T12:45:05.800Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-272Z-xqsym5",
@@ -444,7 +518,11 @@
       "createdAt": "2026-03-13T18:18:12.272Z",
       "externalIssueId": "bug_ebedaca91144",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T12:45:05.803Z",
+      "taskId": "2026-03-14T12-45-05-802Z-3z1t5k",
+      "completedAt": "2026-03-14T12:51:58.567Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-273Z-raxc9h",
@@ -453,7 +531,11 @@
       "createdAt": "2026-03-13T18:18:12.273Z",
       "externalIssueId": "bug_5fc883436515",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T12:51:58.569Z",
+      "taskId": "2026-03-14T12-51-58-567Z-ng9rcu",
+      "completedAt": "2026-03-14T12:59:58.497Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-274Z-7afj4x",
@@ -462,7 +544,11 @@
       "createdAt": "2026-03-13T18:18:12.274Z",
       "externalIssueId": "bug_1d9d2a48788d",
       "externalStatus": "待发版验证",
-      "status": "pending"
+      "status": "needs_human",
+      "startedAt": "2026-03-14T12:59:58.501Z",
+      "taskId": "2026-03-14T12-59-58-499Z-nlr2c7",
+      "completedAt": "2026-03-14T13:05:01.415Z",
+      "triageStatus": "needs_human"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-275Z-v7wivn",
@@ -471,7 +557,11 @@
       "createdAt": "2026-03-13T18:18:12.275Z",
       "externalIssueId": "bug_4958d302a546",
       "externalStatus": "待发版验证",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T13:05:01.419Z",
+      "taskId": "2026-03-14T13-05-01-416Z-caesiy",
+      "completedAt": "2026-03-14T13:10:46.081Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-276Z-gck7xd",
@@ -480,7 +570,11 @@
       "createdAt": "2026-03-13T18:18:12.276Z",
       "externalIssueId": "bug_863185b98485",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T13:10:46.083Z",
+      "taskId": "2026-03-14T13-10-46-082Z-6xnmfg",
+      "completedAt": "2026-03-14T13:20:22.806Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-276Z-ne9aet",
@@ -489,7 +583,11 @@
       "createdAt": "2026-03-13T18:18:12.276Z",
       "externalIssueId": "bug_b75cd683ea10",
       "externalStatus": "待发版验证",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T13:20:22.809Z",
+      "taskId": "2026-03-14T13-20-22-808Z-6l7emw",
+      "completedAt": "2026-03-14T13:27:58.482Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-277Z-08sxfm",
@@ -498,7 +596,11 @@
       "createdAt": "2026-03-13T18:18:12.277Z",
       "externalIssueId": "bug_e74b83c8b69e",
       "externalStatus": "待发版验证",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T13:27:58.484Z",
+      "taskId": "2026-03-14T13-27-58-483Z-4cxtjy",
+      "completedAt": "2026-03-14T13:38:24.307Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-278Z-fq1n84",
@@ -507,7 +609,11 @@
       "createdAt": "2026-03-13T18:18:12.278Z",
       "externalIssueId": "bug_45590459ba11",
       "externalStatus": "待发版验证",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T13:38:24.309Z",
+      "taskId": "2026-03-14T13-38-24-308Z-xhkkq2",
+      "completedAt": "2026-03-14T13:44:46.365Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-294Z-9c1o8r",
@@ -516,7 +622,11 @@
       "createdAt": "2026-03-13T18:18:12.294Z",
       "externalIssueId": "bug_8e6bf07d0dc7",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T13:44:46.368Z",
+      "taskId": "2026-03-14T13-44-46-366Z-dntnlu",
+      "completedAt": "2026-03-14T13:52:36.688Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-295Z-dl8xeo",
@@ -525,7 +635,11 @@
       "createdAt": "2026-03-13T18:18:12.295Z",
       "externalIssueId": "bug_e0dbe455f178",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T13:52:36.690Z",
+      "taskId": "2026-03-14T13-52-36-689Z-udcn2e",
+      "completedAt": "2026-03-14T13:58:25.928Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-295Z-emo4wo",
@@ -534,7 +648,11 @@
       "createdAt": "2026-03-13T18:18:12.295Z",
       "externalIssueId": "bug_15906a83febf",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "needs_human",
+      "startedAt": "2026-03-14T13:58:25.930Z",
+      "taskId": "2026-03-14T13-58-25-929Z-txoiez",
+      "completedAt": "2026-03-14T14:03:41.777Z",
+      "triageStatus": "needs_human"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-296Z-7jar0g",
@@ -543,7 +661,11 @@
       "createdAt": "2026-03-13T18:18:12.296Z",
       "externalIssueId": "bug_fc5d5e45ddb6",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T14:03:41.780Z",
+      "taskId": "2026-03-14T14-03-41-778Z-o8cb9z",
+      "completedAt": "2026-03-14T14:10:47.435Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-296Z-fbihsv",
@@ -552,7 +674,11 @@
       "createdAt": "2026-03-13T18:18:12.296Z",
       "externalIssueId": "bug_33447f0a24b6",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T14:10:47.437Z",
+      "taskId": "2026-03-14T14-10-47-436Z-g2wpng",
+      "completedAt": "2026-03-14T14:16:50.813Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-297Z-g2qpzx",
@@ -561,7 +687,11 @@
       "createdAt": "2026-03-13T18:18:12.297Z",
       "externalIssueId": "bug_1b55eb5f507c",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "needs_human",
+      "startedAt": "2026-03-14T14:16:50.815Z",
+      "taskId": "2026-03-14T14-16-50-814Z-pf6jip",
+      "completedAt": "2026-03-14T14:23:10.840Z",
+      "triageStatus": "needs_human"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-298Z-eazj9m",
@@ -570,7 +700,11 @@
       "createdAt": "2026-03-13T18:18:12.298Z",
       "externalIssueId": "bug_d4c1f46944dc",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "needs_human",
+      "startedAt": "2026-03-14T14:23:10.842Z",
+      "taskId": "2026-03-14T14-23-10-841Z-kjlwjj",
+      "completedAt": "2026-03-14T14:35:03.194Z",
+      "triageStatus": "needs_human"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-298Z-ocdx6o",
@@ -579,7 +713,11 @@
       "createdAt": "2026-03-13T18:18:12.298Z",
       "externalIssueId": "bug_d67624ba8fb3",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "ready",
+      "startedAt": "2026-03-14T14:35:03.201Z",
+      "taskId": "2026-03-14T14-35-03-197Z-vmi6lm",
+      "completedAt": "2026-03-14T14:42:46.798Z",
+      "triageStatus": "ready"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-300Z-4s2xio",
@@ -588,7 +726,9 @@
       "createdAt": "2026-03-13T18:18:12.300Z",
       "externalIssueId": "bug_7fd0bcd43461",
       "externalStatus": "新增",
-      "status": "pending"
+      "status": "running",
+      "startedAt": "2026-03-14T14:42:46.801Z",
+      "taskId": "2026-03-14T14-42-46-799Z-xs7es7"
     },
     {
       "itemId": "wf-2026-03-13T18-18-12-301Z-q8i6up",
@@ -1402,5 +1542,5 @@
     }
   ],
   "startedAt": "2026-03-14T09:22:14.955Z",
-  "currentEntryItemId": "wf-2026-03-13T18-18-12-235Z-o1bnpi"
+  "currentEntryItemId": "wf-2026-03-13T18-18-12-300Z-4s2xio"
 }

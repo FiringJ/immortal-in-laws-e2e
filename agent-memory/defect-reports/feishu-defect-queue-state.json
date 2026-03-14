@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-14T10:08:06.720Z",
+  "updatedAt": "2026-03-14T11:04:39.665Z",
   "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
   "items": {
     "bug_6ff9aece5185": {
@@ -760,11 +760,11 @@
     },
     "bug_1f48ad04f1d5": {
       "issueId": "bug_1f48ad04f1d5",
-      "result": "completed",
-      "consecutiveFailures": 0,
-      "rowHash": "4dfbd0f78735d27d88ae037a872a26b13f4055e5",
-      "lastAttemptAt": "2026-03-14T06:16:39.267Z",
-      "completedAt": "2026-03-14T06:16:39.267Z"
+      "result": "pending",
+      "consecutiveFailures": 1,
+      "rowHash": "7a2d9200a106315b54ce81d9f179e6b823f73743",
+      "lastAttemptAt": "2026-03-14T11:04:39.665Z",
+      "lastBlocker": "app repo has unresolved merge conflict markers in pages/chat/index.ts and pages/filter/index.ts; type-check/build cannot pass until conflicts are resolved"
     },
     "bug_51efc11d8a22": {
       "issueId": "bug_51efc11d8a22",

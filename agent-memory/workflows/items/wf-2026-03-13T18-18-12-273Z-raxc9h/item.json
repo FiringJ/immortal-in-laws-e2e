@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-273Z-raxc9h",
   "kind": "bug",
-  "title": "发送照片：照片未做人脸校验，目前任何图片都可发送对方，正确应该是符合人脸要求的才可发送，否则应如截图所示进行提示",
+  "title": "私信发送照片未校验人脸，任意图片可发送",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_5fc883436515\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n发送照片：照片未做人脸校验，目前任何图片都可发送对方，正确应该是符合人脸要求的才可发送，否则应如截图所示进行提示\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_5fc883436515/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.273Z",
-  "updatedAt": "2026-03-13T18:18:12.273Z",
+  "updatedAt": "2026-03-14T12:59:58.495Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T12-51-58-567Z-ykih7y",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T12:51:58.567Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-273Z-raxc9h/triage.md",
+      "taskId": "2026-03-14T12-51-58-567Z-ng9rcu",
+      "startedAt": "2026-03-14T12:51:58.571Z",
+      "completedAt": "2026-03-14T12:59:58.493Z",
+      "summary": "**Outcome**\n- 已完成 triage，并写入 `ready` 结论：进入 `generate_plan`。\n- 产物文件：`/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-273Z-raxc9h/triage.md:1`\n- 本阶段未修改产品代码，只更新了追踪产物。\n\n**Key Findings**\n- PRD 明确要求：私信“发送照片”必须先校验“符合平台要求且有人脸”，不合规时按钮置灰并提示“照片不符合要求，请点击更换”。\n- 前端聊天页并非完全没做校验；`pages/chat/index.ts` 已在选图后和发送前两次调用 `validateChatPhoto()`，弹窗组件也已支持 `invalid` 态提示。\n- 当前聊天发图校验依赖 `services/user.ts` 复用 `POST /api/v1/profile/child/{child_id}/photo` 这条资料照片上传接口。\n- 后端 `/Users/firingj/Projects/GodQinJia/internal/apiserver/service/profile.go` 中，`faceDetectClient` 未启用时会直接跳过人脸校验，这会导致“任意图片可发送”成为一个高概率根因。\n- `utils/image.ts` 里仍有“默认所有图片都有人脸”的占位实现，说明项目历史上确有人脸校验未完全集成的问题背景。\n\n**Actionable Next Fixes**\n- 先用一张无人脸图片复现，确认聊天页 `validateChatPhoto()` 的真实接口返回。\n- 若接口对无效图直接成功，优先排查后端人脸检测开关/配置与上传链路是否跳过检测。\n- 若接口已返回 `110607/110608/110609` 等错误但前端仍能发出，优先修 `pages/chat/index.ts` 的状态流转、按钮禁用条件和发送绕过分支。\n\n**Changed Files**\n- `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-273Z-raxc9h/triage.md`\n\n**Commands Run**\n- 使用了 `rg`、`sed`、`cat` 检查 `agent-memory` 文档、PRD、聊天页代码、上传服务、OpenAPI 和后端 `profile` 服务。\n- 使用本地图片查看工具检查了缺陷附件 `image.png`。\n- 使用 `rg` 校验了 `triage.md` 的必需标题结构。\n\n**Verification**\n- `triage.md` 已存在，且开头结构与必需章节已逐项校验通过。\n- Readiness verdict：`ready`\n- Next action：`generate_plan`",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-51-58-567Z-ng9rcu/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-51-58-567Z-ng9rcu/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-51-58-567Z-ng9rcu/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-273Z-raxc9h/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-273Z-raxc9h/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-273Z-raxc9h/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-273Z-raxc9h/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-273Z-raxc9h/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T12-51-58-567Z-ng9rcu"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_5fc883436515",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.273Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "私信发送照片未校验人脸，任意图片可发送",
+    "summary": "- 模块为私信会话 `pages/chat/index` 的“发送照片”流程。",
+    "updatedAt": "2026-03-14T12:59:58.495Z"
   }
 }

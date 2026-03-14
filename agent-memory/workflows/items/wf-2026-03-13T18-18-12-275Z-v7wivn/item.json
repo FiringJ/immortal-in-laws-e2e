@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-275Z-v7wivn",
   "kind": "bug",
-  "title": "默认选项：目前所有选项默认选中不限，正确应该除年份和身高要求项默认选中“不限”项外，其他项一律默认不选中（目前选中后的交互无误）",
+  "title": "精准查找页默认选中态错误：仅年份和身高应默认“不限”，其他条件应默认不选中",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_4958d302a546\n飞书状态: 待发版验证\n优先级: P0\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n默认选项：目前所有选项默认选中不限，正确应该除年份和身高要求项默认选中“不限”项外，其他项一律默认不选中（目前选中后的交互无误）\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4958d302a546/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.275Z",
-  "updatedAt": "2026-03-13T18:18:12.275Z",
+  "updatedAt": "2026-03-14T13:10:46.079Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T13-05-01-416Z-rpi2j8",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T13:05:01.416Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-275Z-v7wivn/triage.md",
+      "taskId": "2026-03-14T13-05-01-416Z-caesiy",
+      "startedAt": "2026-03-14T13:05:01.421Z",
+      "completedAt": "2026-03-14T13:10:46.078Z",
+      "summary": "**Outcome**\n- 已完成 triage，结论为 `ready`，建议下一步 `generate_plan`。\n- 已写入工单分析到 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-275Z-v7wivn/triage.md:1`。\n- 本阶段未修改产品代码，只补充了缺陷清洗、仓库上下文和技术落点。\n\n**Findings**\n- 缺陷主战场是 `pages/filter/index.ts:448`、`pages/filter/index.ts:575`、`pages/filter/index.ts:657`、`pages/filter/index.ts:1145`：无历史条件进入和重置后都会重新装配默认态，地区当前会被自动选中。\n- 默认态与历史恢复态共用链路，`store/recommendStore.ts:39` 会恢复本地 `filter_requirements`，后续修复必须明确“首次空白态”和“恢复上次筛选条件”两种口径。\n- 运行态存在额外风险：`pages/filter/index.ts` 与 `pages/filter/index.js:595` 明显不同步；后续实现后必须重新构建，否则修复可能停留在源码层。\n\n**Actionable Fixes**\n- 后续计划应把“仅年份/身高默认‘不限’，其余项默认不选中”落实到初始化与 `onReset()` 两条链路。\n- 地区项应停止自动带入当前城市，同时保留提交前地区必选校验。\n- 保持手动点选交互不变，并覆盖“无缓存首次进入 / 历史恢复进入 / 点击重置后”三种验证场景。\n\n**Commands & Verification**\n- 运行了 `rg --files`、`rg -n`、`sed -n`、`cat` 来检查 `pages/filter`、`components/pages/filter`、`store/recommendStore.ts`、`config/constants.ts`、`package.json` 和 tracker 文档。\n- 使用本地图片查看了缺陷截图证据。\n- 用 `apply_patch` 创建了 triage 文档，并校验了文件存在及标题结构完整性。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-05-01-416Z-caesiy/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-05-01-416Z-caesiy/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-05-01-416Z-caesiy/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-275Z-v7wivn/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-275Z-v7wivn/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-275Z-v7wivn/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-275Z-v7wivn/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-275Z-v7wivn/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T13-05-01-416Z-caesiy"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_4958d302a546",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.275Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "精准查找页默认选中态错误：仅年份和身高应默认“不限”，其他条件应默认不选中",
+    "summary": "`pages/filter/index` 的默认态与产品预期不一致。当前反馈指出：进入精准查找页时，多个筛选组会默认处于已选中状态，其中“不限”被默认选中；截图还显示地区项存在默认选中地区。期望行为是：只有“年份要求”和“身高要求”默认展示为“不限”，其余离散选项组——至少包括学历、地区、收入、婚姻、房产、购车——初始都应为未选中状态。缺陷描述同时说明“选中后的交互无误”，因此问题范围集中在页面初始化/重置时的默认选中态，而不是用户手动点选后的交互逻辑。",
+    "updatedAt": "2026-03-14T13:10:46.079Z"
   }
 }

@@ -2,26 +2,31 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-235Z-o1bnpi",
   "kind": "bug",
-  "title": "黄金会员：权益图片，目前黄金会员的季度、年度、永久tab页会员，其有效期和每天推荐的人数都用了同一个，正确应如截图 1 prd所示",
+  "title": "会员中心黄金会员季度/年度/永久套餐权益图片未随档位切换",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_af36e396753f\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-11\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n黄金会员：权益图片，目前黄金会员的季度、年度、永久tab页会员，其有效期和每天推荐的人数都用了同一个，正确应如截图 1 prd所示\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
-  "stage": "triaging",
+  "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.235Z",
-  "updatedAt": "2026-03-14T10:48:41.713Z",
+  "updatedAt": "2026-03-14T10:55:31.914Z",
   "approvals": [],
   "phaseRuns": [
     {
       "id": "phase-triaging-2026-03-14T10-48-41-701Z-zykqla",
       "phase": "triaging",
-      "status": "running",
+      "status": "completed",
       "createdAt": "2026-03-14T10:48:41.701Z",
       "triggeredBy": "triage-batch",
       "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
       "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-235Z-o1bnpi/triage.md",
       "taskId": "2026-03-14T10-48-41-708Z-qaz7la",
-      "startedAt": "2026-03-14T10:48:41.713Z"
+      "startedAt": "2026-03-14T10:48:41.713Z",
+      "completedAt": "2026-03-14T10:55:31.912Z",
+      "summary": "**Outcome**\n- 已完成分诊产物，写入 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-235Z-o1bnpi/triage.md:1`。\n- Readiness verdict 是 `ready`，建议下一步直接进入 `generate_plan`。\n- 本阶段未改动产品代码。\n\n**Findings**\n- 根因更像前端页面状态映射，而不是接口返回：黄金会员文字权益已经按档位切换，见 `pages/member-center/index.ts:60`。\n- 但黄金会员权益图片仍绑定单一图片组 `EXPLAIN_CARDS_GOLD`，见 `pages/member-center/index.ts:105`，切回黄金 tab 时也始终复用这组图，见 `pages/member-center/index.ts:290`。\n- 套餐切换时只更新了文字权益，没有同步刷新图片区/预览图，见 `pages/member-center/index.ts:464`。\n- 受影响面包含 swiper 和点击行后的大图预览，分别在 `components/pages/member-center/member-center-explain-cards/index.wxml:1` 和 `components/pages/member-center/member-center-benefits/index.ts:18`。\n- 会员中心是“我的”主路径入口页，入口来自 `pages/profile/index.ts:294`。\n- 文档里有一处次要口径差异：年卡写法在 `design/1.需求文档/神仙亲家--小程序产品需求文档.md:181` 为 `372天`，而当前沉淀知识/实现用 `12个月`；但这不影响确认“不能继续复用季卡图”这个核心结论。\n\n**Changed Files**\n- `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-235Z-o1bnpi/triage.md:1`\n\n**Commands Run**\n- `find`, `rg`, `sed`, `cat`, `nl -ba`\n- 本地附件查看：`view_image`\n- 产物写入：`apply_patch`\n\n**Verification**\n- 已确认 `triage.md` 存在且满足要求的起始结构。\n- 未运行构建或测试；本次是 triage-only 阶段，验证范围为文档/代码/附件一致性核对。\n\n如果你要我继续，我下一步可以直接为这个工单生成可执行的修复计划。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-48-41-708Z-qaz7la/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-48-41-708Z-qaz7la/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-48-41-708Z-qaz7la/summary.txt"
     }
   ],
   "artifactPaths": {
@@ -69,7 +74,11 @@
     "syncedAt": "2026-03-13T18:18:12.235Z"
   },
   "triage": {
-    "status": "running",
-    "updatedAt": "2026-03-14T10:48:41.708Z"
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "会员中心黄金会员季度/年度/永久套餐权益图片未随档位切换",
+    "summary": "在 `pages/member-center/index` 的黄金会员页中，季度、年度、永久三个套餐切换时，底部“会员权益”图片区（轮播卡片和权益列表点按预览图）仍复用同一组黄金会员素材，导致年度/永久档位也显示季度档的内容。附件截图中的当前图片文案为“有效期3个月 / 开通后93天内免费解锁并联系家长”，这说明当前展示的是季卡图；但页面默认会优先选中年卡档位，且用户反馈指出年度、永久页也沿用了同一张/同一组图片。期望行为是：黄金会员权益图片必须随当前选中套餐联动，至少在“有效期”和“每天推荐人数”上与对应档位一致；至尊会员页不受影响。",
+    "updatedAt": "2026-03-14T10:55:31.914Z"
   }
 }

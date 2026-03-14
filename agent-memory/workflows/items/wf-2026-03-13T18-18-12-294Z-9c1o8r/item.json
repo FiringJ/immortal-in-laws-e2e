@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-294Z-9c1o8r",
   "kind": "bug",
-  "title": "会员阻断：和点击“日期筛选”弹出会员开通阻断弹框一样（选中至尊tab），正确应点击嘉宾卡片以及卡片按钮也与其保持一致（图 2），目前 点击卡片会弹出莫名弹框（图 1），点击卡片按钮无反应",
+  "title": "历史推荐页会员阻断不一致：卡片主体错误弹框且卡片 CTA 无响应",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_8e6bf07d0dc7\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n会员阻断：和点击“日期筛选”弹出会员开通阻断弹框一样（选中至尊tab），正确应点击嘉宾卡片以及卡片按钮也与其保持一致（图 2），目前 点击卡片会弹出莫名弹框（图 1），点击卡片按钮无反应\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_8e6bf07d0dc7/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_8e6bf07d0dc7/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.294Z",
-  "updatedAt": "2026-03-13T18:18:12.294Z",
+  "updatedAt": "2026-03-14T13:52:36.685Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T13-44-46-366Z-ytnted",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T13:44:46.366Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-294Z-9c1o8r/triage.md",
+      "taskId": "2026-03-14T13-44-46-366Z-dntnlu",
+      "startedAt": "2026-03-14T13:44:46.369Z",
+      "completedAt": "2026-03-14T13:52:36.680Z",
+      "summary": "**Outcome**\n- 已完成 triage，结论是 `ready`，可进入 `generate_plan`。\n- triage 文档已写入 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-294Z-9c1o8r/triage.md:1`。\n- 本阶段未修改产品代码，只做了问题清洗、仓库上下文补全和可计划性判断。\n\n**Key Findings**\n- 问题明确落在 `pages/history/index` 的非至尊会员受限态；同页 `日期筛选` 已是正确基准，会打开 `member-unlock-modal` 并指向至尊流程。\n- 历史卡片当前存在两类高风险面：`guest-card` 事件链与历史页自带的橙色 `.history-lock` CTA。\n- `pages/history/index.ts:227`、`pages/history/index.ts:249` 只读 `dataset.guestid`，不像 `pages/index/index.ts:516` 那样优先读 `e.detail.guestId`；这很像“卡片按钮无响应/走错分支”的直接嫌疑点。\n- `pages/history/index.wxml:103` 仍挂着旧 `block-dialog`，但 `pages/history/index.ts:331` 这条路径在当前 TS 内已无调用；这与“点击卡片会弹出莫名弹框”的描述存在可疑重叠。\n\n**Actionable Fixes**\n- 后续优先统一历史页所有受限触点到 `showHistoryMemberUnlockModal()`：`日期筛选`、卡片主体、橙色提示条、`详细资料/照片`、`联系对方`。\n- 在 `onGuestCardTap` / `onContactTap` 中优先读取 `e.detail.guestId`，再回退到 `dataset`。\n- 清理或隔离 `pages/history/index` 中悬空的 `block-dialog` 路径，避免新旧两套阻断 UI 并存。\n- 复现时同步检查 `pages/history/index.wxss:114` 的 `.history-lock` 与 `pages/history/index.wxss:272` 的固定底栏是否有热区覆盖。\n\n**Commands Run**\n- `rg`\n- `sed`\n- `nl`\n- `ls`\n- `git -C /Users/firingj/Projects/immortal-in-laws-e2e status --short -- agent-memory/workflows/items/wf-2026-03-13T18-18-12-294Z-9c1o8r/triage.md`\n\n**Verification**\n- 已确认 `triage.md` 存在且首部结构符合要求。\n- 已查看本地附件截图并核对 `agent-memory/page-topology.md`、`agent-memory/project-knowledge.md`。\n- 验证范围仅限 triage 产物与代码上下文；未运行构建、测试或真机复现。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-44-46-366Z-dntnlu/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-44-46-366Z-dntnlu/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-44-46-366Z-dntnlu/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-294Z-9c1o8r/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-294Z-9c1o8r/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-294Z-9c1o8r/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-294Z-9c1o8r/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-294Z-9c1o8r/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T13-44-46-366Z-dntnlu"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_8e6bf07d0dc7",
@@ -46,5 +66,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.294Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "历史推荐页会员阻断不一致：卡片主体错误弹框且卡片 CTA 无响应",
+    "summary": "- 问题落点可明确清洗为 `pages/history/index` 的非至尊会员受限态，而不是泛指全站会员中心或详情页问题。",
+    "updatedAt": "2026-03-14T13:52:36.685Z"
   }
 }

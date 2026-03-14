@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-261Z-yqukke",
   "kind": "bug",
-  "title": "解锁会话：对方解锁我后(真人以解锁时间做判断，机器人可以消息触发成功时间做判断)，正确是会话建立后己方无需解锁对方就可以聊天，目前是己方需解锁对方才可聊",
+  "title": "对方已解锁我并建立会话后，聊天页仍错误要求我先解锁对方才能发消息",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_16c405698ee2\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-09\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n解锁会话：对方解锁我后(真人以解锁时间做判断，机器人可以消息触发成功时间做判断)，正确是会话建立后己方无需解锁对方就可以聊天，目前是己方需解锁对方才可聊\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_16c405698ee2/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.261Z",
-  "updatedAt": "2026-03-13T18:18:12.261Z",
+  "updatedAt": "2026-03-14T12:07:28.496Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T12-01-24-979Z-tfq0eh",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T12:01:24.979Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-261Z-yqukke/triage.md",
+      "taskId": "2026-03-14T12-01-24-980Z-jou1t2",
+      "startedAt": "2026-03-14T12:01:24.983Z",
+      "completedAt": "2026-03-14T12:07:28.493Z",
+      "summary": "**Outcome**\n- 已完成 triage，产物写入 `/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-261Z-yqukke/triage.md:1`\n- Readiness 结论：`ready`\n- Source quality：`high`\n- Next action：`generate_plan`\n\n**Key Findings**\n- 聊天页实际门控在 `pages/chat/index.ts` / `pages/chat/index.wxml`，`isUnlocked=false` 时会隐藏输入框并显示“立即解锁”，与截图一致。\n- 前端当前主要依赖 `guest.canContact` 和 `memberStore.canContact()`，但未显式纳入“会话已建立/已解锁”的会话级信号。\n- 后端会话接口已返回 `is_unlocked`，且在 `/Users/firingj/Projects/GodQinJia/internal/apiserver/service/message.go` 中会随打招呼/发消息置位；前端 `services/api-mapper.ts` 的 `mapConversationItem()` 没有消费这个字段，疑似主因。\n- 次级风险是后端 `CanContact` 转换口径仍偏窄，`/Users/firingj/Projects/GodQinJia/internal/pkg/converter/interaction.go` 与 `recommend.go` 还没体现“对方已解锁我 / 已建会话”规则，后续计划里应一并审计。\n\n**Actionable Fixes**\n- 优先在后续实现阶段补齐前端对 `conversation.is_unlocked` 的映射与聊天页判定。\n- 同步审计 `pages/message-record/index.ts`、`pages/message/index.ts`、详情/记录入口是否仍只看 `can_contact`。\n- 若前端接入后仍不符合“真人按解锁时间、机器人按消息触发成功时间”的规则，再下探后端 `is_unlocked` / `can_contact` 置位逻辑。\n\n**Commands Run**\n- 使用了 `rg`、`sed`、`cat` 检索并读取前端/后端代码与文档。\n- 查看了本地证据图 `/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_16c405698ee2/image.png`。\n\n**Verification**\n- 已确认 `triage.md` 存在且头部结构符合要求。\n- 未编辑产品代码；本阶段只做了清洗、上下文补充和可计划性判断。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-01-24-980Z-jou1t2/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-01-24-980Z-jou1t2/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-01-24-980Z-jou1t2/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-261Z-yqukke/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-261Z-yqukke/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-261Z-yqukke/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-261Z-yqukke/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-261Z-yqukke/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T12-01-24-980Z-jou1t2"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_16c405698ee2",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.260Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "对方已解锁我并建立会话后，聊天页仍错误要求我先解锁对方才能发消息",
+    "summary": "用户反馈：当对方已经解锁我后，若双方会话已建立，则我方应可直接在聊天页发送消息，无需再次解锁对方；当前实际表现是聊天页仍处于“未解锁”状态，底部显示“解锁对方后可发送消息 / 立即解锁”，导致我方被错误拦截。",
+    "updatedAt": "2026-03-14T12:07:28.496Z"
   }
 }

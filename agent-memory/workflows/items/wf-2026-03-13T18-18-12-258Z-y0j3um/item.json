@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-258Z-y0j3um",
   "kind": "bug",
-  "title": "注册登录：首次进入小程序，正确应以游客身份进入首页（分享除法），触发注册流程才能完成登录，目前是直接授权手机号直接登入小程序",
+  "title": "首次进入小程序应以游客身份进入首页，完成注册流程后才登录",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_162fc54a2ea9\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-09\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n注册登录：首次进入小程序，正确应以游客身份进入首页（分享除法），触发注册流程才能完成登录，目前是直接授权手机号直接登入小程序",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.258Z",
-  "updatedAt": "2026-03-13T18:18:12.258Z",
+  "updatedAt": "2026-03-14T11:52:40.515Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T11-46-05-333Z-o46rmw",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T11:46:05.333Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-258Z-y0j3um/triage.md",
+      "taskId": "2026-03-14T11-46-05-334Z-8bibgs",
+      "startedAt": "2026-03-14T11:46:05.339Z",
+      "completedAt": "2026-03-14T11:52:40.514Z",
+      "summary": "**Outcome**\n- 已写入 triage 产物：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-258Z-y0j3um/triage.md:1`\n- 结论是 `readiness: needs_human`、`next_action: manual_triage`\n- 本阶段未修改产品代码，只更新了 tracker artifact\n\n**Key Findings**\n- 首次启动当前会先落登录页：`app.json:2`\n- 登录页是“一键手机号直接登录”实现：`pages/login/index.wxml:1`、`pages/login/index.ts:36`、`pages/login/index.ts:92`\n- 首页并不支持游客直接进入：`pages/index/index.ts:225`、`pages/index/index.ts:295`、`store/recommendStore.ts:72`、`utils/request.ts:285`\n- 后端 `/auth/login` 语义也是“创建/获取正式用户并发 token”，不是游客会话：`/Users/firingj/Projects/GodQinJia/internal/apiserver/service/auth.go:77`\n- PRD 明确要求“6 项资料 + 手机授权后才算注册成功，否则为游客态”，且现有 `AUTH-01~AUTH-07` 向导基本未实现：`design/1.需求文档/神仙亲家--小程序产品需求文档.md:133`、`docs/prd-todo.md:21`\n\n**Why Needs Human**\n- 这更像“登录/游客模块未完成 + 范围待定”，不是单纯路由小 bug\n- 仍需确认 `分享除外` 的判定、游客首页的数据策略、以及本单是否要覆盖完整 `AUTH-01~AUTH-07`\n- 在这些边界未定前，直接进计划会默认猜测核心产品规则\n\n**Commands / Verification**\n- 运行了 `rg`、`sed`、`nl`、`find`、`test`、`apply_patch`\n- 已校验 `triage.md` 存在且包含要求的固定标题与各章节\n- 验证状态：artifact 已完成；未运行产品构建或测试，因为本阶段禁止改产品代码\n\n如果你要，我下一步可以继续把这单拆成一个更可执行的人工澄清清单。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-46-05-334Z-8bibgs/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-46-05-334Z-8bibgs/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-46-05-334Z-8bibgs/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-258Z-y0j3um/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-258Z-y0j3um/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-258Z-y0j3um/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-258Z-y0j3um/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-258Z-y0j3um/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T11-46-05-334Z-8bibgs"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_162fc54a2ea9",
@@ -33,5 +53,13 @@
     "review": "",
     "attachments": [],
     "syncedAt": "2026-03-13T18:18:12.258Z"
+  },
+  "triage": {
+    "status": "needs_human",
+    "sourceQuality": "medium",
+    "nextAction": "manual_triage",
+    "normalizedTitle": "首次进入小程序应以游客身份进入首页，完成注册流程后才登录",
+    "summary": "当前小程序首次冷启动会先落到 `pages/login/index`，页面主 CTA 直接拉起微信手机号授权，并在授权成功后立即调用 `/auth/login` 完成登录/注册，再跳转首页。根据现有 PRD，正确行为应是：除分享进入等特殊入口外，新用户首次进入应先以游客身份落到首页；只有当用户主动触发注册流程，并完成“性别 → 出生年份 → 身高 → 学历 → 月收入 → 现居地 → 手机号授权”后，才算注册成功并进入完整登录态。当前实现把“首次进入”“手机号授权”“完成登录”合并为一步，同时缺少游客首页和游客入口拦截链路。",
+    "updatedAt": "2026-03-14T11:52:40.515Z"
   }
 }

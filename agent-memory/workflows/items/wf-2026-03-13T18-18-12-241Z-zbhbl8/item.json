@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-241Z-zbhbl8",
   "kind": "bug",
-  "title": "单次购买倒计时：在倒计时期间，用户可关闭超级曝光，关闭后倒计时正确应该暂停，目前是直接隐藏了",
+  "title": "单次购买超级曝光关闭后倒计时应暂停，当前被直接隐藏",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_ad91d21f5069\n飞书状态: 待发版验证\n优先级: P0\n反馈日期: 2026-03-10\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n单次购买倒计时：在倒计时期间，用户可关闭超级曝光，关闭后倒计时正确应该暂停，目前是直接隐藏了",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.241Z",
-  "updatedAt": "2026-03-13T18:18:12.241Z",
+  "updatedAt": "2026-03-14T11:14:06.132Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T11-06-45-463Z-mtnd3k",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T11:06:45.463Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-241Z-zbhbl8/triage.md",
+      "taskId": "2026-03-14T11-06-45-464Z-apm016",
+      "startedAt": "2026-03-14T11:06:45.476Z",
+      "completedAt": "2026-03-14T11:14:06.130Z",
+      "summary": "**Outcome**\n- 已完成 triage，结论是 `ready`，可进入 `generate_plan`。\n- 产物已写入 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-241Z-zbhbl8/triage.md:1`。\n- 未修改产品代码；只新增了工作流产物文件。\n\n**Concrete Findings**\n- PRD 明确要求：单次购买超级曝光在关闭开关后，倒计时应暂停而不是隐藏，见 `design/1.需求文档/神仙亲家--小程序产品需求文档.md:119`。\n- 前端高风险面集中在 `pages/exposure/index.ts:1`、`pages/exposure/index.wxml:1`、`components/pages/exposure/exposure-control/index.ts:1`、`components/pages/exposure/exposure-control/index.wxml:1`。\n- 后端已支持“关闭即暂停”，`remaining_seconds` 会保留并在状态接口返回，见 `/Users/firingj/Projects/GodQinJia/internal/apiserver/service/exposure.go:104`。\n- 当前工作区本身存在未解决冲突，且正好命中上述曝光文件；后续计划第一步应先收敛这些冲突。\n\n**Changed File**\n- `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-241Z-zbhbl8/triage.md:1`\n\n**Commands Run**\n- `rg --files -g 'AGENTS.md' . ../immortal-in-laws-e2e`\n- `sed -n ...` 查看 `page-topology.md`、`project-knowledge.md`、PRD、曝光页面/组件/服务、后端 exposure service\n- `rg -n \"超级曝光|倒计时|remaining_seconds|exposure\"` 前后端代码检索\n- `git status --short --branch` 检查当前工作区状态\n\n**Verification**\n- 已确认 `triage.md` 存在且结构符合要求。\n- readiness verdict：`ready`\n- verification status：已完成产物校验，未执行产品构建/运行验证。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-06-45-464Z-apm016/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-06-45-464Z-apm016/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-06-45-464Z-apm016/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-241Z-zbhbl8/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-241Z-zbhbl8/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-241Z-zbhbl8/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-241Z-zbhbl8/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-241Z-zbhbl8/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T11-06-45-464Z-apm016"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_ad91d21f5069",
@@ -33,5 +53,13 @@
     "review": "",
     "attachments": [],
     "syncedAt": "2026-03-13T18:18:12.241Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "单次购买超级曝光关闭后倒计时应暂停，当前被直接隐藏",
+    "summary": "单次购买超级曝光用户在 `pages/exposure/index` 开启 24 小时曝光后，若在倒计时尚未结束时手动关闭超级曝光，页面顶部本应继续显示“剩余曝光次数 + 暂停后的剩余倒计时”，以便用户稍后再次开启时继续消耗未用完的时长。当前现象是：关闭开关后倒计时区域直接消失，用户看不到剩余时长，和 PRD 中“关闭后倒计时暂停，直到下次开启再继续扣减未完倒计时”的规则不一致。",
+    "updatedAt": "2026-03-14T11:14:06.132Z"
   }
 }

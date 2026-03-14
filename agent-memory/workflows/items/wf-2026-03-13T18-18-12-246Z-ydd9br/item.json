@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-246Z-ydd9br",
   "kind": "bug",
-  "title": "看过我：至尊/黄金会员身份，目前底部会显示“开通会员 查看全部资料”按钮，正确应不展示",
+  "title": "看过我页中黄金/至尊会员仍显示“开通会员 查看全部资料”底部按钮",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_157abc4b4612\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-10\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n看过我：至尊/黄金会员身份，目前底部会显示“开通会员 查看全部资料”按钮，正确应不展示\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_157abc4b4612/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.246Z",
-  "updatedAt": "2026-03-13T18:18:12.246Z",
+  "updatedAt": "2026-03-14T11:25:24.687Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T11-20-09-234Z-njgiz5",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T11:20:09.234Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-246Z-ydd9br/triage.md",
+      "taskId": "2026-03-14T11-20-09-235Z-4qdx1y",
+      "startedAt": "2026-03-14T11:20:09.242Z",
+      "completedAt": "2026-03-14T11:25:24.685Z",
+      "summary": "**Outcome**\n- 已完成 triage，并写入 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-246Z-ydd9br/triage.md:1`\n- readiness 结论：`ready`\n- next_action 结论：`generate_plan`\n- 本阶段未改动产品代码\n\n**Key Findings**\n- 该问题实际落点是记录页 `pages/message-record/index` 的“看过我”视图，不是会员中心首页。\n- 错误 CTA 直接由 `pages/message-record/index.ts:315` 的 `showBottomBar = !memberStore.isMember() ...` 控制。\n- 会员态来源链路是 `pages/message-record/index.ts:111` → `store/memberStore.ts:103` → `services/member.ts:27` → `services/api-mapper.ts:1018`\n- 高概率根因有两类：会员状态刷新失败后仍继续按非会员渲染；或 `mapMembershipStatus()` 把有效黄金/至尊会员误判成 `null` / `isExpired=true`\n\n**Actionable Fixes For Next Phase**\n- 先复现并记录 `membership/status` 响应、`memberStore.getStatus()` 和 `showBottomBar`\n- 给记录页增加“会员态已完成判定”保护，避免状态未知时先展示开通会员按钮\n- 复核 CTA 是否应按 `canViewRecords()` 而不是单纯 `isMember()` 控制\n- 补黄金/至尊有效态下 `showBottomBar` 不展示的回归测试\n\n**Changed Files**\n- `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-246Z-ydd9br/triage.md:1`\n\n**Commands Run**\n- 用 `rg`/`sed`/`nl`/`cat` 检查了 PRD、结构文档、`pages/message-record`、`store/memberStore`、`services/member`、`services/api-mapper`\n- 查看了本地附件截图 `bug_157abc4b4612/image.png`\n\n**Verification**\n- 已确认 `triage.md` 存在且开头结构符合要求\n- 证据、产品上下文、技术上下文、缺失信息、可疑面和后续建议均已写入文档",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-20-09-235Z-4qdx1y/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-20-09-235Z-4qdx1y/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-20-09-235Z-4qdx1y/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-246Z-ydd9br/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-246Z-ydd9br/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-246Z-ydd9br/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-246Z-ydd9br/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-246Z-ydd9br/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T11-20-09-235Z-4qdx1y"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_157abc4b4612",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.245Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "看过我页中黄金/至尊会员仍显示“开通会员 查看全部资料”底部按钮",
+    "summary": "- 问题页面不是会员中心首页，而是记录页 `pages/message-record/index` 的“看过我”视图，路由态应为 `type=view`、`direction=other_to_me`。",
+    "updatedAt": "2026-03-14T11:25:24.687Z"
   }
 }

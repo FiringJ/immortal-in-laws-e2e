@@ -1,15 +1,330 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-14T10:48:41.713Z",
+  "updatedAt": "2026-03-14T14:42:46.804Z",
   "items": [
     {
-      "id": "wf-2026-03-13T18-18-12-235Z-o1bnpi",
+      "id": "wf-2026-03-13T18-18-12-300Z-4s2xio",
       "kind": "bug",
-      "title": "黄金会员：权益图片，目前黄金会员的季度、年度、永久tab页会员，其有效期和每天推荐的人数都用了同一个，正确应如截图 1 prd所示",
+      "title": "会员身份：当对方有手机号且按钮显示“拨打电话”时，点击“拨打电话”，目前错误解锁并直接弹出了联系方式，正确应弹框提示“您是会员，可免费查看对方号码”；点击“立即解锁”弹框按钮，toast提示“成功解锁对方号码”，同时立即跳转至私信会话页且底",
       "source": "feishu",
       "stage": "triaging",
       "priority": "P0",
-      "updatedAt": "2026-03-14T10:48:41.713Z"
+      "updatedAt": "2026-03-14T14:42:46.804Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-298Z-ocdx6o",
+      "kind": "bug",
+      "title": "相亲资料页移除“户籍”资料项",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T14:42:46.794Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-298Z-eazj9m",
+      "kind": "bug",
+      "title": "解锁记录页：解锁我 24 小时时效展示与权限规则异常，且“我解锁的”阻断预期待确认",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T14:35:03.183Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-297Z-g2qpzx",
+      "kind": "bug",
+      "title": "解锁我测试点因缺少匹配数据暂无法验证",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T14:23:10.836Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-296Z-fbihsv",
+      "kind": "bug",
+      "title": "收藏我底部会员按钮应提示“查看详细资料受限”并进入会员中心黄金 tab",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T14:16:50.809Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-296Z-7jar0g",
+      "kind": "bug",
+      "title": "我看过的页顶部 CTA 与模糊蒙层未统一跳转至尊会员开通页",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T14:10:47.430Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-295Z-emo4wo",
+      "kind": "bug",
+      "title": "会员阻断弹窗四档套餐测试价格需求（0.01/0.02/0.03/0.04）需先澄清范围",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T14:03:41.771Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-295Z-dl8xeo",
+      "kind": "bug",
+      "title": "会员阻断购买说明弹窗内容缺失且排版混乱",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T13:58:25.925Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-294Z-9c1o8r",
+      "kind": "bug",
+      "title": "历史推荐页会员阻断不一致：卡片主体错误弹框且卡片 CTA 无响应",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T13:52:36.685Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-278Z-fq1n84",
+      "kind": "bug",
+      "title": "搜索结果页非至尊会员点击嘉宾卡片与联系按钮阻断方式不一致",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T13:44:46.361Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-277Z-08sxfm",
+      "kind": "bug",
+      "title": "搜索结果页在黄金会员升级为至尊会员后底部悬浮按钮未及时切换为搜索按钮",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T13:38:24.304Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-276Z-ne9aet",
+      "kind": "bug",
+      "title": "精准查找结果页：非至尊会员完成首次搜索后仍显示“条件设置”且可重复搜索",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T13:27:58.479Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-276Z-gck7xd",
+      "kind": "bug",
+      "title": "会员中心：黄金会员页缺少第 4 个“至尊会员”子入口",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T13:20:22.800Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-275Z-v7wivn",
+      "kind": "bug",
+      "title": "精准查找页默认选中态错误：仅年份和身高应默认“不限”，其他条件应默认不选中",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T13:10:46.079Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-274Z-7afj4x",
+      "kind": "bug",
+      "title": "精准查找购车要求选项与资料匹配口径不一致",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T13:05:01.411Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-273Z-raxc9h",
+      "kind": "bug",
+      "title": "私信发送照片未校验人脸，任意图片可发送",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T12:59:58.495Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-272Z-xqsym5",
+      "kind": "bug",
+      "title": "历史推荐页嘉宾卡片内会员提示条点击无响应",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T12:51:58.563Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-272Z-cvdk0f",
+      "kind": "bug",
+      "title": "至尊会员在嘉宾详情点击“交换照片”被误弹“去登记资料”",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T12:45:05.797Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-271Z-uz8rs7",
+      "kind": "bug",
+      "title": "历史推荐单日日期滚筒筛选弹层样式与交互需对齐截图",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T12:39:11.207Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-270Z-p4emb4",
+      "kind": "bug",
+      "title": "编辑资料页首次上传孩子照片时错误展示上传弹层，应先展示示例引导弹层",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T12:34:26.488Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-263Z-fkhzb5",
+      "kind": "bug",
+      "title": "编辑资料页上传无人脸头像时出现英文错误提示，应显示中文合规提示",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T12:25:38.065Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-263Z-as0phw",
+      "kind": "bug",
+      "title": "资料编辑页：多个资料项交互/弹框与 UI 稿不一致",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T12:20:08.714Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-262Z-6c0c3s",
+      "kind": "bug",
+      "title": "消息页精准搜索入口在非会员已用搜索机会后错误进入筛选页，应进入搜索结果页",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T12:14:23.463Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-261Z-yqukke",
+      "kind": "bug",
+      "title": "对方已解锁我并建立会话后，聊天页仍错误要求我先解锁对方才能发消息",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T12:07:28.496Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-260Z-ssg263",
+      "kind": "bug",
+      "title": "嘉宾消息列表编号与详情页相亲编号不一致，应保持一致",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T12:01:24.976Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-259Z-writ33",
+      "kind": "bug",
+      "title": "系统消息入口点击无效，无法进入系统消息列表",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T11:57:11.386Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-258Z-y0j3um",
+      "kind": "bug",
+      "title": "首次进入小程序应以游客身份进入首页，完成注册流程后才登录",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T11:52:40.515Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-252Z-miva3e",
+      "kind": "bug",
+      "title": "非至尊会员次日从精准查找入口重进时错误落到筛选页，应复用最近一次搜索记录进入结果页",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T11:46:05.329Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-251Z-s8pasv",
+      "kind": "bug",
+      "title": "记录页看过我/我看过/收藏我嘉宾卡片资料字段与 UI 稿不一致",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T11:36:43.283Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-249Z-gt1q5e",
+      "kind": "bug",
+      "title": "看过我页非会员点击嘉宾卡片或详细资料按钮会进入详情页，应弹会员开通阻断弹窗",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T11:30:30.730Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-246Z-ydd9br",
+      "kind": "bug",
+      "title": "看过我页中黄金/至尊会员仍显示“开通会员 查看全部资料”底部按钮",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T11:25:24.687Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-243Z-5n1f42",
+      "kind": "bug",
+      "title": "记录页 6 个 tab 会员阻断逻辑总核对",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T11:20:09.223Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-241Z-zbhbl8",
+      "kind": "bug",
+      "title": "单次购买超级曝光关闭后倒计时应暂停，当前被直接隐藏",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T11:14:06.132Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-240Z-arhiw3",
+      "kind": "bug",
+      "title": "至尊会员权益入口点击无响应，应弹出权益图片弹框",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T11:06:45.438Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-237Z-kjqci2",
+      "kind": "bug",
+      "title": "黄金会员权益入口点击无反应，应弹出权益图片弹框",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T11:00:53.387Z"
+    },
+    {
+      "id": "wf-2026-03-13T18-18-12-235Z-o1bnpi",
+      "kind": "bug",
+      "title": "会员中心黄金会员季度/年度/永久套餐权益图片未随档位切换",
+      "source": "feishu",
+      "stage": "intake",
+      "priority": "P0",
+      "updatedAt": "2026-03-14T10:55:31.914Z"
     },
     {
       "id": "wf-2026-03-13T18-18-12-234Z-p9t6vi",
@@ -991,321 +1306,6 @@
       "stage": "intake",
       "priority": "P0",
       "updatedAt": "2026-03-13T18:18:12.301Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-300Z-4s2xio",
-      "kind": "bug",
-      "title": "会员身份：当对方有手机号且按钮显示“拨打电话”时，点击“拨打电话”，目前错误解锁并直接弹出了联系方式，正确应弹框提示“您是会员，可免费查看对方号码”；点击“立即解锁”弹框按钮，toast提示“成功解锁对方号码”，同时立即跳转至私信会话页且底",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.300Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-298Z-eazj9m",
-      "kind": "bug",
-      "title": "我解锁的：1）24 小时内解锁我的展示逻辑搞反了，不在当前tab，而在“解锁的的tab”，且按钮没有“已过期”状态；2）我解锁tab的所有嘉宾，无论会员身份与否，都无阻断",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.298Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-298Z-ocdx6o",
-      "kind": "bug",
-      "title": "户籍项已去掉，辛苦在资料页去掉该资料项",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.298Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-297Z-g2qpzx",
-      "kind": "bug",
-      "title": "解锁我的：目前测试因无法匹配数据，故此处无法验证，此测试点备忘录下",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.297Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-296Z-7jar0g",
-      "kind": "bug",
-      "title": "我看过的：点击顶部“开通至尊会员”按钮，以及绿框蒙层模糊区域，统一跳转至会员开通页（选中至尊tab）；目前问题是前者错误出弹框，后者点击无反应",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.296Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-296Z-fbihsv",
-      "kind": "bug",
-      "title": "收藏我：点击底部按钮正确应跳转至会员开通页（选中黄金tab），且弹框提示“查看详细资料受限 /平台严格保护用户隐私，开通会员方可查看对方详情”，点击弹框按钮“好的”弹框消失（弹框是后续加的，视觉可直接用截图 1 弹框样式套用），目前是直接出",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.296Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-295Z-dl8xeo",
-      "kind": "bug",
-      "title": "购买说明：说明内容缺失，且排版混乱无内容排版，可参考文档进行修改 神仙亲家购买说明",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.295Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-295Z-emo4wo",
-      "kind": "bug",
-      "title": "购买价格：为测试价格档位是否生效，可将4 档价格分为定为：0.01、0.02、0.03、0.04，以方便测试",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.295Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-294Z-9c1o8r",
-      "kind": "bug",
-      "title": "会员阻断：和点击“日期筛选”弹出会员开通阻断弹框一样（选中至尊tab），正确应点击嘉宾卡片以及卡片按钮也与其保持一致（图 2），目前 点击卡片会弹出莫名弹框（图 1），点击卡片按钮无反应",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.294Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-278Z-fq1n84",
-      "kind": "bug",
-      "title": "搜索结果：非至尊会员用户，点击嘉宾卡片以及按钮，正确应统一阻断并跳转至至尊会员开通页，目前点击嘉宾卡片会跳转至资料页，点击“卡片按钮”会弹出会员开通阻断弹框",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.278Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-277Z-08sxfm",
-      "kind": "bug",
-      "title": "搜索结果：目前黄金会员升级为至尊会员后，其搜索结果页底部的“开通至尊会员”悬浮按钮未及时更新（如图 1），正确应该按钮变为高亮按钮 “点击搜索嘉宾（今日剩1次机会）”，如图 1 的UI稿",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.277Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-276Z-gck7xd",
-      "kind": "bug",
-      "title": "黄金会员：选中黄金会员tab时，正确应有第 4 个子tab至尊会员",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.276Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-276Z-ne9aet",
-      "kind": "bug",
-      "title": "搜索结果：非至尊会员用户，正确应有且只有 1 次搜索机会，且搜索完成后立即隐藏“条件设置”入口，目前“条件设置”入口未隐藏，且能重复搜索",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.276Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-275Z-v7wivn",
-      "kind": "bug",
-      "title": "默认选项：目前所有选项默认选中不限，正确应该除年份和身高要求项默认选中“不限”项外，其他项一律默认不选中（目前选中后的交互无误）",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.275Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-274Z-7afj4x",
-      "kind": "bug",
-      "title": "车产要求：正确应只有“不限、已购车/近期购车”2项可选，且 2 项择偶项“已购车、近期购车”匹配 1 项资料项“已购车/近期购车”，“不限”项则匹配“已购车、近期购车、无车” 3项，可参考图 1",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.274Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-273Z-raxc9h",
-      "kind": "bug",
-      "title": "发送照片：照片未做人脸校验，目前任何图片都可发送对方，正确应该是符合人脸要求的才可发送，否则应如截图所示进行提示",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.273Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-272Z-cvdk0f",
-      "kind": "bug",
-      "title": "交换照片：至尊会员身份，点击“交换照片”按钮，错误弹框提示“登记资料”，测试号 15717136585",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.272Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-272Z-xqsym5",
-      "kind": "bug",
-      "title": "历史推荐：点击嘉宾卡片按钮，无反应",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.272Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-271Z-uz8rs7",
-      "kind": "bug",
-      "title": "父问题补充：其滚筒下拉框样式，以及交互，需对照截图样式实现，图 1 是现有视觉弹框可直接复用UI，图 2 是UI复用后的实现样式（排版交互要一致）",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.271Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-270Z-p4emb4",
-      "kind": "bug",
-      "title": "上传照片：首次上传孩子照片时，正确应弹框提示如图 2，目前是 弹框图 1",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.270Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-263Z-as0phw",
-      "kind": "bug",
-      "title": "资料编辑页：资料项的交互能力或交互弹框与UI稿不一致",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.263Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-263Z-fkhzb5",
-      "kind": "bug",
-      "title": "编辑资料页：上传无人脸的头像，目前点击“确认上传”会报错英文提示（图 2），正确提示应 如图 1 所示",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.263Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-262Z-6c0c3s",
-      "kind": "bug",
-      "title": "精准查找：非会员身份，此入口应与首页精准搜索入口逻辑、记录保持一致，目前首页搜索查找机会用过后会进入搜索解锁页，但在消息页则进入了精准查找页，正确应同前者进入搜索结果页",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.262Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-261Z-yqukke",
-      "kind": "bug",
-      "title": "解锁会话：对方解锁我后(真人以解锁时间做判断，机器人可以消息触发成功时间做判断)，正确是会话建立后己方无需解锁对方就可以聊天，目前是己方需解锁对方才可聊",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.261Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-260Z-ssg263",
-      "kind": "bug",
-      "title": "嘉宾消息：目前消息列表的家长编号与详情页的标号不一致，正确应一致",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.260Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-259Z-writ33",
-      "kind": "bug",
-      "title": "系统消息：目前点击系统消息无效，正确应点击进去后，有相应的系统消息",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.259Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-258Z-y0j3um",
-      "kind": "bug",
-      "title": "注册登录：首次进入小程序，正确应以游客身份进入首页（分享除法），触发注册流程才能完成登录，目前是直接授权手机号直接登入小程序",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.258Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-252Z-miva3e",
-      "kind": "bug",
-      "title": "搜索结果：非至尊会员身份，有过 1 次搜索记录，次日再点击金刚区进入时，目前是跳转到了搜索查找页，正确应跳转至搜索结果页",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.252Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-251Z-s8pasv",
-      "kind": "bug",
-      "title": "看过我/我看过/收藏我 3 个tab页：嘉宾卡片资料信息目前显示缺失或多出，可对照UI稿自查，比如：缺少年龄、相亲介绍等",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.251Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-249Z-gt1q5e",
-      "kind": "bug",
-      "title": "看过我：非会员身份，目前此页点击嘉宾卡片以及详情资料按钮，跳转到了详情资料页，此页特殊处理，正确应同底部按钮逻辑一样，弹出会员开通阻断弹框",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.249Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-246Z-ydd9br",
-      "kind": "bug",
-      "title": "看过我：至尊/黄金会员身份，目前底部会显示“开通会员 查看全部资料”按钮，正确应不展示",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.246Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-243Z-5n1f42",
-      "kind": "bug",
-      "title": "会员阻断：我看过/看过我、收藏我/我收藏、解锁我/我解锁的 6 个tab嘉宾列表页，其对应阻断逻辑详见prd，以prd为准",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.243Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-241Z-zbhbl8",
-      "kind": "bug",
-      "title": "单次购买倒计时：在倒计时期间，用户可关闭超级曝光，关闭后倒计时正确应该暂停，目前是直接隐藏了",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.241Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-240Z-arhiw3",
-      "kind": "bug",
-      "title": "至尊会员：目前点击列表各个权益入口无反应，正确应弹出权益图片弹框，详见UI稿",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.240Z"
-    },
-    {
-      "id": "wf-2026-03-13T18-18-12-237Z-kjqci2",
-      "kind": "bug",
-      "title": "黄金会员：目前点击列表各个权益入口无反应，正确应弹出权益图片弹框，详见UI稿",
-      "source": "feishu",
-      "stage": "intake",
-      "priority": "P0",
-      "updatedAt": "2026-03-13T18:18:12.237Z"
     },
     {
       "id": "wf-2026-03-13T18-18-12-197Z-1rgloh",

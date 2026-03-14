@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-276Z-ne9aet",
   "kind": "bug",
-  "title": "搜索结果：非至尊会员用户，正确应有且只有 1 次搜索机会，且搜索完成后立即隐藏“条件设置”入口，目前“条件设置”入口未隐藏，且能重复搜索",
+  "title": "精准查找结果页：非至尊会员完成首次搜索后仍显示“条件设置”且可重复搜索",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_b75cd683ea10\n飞书状态: 待发版验证\n优先级: P0\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n搜索结果：非至尊会员用户，正确应有且只有 1 次搜索机会，且搜索完成后立即隐藏“条件设置”入口，目前“条件设置”入口未隐藏，且能重复搜索\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b75cd683ea10/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.276Z",
-  "updatedAt": "2026-03-13T18:18:12.276Z",
+  "updatedAt": "2026-03-14T13:27:58.479Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T13-20-22-807Z-ldwapv",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T13:20:22.807Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-ne9aet/triage.md",
+      "taskId": "2026-03-14T13-20-22-808Z-6l7emw",
+      "startedAt": "2026-03-14T13:20:22.810Z",
+      "completedAt": "2026-03-14T13:27:58.476Z",
+      "summary": "**Outcome**\n- 已完成 triage，产物已写入 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-ne9aet/triage.md:1`。\n- readiness 结论是 `ready`，建议下一阶段 `generate_plan`。\n- 本阶段未改动任何产品代码，只补充了缺陷清洗、产品/技术上下文和可执行落点。\n\n**Findings**\n- 当前源码里结果页的 `条件设置` 已受 `isSupremeView` 控制：`pages/filter-result/index.wxml:33`；但截图同时出现非至尊底部 CTA 和 `条件设置`，与现源码不一致，说明很可能存在旧包/旧分支/运行态缓存差异。\n- 非至尊重复搜索门禁在 `pages/filter/index.ts:1231`，依赖本地 `recommendStore` + `memberStore` 状态，而不是单一后端强约束。\n- 结果页首次进入不会先刷新会员态：`pages/filter-result/index.ts:281` 和 `pages/filter-result/index.ts:300`；`app.ts:43` 只从本地恢复 store，`app.ts:53` 的全局刷新为空。\n- `store/memberStore.ts:34` 会直接恢复本地 `member_status`，这是“非至尊却表现成至尊”或门禁失效的高风险点。\n- 首页入口也依赖本地筛选历史决定跳结果页还是条件页：`pages/index/index.ts:471`。\n\n**Actionable Next Fixes**\n- 后续计划优先验证“当前源码 vs 报障截图”是否为版本/缓存差异。\n- 修复应重点收敛到两处：刷新会员态时机、以及“一次搜索资格”的统一状态源；必要时补服务端不可再搜标志，而不是只靠本地缓存判断。\n\n**Commands / Verification**\n- 运行了 `rg`、`sed`、`cat`、`apply_patch` 做上下文收集与产物写入。\n- 已校验 `triage.md` 存在且头部结构符合要求。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-20-22-808Z-6l7emw/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-20-22-808Z-6l7emw/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-20-22-808Z-6l7emw/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-ne9aet/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-ne9aet/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-ne9aet/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-ne9aet/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-ne9aet/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T13-20-22-808Z-6l7emw"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_b75cd683ea10",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.276Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "精准查找结果页：非至尊会员完成首次搜索后仍显示“条件设置”且可重复搜索",
+    "summary": "- 缺陷聚焦于 `精准查找 -> 搜索结果` 流程：非至尊会员按产品规则应仅有 1 次搜索机会。",
+    "updatedAt": "2026-03-14T13:27:58.479Z"
   }
 }

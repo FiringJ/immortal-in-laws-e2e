@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-271Z-uz8rs7",
   "kind": "bug",
-  "title": "父问题补充：其滚筒下拉框样式，以及交互，需对照截图样式实现，图 1 是现有视觉弹框可直接复用UI，图 2 是UI复用后的实现样式（排版交互要一致）",
+  "title": "历史推荐单日日期滚筒筛选弹层样式与交互需对齐截图",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_1882b361f30f\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n父问题补充：其滚筒下拉框样式，以及交互，需对照截图样式实现，图 1 是现有视觉弹框可直接复用UI，图 2 是UI复用后的实现样式（排版交互要一致）\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_1882b361f30f/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_1882b361f30f/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.271Z",
-  "updatedAt": "2026-03-13T18:18:12.271Z",
+  "updatedAt": "2026-03-14T12:39:11.207Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T12-34-26-490Z-ppqj0e",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T12:34:26.490Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-271Z-uz8rs7/triage.md",
+      "taskId": "2026-03-14T12-34-26-490Z-sj1dph",
+      "startedAt": "2026-03-14T12:34:26.492Z",
+      "completedAt": "2026-03-14T12:39:11.205Z",
+      "summary": "**Outcome**\n- 已完成 triage，结论是 `readiness=ready`，可直接进入 `generate_plan`。\n- Triage 产物已写入 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-271Z-uz8rs7/triage.md:1`。\n\n**Key Findings**\n- 现状已能明确定位到 `pages/history/index`：页面仍使用原生日期 `picker`，见 `pages/history/index.wxml:11`。\n- 当前交互是“选中即生效并立刻刷新列表”，不符合截图里的“滚动选择后再确认”模式，见 `pages/history/index.ts:127`。\n- 单日筛选与“默认前 31 天”规则已有基础，不是从零设计，见 `pages/history/index.ts:59`。\n- 可行修复面也很清楚：历史页改成自定义 `picker-view` 底部弹层，并参考已存在的筛选页滚轮弹层实现，见 `pages/filter/index.wxml:124`；项目知识也明确建议避免原生 `picker` 做高保真样式，见 `../immortal-in-laws-e2e/agent-memory/project-knowledge.md:25`。\n\n**Changed Files**\n- 新增 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-271Z-uz8rs7/triage.md:1`\n- 未修改产品代码；仅写入跟踪仓 triage 文档。\n\n**Commands Run**\n- 用 `sed`/`rg` 检查 `agent-memory/page-topology.md`、`agent-memory/project-knowledge.md`、`item.json`、`pages/history/index.{ts,wxml,wxss}`、`pages/filter/index.{ts,wxml,wxss}`。\n- 用 `view_image` 查看附件 `bug_1882b361f30f/image.png`。\n- 用 `apply_patch` 创建 triage 文档，并用 `test -f` + `sed -n '1,12p'` 做存在性与头部结构校验。\n\n**Verification**\n- 已确认 `triage.md` 存在且开头结构符合要求。\n- 验证状态：文档产物校验通过；未执行构建/运行时验证，因为本阶段要求是不改产品代码、只做 triage。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-34-26-490Z-sj1dph/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-34-26-490Z-sj1dph/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-34-26-490Z-sj1dph/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-271Z-uz8rs7/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-271Z-uz8rs7/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-271Z-uz8rs7/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-271Z-uz8rs7/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-271Z-uz8rs7/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T12-34-26-490Z-sj1dph"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_1882b361f30f",
@@ -46,5 +66,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.271Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "历史推荐单日日期滚筒筛选弹层样式与交互需对齐截图",
+    "summary": "`pages/history/index` 的“日期筛选”当前仍是页面内展开的原生 `picker mode=\"date\"` 按钮式实现。该补充缺陷要求沿用现有弹框 UI 体系，把历史推荐的日期筛选改成截图中的底部滚筒弹层：三列年/月/日滚轮、居中高亮选中行、圆角白色面板、底部“取消筛选 / 确定推荐日期”双按钮，整体排版和交互需与截图一致。结合同源父缺陷，可将问题归一为：历史推荐只保留“单日日期筛选”，默认选中前 31 天，用户在滚轮中调整日期后，通过显式确认再应用到推荐列表。",
+    "updatedAt": "2026-03-14T12:39:11.207Z"
   }
 }

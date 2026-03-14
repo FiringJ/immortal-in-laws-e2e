@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-262Z-6c0c3s",
   "kind": "bug",
-  "title": "精准查找：非会员身份，此入口应与首页精准搜索入口逻辑、记录保持一致，目前首页搜索查找机会用过后会进入搜索解锁页，但在消息页则进入了精准查找页，正确应同前者进入搜索结果页",
+  "title": "消息页精准搜索入口在非会员已用搜索机会后错误进入筛选页，应进入搜索结果页",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_d1fd9fefe899\n飞书状态: 待发版验证\n优先级: P0\n反馈日期: 2026-03-09\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n精准查找：非会员身份，此入口应与首页精准搜索入口逻辑、记录保持一致，目前首页搜索查找机会用过后会进入搜索解锁页，但在消息页则进入了精准查找页，正确应同前者进入搜索结果页\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_d1fd9fefe899/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.262Z",
-  "updatedAt": "2026-03-13T18:18:12.262Z",
+  "updatedAt": "2026-03-14T12:14:23.463Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T12-07-28-500Z-yp0219",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T12:07:28.500Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-262Z-6c0c3s/triage.md",
+      "taskId": "2026-03-14T12-07-28-501Z-wa2dy6",
+      "startedAt": "2026-03-14T12:07:28.505Z",
+      "completedAt": "2026-03-14T12:14:23.461Z",
+      "summary": "**Outcome**\n- Triage 完成，结论是 `ready`，下一步应为 `generate_plan`。\n- 已写入工件：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-262Z-6c0c3s/triage.md:1`\n\n**Key Findings**\n- 问题直接落点在 `pages/message/index.ts:253`：消息页“精准搜索”入口用本地内存态判断，可能误跳到 `pages/filter/index`。\n- 首页存在重复实现于 `pages/index/index.ts:471`，说明入口规则没有统一封装。\n- 已有未接入的统一工具草稿 `utils/filter-flow.ts:1`，但它依赖缺失的 `recommendStore.refreshLatestFilterSearchHistory`，当前链路未完成。\n- `pages/filter/index.ts:1231` 已体现产品意图：非至尊会员重复搜索时应回到 `pages/filter-result/index`，不是重新进筛选页。\n\n**Changed Files**\n- 新增 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-262Z-6c0c3s/triage.md:1`\n- 未修改产品代码。\n\n**Commands / Verification**\n- 运行了 `rg`、`sed`、`git log`、`git blame`、`git status`、`npm run type-check`。\n- 已校验 `triage.md` 存在，且必需章节齐全。\n- `npm run type-check` 当前不通过：`utils/filter-flow.ts(28,48)` 缺少 `refreshLatestFilterSearchHistory`，另有无关存量错误 `services/api-mapper.ts(797,5)` 重复字段。\n- 可执行修复建议：下一阶段统一抽“精准搜索入口决策”能力，接入消息页/首页/记录入口，并以持久化或服务端的搜索历史/已用机会状态为准，不再只看当前会话内存。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-07-28-501Z-wa2dy6/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-07-28-501Z-wa2dy6/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-07-28-501Z-wa2dy6/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-262Z-6c0c3s/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-262Z-6c0c3s/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-262Z-6c0c3s/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-262Z-6c0c3s/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-262Z-6c0c3s/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T12-07-28-501Z-wa2dy6"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_d1fd9fefe899",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.262Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "消息页精准搜索入口在非会员已用搜索机会后错误进入筛选页，应进入搜索结果页",
+    "summary": "非会员用户在首页已经使用过一次精准搜索后，首页入口会进入搜索结果/解锁页，但消息页的“精准搜索”入口仍会进入筛选条件页。该入口应与首页及同类记录入口保持一致：当用户已有已保存的筛选条件或既有搜索记录/已用机会状态时，应直接进入 `pages/filter-result/index`，而不是回到 `pages/filter/index`。",
+    "updatedAt": "2026-03-14T12:14:23.463Z"
   }
 }

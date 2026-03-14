@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-263Z-as0phw",
   "kind": "bug",
-  "title": "资料编辑页：资料项的交互能力或交互弹框与UI稿不一致",
+  "title": "资料编辑页：多个资料项交互/弹框与 UI 稿不一致",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_110da6b2392e\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-09\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n资料编辑页：资料项的交互能力或交互弹框与UI稿不一致",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.263Z",
-  "updatedAt": "2026-03-13T18:18:12.263Z",
+  "updatedAt": "2026-03-14T12:20:08.714Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T12-14-23-466Z-prnrij",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T12:14:23.466Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-as0phw/triage.md",
+      "taskId": "2026-03-14T12-14-23-467Z-bxa03c",
+      "startedAt": "2026-03-14T12:14:23.470Z",
+      "completedAt": "2026-03-14T12:20:08.711Z",
+      "summary": "**Outcome**\n- 已写入 triage 文档：`/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-as0phw/triage.md:1`\n- 结论：`needs_human`，`source_quality: low`，`next_action: manual_triage`\n- 本阶段未改动产品代码；仅新增 triage 产物\n\n**Key Findings**\n- 工单原文只有一句泛化描述，且飞书同步数据无附件，无法直接定位具体异常字段或期望 UI\n- `pages/profile-edit/index.wxml:36` 起仍有 19 个原生 `picker`；而当前仅挂载了 5 类自定义弹层，见 `pages/profile-edit/index.wxml:369`、`pages/profile-edit/index.wxml:425`、`pages/profile-edit/index.wxml:454`、`pages/profile-edit/index.wxml:469`、`pages/profile-edit/index.wxml:491`\n- 设计目录存在 20+ 张字段级弹窗稿，但同批又已拆出更具体子问题，说明这条更像父问题，直接生成计划会高风险重复/误改\n\n**Actionable Fixes**\n- 先人工补齐：具体异常字段清单、每个字段的当前 vs 期望表现、对应截图/设计图/Figma 节点\n- 先人工判断是否与 `bug_c8b0ad4d605c`、`bug_8d618b6c9f9b`、`bug_1882b361f30f` 去重或拆单\n- 明确后再进入 `generate_plan`\n\n**Commands Run**\n- `rg`, `sed`, `find`, `cat`\n- `npx tsx src/tools/probes/profile-edit-interaction-static-probe.ts`\n- `npx tsx src/tools/probes/profile-edit-first-photo-guide-static-probe.ts`\n\n**Verification**\n- `triage.md` 已存在且结构符合要求\n- 两条静态 probe 均通过，说明“文本编辑弹层”和“首次照片引导弹层”大概率已落地；剩余问题范围仍需人工澄清后才能安全规划",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-14-23-467Z-bxa03c/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-14-23-467Z-bxa03c/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-14-23-467Z-bxa03c/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-as0phw/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-as0phw/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-as0phw/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-as0phw/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-263Z-as0phw/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T12-14-23-467Z-bxa03c"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_110da6b2392e",
@@ -33,5 +53,13 @@
     "review": "",
     "attachments": [],
     "syncedAt": "2026-03-13T18:18:12.263Z"
+  },
+  "triage": {
+    "status": "needs_human",
+    "sourceQuality": "low",
+    "nextAction": "manual_triage",
+    "normalizedTitle": "资料编辑页：多个资料项交互/弹框与 UI 稿不一致",
+    "summary": "- 缺陷可归一为：`pages/profile-edit/index` 中“资料编辑页”多个资料项的触发方式、弹框形态或弹框内容与设计稿不一致。",
+    "updatedAt": "2026-03-14T12:20:08.714Z"
   }
 }

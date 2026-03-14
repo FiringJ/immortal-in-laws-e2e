@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-274Z-7afj4x",
   "kind": "bug",
-  "title": "车产要求：正确应只有“不限、已购车/近期购车”2项可选，且 2 项择偶项“已购车、近期购车”匹配 1 项资料项“已购车/近期购车”，“不限”项则匹配“已购车、近期购车、无车” 3项，可参考图 1",
+  "title": "精准查找购车要求选项与资料匹配口径不一致",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_1d9d2a48788d\n飞书状态: 待发版验证\n优先级: P0\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n车产要求：正确应只有“不限、已购车/近期购车”2项可选，且 2 项择偶项“已购车、近期购车”匹配 1 项资料项“已购车/近期购车”，“不限”项则匹配“已购车、近期购车、无车” 3项，可参考图 1\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_1d9d2a48788d/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.274Z",
-  "updatedAt": "2026-03-13T18:18:12.274Z",
+  "updatedAt": "2026-03-14T13:05:01.411Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T12-59-58-498Z-6337xy",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T12:59:58.498Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-274Z-7afj4x/triage.md",
+      "taskId": "2026-03-14T12-59-58-499Z-nlr2c7",
+      "startedAt": "2026-03-14T12:59:58.502Z",
+      "completedAt": "2026-03-14T13:05:01.408Z",
+      "summary": "**Outcome**\n- 已完成 triage，产物写入 `/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-274Z-7afj4x/triage.md:1`。\n- Readiness 判定为 `needs_human`，下一步建议 `manual_triage`，不是直接进实现计划。\n- 原因是当前源码已基本满足该缺陷的核心诉求，这单更像“待发版验证 / 重复拆分项”。\n\n**Findings**\n- `config/constants.ts:175` 的 `FILTER_CAR_OPTIONS` 已是 `不限` + `已购车/近期购车` 两项。\n- `pages/filter/index.ts:265` 会把历史 `recent_purchase` 归一到统一选项，`pages/filter/index.ts:1116` 的 `onCarToggle()` 也是单选逻辑。\n- `services/guest.ts:252` 已将 `owned` / `recent_purchase` 统一映射为接口 `car_status=1`，与 PRD 的“2 项择偶口径匹配 3 项资料口径”一致。\n- 邻近风险是 `pages/filter-result/index.ts:128` 仍使用 `CAR_LABELS` 渲染摘要，后续若仍报问题，要确认是否其实是结果页文案显示成“车产已购车”。\n\n**Commands Run**\n- `rg -n \"车产|购车|已购车|近期购车|无车\" /Users/firingj/Projects/immortal-in-laws /Users/firingj/Projects/immortal-in-laws-e2e`\n- `npx tsx src/tools/probes/filter-car-criteria-static-probe.ts`\n- `git -C /Users/firingj/Projects/immortal-in-laws-e2e status --short .../triage.md`\n\n**Verification**\n- 静态探针通过：仅两项、历史值归一、请求映射兼容，3/3 PASS。\n- 已确认 `triage.md` 文件存在，且本阶段未改动产品代码。\n- 可执行的后续动作：先由人工确认失败包版本/是否重复单；若仍可复现，再补失败截图或请求日志，明确是“选项数量”“筛选结果”还是“结果页文案”问题。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-59-58-499Z-nlr2c7/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-59-58-499Z-nlr2c7/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-59-58-499Z-nlr2c7/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-274Z-7afj4x/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-274Z-7afj4x/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-274Z-7afj4x/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-274Z-7afj4x/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-274Z-7afj4x/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T12-59-58-499Z-nlr2c7"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_1d9d2a48788d",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.274Z"
+  },
+  "triage": {
+    "status": "needs_human",
+    "sourceQuality": "medium",
+    "nextAction": "manual_triage",
+    "normalizedTitle": "精准查找购车要求选项与资料匹配口径不一致",
+    "summary": "缺陷聚焦于 `pages/filter/index` 的“购车要求”筛选项。按 PRD，筛选侧正确口径应为：",
+    "updatedAt": "2026-03-14T13:05:01.411Z"
   }
 }

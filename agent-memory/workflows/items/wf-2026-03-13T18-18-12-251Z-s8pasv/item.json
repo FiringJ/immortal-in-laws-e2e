@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-251Z-s8pasv",
   "kind": "bug",
-  "title": "看过我/我看过/收藏我 3 个tab页：嘉宾卡片资料信息目前显示缺失或多出，可对照UI稿自查，比如：缺少年龄、相亲介绍等",
+  "title": "记录页看过我/我看过/收藏我嘉宾卡片资料字段与 UI 稿不一致",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_4a582a6d3339\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-10\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n看过我/我看过/收藏我 3 个tab页：嘉宾卡片资料信息目前显示缺失或多出，可对照UI稿自查，比如：缺少年龄、相亲介绍等\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4a582a6d3339/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.251Z",
-  "updatedAt": "2026-03-13T18:18:12.251Z",
+  "updatedAt": "2026-03-14T11:36:43.283Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T11-30-30-735Z-9aeis5",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T11:30:30.735Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-251Z-s8pasv/triage.md",
+      "taskId": "2026-03-14T11-30-30-735Z-5xsehn",
+      "startedAt": "2026-03-14T11:30:30.738Z",
+      "completedAt": "2026-03-14T11:36:43.280Z",
+      "summary": "**Outcome**\n- 已完成分诊，产物写入 ` /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-251Z-s8pasv/triage.md:1`\n- 结论：`readiness=ready`，`source_quality=medium`，`next_action=generate_plan`\n- 本阶段未改动产品代码，只写了 triage 文档\n\n**Concrete Findings**\n- 记录页卡片主实现位于 `components/pages/message-record/record-card/index.ts:137`，无图卡对 `view`/`favorite` 使用了错误字段矩阵，当前会出现“多出年龄、缺少家乡”的问题\n- 相亲介绍渲染依赖 `record.cardGuest.matchmakingNote || record.description`，见 `components/pages/message-record/record-card/index.ts:201`，因此“相亲介绍缺失”还需继续核对 `services/api-mapper.ts:1264` 的字段映射和真实接口返回\n- 页面与数据拼装链路已定位：`pages/message-record/index.ts:101`、`pages/message-record/helpers.ts:180`、`services/record.ts:72`\n\n**Changed Files**\n- ` /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-251Z-s8pasv/triage.md:1`\n\n**Commands Run**\n- 用 `rg --files`、`rg -n` 定位 AGENTS、页面、服务、设计稿、接口文档\n- 用 `sed -n`、`nl -ba` 检查 `pages/message-record`、`components/pages/message-record/record-card`、`services/record.ts`、`services/api-mapper.ts`\n- 查看了缺陷截图和本地设计稿 `神仙亲家-消息-看过我1.png`、`神仙亲家-消息-收藏我1.png`\n\n**Verification**\n- 已确认 `triage.md` 存在\n- 已校验 triage 顶部结构与所有必需章节齐全\n- 下一步可直接进入计划生成，按“字段矩阵对齐 UI 稿 + 核对相亲介绍字段来源”推进",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-30-30-735Z-5xsehn/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-30-30-735Z-5xsehn/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-30-30-735Z-5xsehn/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-251Z-s8pasv/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-251Z-s8pasv/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-251Z-s8pasv/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-251Z-s8pasv/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-251Z-s8pasv/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T11-30-30-735Z-5xsehn"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_4a582a6d3339",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.251Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "记录页看过我/我看过/收藏我嘉宾卡片资料字段与 UI 稿不一致",
+    "summary": "缺陷集中在记录页 `pages/message-record/index` 的嘉宾卡片信息区，范围至少覆盖以下 3 个场景：`看过我`、`我看过的`、`收藏我`。当前卡片资料字段与 UI 稿不一致，表现为部分字段缺失、部分字段多出，示例包括：应展示的年龄/出生年份样式、相亲介绍（相亲说明）未出现，或在无照片卡片中出现了不该出现的字段。",
+    "updatedAt": "2026-03-14T11:36:43.283Z"
   }
 }

@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-277Z-08sxfm",
   "kind": "bug",
-  "title": "搜索结果：目前黄金会员升级为至尊会员后，其搜索结果页底部的“开通至尊会员”悬浮按钮未及时更新（如图 1），正确应该按钮变为高亮按钮 “点击搜索嘉宾（今日剩1次机会）”，如图 1 的UI稿",
+  "title": "搜索结果页在黄金会员升级为至尊会员后底部悬浮按钮未及时切换为搜索按钮",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_e74b83c8b69e\n飞书状态: 待发版验证\n优先级: P0\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n搜索结果：目前黄金会员升级为至尊会员后，其搜索结果页底部的“开通至尊会员”悬浮按钮未及时更新（如图 1），正确应该按钮变为高亮按钮 “点击搜索嘉宾（今日剩1次机会）”，如图 1 的UI稿\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e74b83c8b69e/image.png\n- 1f6282883d3ada70427a2215748d2d52.jpg -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e74b83c8b69e/1f6282883d3ada70427a2215748d2d52.jpg",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.277Z",
-  "updatedAt": "2026-03-13T18:18:12.277Z",
+  "updatedAt": "2026-03-14T13:38:24.304Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T13-27-58-482Z-xryxh1",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T13:27:58.482Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/triage.md",
+      "taskId": "2026-03-14T13-27-58-483Z-4cxtjy",
+      "startedAt": "2026-03-14T13:27:58.486Z",
+      "completedAt": "2026-03-14T13:38:24.302Z",
+      "summary": "**Outcome**\n- 已完成分诊文档，结论是 `ready / generate_plan`，已写入 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/triage.md:1`。\n- 未修改产品代码；本阶段只做了清洗、上下文补全和落点判断。\n\n**Key Findings**\n- 搜索结果页底部 CTA 由 `isSupremeView` 分支控制，落点在 `pages/filter-result/index.wxml:97`。\n- 搜索结果页已具备“从会员中心返回后刷新”的逻辑：`pages/filter-result/index.ts:59` 和 `pages/filter-result/index.ts:281`。\n- 更可疑的缺口是当前页支付成功链路：`components/member-unlock-modal/index.ts:466` 支付成功后会触发 `paidsuccess`，但 `pages/filter-result/index.ts:563` 仅关闭弹窗，没有刷新会员态或重算 CTA。\n- 同类页面已有对照实现：`pages/index/index.ts:722`、`pages/exposure/index.ts:436`、`pages/message-record/index.ts:478` 都会在支付成功后主动刷新会员状态/权益。\n\n**Actionable Fixes**\n- 后续计划优先核查两条路径：`filter-result -> member-center -> 返回` 和 `filter-result -> member-unlock-modal -> 支付成功留在当前页`。\n- 若命中当前页弹窗支付路径，首选修复是补强 `pages/filter-result/index.ts:563`：支付成功后刷新 `memberStore`，并立即执行 `syncMemberViewState()` 或 `loadData(0)`。\n\n**Changed Files**\n- `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/triage.md:1`\n\n**Commands Run**\n- 运行了 `rg --files -g 'AGENTS.md'`、多组 `rg -n`、`sed -n`、`nl -ba`、`find design ...`。\n- 查看了两张附件：`image.png` 和 `1f6282883d3ada70427a2215748d2d52.jpg`。\n\n**Verification**\n- 已确认 `triage.md` 存在且头部结构完整，字段为 `readiness: ready`、`source_quality: high`、`next_action: generate_plan`。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-27-58-483Z-4cxtjy/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-27-58-483Z-4cxtjy/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-27-58-483Z-4cxtjy/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T13-27-58-483Z-4cxtjy"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_e74b83c8b69e",
@@ -46,5 +66,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.277Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "搜索结果页在黄金会员升级为至尊会员后底部悬浮按钮未及时切换为搜索按钮",
+    "summary": "在 `pages/filter-result/index` 搜索结果页中，用户原本处于黄金会员态时，底部固定悬浮 CTA 会展示非至尊态按钮“开通至尊会员（每天搜索6位）”。当用户完成“黄金会员 -> 至尊会员”升级后，当前搜索结果页未及时刷新为至尊会员态，底部 CTA 仍停留在“开通至尊会员”，而不是切换为高亮搜索按钮“点击搜索嘉宾（今日剩1次机会）”。",
+    "updatedAt": "2026-03-14T13:38:24.304Z"
   }
 }

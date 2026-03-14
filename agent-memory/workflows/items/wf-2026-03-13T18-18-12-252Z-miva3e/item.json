@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-252Z-miva3e",
   "kind": "bug",
-  "title": "搜索结果：非至尊会员身份，有过 1 次搜索记录，次日再点击金刚区进入时，目前是跳转到了搜索查找页，正确应跳转至搜索结果页",
+  "title": "非至尊会员次日从精准查找入口重进时错误落到筛选页，应复用最近一次搜索记录进入结果页",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_2e1530e4ebc9\n飞书状态: 待发版验证\n优先级: P0\n反馈日期: 2026-03-09\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n搜索结果：非至尊会员身份，有过 1 次搜索记录，次日再点击金刚区进入时，目前是跳转到了搜索查找页，正确应跳转至搜索结果页\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_2e1530e4ebc9/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.252Z",
-  "updatedAt": "2026-03-13T18:18:12.252Z",
+  "updatedAt": "2026-03-14T11:46:05.329Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T11-36-43-291Z-j9494j",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T11:36:43.291Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-252Z-miva3e/triage.md",
+      "taskId": "2026-03-14T11-36-43-292Z-rlzm0s",
+      "startedAt": "2026-03-14T11:36:43.294Z",
+      "completedAt": "2026-03-14T11:46:05.327Z",
+      "summary": "**Outcome**\n- 已写入 triage 产物：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-252Z-miva3e/triage.md:1`\n- 就绪结论：`ready`\n- 下一步建议：`generate_plan`\n\n**Key Findings**\n- 当前工作区首页和消息页入口仍是本地缓存判定：`pages/index/index.ts:471`、`pages/message/index.ts:253`，只看 `recommendStore.getFilterResultList()` / `getFilterRequirements()`，会把“次日仅服务端有历史记录”的用户导回 `pages/filter/index`。\n- 仓库里已有更合理的公共分流意图：`utils/filter-flow.ts:18` 会走“本地优先 + 最近一次搜索记录兜底”，说明正确方向不是新需求，而是已有方案未收口。\n- 当前工作区处于半回退状态；`npm run type-check -- --pretty false` 已报 `utils/filter-flow.ts:28` 缺少 `refreshLatestFilterSearchHistory`，证明历史分流链路在本地不完整。\n- 后端已提供 `/api/v1/match/search-history/latest`，且返回最近一次 `criteria`；后续修复应同时补齐 store/service 的历史条件恢复，避免只修路由、不恢复结果页摘要状态。\n\n**Changed Files**\n- `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-252Z-miva3e/triage.md:1`\n\n**Commands Run**\n- `find`, `rg`, `sed`, `nl`, `git log`, `git diff`, `git show`\n- `npm run type-check -- --pretty false`\n- 查看了附件：`/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_2e1530e4ebc9/image.png`\n\n**Verification**\n- 已确认 `triage.md` 存在且首部结构符合要求。\n- 未编辑产品代码。\n- 类型检查还暴露一个无关现存错误：`services/api-mapper.ts(797,5)` 重复属性；我未在本阶段处理。\n- 额外风险：当前 app 工作区有大量未提交改动，且正好触及 `pages/index/index.ts`、`pages/message/index.ts`、`services/guest.ts`、`store/recommendStore.ts`，后续计划应先确认基线再改。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-36-43-292Z-rlzm0s/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-36-43-292Z-rlzm0s/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-36-43-292Z-rlzm0s/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-252Z-miva3e/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-252Z-miva3e/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-252Z-miva3e/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-252Z-miva3e/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-252Z-miva3e/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T11-36-43-292Z-rlzm0s"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_2e1530e4ebc9",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.252Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "非至尊会员次日从精准查找入口重进时错误落到筛选页，应复用最近一次搜索记录进入结果页",
+    "summary": "当非至尊会员已经完成过 1 次精准搜索后，次日再次点击“精准查找 / 精准搜索”入口（飞书原文口语称“金刚区”）时，当前实际落到 `pages/filter/index` 的筛选表单页。期望行为应是复用最近一次搜索记录，直接进入 `pages/filter-result/index` 搜索结果页，而不是要求用户重新填写筛选条件。附件截图展示的正是错误落点：筛选表单页，而不是结果页。",
+    "updatedAt": "2026-03-14T11:46:05.329Z"
   }
 }

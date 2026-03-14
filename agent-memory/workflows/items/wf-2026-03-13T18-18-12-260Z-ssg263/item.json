@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-260Z-ssg263",
   "kind": "bug",
-  "title": "嘉宾消息：目前消息列表的家长编号与详情页的标号不一致，正确应一致",
+  "title": "嘉宾消息列表编号与详情页相亲编号不一致，应保持一致",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_ce6c773dbadf\n飞书状态: 待发版验证\n优先级: P0\n反馈日期: 2026-03-09\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n嘉宾消息：目前消息列表的家长编号与详情页的标号不一致，正确应一致\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_ce6c773dbadf/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.260Z",
-  "updatedAt": "2026-03-13T18:18:12.260Z",
+  "updatedAt": "2026-03-14T12:01:24.976Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T11-57-11-390Z-0up1u1",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T11:57:11.390Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-260Z-ssg263/triage.md",
+      "taskId": "2026-03-14T11-57-11-391Z-7mroi0",
+      "startedAt": "2026-03-14T11:57:11.398Z",
+      "completedAt": "2026-03-14T12:01:24.973Z",
+      "summary": "**Outcome**\n- 已完成 triage 归档，结论是 `ready`，建议进入 `generate_plan`；产物在 `/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-260Z-ssg263/triage.md:1`。\n- 本阶段未修改产品代码，只补充了缺陷清洗、仓库上下文、可能根因和后续修复方向。\n\n**Findings**\n- 消息列表编号来自 `pages/message/index.ts:96`，当前逻辑是 `conv.guest.matchId || childId尾段`，而详情页编号来自 `pages/guest-detail/index.ts:1437`，是 `guest.matchId || guest.id`，两边来源本就不统一。\n- 会话映射链在 `services/api-mapper.ts:1156`，但后端消息契约 `/Users/firingj/Projects/GodQinJia/internal/pkg/types/message_types.go:127` 的 `TargetChildInfo` 不含 `match_id`；因此高概率是会话列表接口拿不到标准相亲编号，前端才回退成 `child_id` 尾段。\n\n**Actionable Fixes**\n- 首选方案：后端会话列表补出 `target_child.match_id`，前端消息链路直接消费并统一到详情页同一编号。\n- 兜底方案：若短期不能改后端，前端基于 `child_id` 补拉详情或做缓存映射，再统一消息列表、聊天页资料卡、详情页的显示编号。\n\n**Changed Files**\n- 新增 `/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-260Z-ssg263/triage.md:1`。\n\n**Commands & Verification**\n- 运行了 `rg --files -g 'AGENTS.md'`、多组 `rg -n` / `sed -n` 读取 `agent-memory` 文档、前端页面/服务代码、后端消息类型与 Swagger；并查看了附件截图。\n- 已验证 `triage.md` 存在且开头结构符合要求；验证状态：`artifact written and checked`。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-57-11-391Z-7mroi0/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-57-11-391Z-7mroi0/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T11-57-11-391Z-7mroi0/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-260Z-ssg263/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-260Z-ssg263/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-260Z-ssg263/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-260Z-ssg263/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-260Z-ssg263/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T11-57-11-391Z-7mroi0"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_ce6c773dbadf",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.260Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "嘉宾消息列表编号与详情页相亲编号不一致，应保持一致",
+    "summary": "在 `pages/message/index` 的会话列表中，同一位嘉宾展示的编号与进入 `pages/guest-detail/index` 后展示的详情页编号不一致。当前用户反馈是“消息列表的家长编号与详情页的标号不一致，正确应一致”。结合现有前端实现可进一步归一化为：消息列表行内 `{{item.displayId}}` 与详情页 `相亲编号: {{view.matchId}}` 没有使用同一套编号来源，导致用户在消息列表识别到的对象编号，进入详情页后变成了另一串号码。期望行为是：同一嘉宾在消息列表、聊天/详情链路中应展示同一个对外编号，避免身份识别混乱。",
+    "updatedAt": "2026-03-14T12:01:24.976Z"
   }
 }

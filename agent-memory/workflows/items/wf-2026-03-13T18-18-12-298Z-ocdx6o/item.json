@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-298Z-ocdx6o",
   "kind": "bug",
-  "title": "户籍项已去掉，辛苦在资料页去掉该资料项",
+  "title": "相亲资料页移除“户籍”资料项",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_d67624ba8fb3\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-07\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n户籍项已去掉，辛苦在资料页去掉该资料项\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_d67624ba8fb3/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.298Z",
-  "updatedAt": "2026-03-13T18:18:12.298Z",
+  "updatedAt": "2026-03-14T14:42:46.794Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T14-35-03-195Z-doarsy",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T14:35:03.195Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-ocdx6o/triage.md",
+      "taskId": "2026-03-14T14-35-03-197Z-vmi6lm",
+      "startedAt": "2026-03-14T14:35:03.206Z",
+      "completedAt": "2026-03-14T14:42:46.789Z",
+      "summary": "**Outcome**\n- 已完成分诊产物，文件在 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-ocdx6o/triage.md:1`。\n- readiness 判定为 `ready`，`next_action` 为 `generate_plan`。\n- 本阶段未改动产品代码，只写了 tracker 侧分诊文档。\n\n**Findings**\n- 附件截图明确是 `相亲资料` 展示页，视觉上更接近 `pages/guest-detail/index`，但原始描述里的“资料页”仍有一点路由歧义。\n- 当前源码里，`pages/guest-detail/index.ts`、`pages/profile-preview/index.ts`、`pages/profile-edit/index.wxml` 都已不再显式渲染/编辑 `户籍`。\n- 现有静态探针已通过：`npx tsx src/tools/probes/guest-detail-remove-hukou-static-probe.ts`、`npx tsx src/tools/probes/profile-preview-remove-hukou-static-probe.ts`。\n- 残留面主要在数据和文档：`services/guest.ts` 仍回填 `hukou`，`types/guest.ts` 仍保留字段，`docs/实现现状分析.md` 仍有“户籍/籍贯替代”的旧说明。\n\n**Commands Run**\n- `rg -n \"户籍|hukou|相亲资料|转发\" ...`\n- `sed -n ...` 检查 `page-topology.md`、`project-knowledge.md`、相关页面与文档\n- `npx tsx src/tools/probes/guest-detail-remove-hukou-static-probe.ts`\n- `npx tsx src/tools/probes/profile-preview-remove-hukou-static-probe.ts`\n\n**Verification**\n- `triage.md` 已落盘并复核内容。\n- 两个“去掉户籍”静态探针均通过。\n- 结论是：当前仓库源码态看起来已满足需求，截图与源码存在“运行态/构建态不同步”或“重复提报”迹象。\n\n**Actionable Fixes**\n- 下一阶段先做运行态核验，确认截图对应的真实路由和当前构建版本。\n- 若运行态仍显示 `户籍`，优先排查 `pages/guest-detail/index` / `pages/profile-preview/index` 的源码与已编译 `.js` / 发布包是否不同步。\n- 若运行态已正常，可按“重复/已修复待发版验证”处理，并顺手清理 `services/guest.ts`、`types/guest.ts`、`docs/实现现状分析.md` 的陈旧 `hukou` 上下文。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T14-35-03-197Z-vmi6lm/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T14-35-03-197Z-vmi6lm/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T14-35-03-197Z-vmi6lm/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-ocdx6o/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-ocdx6o/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-ocdx6o/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-ocdx6o/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-ocdx6o/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T14-35-03-197Z-vmi6lm"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_d67624ba8fb3",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.298Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "相亲资料页移除“户籍”资料项",
+    "summary": "飞书缺陷反馈“户籍项已去掉，辛苦在资料页去掉该资料项”。附件截图显示 `相亲资料` 页面基础信息区仍外显一行 `户籍：浙江省杭州市萧山区`，与当前产品口径“神仙亲家不再展示/填写户籍”不一致。期望是资料页基础信息仅保留 `现居`、`家乡` 等字段，不再显示 `户籍`。",
+    "updatedAt": "2026-03-14T14:42:46.794Z"
   }
 }

@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-276Z-gck7xd",
   "kind": "bug",
-  "title": "黄金会员：选中黄金会员tab时，正确应有第 4 个子tab至尊会员",
+  "title": "会员中心：黄金会员页缺少第 4 个“至尊会员”子入口",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_863185b98485\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n黄金会员：选中黄金会员tab时，正确应有第 4 个子tab至尊会员\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_863185b98485/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.276Z",
-  "updatedAt": "2026-03-13T18:18:12.276Z",
+  "updatedAt": "2026-03-14T13:20:22.800Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T13-10-46-082Z-3muqky",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T13:10:46.082Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-gck7xd/triage.md",
+      "taskId": "2026-03-14T13-10-46-082Z-6xnmfg",
+      "startedAt": "2026-03-14T13:10:46.084Z",
+      "completedAt": "2026-03-14T13:20:22.797Z",
+      "summary": "**Outcome**\n- 已完成 triage，并写入 `readiness: ready`、`next_action: generate_plan` 到 `/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-gck7xd/triage.md:1`。\n- 本阶段未修改产品代码，只补充了缺陷清洗与仓库上下文。\n\n**Findings**\n- 前端其实已经预留“黄金页第 4 个至尊入口卡”逻辑：`pages/member-center/index.ts:33`、`pages/member-center/index.ts:150`、`pages/member-center/index.ts:353`。\n- 若现场仍只显示 3 张卡，更可能是数据链路问题而非纯样式问题：`services/api-mapper.ts:1076` 的套餐映射、`/api/v1/membership/plans` 返回值，或后端在售商品缺少 `supreme_forever`；组件渲染层 `components/pages/member-center/member-center-gold-plans/index.wxml:1` / `components/pages/member-center/member-center-gold-plans/index.wxss:1` 只是按数组渲染。\n- 后端也明确支持第 4 种套餐 `supreme_forever`：`/Users/firingj/Projects/GodQinJia/internal/apiserver/service/membership.go:113`、`/Users/firingj/Projects/GodQinJia/internal/apiserver/service/membership.go:492`。\n\n**Changed / Commands**\n- 变更文件：`/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-gck7xd/triage.md:1`。\n- 运行了 `rg`、`sed`、`nl`、`python3` 检查 tracker 文档、会员中心页面/组件、OpenAPI、后端会员服务；并用 `view_image` 查看了缺陷截图和本地设计稿。\n\n**Verification**\n- 已校验 `triage.md` 存在且头部结构符合要求。\n- readiness 结论：`ready`；下一步建议直接进入 `generate_plan`，优先核对 failing 环境 `/api/v1/membership/plans` 是否缺少 `supreme_forever`。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-10-46-082Z-6xnmfg/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-10-46-082Z-6xnmfg/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T13-10-46-082Z-6xnmfg/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-gck7xd/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-gck7xd/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-gck7xd/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-gck7xd/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-276Z-gck7xd/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T13-10-46-082Z-6xnmfg"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_863185b98485",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.276Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "会员中心：黄金会员页缺少第 4 个“至尊会员”子入口",
+    "summary": "会员中心页面在顶部选中“黄金会员”后，套餐横向选择区按反馈应展示 4 个子入口（3 个黄金套餐 + 1 个“至尊会员”入口）。当前附件截图仅看到 3 个黄金套餐卡，缺少第 4 个“至尊会员”入口卡，导致用户无法在黄金页内直接切到至尊会员入口位。",
+    "updatedAt": "2026-03-14T13:20:22.800Z"
   }
 }

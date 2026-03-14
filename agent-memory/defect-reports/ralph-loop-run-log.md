@@ -588,3 +588,23 @@
   - `npm run build`
 - page/static probe passed:
   - `chat-voice-recall-static-probe.ts`
+
+## 2026-03-14 19:04 +0800 Ralph Loop
+
+### queue processing summary
+- Preflight passed: `/Users/firingj/Projects/immortal-in-laws` and `/Users/firingj/Projects/immortal-in-laws-e2e` writable.
+- Online Feishu queue pull succeeded (no TSV fallback used).
+- Processed only current issue this round and stopped after a non-completed result.
+
+### issue results
+- `bug_1f48ad04f1d5` (`rowHash: 7a2d9200a106315b54ce81d9f179e6b823f73743`) -> mark command used `failed`; queue normalized to `pending` (`consecutiveFailures=1`).
+  - fix: chat bottom action buttons now hide `拨打电话` when counterparty phone is empty and keep remaining buttons left-aligned with fixed pill width.
+  - code: `/Users/firingj/Projects/immortal-in-laws/pages/chat/index.wxml`, `/Users/firingj/Projects/immortal-in-laws/components/pages/chat/chat-action-buttons/index.ts`, `/Users/firingj/Projects/immortal-in-laws/components/pages/chat/chat-action-buttons/index.wxml`, `/Users/firingj/Projects/immortal-in-laws/components/pages/chat/chat-action-buttons/index.wxss`.
+  - blocker: app repo currently contains unresolved merge conflict markers in `/Users/firingj/Projects/immortal-in-laws/pages/chat/index.ts` and `/Users/firingj/Projects/immortal-in-laws/pages/filter/index.ts`, so full `type-check/build` cannot pass.
+
+### validation
+- app repo checks (executed, failed due existing conflict markers):
+  - `npm run type-check`
+  - `npm run build`
+- page/static probe passed:
+  - `chat-call-button-visibility-static-probe.ts`

@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-272Z-cvdk0f",
   "kind": "bug",
-  "title": "交换照片：至尊会员身份，点击“交换照片”按钮，错误弹框提示“登记资料”，测试号 15717136585",
+  "title": "至尊会员在嘉宾详情点击“交换照片”被误弹“去登记资料”",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_69f52e9040b0\n飞书状态: 待发版验证\n优先级: P0\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n交换照片：至尊会员身份，点击“交换照片”按钮，错误弹框提示“登记资料”，测试号 15717136585\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_69f52e9040b0/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.272Z",
-  "updatedAt": "2026-03-13T18:18:12.272Z",
+  "updatedAt": "2026-03-14T12:45:05.797Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T12-39-11-210Z-56owrg",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T12:39:11.210Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-272Z-cvdk0f/triage.md",
+      "taskId": "2026-03-14T12-39-11-210Z-u92hyu",
+      "startedAt": "2026-03-14T12:39:11.214Z",
+      "completedAt": "2026-03-14T12:45:05.794Z",
+      "summary": "**Outcome**\n- 已完成 triage，结论是 `readiness: ready`，`next_action: generate_plan`。\n- 我把缺陷归一为：`至尊会员在嘉宾详情点击“交换照片”被误弹“去登记资料”`。\n\n**Findings**\n- 截图与代码都指向 `pages/guest-detail/index`，不是 `pages/member-center/index`；按钮在 `pages/guest-detail/index.wxml:74`，错误弹窗在 `pages/guest-detail/index.wxml:269`。\n- 详情页当前会先检查 `selfExchangePhotoUrl`，为空就直接弹“去登记资料”，见 `pages/guest-detail/index.ts:918` 和 `pages/guest-detail/index.ts:1042`。\n- 详情页没有走已有的 `requestPhotoExchange()` 接口，而是手动 `createConversation()` + `sendImageMessage()`，与后端交换照片时序文档不一致，见 `services/message.ts:490` 和 `pages/guest-detail/index.ts:1059`。\n- 按需求文档，交换照片应优先走“会员/剩余联系次数”判断，权限不足时才提示“立即解锁”，见 `/Users/firingj/Projects/GodQinJia/docs/xuqiu.md:73` 和 `/Users/firingj/Projects/GodQinJia/docs/modules/06-消息模块-交换照片前端接入指南.md:34`。\n\n**Changed Files**\n- 新增 ` /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-272Z-cvdk0f/triage.md`\n\n**Commands Run**\n- 用 `rg` 搜索 `交换照片` / `去登记` / `photo_exchange` 相关代码与文档。\n- 读取了 `agent-memory/page-topology.md`、`agent-memory/project-knowledge.md`、`design/4.项目结构分析/项目结构分析.md`、相关 TS/WXML/后端文档。\n- 校验了 `triage.md` 已生成且内容结构正确。\n\n**Verification**\n- 已验证 `triage.md` 存在且以要求的结构开头。\n- 未修改产品代码；本阶段仅做清洗、定位和上下文补强。\n\n如果你要，我下一步可以直接进入 `generate_plan`，把修复路径拆成可执行方案。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-39-11-210Z-u92hyu/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-39-11-210Z-u92hyu/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T12-39-11-210Z-u92hyu/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-272Z-cvdk0f/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-272Z-cvdk0f/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-272Z-cvdk0f/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-272Z-cvdk0f/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-272Z-cvdk0f/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T12-39-11-210Z-u92hyu"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_69f52e9040b0",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.272Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "至尊会员在嘉宾详情点击“交换照片”被误弹“去登记资料”",
+    "summary": "- 使用测试号 `15717136585`，在嘉宾详情页的“交换照片”入口点击后，当前弹出的是“您还未登记孩子的相亲资料 / 去登记”弹窗，而不是进入交换照片流程。",
+    "updatedAt": "2026-03-14T12:45:05.797Z"
   }
 }

@@ -2,23 +2,43 @@
   "version": 1,
   "id": "wf-2026-03-13T18-18-12-298Z-eazj9m",
   "kind": "bug",
-  "title": "我解锁的：1）24 小时内解锁我的展示逻辑搞反了，不在当前tab，而在“解锁的的tab”，且按钮没有“已过期”状态；2）我解锁tab的所有嘉宾，无论会员身份与否，都无阻断",
+  "title": "解锁记录页：解锁我 24 小时时效展示与权限规则异常，且“我解锁的”阻断预期待确认",
   "source": "feishu",
   "rawInput": "飞书缺陷 ID: bug_d4c1f46944dc\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-07\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n我解锁的：1）24 小时内解锁我的展示逻辑搞反了，不在当前tab，而在“解锁的的tab”，且按钮没有“已过期”状态；2）我解锁tab的所有嘉宾，无论会员身份与否，都无阻断\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_d4c1f46944dc/image.png",
   "cwd": "/Users/firingj/Projects/immortal-in-laws",
   "priority": "P0",
   "stage": "intake",
   "createdAt": "2026-03-13T18:18:12.298Z",
-  "updatedAt": "2026-03-13T18:18:12.298Z",
+  "updatedAt": "2026-03-14T14:35:03.183Z",
   "approvals": [],
-  "phaseRuns": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T14-23-10-840Z-161j6n",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T14:23:10.840Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/triage.md",
+      "taskId": "2026-03-14T14-23-10-841Z-kjlwjj",
+      "startedAt": "2026-03-14T14:23:10.843Z",
+      "completedAt": "2026-03-14T14:35:03.176Z",
+      "summary": "**Outcome**\n- 已完成分诊并写入 ` /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/triage.md:1`。\n- 结论是 `readiness=needs_human`、`next_action=manual_triage`，因为工单第 2 条与 PRD 现文冲突，不能直接进入计划生成。\n\n**Concrete Findings**\n- PRD 明确写的是：`解锁我` 有 24 小时免费查看/过期/会员阻断规则，而 `我解锁的` 本来就“不阻断”：`design/1.需求文档/神仙亲家--小程序产品需求文档.md:144`。\n- 前端已确认存在一处真实风险：`pages/message-record/index.ts:407` 对两个解锁 tab 都直接放行聊天，`解锁我` 没有按 24 小时/会话/会员态阻断。\n- 但“24 小时逻辑被展示到错误 tab”这点，静态 FE 路由和 helper 没看出显式取反；更像需要抓 `/api/v1/interaction/unlocked-me` 与 `/api/v1/interaction/my-unlocks` 的真实响应确认。\n- 后端也有相关上下文：`/Users/firingj/Projects/GodQinJia/internal/apiserver/handler/interaction.go:422`、`/Users/firingj/Projects/GodQinJia/internal/pkg/converter/interaction.go:45`。\n\n**Changed Files**\n- 新增分诊工件：`/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/triage.md:1`\n- 未修改产品代码。\n\n**Commands Run**\n- 查看了 `AGENTS.md`、workflow `item.json`、`page-topology.md`、`project-knowledge.md`、PRD、相关前后端源码，并读取了附件 `image.png`。\n- 重点排查了 `pages/message-record/index.ts`、`pages/message-record/helpers.ts`、`services/record.ts`、后端 interaction handler/service/converter。\n\n**Verification**\n- 已确认 `triage.md` 文件存在且结构符合要求。\n- 未运行测试；本阶段仅做 triage 与上下文补全。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T14-23-10-841Z-kjlwjj/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T14-23-10-841Z-kjlwjj/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T14-23-10-841Z-kjlwjj/summary.txt"
+    }
+  ],
   "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/triage.md",
     "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/plan.md",
     "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/reproduction.md",
     "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/verification.md",
     "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/writeback.md"
   },
-  "linkedDaemonTaskIds": [],
+  "linkedDaemonTaskIds": [
+    "2026-03-14T14-23-10-841Z-kjlwjj"
+  ],
   "sourceMeta": {
     "kind": "feishu-defect",
     "externalIssueId": "bug_d4c1f46944dc",
@@ -40,5 +60,13 @@
       }
     ],
     "syncedAt": "2026-03-13T18:18:12.298Z"
+  },
+  "triage": {
+    "status": "needs_human",
+    "sourceQuality": "medium",
+    "nextAction": "manual_triage",
+    "normalizedTitle": "解锁记录页：解锁我 24 小时时效展示与权限规则异常，且“我解锁的”阻断预期待确认",
+    "summary": "该缺陷落在 `pages/message-record/index` 的“解锁记录”页，原始描述混用了“解锁我 / 我解锁的”两个 tab，需要拆成两部分理解：",
+    "updatedAt": "2026-03-14T14:35:03.183Z"
   }
 }
