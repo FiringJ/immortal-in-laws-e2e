@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-243Z-5n1f42",
+  "kind": "bug",
+  "title": "会员阻断：我看过/看过我、收藏我/我收藏、解锁我/我解锁的 6 个tab嘉宾列表页，其对应阻断逻辑详见prd，以prd为准",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_5e0d51145e36\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-10\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n会员阻断：我看过/看过我、收藏我/我收藏、解锁我/我解锁的 6 个tab嘉宾列表页，其对应阻断逻辑详见prd，以prd为准",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.243Z",
+  "updatedAt": "2026-03-13T18:18:12.243Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-243Z-5n1f42/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-243Z-5n1f42/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-243Z-5n1f42/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-243Z-5n1f42/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_5e0d51145e36",
+    "externalRowHash": "948a5d0266b905acf04b5d318467859e46043e7c",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-10",
+    "notes": "",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.243Z"
+  }
+}

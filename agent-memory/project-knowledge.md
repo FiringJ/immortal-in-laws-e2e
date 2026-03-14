@@ -70,8 +70,16 @@
     - tap the bottom `消息` tab directly
     - assert the message list page before tapping the first conversation row
     - use direct button centers for `交换微信 / 拨打电话 / 发送照片`
-    - use the latest outgoing green bubble center for long-press validation
+  - use the latest outgoing green bubble center for long-press validation
   - on chat modals, hide the bottom fixed action bar while the modal is open; otherwise WeChat Mini Program fixed-layer composition can make the base action bar overlap the sheet
+
+## Message Record Restoration Notes
+
+- `components/pages/message-record/record-action-sheet` is shared by multiple record tabs and action-count variants.
+- Do not force one fixed sheet height across all record-tab action sheets:
+  - two-action states such as `看过我-选择操作` need a compact bottom sheet around the `470rpx` design height
+  - three/four-action states can keep the taller grid layout
+- In miniapp rendering, the bottom safe-area inset amplifies blank space quickly, so a tall shared `min-height` that looks acceptable for four items will look obviously wrong for two items.
 
 ## Exposure Entry Rules
 

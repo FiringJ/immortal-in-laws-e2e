@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-334Z-fqt9n9",
+  "kind": "bug",
+  "title": "屏蔽的人：列表右侧错误显示为了家长头像，正确应为孩子照片（如未解锁还应模糊处理）",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_94bd86e61a0a\n飞书状态: 新增\n优先级: P1\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n屏蔽的人：列表右侧错误显示为了家长头像，正确应为孩子照片（如未解锁还应模糊处理）\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_94bd86e61a0a/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P1",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.334Z",
+  "updatedAt": "2026-03-13T18:18:12.334Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-334Z-fqt9n9/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-334Z-fqt9n9/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-334Z-fqt9n9/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-334Z-fqt9n9/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_94bd86e61a0a",
+    "externalRowHash": "b3ea6d7b17c787a67ab63dfe6378ea7540ab76ae",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-08",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_94bd86e61a0a/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=NqmAbyREBoqyewxMQ2EcwDFLnRf",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.334Z"
+  }
+}

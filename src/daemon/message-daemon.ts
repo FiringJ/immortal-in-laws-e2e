@@ -2,22 +2,19 @@ require('../../setup-env.js');
 
 import express from 'express';
 import type { Server } from 'http';
-import fs from 'fs';
 import path from 'path';
+import { AgentExecutor, getDefaultAgent, type TaskRecord, type TaskRequest } from './agent-executor';
 import {
-  AgentExecutor,
-  getDefaultAgent,
-  normalizeAgent,
-  parseAgentDirective,
-  type TaskRecord,
-  type TaskRequest,
-} from './agent-executor';
-import { notifyTaskResult } from './feishu-notifier';
-
-type TaskListQuery = {
-  status?: string;
-  limit?: string;
-};
+  buildForceFinalAnswerTask,
+  generateTaskId,
+  isPlanOnlySummary,
+  normalizeTaskRequest,
+  toTaskSummary,
+  type TaskListQuery,
+} from './task-utils';
+import { notifyTaskResult, sendFeishuText } from './feishu-notifier';
+import { WorkflowService } from '../workflow/service';
+import { syncFeishuDefectSource } from '../tools/feishu/feishu-defect-source';
 
 const PLAN_ONLY_RETRY_MAX = Math.max(0, parseInt(process.env.DAEMON_PLAN_ONLY_RETRY_MAX || '0', 10) || 0);
 const FEISHU_EVENT_DEDUP_WINDOW_MS = Math.max(
@@ -25,183 +22,20 @@ const FEISHU_EVENT_DEDUP_WINDOW_MS = Math.max(
   parseInt(process.env.DAEMON_FEISHU_EVENT_DEDUP_WINDOW_MS || '600000', 10) || 600_000,
 );
 
-function generateTaskId(): string {
-  return `${new Date().toISOString().replace(/[:.]/g, '-')}-${Math.random().toString(36).slice(2, 8)}`;
-}
+type WorkflowListQuery = {
+  kind?: string;
+  source?: string;
+  stage?: string;
+  status?: string;
+  limit?: string;
+};
 
-function resolveTaskCwd(input: Partial<TaskRequest>, parsedTask: string): string {
-  if (input.cwd) {
-    return path.resolve(input.cwd);
-  }
-
-  const trackerRoot = path.resolve(process.env.DAEMON_WORKSPACE_ROOT || process.cwd());
-  const appRootRaw = process.env.APP_REPO_PATH;
-  const appRoot = appRootRaw ? path.resolve(appRootRaw) : undefined;
-  const hasAppRoot = Boolean(appRoot && fs.existsSync(appRoot));
-
-  if (input.source === 'feishu') {
-    const mode = (process.env.DAEMON_FEISHU_DEFAULT_CWD || 'app').trim().toLowerCase();
-
-    if (mode === 'tracker' || mode === 'e2e') {
-      return trackerRoot;
-    }
-
-    if (mode === 'auto') {
-      const lower = parsedTask.toLowerCase();
-      const trackerHints = ['daemon', 'e2e', 'webhook', 'launchctl', 'ngrok', 'notifier', 'message-daemon'];
-      const shouldUseTracker = trackerHints.some((token) => lower.includes(token));
-      if (shouldUseTracker || !hasAppRoot) {
-        return trackerRoot;
-      }
-      return appRoot as string;
-    }
-
-    if (hasAppRoot) {
-      return appRoot as string;
-    }
-    return trackerRoot;
-  }
-
-  return trackerRoot;
-}
-
-function normalizeTaskRequest(input: Partial<TaskRequest>): TaskRequest {
-  const parsed = parseAgentDirective(String(input.task || ''));
-  const agent = normalizeAgent(input.agent) || parsed.agent || getDefaultAgent();
-  const cwd = resolveTaskCwd(input, parsed.task);
-
-  return {
-    task: parsed.task,
-    source: input.source || 'http',
-    userId: input.userId,
-    metadata: input.metadata,
-    agent,
-    cwd,
-    addDirs: input.addDirs,
-    timeoutMs: input.timeoutMs,
-    model: input.model,
-  };
-}
-
-function toTaskSummary(task: TaskRecord): Record<string, unknown> {
-  return {
-    id: task.id,
-    task: task.task,
-    source: task.source,
-    userId: task.userId,
-    agent: task.agent,
-    cwd: task.cwd,
-    status: task.status,
-    createdAt: task.createdAt,
-    startedAt: task.startedAt,
-    completedAt: task.completedAt,
-    durationMs: task.durationMs,
-    exitCode: task.exitCode,
-    signal: task.signal,
-    error: task.error,
-    stdoutPath: task.stdoutPath,
-    stderrPath: task.stderrPath,
-    summaryPath: task.summaryPath,
-    summary: task.summary,
-  };
-}
-
-function isPlanOnlySummary(summary: string): boolean {
-  const text = summary.trim();
-  if (!text) {
-    return true;
-  }
-
-  const strongPlanPrefixes = [
-    /^我接下来会/,
-    /^接下来会/,
-    /^下一步会/,
-    /^我会先/,
-    /^先从/,
-  ];
-  if (strongPlanPrefixes.some((pattern) => pattern.test(text))) {
-    return true;
-  }
-
-  const planPatterns = [
-    '接下来会',
-    '下一步会',
-    '我会先',
-    '先从',
-    '然后会',
-    '下一步',
-    '计划',
-    '后续',
-    'I will',
-    'next I will',
-    'next step',
-  ];
-  const donePatterns = [
-    '已完成',
-    '已修复',
-    '已验证',
-    '验证通过',
-    '结论：',
-    '结论是',
-    '根因：',
-    '根因是',
-    '确认存在',
-    '确认不存在',
-    '问题存在',
-    '问题不存在',
-    '最终结论',
-    'final conclusion',
-    'root cause:',
-    'verified',
-    'resolved',
-  ];
-  const blockerPatterns = [
-    '阻塞',
-    '无法继续',
-    '缺少权限',
-    '缺少数据',
-    'hard blocker',
-    'blocked by',
-  ];
-
-  const hasPlanSignal = planPatterns.some((token) => text.includes(token));
-  const hasDoneSignal = donePatterns.some((token) => text.includes(token));
-  const hasBlockerSignal = blockerPatterns.some((token) => text.includes(token));
-
-  if (hasPlanSignal && hasBlockerSignal && !hasDoneSignal) {
-    return false;
-  }
-
-  return hasPlanSignal && !hasDoneSignal;
-}
-
-function buildForceFinalAnswerTask(taskText: string): string {
-  return `${taskText}
-
-【强制收敛要求】
-你上一次输出只有计划/下一步，没有最终结论。
-本次必须直接给出：
-1) 是否存在该问题（明确结论）；
-2) 根因定位（文件/接口/条件分支）；
-3) 可执行修复方案（必要时给代码修改点）；
-4) 验证步骤与预期结果。
-禁止只写“接下来会/下一步会/我会先…”这类计划语句后结束。`;
-}
-
-/**
- * Daemon：消息接收 + 执行器
- *
- * 职责：
- * 1. 接收 HTTP / 飞书任务
- * 2. 入队并自动串行执行
- * 3. 通过 codex / claude / cursor-agent CLI 驱动本地 agent
- * 4. 暴露任务状态与日志查询接口
- */
 export class Daemon {
   private readonly app: express.Application;
   private readonly port: number;
   private readonly executor: AgentExecutor;
   private readonly tasks: TaskRecord[];
+  private readonly workflowService: WorkflowService;
   private readonly seenFeishuEventKeys: Map<string, number>;
   private server?: Server;
   private isProcessing: boolean;
@@ -215,6 +49,11 @@ export class Daemon {
     this.seenFeishuEventKeys = new Map();
     this.isProcessing = false;
     this.stopping = false;
+    this.workflowService = new WorkflowService({
+      trackerRoot: path.resolve(process.env.DAEMON_WORKSPACE_ROOT || process.cwd()),
+      scheduleTask: (request) => this.enqueueTask(request),
+      log: (message) => console.log(message),
+    });
 
     this.setupMiddleware();
     this.setupRoutes();
@@ -262,41 +101,16 @@ export class Daemon {
         runningTaskId: this.runningTask?.id || null,
         defaultAgent: getDefaultAgent(),
         installedAgents: this.executor.getInstalledAgents(),
+        workflowItems: this.workflowService.listItems({ limit: '500' }).length,
+        activeTriageBatchId: this.workflowService.listTriageBatches(1).activeBatchId || null,
+        activePlanBatchId: this.workflowService.listPlanBatches(1).activeBatchId || null,
         timestamp: new Date().toISOString(),
       });
     });
 
     this.app.post('/task', async (req, res) => {
       try {
-        const request = normalizeTaskRequest(req.body || {});
-
-        if (!request.task) {
-          return res.status(400).json({
-            success: false,
-            error: '缺少 task 字段',
-          });
-        }
-
-        const record: TaskRecord = {
-          ...request,
-          id: generateTaskId(),
-          status: 'queued',
-          createdAt: new Date().toISOString(),
-        };
-
-        console.log('\n========================================');
-        console.log('📨 收到新任务');
-        console.log('========================================');
-        console.log(`任务 ID: ${record.id}`);
-        console.log(`任务: ${record.task}`);
-        console.log(`来源: ${record.source || 'unknown'}`);
-        console.log(`Agent: ${record.agent}`);
-        console.log(`目录: ${record.cwd}`);
-        console.log('');
-
-        this.tasks.push(record);
-        void this.processQueue();
-
+        const record = this.enqueueTask(req.body || {});
         return res.status(202).json({
           success: true,
           message: '任务已加入队列并等待执行',
@@ -313,7 +127,6 @@ export class Daemon {
       }
     });
 
-    // 兼容旧消费者：仅预览下一个任务，不再 claim/shift。
     this.app.get('/task/next', (req, res) => {
       const task = this.queuedTasks[0] || this.runningTask;
 
@@ -380,6 +193,214 @@ export class Daemon {
       });
     });
 
+    this.app.get('/workbench', (req, res) => {
+      res.type('html').send(this.workflowService.renderWorkbench());
+    });
+
+    this.app.post('/workflow/items', (req, res) => {
+      try {
+        const item = this.workflowService.createItem({
+          ...req.body,
+          source: 'manual',
+        });
+        return res.status(201).json({
+          success: true,
+          item,
+        });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        return res.status(400).json({
+          success: false,
+          error: message,
+        });
+      }
+    });
+
+    this.app.get('/workflow/board', (req, res) => {
+      return res.json({
+        success: true,
+        ...this.workflowService.getBoard(req.query as WorkflowListQuery),
+      });
+    });
+
+    this.app.get('/workflow/items', (req, res) => {
+      const query = req.query as WorkflowListQuery;
+      const items = this.workflowService.listItems(query);
+      return res.json({
+        success: true,
+        total: items.length,
+        items,
+      });
+    });
+
+    this.app.get('/workflow/items/:id', (req, res) => {
+      try {
+        return res.json({
+          success: true,
+          ...this.workflowService.getItemDetail(req.params.id),
+        });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        return res.status(404).json({
+          success: false,
+          error: message,
+        });
+      }
+    });
+
+    this.app.get('/workflow/items/:id/source-attachments/:index', (req, res) => {
+      try {
+        const attachmentIndex = Math.max(0, parseInt(req.params.index, 10) || 0);
+        const filePath = this.workflowService.getSourceAttachmentPath(req.params.id, attachmentIndex);
+        if (!filePath) {
+          return res.status(404).json({
+            success: false,
+            error: '附件不存在',
+          });
+        }
+        return res.sendFile(filePath);
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        return res.status(404).json({
+          success: false,
+          error: message,
+        });
+      }
+    });
+
+    this.app.post('/workflow/items/:id/actions', (req, res) => {
+      try {
+        const item = this.workflowService.handleAction(req.params.id, req.body || {});
+        return res.json({
+          success: true,
+          item,
+        });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        return res.status(400).json({
+          success: false,
+          error: message,
+        });
+      }
+    });
+
+    this.app.post('/workflow/triage-batches', (req, res) => {
+      try {
+        const batch = this.workflowService.createDefaultBugTriageBatch();
+        return res.status(201).json({
+          success: true,
+          batch,
+        });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        return res.status(400).json({
+          success: false,
+          error: message,
+        });
+      }
+    });
+
+    this.app.get('/workflow/triage-batches', (req, res) => {
+      try {
+        const limit = typeof req.query.limit === 'string' ? req.query.limit : undefined;
+        return res.json({
+          success: true,
+          ...this.workflowService.listTriageBatches(limit),
+        });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        return res.status(400).json({
+          success: false,
+          error: message,
+        });
+      }
+    });
+
+    this.app.get('/workflow/triage-batches/:id', (req, res) => {
+      try {
+        return res.json({
+          success: true,
+          batch: this.workflowService.getTriageBatch(req.params.id),
+        });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        return res.status(404).json({
+          success: false,
+          error: message,
+        });
+      }
+    });
+
+    this.app.post('/workflow/plan-batches', (req, res) => {
+      try {
+        const batch = this.workflowService.createDefaultBugPlanBatch();
+        return res.status(201).json({
+          success: true,
+          batch,
+        });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        return res.status(400).json({
+          success: false,
+          error: message,
+        });
+      }
+    });
+
+    this.app.get('/workflow/plan-batches', (req, res) => {
+      try {
+        const limit = typeof req.query.limit === 'string' ? req.query.limit : undefined;
+        return res.json({
+          success: true,
+          ...this.workflowService.listPlanBatches(limit),
+        });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        return res.status(400).json({
+          success: false,
+          error: message,
+        });
+      }
+    });
+
+    this.app.get('/workflow/plan-batches/:id', (req, res) => {
+      try {
+        return res.json({
+          success: true,
+          batch: this.workflowService.getPlanBatch(req.params.id),
+        });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        return res.status(404).json({
+          success: false,
+          error: message,
+        });
+      }
+    });
+
+    this.app.post('/workflow/sources/feishu-defects/sync', async (req, res) => {
+      try {
+        const syncResult = await syncFeishuDefectSource({
+          sourceUrl: req.body?.sourceUrl,
+          targetSection: req.body?.section,
+          trackerRoot: path.resolve(process.env.DAEMON_WORKSPACE_ROOT || process.cwd()),
+        });
+        const importResult = this.workflowService.syncFeishuDefectItems(syncResult.defects);
+        return res.json({
+          success: true,
+          sync: syncResult,
+          import: importResult,
+        });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.error('[Daemon] 同步飞书缺陷失败:', error);
+        return res.status(500).json({
+          success: false,
+          error: message,
+        });
+      }
+    });
+
     this.app.post('/feishu/webhook', async (req, res) => {
       try {
         const event = req.body;
@@ -396,6 +417,7 @@ export class Daemon {
           const appId = String(event.header?.app_id || event.app_id || '');
           const messageId = String(message?.message_id || '');
           const chatId = String(message?.chat_id || '');
+          const userId = event.event?.sender?.sender_id?.user_id;
           const dedupKey = eventId || messageId;
 
           if (dedupKey && this.isDuplicateFeishuEvent(dedupKey)) {
@@ -425,27 +447,45 @@ export class Daemon {
           }
           console.log('');
 
-          const request = normalizeTaskRequest({
-            task: text,
+          const parsed = this.workflowService.parseFeishuCommand(text);
+          if (!parsed.matched) {
+            await this.replyFeishuMessage({ messageId, chatId }, parsed.usage, 'workflow-usage');
+            return res.json({
+              success: true,
+              ignored: true,
+              reason: 'missing workflow prefix',
+            });
+          }
+
+          const item = this.workflowService.createItem({
+            kind: parsed.kind,
+            title: parsed.rawInput.split('\n')[0] || parsed.rawInput,
+            rawInput: parsed.rawInput,
+            preferredAgent: parsed.preferredAgent,
             source: 'feishu',
-            userId: event.event?.sender?.sender_id?.user_id,
-            metadata: event,
+            sourceContext: {
+              userId,
+              messageId,
+              chatId,
+            },
           });
 
-          const record: TaskRecord = {
-            ...request,
-            id: generateTaskId(),
-            status: 'queued',
-            createdAt: new Date().toISOString(),
-          };
-
-          this.tasks.push(record);
-          void this.processQueue();
+          await this.replyFeishuMessage(
+            { messageId, chatId },
+            [
+              `已创建${parsed.kind === 'bug' ? ' Bug ' : '需求 '}工作项`,
+              `标题: ${item.title}`,
+              `ID: ${item.id}`,
+              `当前阶段: ${item.stage}`,
+              `工作台: http://localhost:${this.port}/workbench`,
+            ].join('\n'),
+            `workflow-item-${item.id}`,
+          );
 
           return res.json({
             success: true,
-            taskId: record.id,
-            agent: record.agent,
+            workflowItemId: item.id,
+            stage: item.stage,
           });
         }
 
@@ -459,6 +499,53 @@ export class Daemon {
         });
       }
     });
+  }
+
+  private enqueueTask(input: Partial<TaskRequest>): TaskRecord {
+    const request = normalizeTaskRequest(input);
+
+    if (!request.task) {
+      throw new Error('缺少 task 字段');
+    }
+
+    const record: TaskRecord = {
+      ...request,
+      id: generateTaskId(),
+      status: 'queued',
+      createdAt: new Date().toISOString(),
+    };
+
+    console.log('\n========================================');
+    console.log('📨 收到新任务');
+    console.log('========================================');
+    console.log(`任务 ID: ${record.id}`);
+    console.log(`任务: ${record.task.split('\n')[0]}`);
+    console.log(`来源: ${record.source || 'unknown'}`);
+    console.log(`Agent: ${record.agent}`);
+    console.log(`目录: ${record.cwd}`);
+    if (record.workflowItemId) {
+      console.log(`Workflow Item: ${record.workflowItemId} / ${record.workflowPhase}`);
+    }
+    console.log('');
+
+    this.tasks.push(record);
+    void this.processQueue();
+    return record;
+  }
+
+  private async replyFeishuMessage(
+    context: {
+      messageId?: string;
+      chatId?: string;
+    },
+    text: string,
+    uuidPrefix: string,
+  ): Promise<void> {
+    try {
+      await sendFeishuText(context, text, uuidPrefix);
+    } catch (error) {
+      console.error('[Daemon] 飞书即时回复失败:', error);
+    }
   }
 
   private async processQueue(): Promise<void> {
@@ -485,6 +572,7 @@ export class Daemon {
   private async runTask(task: TaskRecord): Promise<void> {
     task.status = 'running';
     task.startedAt = new Date().toISOString();
+    this.workflowService.handleTaskUpdate(task);
 
     console.log('\n========================================');
     console.log('🤖 开始执行任务');
@@ -492,7 +580,7 @@ export class Daemon {
     console.log(`任务 ID: ${task.id}`);
     console.log(`Agent: ${task.agent}`);
     console.log(`目录: ${task.cwd}`);
-    console.log(`任务: ${task.task}`);
+    console.log(`任务: ${task.task.split('\n')[0]}`);
     console.log('');
 
     try {
@@ -543,6 +631,7 @@ export class Daemon {
       console.error(`[Daemon] 任务 ${task.id} 执行失败:`, error);
     }
 
+    this.workflowService.handleTaskUpdate(task);
     await this.notifyTaskResult(task);
   }
 
@@ -571,24 +660,20 @@ export class Daemon {
       console.log('');
       console.log('API 端点:');
       console.log(`  健康检查: GET  http://localhost:${this.port}/health`);
+      console.log(`  工作台:   GET  http://localhost:${this.port}/workbench`);
       console.log(`  提交任务: POST http://localhost:${this.port}/task`);
-      console.log(`  任务队列: GET  http://localhost:${this.port}/queue`);
+      console.log(`  工作流:   POST http://localhost:${this.port}/workflow/items`);
+      console.log(`  批量Triage: POST http://localhost:${this.port}/workflow/triage-batches`);
+      console.log(`  批量计划: POST http://localhost:${this.port}/workflow/plan-batches`);
+      console.log(`  缺陷同步: POST http://localhost:${this.port}/workflow/sources/feishu-defects/sync`);
+      console.log(`  队列预览: GET  http://localhost:${this.port}/queue`);
       console.log(`  最近任务: GET  http://localhost:${this.port}/tasks`);
-      console.log(`  任务详情: GET  http://localhost:${this.port}/tasks/:id`);
       console.log(`  飞书回调: POST http://localhost:${this.port}/feishu/webhook`);
       console.log('');
       console.log('使用方式:');
-      console.log('  1. 提交任务到 /task 或 /feishu/webhook');
-      console.log('  2. Daemon 自动拉起 codex / claude / cursor-agent CLI');
-      console.log('  3. 通过 /tasks 查看执行结果和日志路径');
-      console.log('');
-      console.log('示例:');
-      console.log(`  curl -X POST http://localhost:${this.port}/task \\`);
-      console.log('    -H "Content-Type: application/json" \\');
-      console.log('    -d \'{"task":"修复 settings 页面","agent":"codex"}\'');
-      console.log('');
-      console.log('  # 飞书消息也支持前缀选 agent：');
-      console.log('  /claude 分析 pages/settings/index 页面为什么布局错位');
+      console.log('  1. 调试任务继续走 /task');
+      console.log('  2. 正式需求与 bug 流程走 /workbench 或飞书 /req /bug');
+      console.log('  3. workflow phase 仍复用现有 daemon 串行执行器');
       console.log('========================================\n');
     });
   }

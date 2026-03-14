@@ -1,0 +1,4010 @@
+{
+  "generatedAt": "2026-03-14T09:04:58.751Z",
+  "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+  "targetSection": "漏洞跟踪记录",
+  "totalBugCount": 229,
+  "openBugCount": 147,
+  "attachmentCount": 154,
+  "downloadedAttachmentCount": 154,
+  "snapshotPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/feishu-defect-workbench-source.json",
+  "defects": [
+    {
+      "issueId": "bug_69196948a451",
+      "rowHash": "684977f06e0b7f45bf5fdf177adcf9a84ac39c5a",
+      "section": "漏洞跟踪记录",
+      "priority": "",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "房产要求：正确应只有“不限、近期购房、家乡地已购房、现居地已购房”4项可选，且择偶项“近期购房”匹配 资料项“近期有购房计划”，择偶项“家乡地已购房、现居地已购房”匹配同理；“不限”项则匹配“家乡地已购房、现居地已购房、近期有购房计划、婚后购房、父母同住、租房” 6项",
+      "notes": "@ham后端已完成，等待前端接入",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvbyuYL7id6V",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_4bfed06e4430",
+      "rowHash": "38c9b130595cbb0b06e251d3a4e4b8a13c427609",
+      "section": "漏洞跟踪记录",
+      "priority": "",
+      "status": "待验收",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿",
+      "feedbackTime": 0,
+      "feedbackDate": "",
+      "parentRecord": "",
+      "description": "机器人后缀亲属关系字段，建议随机关系，否则清一色都是“母亲”",
+      "notes": "@刘瀚卿 看看这个问题",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvbyzDPyOtVv",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_504c1b571d39",
+      "rowHash": "9543d720b51df61b5a94993cadc75217ac081d00",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "dylon",
+      "feedbackTime": 1773331200000,
+      "feedbackDate": "2026-03-13",
+      "parentRecord": "",
+      "description": "黄金会员：过期状态，待测点",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdKVXoRYdsv",
+      "attachments": [
+        {
+          "name": "img_v3_02vo_98ac2632-795a-42d6-97e3-097104d569bg.jpg",
+          "fileToken": "ICDBbPluEop45axUNhpcYxljnnc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/ICDBbPluEop45axUNhpcYxljnnc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=ICDBbPluEop45axUNhpcYxljnnc",
+          "contentType": "image/jpeg",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_504c1b571d39/img_v3_02vo_98ac2632-795a-42d6-97e3-097104d569bg.jpg"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_fd9f2f51d843",
+      "rowHash": "3a3d3cf57c81b024590b122673b880910c995f11",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773331200000,
+      "feedbackDate": "2026-03-13",
+      "parentRecord": "",
+      "description": "邀请有奖：目前该功能未实现",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdL1TibnLEc",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_5b4c2c4efb2d",
+      "rowHash": "be54000c580b1d4992288c9fecb94dd2545dd7f1",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773331200000,
+      "feedbackDate": "2026-03-13",
+      "parentRecord": "",
+      "description": "其他功能：目前该模块缺少了“相亲红豆”、“账号切换”入口，正确应加上其入口，且去掉多余的“联系管家”、“防骗指南”入口，并按右侧UI稿排序",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdL7n5EUmJ0",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "VKcObxBeHo6HkWxfRJic8srnnbG",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/VKcObxBeHo6HkWxfRJic8srnnbG/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=VKcObxBeHo6HkWxfRJic8srnnbG",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_5b4c2c4efb2d/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_f4898e11d7c3",
+      "rowHash": "026e89e30dd6e36744f1b914f027120a626ca0aa",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1773331200000,
+      "feedbackDate": "2026-03-13",
+      "parentRecord": "",
+      "description": "通知权限：目前通知权限交互错误，可参考右侧图 UI稿和prd",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdLkz9dFgXN",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "GrwGb8JMsoTidWxaqYMcJDN2njb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/GrwGb8JMsoTidWxaqYMcJDN2njb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=GrwGb8JMsoTidWxaqYMcJDN2njb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_f4898e11d7c3/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "QnR1bssxpoZiDpxdSq8ccclLnke",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/QnR1bssxpoZiDpxdSq8ccclLnke/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=QnR1bssxpoZiDpxdSq8ccclLnke",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_f4898e11d7c3/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_1d273429490e",
+      "rowHash": "0a135adc7b86d033bd9cb80d180eec1864df26f8",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "实名认证：第一次实名认证时，提示实名认证失败，具体状态提示为姓名、身份证号校对正确，与微信号的校对失败，点击“重新校对”按钮时，才校对成功且提示认证成功",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvbyy0P4CGKe",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_ae6a8961a8e4",
+      "rowHash": "eaabc23480b7c9ab83ea390555b349944b5081d8",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "未支付订单",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdF0O0dSGAm",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_408bbd994edc",
+      "rowHash": "e1e96e146a1626287c63968f04c25a5827e0246e",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "目前会提示多笔订单未支出，正确应至提示最新一笔；",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdF4fqJWHF9",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "WKknbfoFRos9LVxOMe7cS0nanZc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/WKknbfoFRos9LVxOMe7cS0nanZc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WKknbfoFRos9LVxOMe7cS0nanZc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_408bbd994edc/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_dc838438d8c1",
+      "rowHash": "1d3981cce3e2787508952a685d81c6bc6c2fc21f",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "目前待支付订单开通会员未明确，正确应显示“年度/季度/永久黄金会员、至尊会员”",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdF4hjC8ypz",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "WKknbfoFRos9LVxOMe7cS0nanZc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/WKknbfoFRos9LVxOMe7cS0nanZc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WKknbfoFRos9LVxOMe7cS0nanZc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_dc838438d8c1/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_ea04e2519f55",
+      "rowHash": "79ba625f9605246d20f9eab73b9a42a5a4ef17da",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "目前倒计时直接为 00:00:00，正确应开始 2 小时倒计时",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdF4hD4TTvE",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "WKknbfoFRos9LVxOMe7cS0nanZc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/WKknbfoFRos9LVxOMe7cS0nanZc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WKknbfoFRos9LVxOMe7cS0nanZc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_ea04e2519f55/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_028c6ceaf388",
+      "rowHash": "048edff6fda9428b0dd4b754b900d7c7b709fa84",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "目前点击“立即支付”按钮以及整栏跳转到了订单列表页，正确应点击按钮再次以最近 1 次订单价重新拉起支付且点击按钮以外不跳转",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdF4hWENBKZ",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "WKknbfoFRos9LVxOMe7cS0nanZc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/WKknbfoFRos9LVxOMe7cS0nanZc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WKknbfoFRos9LVxOMe7cS0nanZc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_028c6ceaf388/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_7143a0f6b055",
+      "rowHash": "da2b24f6546d3b7caa83494f53230fe4b408b944",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "目前“叉”掉订单提醒，又退出小程序再回到小程序后，订单提醒栏还在，正确应在回来后不会再显示提醒栏",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdF4igXBUfd",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "WKknbfoFRos9LVxOMe7cS0nanZc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/WKknbfoFRos9LVxOMe7cS0nanZc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WKknbfoFRos9LVxOMe7cS0nanZc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_7143a0f6b055/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_4e6775761a11",
+      "rowHash": "f2e4241a566383cd0df6e3e9803d8fc546f54068",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "挽留弹框：目前点击“返回”按钮后未触发挽留弹框，正确应弹出挽留弹框",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdF53BOI0lu",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "ZiNeb1POiow6k5xzc0IcAXULnyb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/ZiNeb1POiow6k5xzc0IcAXULnyb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=ZiNeb1POiow6k5xzc0IcAXULnyb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e6775761a11/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_b1defc9f1265",
+      "rowHash": "6de68535ddb41c72143b1767393eb63f46fee094",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "实名认证：目前实名认证成功后离开已认证状态页，再回到已经认证状态页时，其姓名和身份证号会消失，正确应如之前",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdFofBMyfV7",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "OPnLbNLYxoKlPHxcVd3cf55QnRg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/OPnLbNLYxoKlPHxcVd3cf55QnRg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=OPnLbNLYxoKlPHxcVd3cf55QnRg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b1defc9f1265/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_720585e7607a",
+      "rowHash": "aab9de27b6c50e9cd9ddd428963089a04099d9c1",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "我收藏的：非会员身份，目前点击“联系对方”弹出的是会员开通阻断弹框，正确应弹框提示“联系次数不足 / 开通会员无限解锁联系方式”，点击“开通会员”弹框按钮，立即跳转至会员开通页（选中黄金会员tab--年度会员）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdyHh2pd8Yr",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_6e4eb5547b71",
+      "rowHash": "94bbbf9ef299ccc3e987427c471a435078484d4c",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "我收藏的：会员身份，目前点击“联系对方”是直接解锁并跳转到了私信页，正确应弹框提示“您是会员，可免费解锁和对方的聊天”；点击“立即解锁”弹框按钮，toast提示“成功解锁联系方式”，同时立即跳转至私信会话页且底部弹出“xx家长联系方式/xxxxxxxxxxx”（若没有联系方式则不弹）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdyHFi0m7Cf",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_992ce36d145c",
+      "rowHash": "9ae7876e53fa11b4f602b5e06948d70b4f654cdd",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "dylon",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "我收藏的：非会员解锁剩余次数≥ 1，点击“联系对方”应弹框提示“您有xx次免费解锁机会，可解锁并查看对方号码”；点击“立即解锁”弹框按钮，后续交互同上（会员条件解锁），此为待测点",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdyJRbiNi0H",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_00ec36e979f1",
+      "rowHash": "a51b9afc271b22aa271efa6617dca5d2613c0215",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "dylon",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "我收藏的：点击已建立过会话嘉宾，直接跳转到至私信页并弹出联系方式（没手机号则不弹），目前好像是会阻断，待测点",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdyLs8lNVzh",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_496a05b14dbe",
+      "rowHash": "1b0cfcd2cc0d2bafd713888724fe948f654216a1",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "收藏我：非会员身份，目前点击嘉宾卡片以及详细资料按钮、联系对方按钮都是跳转到新的页面，正确应该统一弹出会员开通阻断弹框",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdyUj4iZaSA",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_72247ecfcc84",
+      "rowHash": "2b632cebfd9f25b50a0e1dcc49d043afa553028a",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "解锁我：需求变更，因任一方解锁了对方，会话即生成，双方就可以发起聊天，所以无论己方是否会员，在当前tab页都不受会员阻断，即点击嘉宾卡片的“详细资料/照片”按钮，或点击资料卡“联系对方”按钮以外区域，统一跳转“详细资料”页；点击“联系对方”按钮，则跳转私信会话页。顺带强调，文字提醒“24 小时内免费查看 xx：xx：xx”保留，起到吸引用户点击作用（实际24 小时后也可查看）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdzaPcsSug6",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "JxHZbRTg6oJ3fFxvRVeccfVYnQm",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/JxHZbRTg6oJ3fFxvRVeccfVYnQm/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=JxHZbRTg6oJ3fFxvRVeccfVYnQm",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_72247ecfcc84/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_7dba4ca9f15a",
+      "rowHash": "304f62af72c0a5c2d89f28416d10e3ef0ade2f57",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "通顶交互：目前除了主页面，其他所有二级页、三级页都缺少通顶设计，即下拉页面时，顶部未做通顶处理，右侧操作栏无背景上滑重叠后体验差（可参考完美亲家看看），另外我的首页顶部右侧操作栏有2 个会重叠",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdzAnzxax8G",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "HPWmbTKKlo13cax1M3UcOddNnRd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/HPWmbTKKlo13cax1M3UcOddNnRd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=HPWmbTKKlo13cax1M3UcOddNnRd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_7dba4ca9f15a/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_6d4ca7d9f4e9",
+      "rowHash": "5f7807ed904ec1c2e508f212e046021524f7e7d1",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "黄金会员：目前点击“购买说明”跳转到了新页面（图 2），正确应弹框提示（图 1）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdzEb5BwFEe",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "OJS0bvftGo4cWBx1hrjce17VnWe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/OJS0bvftGo4cWBx1hrjce17VnWe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=OJS0bvftGo4cWBx1hrjce17VnWe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_6d4ca7d9f4e9/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "WOUobUN5RoErguxGvoiciuuFnLd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/WOUobUN5RoErguxGvoiciuuFnLd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WOUobUN5RoErguxGvoiciuuFnLd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_6d4ca7d9f4e9/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_af36e396753f",
+      "rowHash": "9f383c341f3dd88d560711fd1223000753197751",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "黄金会员：权益图片，目前黄金会员的季度、年度、永久tab页会员，其有效期和每天推荐的人数都用了同一个，正确应如截图 1 prd所示",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdzH2HCadGC",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "MllwbI3yIoPAKQx9V3zcHOZ9nff",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/MllwbI3yIoPAKQx9V3zcHOZ9nff/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=MllwbI3yIoPAKQx9V3zcHOZ9nff",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "OCMGb3HmUoGZhzxw3CLc3PYSn2c",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/OCMGb3HmUoGZhzxw3CLc3PYSn2c/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=OCMGb3HmUoGZhzxw3CLc3PYSn2c",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "GfD9bZLYGo7WlTxWCm3ctfgxnBb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/GfD9bZLYGo7WlTxWCm3ctfgxnBb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=GfD9bZLYGo7WlTxWCm3ctfgxnBb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_2bb8fdcdff88",
+      "rowHash": "a3a142575ea381d5e1be39e58e7cf0d704dad2de",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "黄金会员：目前点击列表各个权益入口无反应，正确应弹出权益图片弹框，详见UI稿",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdzHTDj3Zxr",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "GhJcbQbkSoWXpkxpt0TcQZ5OnVg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/GhJcbQbkSoWXpkxpt0TcQZ5OnVg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=GhJcbQbkSoWXpkxpt0TcQZ5OnVg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_2bb8fdcdff88/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_35384028f48c",
+      "rowHash": "d8b77a6d99f994a2c81340429546822905a7d57f",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "至尊会员：目前点击列表各个权益入口无反应，正确应弹出权益图片弹框，详见UI稿",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdzJ5GHhVR2",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "JZzBbtKx4oZrlMxCCqeclRVVnYb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/JZzBbtKx4oZrlMxCCqeclRVVnYb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=JZzBbtKx4oZrlMxCCqeclRVVnYb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_35384028f48c/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_ad91d21f5069",
+      "rowHash": "7aef0e6ddcde2a4c018e561ef249fe52a62dbfe5",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773072000000,
+      "feedbackDate": "2026-03-10",
+      "parentRecord": "",
+      "description": "单次购买倒计时：在倒计时期间，用户可关闭超级曝光，关闭后倒计时正确应该暂停，目前是直接隐藏了",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdth1QE1c7q",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_5e0d51145e36",
+      "rowHash": "948a5d0266b905acf04b5d318467859e46043e7c",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773072000000,
+      "feedbackDate": "2026-03-10",
+      "parentRecord": "",
+      "description": "会员阻断：我看过/看过我、收藏我/我收藏、解锁我/我解锁的 6 个tab嘉宾列表页，其对应阻断逻辑详见prd，以prd为准",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdtxalQx9pf",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_157abc4b4612",
+      "rowHash": "73e33994673880ad5c75c33801c344a5c97f9272",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773072000000,
+      "feedbackDate": "2026-03-10",
+      "parentRecord": "",
+      "description": "看过我：至尊/黄金会员身份，目前底部会显示“开通会员 查看全部资料”按钮，正确应不展示",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdtARHJWeco",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "K6Ozbc28KoZ2f6x9YB8cTGxPnWe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/K6Ozbc28KoZ2f6x9YB8cTGxPnWe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=K6Ozbc28KoZ2f6x9YB8cTGxPnWe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_157abc4b4612/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_e64aa58c4dd6",
+      "rowHash": "c97b661a2bc9288f74f33ddd049bf84c621512b2",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773072000000,
+      "feedbackDate": "2026-03-10",
+      "parentRecord": "",
+      "description": "看过我：非会员身份，目前此页点击嘉宾卡片以及详情资料按钮，跳转到了详情资料页，此页特殊处理，正确应同底部按钮逻辑一样，弹出会员开通阻断弹框",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdtLbwYH5xO",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "DqBIb8kqloUaP1xRtTXcdNE9nVb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/DqBIb8kqloUaP1xRtTXcdNE9nVb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=DqBIb8kqloUaP1xRtTXcdNE9nVb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e64aa58c4dd6/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_4a582a6d3339",
+      "rowHash": "a3cff85fac9b471abf9e604693c37e90f56b306b",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773072000000,
+      "feedbackDate": "2026-03-10",
+      "parentRecord": "",
+      "description": "看过我/我看过/收藏我 3 个tab页：嘉宾卡片资料信息目前显示缺失或多出，可对照UI稿自查，比如：缺少年龄、相亲介绍等",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdtMXWDzhBT",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "J0bSbRvZMoE4aCxYQ9JcY1hennT",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/J0bSbRvZMoE4aCxYQ9JcY1hennT/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=J0bSbRvZMoE4aCxYQ9JcY1hennT",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4a582a6d3339/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_2e1530e4ebc9",
+      "rowHash": "c7e17107838a05c34081e76825df1202d3af8590",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "搜索结果：非至尊会员身份，有过 1 次搜索记录，次日再点击金刚区进入时，目前是跳转到了搜索查找页，正确应跳转至搜索结果页",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdniMC5AhFg",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "OTYqbpIYHopkhgxiaLScNF7Rnbb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/OTYqbpIYHopkhgxiaLScNF7Rnbb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=OTYqbpIYHopkhgxiaLScNF7Rnbb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_2e1530e4ebc9/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_162fc54a2ea9",
+      "rowHash": "5e706f48733d69ae36b3fd403938b58c65e97592",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "注册登录：首次进入小程序，正确应以游客身份进入首页（分享除法），触发注册流程才能完成登录，目前是直接授权手机号直接登入小程序",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnyqqJARRC",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_27dd952691b3",
+      "rowHash": "b261262b1d7f2418b04dfda1841617c074622e33",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "dylon, ham",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "系统消息：目前点击系统消息无效，正确应点击进去后，有相应的系统消息",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnAwlAbJx4",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "W5A8bS8R5oiVMOx8YXPcmoAfnHe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/W5A8bS8R5oiVMOx8YXPcmoAfnHe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=W5A8bS8R5oiVMOx8YXPcmoAfnHe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_27dd952691b3/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_ce6c773dbadf",
+      "rowHash": "d40cdbcd1b9ea9a46a77ee3bfc6bef7352b1c661",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "嘉宾消息：目前消息列表的家长编号与详情页的标号不一致，正确应一致",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnBa5vF4kw",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "TcOAbolpeossjpxQaNHcXLcBnkb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/TcOAbolpeossjpxQaNHcXLcBnkb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=TcOAbolpeossjpxQaNHcXLcBnkb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_ce6c773dbadf/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_16c405698ee2",
+      "rowHash": "45375262e1f9556e5a14271bd9b446c9a57e8a96",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "解锁会话：对方解锁我后(真人以解锁时间做判断，机器人可以消息触发成功时间做判断)，正确是会话建立后己方无需解锁对方就可以聊天，目前是己方需解锁对方才可聊",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnJhEhImf4",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "RvE3bk0GropWiOxPnWkc1kQ4nYb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/RvE3bk0GropWiOxPnWkc1kQ4nYb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=RvE3bk0GropWiOxPnWkc1kQ4nYb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_16c405698ee2/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_d1fd9fefe899",
+      "rowHash": "0273620db691480ca70362e44fd49f46a855cac8",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "精准查找：非会员身份，此入口应与首页精准搜索入口逻辑、记录保持一致，目前首页搜索查找机会用过后会进入搜索解锁页，但在消息页则进入了精准查找页，正确应同前者进入搜索结果页",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnLP9gNIgh",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Vy8SbYe1MowEftxNO1ZcabCZnbe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Vy8SbYe1MowEftxNO1ZcabCZnbe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Vy8SbYe1MowEftxNO1ZcabCZnbe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_d1fd9fefe899/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_110da6b2392e",
+      "rowHash": "f59585b0c5a4b9ab89c22d3a388256bfec7ba734",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "资料编辑页：资料项的交互能力或交互弹框与UI稿不一致",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnSzJfyhgT",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_c8b0ad4d605c",
+      "rowHash": "7cd52b1a79b429e05a56c21e6a487da36dad871c",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "编辑资料页：上传无人脸的头像，目前点击“确认上传”会报错英文提示（图 2），正确提示应 如图 1 所示",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnUGQR7kNU",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "SKRobxnXnoozRlxN83mcITwqnBf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/SKRobxnXnoozRlxN83mcITwqnBf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=SKRobxnXnoozRlxN83mcITwqnBf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_c8b0ad4d605c/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "Mob7b4wbXo0Vf8x4Zm6cHRGlnG4",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Mob7b4wbXo0Vf8x4Zm6cHRGlnG4/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Mob7b4wbXo0Vf8x4Zm6cHRGlnG4",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_c8b0ad4d605c/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_8d618b6c9f9b",
+      "rowHash": "1e9fe59aace3cc538b22f21b36036980bbbb2b05",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "上传照片：首次上传孩子照片时，正确应弹框提示如图 2，目前是 弹框图 1",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnWoi3NCU3",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "XGCnbIEEzow9d8xqtqGc9Dp5nKB",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/XGCnbIEEzow9d8xqtqGc9Dp5nKB/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=XGCnbIEEzow9d8xqtqGc9Dp5nKB",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_8d618b6c9f9b/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "AP2Tbsrqro37hsxOkttcf9FRnRZ",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/AP2Tbsrqro37hsxOkttcf9FRnRZ/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=AP2Tbsrqro37hsxOkttcf9FRnRZ",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_8d618b6c9f9b/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_1882b361f30f",
+      "rowHash": "250752b7f14c69913ebfcee70d6300513780fa9b",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "父问题补充：其滚筒下拉框样式，以及交互，需对照截图样式实现，图 1 是现有视觉弹框可直接复用UI，图 2 是UI复用后的实现样式（排版交互要一致）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvb1cilOmbpj",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "YsRMbIlr8ohtsJxcHjDcooOMnfY",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/YsRMbIlr8ohtsJxcHjDcooOMnfY/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=YsRMbIlr8ohtsJxcHjDcooOMnfY",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_1882b361f30f/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "K3ZhbOeY2o01uRxV6i8cKX1ZntQ",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/K3ZhbOeY2o01uRxV6i8cKX1ZntQ/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=K3ZhbOeY2o01uRxV6i8cKX1ZntQ",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_1882b361f30f/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_ebedaca91144",
+      "rowHash": "21c5b88a3a57ca597081c35ea6b4a98077d540ef",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "历史推荐：点击嘉宾卡片按钮，无反应",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvcU7iaLNYVD",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "KJWQbBr3Sokbe1xEHJ9cyCpFnqb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/KJWQbBr3Sokbe1xEHJ9cyCpFnqb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=KJWQbBr3Sokbe1xEHJ9cyCpFnqb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_ebedaca91144/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_69f52e9040b0",
+      "rowHash": "2e012090a47f776b2a66bc98bffb6de94fb25cbc",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "交换照片：至尊会员身份，点击“交换照片”按钮，错误弹框提示“登记资料”，测试号 15717136585",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdflO9A5KSF",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "GWdGbCMEpo866zxi0FUcaLPSnTe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/GWdGbCMEpo866zxi0FUcaLPSnTe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=GWdGbCMEpo866zxi0FUcaLPSnTe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_69f52e9040b0/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_5fc883436515",
+      "rowHash": "c3ac5e1acea63b703cbbdd2bdee966b24048496a",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "发送照片：照片未做人脸校验，目前任何图片都可发送对方，正确应该是符合人脸要求的才可发送，否则应如截图所示进行提示",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdfNoirSZRO",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "VAm6brGo1oK4qZxIRTOcEiwHn9b",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/VAm6brGo1oK4qZxIRTOcEiwHn9b/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=VAm6brGo1oK4qZxIRTOcEiwHn9b",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_5fc883436515/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_1d9d2a48788d",
+      "rowHash": "e7ead1db177f9ca11ece2a594d90241370f8f1c9",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "车产要求：正确应只有“不限、已购车/近期购车”2项可选，且 2 项择偶项“已购车、近期购车”匹配 1 项资料项“已购车/近期购车”，“不限”项则匹配“已购车、近期购车、无车” 3项，可参考图 1",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhs3LLhRta",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "OsFHbSSX4oPZAzx9stQcXGIlnMh",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/OsFHbSSX4oPZAzx9stQcXGIlnMh/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=OsFHbSSX4oPZAzx9stQcXGIlnMh",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_1d9d2a48788d/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_4958d302a546",
+      "rowHash": "69ae02620aef23f7404a90bf77445d906f66b346",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "默认选项：目前所有选项默认选中不限，正确应该除年份和身高要求项默认选中“不限”项外，其他项一律默认不选中（目前选中后的交互无误）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhy4KFUXJV",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Eht1bHqRRoGmxaxAAIFcyZyqnqf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Eht1bHqRRoGmxaxAAIFcyZyqnqf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Eht1bHqRRoGmxaxAAIFcyZyqnqf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4958d302a546/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_b75cd683ea10",
+      "rowHash": "8fa8988d6952e32dabcf0348dc5abab15be75dea",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "搜索结果：非至尊会员用户，正确应有且只有 1 次搜索机会，且搜索完成后立即隐藏“条件设置”入口，目前“条件设置”入口未隐藏，且能重复搜索",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhzLDV1Qnt",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "EQzYbLvXGoGOW3xlUKvciiGIn4E",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/EQzYbLvXGoGOW3xlUKvciiGIn4E/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=EQzYbLvXGoGOW3xlUKvciiGIn4E",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b75cd683ea10/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_863185b98485",
+      "rowHash": "2b14f213516bf1ef59bd5c382dc26770210fa900",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "黄金会员：选中黄金会员tab时，正确应有第 4 个子tab至尊会员",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhCjDxH2M2",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "WKqPbeb78ogXhqxnQvfclbOInNe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/WKqPbeb78ogXhqxnQvfclbOInNe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WKqPbeb78ogXhqxnQvfclbOInNe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_863185b98485/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_e74b83c8b69e",
+      "rowHash": "4c0a9c78eb583a7d649d28371b912b8ada083dc9",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "搜索结果：目前黄金会员升级为至尊会员后，其搜索结果页底部的“开通至尊会员”悬浮按钮未及时更新（如图 1），正确应该按钮变为高亮按钮 “点击搜索嘉宾（今日剩1次机会）”，如图 1 的UI稿",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhEGPD0p4m",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Si77bVnqrosqflxPO02ct4QqnXg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Si77bVnqrosqflxPO02ct4QqnXg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Si77bVnqrosqflxPO02ct4QqnXg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e74b83c8b69e/image.png"
+        },
+        {
+          "name": "1f6282883d3ada70427a2215748d2d52.jpg",
+          "fileToken": "Cr25b5dPbot626x7WWnc37I1nmb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Cr25b5dPbot626x7WWnc37I1nmb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Cr25b5dPbot626x7WWnc37I1nmb",
+          "contentType": "image/jpeg",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e74b83c8b69e/1f6282883d3ada70427a2215748d2d52.jpg"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_45590459ba11",
+      "rowHash": "eb4906c4420166065fb9206d41b98b8c966de2ce",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "搜索结果：非至尊会员用户，点击嘉宾卡片以及按钮，正确应统一阻断并跳转至至尊会员开通页，目前点击嘉宾卡片会跳转至资料页，点击“卡片按钮”会弹出会员开通阻断弹框",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhQcUBW1tf",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Fi3YbsUEnoyyvYxyC0BcTUrrnqd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Fi3YbsUEnoyyvYxyC0BcTUrrnqd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Fi3YbsUEnoyyvYxyC0BcTUrrnqd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_45590459ba11/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_8e6bf07d0dc7",
+      "rowHash": "f6623f57ab83871a779e644b78a9b5067c7cf8e5",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "会员阻断：和点击“日期筛选”弹出会员开通阻断弹框一样（选中至尊tab），正确应点击嘉宾卡片以及卡片按钮也与其保持一致（图 2），目前 点击卡片会弹出莫名弹框（图 1），点击卡片按钮无反应",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhXEVKb5OP",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "S5SubQB4soH6pTxpNjhcT4JunBh",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/S5SubQB4soH6pTxpNjhcT4JunBh/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=S5SubQB4soH6pTxpNjhcT4JunBh",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_8e6bf07d0dc7/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "THX7b5Io3ocy3BxsyxLcuH11nae",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/THX7b5Io3ocy3BxsyxLcuH11nae/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=THX7b5Io3ocy3BxsyxLcuH11nae",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_8e6bf07d0dc7/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_e0dbe455f178",
+      "rowHash": "d20ace213e9c676642d84369cfde40c726ca3d3a",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "购买说明：说明内容缺失，且排版混乱无内容排版，可参考文档进行修改 神仙亲家购买说明",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdboXwtZEg0",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Gck3bKzZ8oypdLxKBDpckI4PnCg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Gck3bKzZ8oypdLxKBDpckI4PnCg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Gck3bKzZ8oypdLxKBDpckI4PnCg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e0dbe455f178/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_15906a83febf",
+      "rowHash": "7e72feeb8cb57967c810cd3b37cf831e7ad8280b",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "购买价格：为测试价格档位是否生效，可将4 档价格分为定为：0.01、0.02、0.03、0.04，以方便测试",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdbqKfWGxh4",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Pm8YbbWFFo1utxx0EmUcIosnnHt",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Pm8YbbWFFo1utxx0EmUcIosnnHt/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Pm8YbbWFFo1utxx0EmUcIosnnHt",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_15906a83febf/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_fc5d5e45ddb6",
+      "rowHash": "7fe827fed1ae58de93720876db27e716a12628c4",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "我看过的：点击顶部“开通至尊会员”按钮，以及绿框蒙层模糊区域，统一跳转至会员开通页（选中至尊tab）；目前问题是前者错误出弹框，后者点击无反应",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdbMWNf7o8W",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "DUmLbS7bkoik2lx7j1LciOvwnDc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/DUmLbS7bkoik2lx7j1LciOvwnDc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=DUmLbS7bkoik2lx7j1LciOvwnDc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_fc5d5e45ddb6/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_33447f0a24b6",
+      "rowHash": "c290e645de604c4b7a8d42d58df5dd80bb891262",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "收藏我：点击底部按钮正确应跳转至会员开通页（选中黄金tab），且弹框提示“查看详细资料受限 /平台严格保护用户隐私，开通会员方可查看对方详情”，点击弹框按钮“好的”弹框消失（弹框是后续加的，视觉可直接用截图 1 弹框样式套用），目前是直接出阻断弹框",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdbPr7KsMeY",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "BhFqbHgcZonwaPxq2R9c0oCbndd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/BhFqbHgcZonwaPxq2R9c0oCbndd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=BhFqbHgcZonwaPxq2R9c0oCbndd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_33447f0a24b6/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "TLcmbjXOFoe2ThxbzlFcZ9JwnNe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/TLcmbjXOFoe2ThxbzlFcZ9JwnNe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=TLcmbjXOFoe2ThxbzlFcZ9JwnNe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_33447f0a24b6/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_1b55eb5f507c",
+      "rowHash": "e8106d18f06198e289512997770262eb5410c969",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "dylon",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "解锁我的：目前测试因无法匹配数据，故此处无法验证，此测试点备忘录下",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdbTrBbrKJ0",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_d4c1f46944dc",
+      "rowHash": "3c7b7eb9368a0ef9901339248fe22cc171d998d4",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "我解锁的：1）24 小时内解锁我的展示逻辑搞反了，不在当前tab，而在“解锁的的tab”，且按钮没有“已过期”状态；2）我解锁tab的所有嘉宾，无论会员身份与否，都无阻断",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdbTyqM0Sru",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "EYErbbdCXoe6Ndx08T7cWDmEnCe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/EYErbbdCXoe6Ndx08T7cWDmEnCe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=EYErbbdCXoe6Ndx08T7cWDmEnCe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_d4c1f46944dc/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_d67624ba8fb3",
+      "rowHash": "e7c7790151cdb13547f44fa69a16041b9b3e1d34",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "户籍项已去掉，辛苦在资料页去掉该资料项",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdcfJjwGRm8",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Oy4lbz7dlo2j19xypQqcldgfnyc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Oy4lbz7dlo2j19xypQqcldgfnyc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Oy4lbz7dlo2j19xypQqcldgfnyc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_d67624ba8fb3/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_7fd0bcd43461",
+      "rowHash": "9b3faddfcc5d80f5b4d7000f28c65968e7318189",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "会员身份：当对方有手机号且按钮显示“拨打电话”时，点击“拨打电话”，目前错误解锁并直接弹出了联系方式，正确应弹框提示“您是会员，可免费查看对方号码”；点击“立即解锁”弹框按钮，toast提示“成功解锁对方号码”，同时立即跳转至私信会话页且底部弹出“xx家长联系方式/xxxxxxxxxxx”；",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdcguAuMLt8",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_35d0f7239d83",
+      "rowHash": "c9648c040fba1cfb4b4e81170cdcf3bb4321098f",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "当对方有无手机号时，“拨打电话”隐藏，收藏按钮居中展示才正确，错误如截图所示",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdcgKmdarMT",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Pk2xb6jxLoydUgxQRiTcNqUAngc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Pk2xb6jxLoydUgxQRiTcNqUAngc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Pk2xb6jxLoydUgxQRiTcNqUAngc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_35d0f7239d83/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_9b57fd1d66a6",
+      "rowHash": "ac3782c5a22f8be6f0ae60d3508a87732820f4a3",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1772640000000,
+      "feedbackDate": "2026-03-05",
+      "parentRecord": "",
+      "description": "首页嘉宾列表页：今日开通完季度黄金会员，回到首页点击联系对方时，弹框错误提示为了联系次数不足（手机号 13995550744）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvcU7czCvYvD",
+      "attachments": [
+        {
+          "name": "img_v3_02vg_67d0c67b-8dbb-4172-9086-10b20dedb72g.png",
+          "fileToken": "X4Oob6wtUoaD1RxgQfacg45pnBd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/X4Oob6wtUoaD1RxgQfacg45pnBd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=X4Oob6wtUoaD1RxgQfacg45pnBd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_9b57fd1d66a6/img_v3_02vg_67d0c67b-8dbb-4172-9086-10b20dedb72g.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_a590c797de90",
+      "rowHash": "7772f03b2fbdd5be3971dce0b6f4256f41284f82",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772640000000,
+      "feedbackDate": "2026-03-05",
+      "parentRecord": "",
+      "description": "录制语音：单机按住说话栏应无反应才对，目前错误唤起了语音录制按钮",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvd0cxB4nbT1",
+      "attachments": [
+        {
+          "name": "img_v3_02vg_56f996ba-c8dc-4f89-b21a-14fd50127a4g.png",
+          "fileToken": "DMz1budeQo2VYExLJaacDhoJnHg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/DMz1budeQo2VYExLJaacDhoJnHg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=DMz1budeQo2VYExLJaacDhoJnHg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_a590c797de90/img_v3_02vg_56f996ba-c8dc-4f89-b21a-14fd50127a4g.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_7aa066c2c692",
+      "rowHash": "090e99f0a0e03d79fa2178c187e486925dba1ada",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772640000000,
+      "feedbackDate": "2026-03-05",
+      "parentRecord": "",
+      "description": "点击播放语音失败",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvd0dcG8bYUC",
+      "attachments": [
+        {
+          "name": "img_v3_02vg_67c868d6-4a62-465f-9ff7-d9559f74699g.png",
+          "fileToken": "VVfkbddhsodywBxZx3acD7rInbe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/VVfkbddhsodywBxZx3acD7rInbe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=VVfkbddhsodywBxZx3acD7rInbe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_7aa066c2c692/img_v3_02vg_67c868d6-4a62-465f-9ff7-d9559f74699g.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_d277cc93a551",
+      "rowHash": "9872b8a31ca882e725fcbb6e54686ed6d243cc8b",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772640000000,
+      "feedbackDate": "2026-03-05",
+      "parentRecord": "",
+      "description": "点击撤回语音失败",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvd0dcSw3DYF",
+      "attachments": [
+        {
+          "name": "img_v3_02vg_920bba66-762d-4d5d-8560-b1345e6f6a9g.png",
+          "fileToken": "Pzz7bjfIBopTH9xlEeYc1k14nCI",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Pzz7bjfIBopTH9xlEeYc1k14nCI/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Pzz7bjfIBopTH9xlEeYc1k14nCI",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_d277cc93a551/img_v3_02vg_920bba66-762d-4d5d-8560-b1345e6f6a9g.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_b0e797a77ede",
+      "rowHash": "b3d8b13839a248ceb8e063d45595f5dd87edff15",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772640000000,
+      "feedbackDate": "2026-03-05",
+      "parentRecord": "",
+      "description": "照片交换无需对方同意，只要照片识别后符合平台要求，则点击“交换照片”按钮后，直接打开对方清晰照，同时将我方清晰照通过私信发送对方。目前截图错误处理成了需对方同意才可交换逻辑，私信错发了交换私信，嘉宾详情页错误显示申请中，正确详见截图红框prd",
+      "notes": "@ham消息列表中需要有具体的 UI 展示",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvd07navbW1X",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "YUW3bDO8uoSscSxDfEVcTUSInnC",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/YUW3bDO8uoSscSxDfEVcTUSInnC/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=YUW3bDO8uoSscSxDfEVcTUSInnC",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b0e797a77ede/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "Afbeb1ySdocRcbxjQ8DcvnyHn6f",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Afbeb1ySdocRcbxjQ8DcvnyHn6f/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Afbeb1ySdocRcbxjQ8DcvnyHn6f",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b0e797a77ede/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "PMOvbBwqxoLu0MxQAqEc7vhYn3d",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/PMOvbBwqxoLu0MxQAqEc7vhYn3d/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=PMOvbBwqxoLu0MxQAqEc7vhYn3d",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b0e797a77ede/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_9f520fdce3c0",
+      "rowHash": "e7641862f8165238918ec0164cccf8df81bf72cd",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "待验收",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1772553600000,
+      "feedbackDate": "2026-03-04",
+      "parentRecord": "",
+      "description": "编辑资料页：资料无法保存",
+      "notes": "@刘瀚卿 {\"code\":110507,\"message\":\"The gender can only be modified once, and the modification limit has been used up\",\"data\":null} \n@Leo 性别没有办法修改，这个逻辑应该是合理的，你要是想验证可以让后台改一下数据",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvcU7fK0bD0M",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "KFlKbHWgpo1wnnxYQskcsw0JnVe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/KFlKbHWgpo1wnnxYQskcsw0JnVe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=KFlKbHWgpo1wnnxYQskcsw0JnVe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_9f520fdce3c0/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_2c60cb5ea37c",
+      "rowHash": "d0582586fa45831c56acdbbecca69eef26ab899f",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1772553600000,
+      "feedbackDate": "2026-03-04",
+      "parentRecord": "",
+      "description": "精准搜索：非会员账号，通过精准搜索点击“联系对方”却能解锁私信并发送消息（手机号 15356138328），正确应无法联系对方且阻断提醒。若此账号能解锁私信是因有未使用的 3 次解锁机会，则在此处依然错误，正确应跳转至尊会员页（精准搜索为至尊会员特定权限），详见截图prd",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvcU7nYHmigX",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "NPXdbSRUcodzSDxlpWMcfHlLnJe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/NPXdbSRUcodzSDxlpWMcfHlLnJe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=NPXdbSRUcodzSDxlpWMcfHlLnJe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_2c60cb5ea37c/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "CWqrbSw8EohOPRxW7JJcA8Zlnrg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/CWqrbSw8EohOPRxW7JJcA8Zlnrg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=CWqrbSw8EohOPRxW7JJcA8Zlnrg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_2c60cb5ea37c/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "AJ2AbWSmXoWHCqxU0AwcStRRnuh",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/AJ2AbWSmXoWHCqxU0AwcStRRnuh/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=AJ2AbWSmXoWHCqxU0AwcStRRnuh",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_2c60cb5ea37c/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_523eb677b9e6",
+      "rowHash": "db5420fb0e0b21facb152f7df41d0979579da956",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1770480000000,
+      "feedbackDate": "2026-02-08",
+      "parentRecord": "",
+      "description": "超级曝光：首页未实现超级曝光专区推荐，详见prd",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvaDgliuk7oI",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Nz9obuSF2obuduxZjIcchU7enMc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Nz9obuSF2obuduxZjIcchU7enMc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Nz9obuSF2obuduxZjIcchU7enMc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_523eb677b9e6/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_12987ba6072e",
+      "rowHash": "9a4d0049fe42abb313fb8a8721f2f2a7b7f4b31f",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1770393600000,
+      "feedbackDate": "2026-02-07",
+      "parentRecord": "",
+      "description": "目前在不同页面的不同按钮解锁会话时，其实现的交互有些混乱，需要统一梳理，详见下方【新需求--3】",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvayCA9ZWJu1",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_0f109d4adccb",
+      "rowHash": "47dc65b5cd3277feb583fabf3d1f3c2d9663b21d",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "验收未通过",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 0,
+      "feedbackDate": "",
+      "parentRecord": "",
+      "description": "正确阻断方式，正确应该如父问题的prd截图出阻断解锁弹框，而现在错误出了阻断开通弹框",
+      "notes": "@ham 之前父问题prd表达有误，辛苦以当前子问题prd截图红框需求为准",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvaVRprGHWey",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "D63MbxkSLoiQixxh0aicm05nnvd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/D63MbxkSLoiQixxh0aicm05nnvd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=D63MbxkSLoiQixxh0aicm05nnvd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_0f109d4adccb/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "TZKnbh6fAoYFcQxTap1cRL9HnWd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/TZKnbh6fAoYFcQxTap1cRL9HnWd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=TZKnbh6fAoYFcQxTap1cRL9HnWd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_0f109d4adccb/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_c874ce490a14",
+      "rowHash": "ac2747100c7b899e79f4f1a82f65eeaba41a4548",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 0,
+      "feedbackDate": "",
+      "parentRecord": "",
+      "description": "会员身份：点击首页的“联系对方”按钮，目前错误解锁并直接跳转至私信会话页了，正确应弹框提示“您是会员，可免费解锁和对方的聊天”；点击“立即解锁”弹框按钮，toast提示“成功解锁联系方式”，同时立即跳转至私信会话页且底部弹出“xx家长联系方式/xxxxxxxxxxx”；",
+      "notes": "@刘瀚卿@ham会员身份：黄金与至尊会员用户，也要有阻断（即非会员需解锁并阻断的场景），会员都要先阻断后解锁才能获得解锁聊天，此举是为了透传会员权益价值。",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdccYJ9w8Oq",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_90df08803a9c",
+      "rowHash": "52141ff8b040964a4b7d53aa8b3c92518d215570",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 0,
+      "feedbackDate": "",
+      "parentRecord": "",
+      "description": "嘉宾数量：目前每日推荐给至尊会员嘉宾数是 20 位（手机号 15717136585），正确应该为 26 位，其他会员类型对照截图prd自查",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdeMc3akmPV",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "RfjCbtQ56ouEP7xcBGEcLc1gnPg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/RfjCbtQ56ouEP7xcBGEcLc1gnPg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=RfjCbtQ56ouEP7xcBGEcLc1gnPg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_90df08803a9c/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "Cg2tb0PkgoGrHhxbfgLcmlChniN",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Cg2tb0PkgoGrHhxbfgLcmlChniN/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Cg2tb0PkgoGrHhxbfgLcmlChniN",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_90df08803a9c/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_35e7574534ec",
+      "rowHash": "a141bd1cfac52db5490cc054d5e71b1a4284eb2f",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "dylon",
+      "feedbackTime": 0,
+      "feedbackDate": "",
+      "parentRecord": "",
+      "description": "卡片样式：无照片样式的资料展示，测试点备忘录",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdeQq6EO4Pl",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_6071f4ca5acc",
+      "rowHash": "3914a304fb55b2f17034b8cfa35d24d211404307",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "dylon",
+      "feedbackTime": 0,
+      "feedbackDate": "",
+      "parentRecord": "",
+      "description": "会员标签：显示与否，测试点备忘录",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdeYlXmBUCe",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_7515a2a8d197",
+      "rowHash": "385edf6847d604d350ab877fbdbc8a8bf4dccb9f",
+      "section": "漏洞跟踪记录",
+      "priority": "P0",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 0,
+      "feedbackDate": "",
+      "parentRecord": "",
+      "description": "联系对方：目前当用户拥有解锁次数时，点击“联系对方”直接进入私信页且解锁了，正确应该弹框提示“您有xx次免费解锁机会，可免费解锁和对方的聊天”；点击“立即解锁”弹框按钮，后续交互同会员条件解锁",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdeZ241aBrV",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_6a9997a0ec05",
+      "rowHash": "4bddd41da944d129cfcc8fbd9b73df076fb58302",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1773331200000,
+      "feedbackDate": "2026-03-13",
+      "parentRecord": "",
+      "description": "用户协议/隐私政策：目前 2 个文本内容错误且与UI稿不一致，需对照神仙亲家用户使用协议修改用户协议，对照神仙亲家隐私协议修改隐私协议",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdL1SYqZXTj",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "CxLtboPNHon7SFxLtG4c0H27nMf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/CxLtboPNHon7SFxLtG4c0H27nMf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=CxLtboPNHon7SFxLtG4c0H27nMf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_6a9997a0ec05/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_dfd7ebf5e4e6",
+      "rowHash": "4fe07b21f4e8fd95d14b379b3431c89e5ffe8edf",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773331200000,
+      "feedbackDate": "2026-03-13",
+      "parentRecord": "",
+      "description": "订单记录：目前购买明细、订单时间、金额展示文案错误（图 1），需对照prd优化（图 2）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdL1bKiut4C",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "VTf3bd564oc3CIxySIJcnpCdnMd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/VTf3bd564oc3CIxySIJcnpCdnMd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=VTf3bd564oc3CIxySIJcnpCdnMd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_dfd7ebf5e4e6/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "Jqn5bMz25oYx6YxpwNkcr7nanWb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Jqn5bMz25oYx6YxpwNkcr7nanWb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Jqn5bMz25oYx6YxpwNkcr7nanWb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_dfd7ebf5e4e6/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_5b2c5588cc6b",
+      "rowHash": "1b0864e4e6f7a757570c98b8b44e2a6f4fb2c394",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773331200000,
+      "feedbackDate": "2026-03-13",
+      "parentRecord": "",
+      "description": "隐私政策摘要/个人信息收集清单/第三方共享个人信息清单：去掉此 3 栏，至保留“用户协议”、“隐私政策”栏即可",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdL2LUf9YLp",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Xhh8b359Xo3JSNxaXn2csPMqnnf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Xhh8b359Xo3JSNxaXn2csPMqnnf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Xhh8b359Xo3JSNxaXn2csPMqnnf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_5b2c5588cc6b/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_b2911ce2d8bf",
+      "rowHash": "745c2f26dea3e35dc2b525a2c799b038fc4179d7",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773331200000,
+      "feedbackDate": "2026-03-13",
+      "parentRecord": "",
+      "description": "申请注销账号/申请暂停相亲：目前2 栏未开发完整，且功能优先级低，第一期可先隐藏，二期迭代后再上线",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdL4nSTfp88",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "B3z1b9bnoobI5lxjQzicxdmTnwg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/B3z1b9bnoobI5lxjQzicxdmTnwg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=B3z1b9bnoobI5lxjQzicxdmTnwg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b2911ce2d8bf/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_fb72ee082d4a",
+      "rowHash": "8f92831775c542bc392e5884f4ac6ab1b7237fb3",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "个性化推荐：目前点击入口栏直接从“已开启”变为“已关闭”，正确应点击“已开启”入口栏，弹出推荐开关弹框，弹框提示“关闭后，将不会再为您推荐个性化资料卡，卡片推荐精准度会下降”，按钮：取消/确认；点击按钮“取消”，关闭失败，弹框消失；点击按钮“确认”，关闭成功，弹框消失，入口栏状态变为“已关闭”；点击“已关闭”入口栏，开启成功，toast提示“已开启个性化推荐”，入口栏状态变为“已开启”",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdF8hqVcLv3",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "MGxvbccOyoXXdpx4G2dcJbJFn4f",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/MGxvbccOyoXXdpx4G2dcJbJFn4f/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=MGxvbccOyoXXdpx4G2dcJbJFn4f",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_fb72ee082d4a/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_0b18ac4ee14d",
+      "rowHash": "5c40ead8f7e103542db4caa60a9afc4a4918496b",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "打招呼语：目前打招呼语设置的交互、展示样式与UI稿不一致",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdF9zWEIjCU",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "WL6ebED6UonxAuxXXBZcvnV5nhf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/WL6ebED6UonxAuxXXBZcvnV5nhf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WL6ebED6UonxAuxXXBZcvnV5nhf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_0b18ac4ee14d/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_5546ac50605e",
+      "rowHash": "9a48e822ab67287454d51d96e0464607fb9935d5",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "开启实名认证：目前未实名用户，点击该栏直接弹框提醒要先去实名认证，正确应先跳转至实名认证权益介绍页，再点击“开启实名认证”才出弹框提醒，对应UI稿如右图",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdF9EG61cBH",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "G2nQbAmmeopPqGxQEcCcYWDBnwb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/G2nQbAmmeopPqGxQEcCcYWDBnwb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=G2nQbAmmeopPqGxQEcCcYWDBnwb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_5546ac50605e/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_2cb6019cfd64",
+      "rowHash": "9b969556abf68b851ad9781281eda5c3b9019fa7",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "无门槛联系：目前无门槛联系能力未实现，若本期不做可隐藏入口，若确认在本期实现，可参考图 1prd，图 2 弹框样式做优化",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdFaV78lJ9g",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "SxPibIyW8op7ilxcA2XcGn4unse",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/SxPibIyW8op7ilxcA2XcGn4unse/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=SxPibIyW8op7ilxcA2XcGn4unse",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_2cb6019cfd64/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_9514af4dc83e",
+      "rowHash": "9e2e418504849ba57a50574fab4a4274f2890b27",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773244800000,
+      "feedbackDate": "2026-03-12",
+      "parentRecord": "",
+      "description": "确认承诺书：1、目前点击“承诺并确认”按钮会二次弹框提示，正确应点击“承诺并确认”按钮后立即toast提示“已承诺”，同时，按钮变为置灰“已承诺”，页面打上“已承诺”水印；点击“已承诺”无反应，不可取消承诺书；2、目前承诺书页面UI展示内容错误，正确详见UI稿，且页面展示字段信息含：家长编号、当日承诺时间（实时更新，精确到年月日）、承诺状态",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdFd0XZ7b5H",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "O5ZabNH0ko1Kb2xbYFgc81vbnHf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/O5ZabNH0ko1Kb2xbYFgc81vbnHf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=O5ZabNH0ko1Kb2xbYFgc81vbnHf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_9514af4dc83e/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_285a3ed46902",
+      "rowHash": "8bd2863928e52cd557570f9ea27f01cff1c2bfc6",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "单次购买：目前单次购买成功未在当前页刷新出来一批超级曝光嘉宾，建议购买完成进入此页后，刷新一批",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdtRVTw1qPD",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "BPJlbA9UxoxDbqxCpRLclch9nVd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/BPJlbA9UxoxDbqxCpRLclch9nVd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=BPJlbA9UxoxDbqxCpRLclch9nVd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_285a3ed46902/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_ab3e5f112edb",
+      "rowHash": "54941ba584ffc972e44951c405c83519b1f3ae94",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "看过我/收藏我：点击嘉宾卡片“···”按钮，目前是弹出操作弹框，正确应跳转至会员开通页（选中黄金tab），且弹框提示“查看详细资料受限 /平台严格保护用户隐私，开通会员方可查看对方详情”，点击弹框按钮“好的”弹框消失（弹框是后续加的，视觉可直接用截图 1 弹框样式套用）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdtWrWCyloZ",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "SfK1bscLko20qrx5UCNcm8yhnED",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/SfK1bscLko20qrx5UCNcm8yhnED/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=SfK1bscLko20qrx5UCNcm8yhnED",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_ab3e5f112edb/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_bb72bc8166f0",
+      "rowHash": "b4933f35b01862d326a218aab6ffd5876ae365a7",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "看过我/我看过/我收藏的--tab页：会员身份，点击嘉宾卡片“···”按钮触发的弹框按钮，目前点击“屏蔽并删除”是跳过了二次确认弹框直接屏蔽成功，正确应如详情资料页（图 1 ）屏蔽，先填写二次弹框确认",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdtZvtVVbrB",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "K2aJbEqgPo9k6FxLQ6kc8glCn2f",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/K2aJbEqgPo9k6FxLQ6kc8glCn2f/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=K2aJbEqgPo9k6FxLQ6kc8glCn2f",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_bb72bc8166f0/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_587d4be88b55",
+      "rowHash": "e2b6f27db9286f4a673f28fe0b8b871d364f1e21",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "屏蔽的人：被屏蔽的人在浏览/收藏/解锁记录的 6 个页面里，正确应都隐藏（包括机器人），目前我收藏的人页面会展示（编号 3079540 看第 2 个）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdyGmdsJePR",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "VJbnbKbNyoi8UGxnqRWclTfsnql",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/VJbnbKbNyoi8UGxnqRWclTfsnql/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=VJbnbKbNyoi8UGxnqRWclTfsnql",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_587d4be88b55/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_81e329e3b369",
+      "rowHash": "a41cd0037f549482136705162def2128f0f00206",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "收藏我：会员身份，目前底部会提示开通会员（如图 1），正确应去掉提示语及按钮",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdyWpfjAobx",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "R09Wbe17eoW39RxvpkHcV5U8nrg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/R09Wbe17eoW39RxvpkHcV5U8nrg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=R09Wbe17eoW39RxvpkHcV5U8nrg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_81e329e3b369/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_7fe2338ee19d",
+      "rowHash": "19040197d851c8ca918e848665d26f696274495d",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "解锁我：目前解锁嘉宾后，“解锁我、我解锁”2 个tab页都显示了我解锁的嘉宾按钮状态，因 2 个页面的嘉宾都可以正常查看，“已解锁”按钮反而会增加理解成本，故去掉该逻辑，正常展示“联系对方”按钮状态",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdyYAM6Is3n",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "T9YMbSNm7okt7axJa33cvgsUnBd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/T9YMbSNm7okt7axJa33cvgsUnBd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=T9YMbSNm7okt7axJa33cvgsUnBd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_7fe2338ee19d/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_171f42c35ee5",
+      "rowHash": "8ab87f511066a4203133d8d3f77ef16d09d8226f",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "我解锁的：底部不应该有提示“共解锁xxx位·······”，详见图 1",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdzuxJpHAd3",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "MxKNbYwisovpX9xgEoccet77nzg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/MxKNbYwisovpX9xgEoccet77nzg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=MxKNbYwisovpX9xgEoccet77nzg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_171f42c35ee5/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_49130109a940",
+      "rowHash": "33468a5025b9e57702e95296e0819a9fbdf27129",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1773072000000,
+      "feedbackDate": "2026-03-10",
+      "parentRecord": "",
+      "description": "首页金刚区：有人看过我、收藏我、解锁我后，目前首页人数未增加（进入再返回才增加了），正确应实时显示历史+新增人数",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdt2ot3Awyx",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Ot8Lbv1HkokiPPxxNgRcC2Fznnb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Ot8Lbv1HkokiPPxxNgRcC2Fznnb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Ot8Lbv1HkokiPPxxNgRcC2Fznnb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_49130109a940/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_7c4e0e83f864",
+      "rowHash": "ff376c39d8d73cceeba112fd886ff014c9940da9",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773072000000,
+      "feedbackDate": "2026-03-10",
+      "parentRecord": "",
+      "description": "看过我：目前对方看过我资料主页多次后，此页顶部只显示了“看了我”，正确应显示“xx月xx日看了我 共看过我xx次”（若累计看过次数≥ 2 且有通过超级曝光看了我，则依然遵从该逻辑）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdtjFR7ca8D",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "B4m9b4LqMo4AIXx311Pc3956nzg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/B4m9b4LqMo4AIXx311Pc3956nzg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=B4m9b4LqMo4AIXx311Pc3956nzg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_7c4e0e83f864/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_634001549ca8",
+      "rowHash": "4f5f205f6c1d148c9158b3e310cd7bee831a461e",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "解锁会话：当底部操作栏是未解锁状态时，目前点击“立即解锁”，以及点击 “交换微信、拨打电话、发送照片”菜单按钮，是跳转到了会员开通页，正确应统一弹出会员阻断弹框，详见截图prd",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnGyiCn3j3",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "InXybTcL0ole0exLEXycKirOnMf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/InXybTcL0ole0exLEXycKirOnMf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=InXybTcL0ole0exLEXycKirOnMf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_634001549ca8/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "T5ycbGwLXovP1NxBkVjcOIRDnac",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/T5ycbGwLXovP1NxBkVjcOIRDnac/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=T5ycbGwLXovP1NxBkVjcOIRDnac",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_634001549ca8/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_cb58ddbf4447",
+      "rowHash": "011a43a541e5e325160ef692d9b4e2303b1b1834",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "填写称呼：目前只能在编辑页填写，正确应如图 2 所示，跳转至填写页",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnZZW03FBZ",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "KcWLbZ4Kio3Agaxy05rcGQHfnLf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/KcWLbZ4Kio3Agaxy05rcGQHfnLf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=KcWLbZ4Kio3Agaxy05rcGQHfnLf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_cb58ddbf4447/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_27ffe8f1b8d2",
+      "rowHash": "6bdc21e65a32a6f01bd401a38c00a2075a8287aa",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "嘉宾资料：当用户已填 收入和职业时，优先展示收入",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdePWFqFuaH",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "VoXGb38JZoiihFxmXg9ccioDnmg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/VoXGb38JZoiihFxmXg9ccioDnmg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=VoXGb38JZoiihFxmXg9ccioDnmg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_27ffe8f1b8d2/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_811a4a0500d5",
+      "rowHash": "185c94049cf5b87140d8772b5faccfa78addc903",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "私信内容：私信缺少发送时间，以及“未读/已读”状态（若对方为真人，则以实际阅读时间显示状态，若对方为真人，则以回复时间显示）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdfpPK7EEDW",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "ExTfbIcXIozBfJxtaZlce7efnB3",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/ExTfbIcXIozBfJxtaZlce7efnB3/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=ExTfbIcXIozBfJxtaZlce7efnB3",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_811a4a0500d5/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_96164c6eead1",
+      "rowHash": "2992fe5d10cb24c4b88413df54775dba01fbf66c",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "私信内容：长按己方私信时，操作提示有遮挡影响体验（固定位置展示就好了）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdfGXWwh1e6",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "O6ANbrgZXoDxQNxHZ1ccnwaanfb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/O6ANbrgZXoDxQNxHZ1ccnwaanfb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=O6ANbrgZXoDxQNxHZ1ccnwaanfb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_96164c6eead1/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_245d3f132be9",
+      "rowHash": "8c140ce9a8430e7d5ecc03076d20f035fcb09da4",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "私信撤回：目前2 分钟内的私信内容会提示撤回失败，正确应按prd撤回，详见截图prd",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdfIAHKM7GF",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "T9DCbUI9koryy4xBEICcy18xnNd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/T9DCbUI9koryy4xBEICcy18xnNd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=T9DCbUI9koryy4xBEICcy18xnNd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_245d3f132be9/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_c142a8380a95",
+      "rowHash": "e3995644d3c216cac051335084708417998f3d18",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "拨打电话：当对方无手机号（如机器人）时，此按钮隐藏，其他按钮自适应左对齐",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdfMIkiRzGG",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "CJ7wbcQzoocwXYxvS2wcJLDdnbf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/CJ7wbcQzoocwXYxvS2wcJLDdnbf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=CJ7wbcQzoocwXYxvS2wcJLDdnbf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_c142a8380a95/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_51865f161582",
+      "rowHash": "c883c0aa96e1f0f2629d76055571091f5ead3528",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "年份筛选：筛选选择框的交互&展示逻辑不对，需对照prd优化 神仙亲家--用户资料/打招呼/任务体系",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdgWI3HRU47",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "QgI1b0K3xorxyBxsBjQcsLkjntb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/QgI1b0K3xorxyBxsBjQcsLkjntb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=QgI1b0K3xorxyBxsBjQcsLkjntb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_51865f161582/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_d13301ee33d0",
+      "rowHash": "a08c0ebbfd8299dc14744c072564cff30b15bc48",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "身高筛选：筛选选择框的交互&展示逻辑不对，需对照prd优化 神仙亲家--用户资料/打招呼/任务体系",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdgYsS0NT08",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_b5153f86466b",
+      "rowHash": "6b365f9f1777a747b08c807771fa4ab5eeb6d43d",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "截止年份栏，其高亮选中的年份，目前随起始年份错误显示为了“不限”项，正确应选中“不限”项的下一项（N+5cm项）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhdRv1HPjx",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "HYm5bGpPLoYU6Px1uE0c1LnBnUb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/HYm5bGpPLoYU6Px1uE0c1LnBnUb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=HYm5bGpPLoYU6Px1uE0c1LnBnUb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b5153f86466b/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_48c69ef268ce",
+      "rowHash": "7e8bf19cf26321048dd450e3ae265cfc0c9a4b64",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "选项框的上下选项有遮挡，看着体验不好",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdheTcVEb3i",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "NJoobDIPCo8RW9x3ypecHoCrnXb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/NJoobDIPCo8RW9x3ypecHoCrnXb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=NJoobDIPCo8RW9x3ypecHoCrnXb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_48c69ef268ce/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_c0b31644b9a4",
+      "rowHash": "a35e3194aabd51189c201f3ea5efd3af58206026",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "地区选择：目前仅支持 1 个城市（见图 2），正确应支持添加第 2 个城市且单选，详见prd 图 1，视觉稿详见图 2、图 3",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhgDd1SsbC",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "DMWSbgMNAoXahpxL7WPcGDo9nbc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/DMWSbgMNAoXahpxL7WPcGDo9nbc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=DMWSbgMNAoXahpxL7WPcGDo9nbc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_c0b31644b9a4/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "MbdDbVSrpoBaYPxC6FWc5wb4nwd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/MbdDbVSrpoBaYPxC6FWc5wb4nwd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=MbdDbVSrpoBaYPxC6FWc5wb4nwd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_c0b31644b9a4/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "RC92bZcNpoTMf3xOYsLcl6Non6Z",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/RC92bZcNpoTMf3xOYsLcl6Non6Z/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=RC92bZcNpoTMf3xOYsLcl6Non6Z",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_c0b31644b9a4/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "KEGnbuWo8oCMXBxMgYLcyoe6n1f",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/KEGnbuWo8oCMXBxMgYLcyoe6n1f/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=KEGnbuWo8oCMXBxMgYLcyoe6n1f",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_c0b31644b9a4/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_fe1677781cf4",
+      "rowHash": "dfa59c43c61257826773368fe79ab3469e668230",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "交换照片：会员身份，点击“交换照片”按钮，目前弹出弹框样式不对（图 2），正确应 如UI稿图 1，但图 1 的提示内容和按钮文案需分别改为“您是会员，可免费解锁”，和“立即解锁”",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdi0eJCZ0pD",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "VJAIbowOLo4nrLx9MYGc8HmwnDb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/VJAIbowOLo4nrLx9MYGc8HmwnDb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=VJAIbowOLo4nrLx9MYGc8HmwnDb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_fe1677781cf4/image.png"
+        },
+        {
+          "name": "9033aefa54d19824e91ce635dd6caa16.jpg",
+          "fileToken": "KmzOb4Ru4opqqHx8DfXcdtiln4b",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/KmzOb4Ru4opqqHx8DfXcdtiln4b/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=KmzOb4Ru4opqqHx8DfXcdtiln4b",
+          "contentType": "image/jpeg",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_fe1677781cf4/9033aefa54d19824e91ce635dd6caa16.jpg"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_ae0134ae8155",
+      "rowHash": "dcac8b3eb28307996d6f778e721f1345d459574f",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "延展父问题场景\n1）当非会员身份但解锁次数≥ 1，  则点击“交换照片”按钮，按图 1 的提示内容和按钮文案需分别改为“交换照片需先解锁对方联系方式 / 您是会员，可免费解锁”，和“立即解锁”\n2）当非会员身份且解锁次数=0， 则点击“交换照片”按钮，按图 1 的提示内容和按钮文案需分别改为“交换照片需先解锁对方联系方式 / 您的联系次数不足，开通会员可无限解锁”，和“开通会员”",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdi24vPhQ0d",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_94bd86e61a0a",
+      "rowHash": "b3ea6d7b17c787a67ab63dfe6378ea7540ab76ae",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "屏蔽的人：列表右侧错误显示为了家长头像，正确应为孩子照片（如未解锁还应模糊处理）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdeUHa6PTrb",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "NqmAbyREBoqyewxMQ2EcwDFLnRf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/NqmAbyREBoqyewxMQ2EcwDFLnRf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=NqmAbyREBoqyewxMQ2EcwDFLnRf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_94bd86e61a0a/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_793be1971b3f",
+      "rowHash": "9da6ce69057f933d14870317d280c5817c76ca19",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "屏蔽的人：此列表嘉宾卡片错误显示了更多“···”图标，正确应没有",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdeXbcdFtoy",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Yhc5bdDfPoP0BQxalwDc670nnmc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Yhc5bdDfPoP0BQxalwDc670nnmc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Yhc5bdDfPoP0BQxalwDc670nnmc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_793be1971b3f/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_90d46bdba290",
+      "rowHash": "93c02d2a28bdd9d915c9fa2d8e74cdd5f702b878",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "“xx会员尊享xx大特权”标题，需根据选中的价格档位，文案相应变化，前者“xx”文案分别为“季度、年度、不限时、至尊”，后者“xx”数值分别为“6、6、6、12”",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdbs7h3a1AO",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Kq7RbaLR0oqirKxc6flc7Vi7n9Q",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Kq7RbaLR0oqirKxc6flc7Vi7n9Q/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Kq7RbaLR0oqirKxc6flc7Vi7n9Q",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_90d46bdba290/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_8fe649498e61",
+      "rowHash": "b5cfd272f5b4c49133e80269d36625671b5c4768",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "精准搜索：点击嘉宾卡片按钮，或点击底部常驻按钮，可统一跳转至会员开通页，但目前都未正确选中“至尊会员”tab",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdbIWdOacCu",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "F3pqblc7Go2tiGxCv4WcLmBfnPg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/F3pqblc7Go2tiGxCv4WcLmBfnPg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=F3pqblc7Go2tiGxCv4WcLmBfnPg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_8fe649498e61/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_800045a6af94",
+      "rowHash": "7c6e513de2cfd4a61bbf184f9df43b8cf0b3fdcf",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1770825600000,
+      "feedbackDate": "2026-02-12",
+      "parentRecord": "",
+      "description": "会员阻断弹窗：标题文案“开通会员解锁联系方式”错误，需根据黄金会员、至尊会员tab的切换而变化，对应标题为“开通黄金会员即可查看 / 开通至尊会员即可查看”  ；",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvb12DzDcUrn",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_719d02a19dc7",
+      "rowHash": "74008fad1824ae2ceef417f908fc3bcf00bca318",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1770480000000,
+      "feedbackDate": "2026-02-08",
+      "parentRecord": "",
+      "description": "截止年份栏，高亮选中的年份项无法与起始年份联动变化",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhaXvLmzWy",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "AIwqblYE8oCQ4RxVC2scW17nn7c",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/AIwqblYE8oCQ4RxVC2scW17nn7c/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=AIwqblYE8oCQ4RxVC2scW17nn7c",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_719d02a19dc7/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_852e8d599ec6",
+      "rowHash": "7b6aa95c965f6fbb46e3e83fa2d13d55852563ef",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1770480000000,
+      "feedbackDate": "2026-02-08",
+      "parentRecord": "",
+      "description": "截止年份栏，其与起始年份联动变化的选项，正确应该当起始选项选择的出生年份为“n年”时，截止选项始终依次显示“不限”、 “n年+3 年”，且高亮选中 “n年+3 年”年份（体验完美亲家秒懂）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhbIhhCUFp",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Y1NbbvXqcoOIr2xNtBYcma1Anke",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Y1NbbvXqcoOIr2xNtBYcma1Anke/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Y1NbbvXqcoOIr2xNtBYcma1Anke",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_852e8d599ec6/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_e7494c4e770c",
+      "rowHash": "d2f827ecd495b79e8387caf2a03c8922a9d4c905",
+      "section": "漏洞跟踪记录",
+      "priority": "P1",
+      "status": "修复中",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1770393600000,
+      "feedbackDate": "2026-02-07",
+      "parentRecord": "",
+      "description": "上传孩子照片时，缺少做人脸验证，需求详见截图 2",
+      "notes": "@ham\n前端接入按这 3 步：\n先拿上传预签名 URL\nPOST /object/upload（需 Bearer）\n代码：object.go (line 33)\nbody 示例：\n{ \"module\": \"child_photo\", \"file_number\": 1 }\n前端直传图片到预签名 URL（PUT）\n回调业务接口保存照片\nPOST /api/v1/profile/child/{child_id}/photo\nbody 示例：\n{ \"url\": \"child_photo/xxx.jpg\", \"is_primary\": false }\n（也可传可访问的 https URL）\n联调时前端重点处理这些错误码：\n110607：未检测到人脸\n110608：检测到多人脸\n110602：上传/检测服务异常（稍后重试）\n110603：最多 6 张",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvaxxmCIQz5R",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "YhUfbgmKvotSWvx8uRfcxLcUnGb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/YhUfbgmKvotSWvx8uRfcxLcUnGb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=YhUfbgmKvotSWvx8uRfcxLcUnGb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e7494c4e770c/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "AA35bOsYiornGux4eqHcpNmAnOf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/AA35bOsYiornGux4eqHcpNmAnOf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=AA35bOsYiornGux4eqHcpNmAnOf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e7494c4e770c/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_4fa49f433079",
+      "rowHash": "aa12ee7bd35a0ba91a78be4071633e5fa147f3b9",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "刘瀚卿, ham",
+      "feedbackTime": 1773331200000,
+      "feedbackDate": "2026-03-13",
+      "parentRecord": "",
+      "description": "黄金会员：黄金会员身份，在“我的”首页，点击会员入口栏时，目前跳转黄金会员页选中“年卡黄金tab”，正确应在黄金会员页选中“至尊会员tab”",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdKTO4h0uMT",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "KNRmbNZfeoJbeixsdkTc6lqinFd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/KNRmbNZfeoJbeixsdkTc6lqinFd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=KNRmbNZfeoJbeixsdkTc6lqinFd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4fa49f433079/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_9840152c672d",
+      "rowHash": "c1a59eab981f98d37c3bacb475a4f841111a7bac",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773331200000,
+      "feedbackDate": "2026-03-13",
+      "parentRecord": "",
+      "description": "邀请好友：入口栏缺少“分享赚钱”标签，对照UI稿优化",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdL7XQMgVge",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "W04eblLGUoZ03axt6V5cwjeznbb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/W04eblLGUoZ03axt6V5cwjeznbb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=W04eblLGUoZ03axt6V5cwjeznbb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_9840152c672d/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_10164589d4af",
+      "rowHash": "6fdc874158164b45048dc7cd690f750c0fb658ba",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "看过我/我看过/我收藏的3 个tab页：会员身份，点击嘉宾卡片“···”按钮触发的弹框按钮，目前点击“举报”是跳过了举报选项页直接举报成功，正确应如详情资料页（图 1 ）举报，先填写举报原因",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdtXpod5vUM",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "FlPbbG4LgoACt0xaSyfcjxNDnld",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/FlPbbG4LgoACt0xaSyfcjxNDnld/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=FlPbbG4LgoACt0xaSyfcjxNDnld",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_10164589d4af/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_d3406025cced",
+      "rowHash": "bce37dd3f706dddac5e196be62fad5d0ddf0a5e2",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "收藏我：非会员身份，底部按钮的提醒“最近有xx人收藏我”，前缀“最近有”改为“共有”",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdyNLOcvOJO",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "ShqZbFEgFoHhgexefU7cThvynjc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/ShqZbFEgFoHhgexefU7cThvynjc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=ShqZbFEgFoHhgexefU7cThvynjc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_d3406025cced/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_e0438693bfff",
+      "rowHash": "b0f0d08b14da44e99dc4b34a1d755c171969b044",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "收藏我：目前在此页取消被我屏蔽的嘉宾，无法取消屏蔽，会提示操作失败",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdyOyyvIvBj",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "JN3qbRB8Box1zRxRx9JcRsSCnLf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/JN3qbRB8Box1zRxRx9JcRsSCnLf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=JN3qbRB8Box1zRxRx9JcRsSCnLf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e0438693bfff/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_3b4742d86136",
+      "rowHash": "00538c9af2ebb1fd8a42e41e832ed384bae17c82",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "看过我/我看过/收藏我/我收藏/解锁我/我解锁：6 个页面嘉宾顶部的日期，今/昨天的日期用“今天、明天”代替。目前除了“看过我”页面实现，其他 5 个页面未实现",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdyVlTCkJsE",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "QkjgbpGpJong8sxRuQTcu8Ccn8b",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/QkjgbpGpJong8sxRuQTcu8Ccn8b/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=QkjgbpGpJong8sxRuQTcu8Ccn8b",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_3b4742d86136/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_4f35c8db8cbf",
+      "rowHash": "fbd4a0075ac38df811544699ce0d9252937e80cd",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "解锁我/我解锁 2 个tab页：置顶资料，目前点击“···”更多操作框，缺少置顶资料能力，且我解锁的tab页操作框误加了“查看联系方式”操作项（图 1）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdzecOZhf0F",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "NgMKbLIujoNasIx3SgTcvXronKf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/NgMKbLIujoNasIx3SgTcvXronKf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=NgMKbLIujoNasIx3SgTcvXronKf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4f35c8db8cbf/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "NMPvbrE3Mo9gWBxcUeuc4zTvnee",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/NMPvbrE3Mo9gWBxcUeuc4zTvnee/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=NMPvbrE3Mo9gWBxcUeuc4zTvnee",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4f35c8db8cbf/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_a83fb0d12f25",
+      "rowHash": "127d01d241ace2db4f60dd63e7ad6ed1d30cb49b",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "至尊会员：目前点击入口栏的“查看特权”，跳转至会员中心页且选中了“黄金会员tab”，正确应选中“至尊会员”tab",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdzyOK0tGCO",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "X5uXbBWRJoswOTxevnhcD06SnXe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/X5uXbBWRJoswOTxevnhcD06SnXe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=X5uXbBWRJoswOTxevnhcD06SnXe",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_a83fb0d12f25/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_94dda34e6aa9",
+      "rowHash": "780eea9533dabd43b2b3075f3e62d6c2d60622ad",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 1773158400000,
+      "feedbackDate": "2026-03-11",
+      "parentRecord": "",
+      "description": "滚动弹幕：无论选中哪个tab，希望用户在浏览权益信息时，滚动弹幕能随通顶标题一起固定住，确保用户浏览同时能感受其他人也在买，加速家长支付决策",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdzFA27MACE",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "RDWlbNTkhoxjsPxSSpicuUwnn7g",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/RDWlbNTkhoxjsPxSSpicuUwnn7g/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=RDWlbNTkhoxjsPxSSpicuUwnn7g",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_94dda34e6aa9/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_4abb28ceb29d",
+      "rowHash": "ed8e006b82a2694d0ac6edbd25afc3c85c99b19b",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1773072000000,
+      "feedbackDate": "2026-03-10",
+      "parentRecord": "",
+      "description": "目前看过我/我看过、收藏我/我收藏、解锁我/我解锁的 6 个页面，都缺少嘉宾为 0 的缺省提醒，正确应如图 1的prd提醒（图 2 是UI稿）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdeNmHsoRvO",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "BVi9boeupoy0K7xQbCRctlMtn9e",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/BVi9boeupoy0K7xQbCRctlMtn9e/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=BVi9boeupoy0K7xQbCRctlMtn9e",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4abb28ceb29d/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "UVjIbnX9doAxxtxxOtXcd0asnHh",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/UVjIbnX9doAxxtxxOtXcd0asnHh/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=UVjIbnX9doAxxtxxOtXcd0asnHh",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4abb28ceb29d/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_b9883fea7490",
+      "rowHash": "5ca49579e417e0a5c4d5ec2920be657e6739903f",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1773072000000,
+      "feedbackDate": "2026-03-10",
+      "parentRecord": "",
+      "description": "超级曝光提醒：所有通过己方在首页超级曝光推荐专区或超级曝光嘉宾列表页资料卡片“看过我、收藏我、解锁我、私信我”的异性嘉宾，在己方视角的浏览记录、收藏记录、解锁记录、私信会话里正确应都会提醒“通过超级曝光xx”，目前没有除了浏览记录有提醒，收藏和解锁记录都没有",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdt3Wr4tM7x",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "R12WbKrZsoLXjoxEM7GcpUBYnHf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/R12WbKrZsoLXjoxEM7GcpUBYnHf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=R12WbKrZsoLXjoxEM7GcpUBYnHf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b9883fea7490/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "TA6rbRVUJoF8zzx9jkQc2gIGn6g",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/TA6rbRVUJoF8zzx9jkQc2gIGn6g/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=TA6rbRVUJoF8zzx9jkQc2gIGn6g",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b9883fea7490/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_040afd34f542",
+      "rowHash": "e80d1cb9aafaf1886b228954e08613c4a7e9f05b",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "超级曝光--开关设置页：若用户单次购买超级曝光次数或时长未用完时，此时购买了至尊会员，则正确做法是顶部“剩余曝光次数”和“曝光倒计时”提示不再显示，开关状态延续之前，但目前还会显示“剩余曝光次数”和“曝光倒计时”",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnlWQRGK22",
+      "attachments": [
+        {
+          "name": "c4c4e3b3336183e7e0eea25b8c71cf23.jpg",
+          "fileToken": "LroLbBlILopfV8xeJPAc1N65nxe",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/LroLbBlILopfV8xeJPAc1N65nxe/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=LroLbBlILopfV8xeJPAc1N65nxe",
+          "contentType": "image/jpeg",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_040afd34f542/c4c4e3b3336183e7e0eea25b8c71cf23.jpg"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_8d925e275789",
+      "rowHash": "f031eb83f0b591dcf50755bafd55c7f9e7d6284c",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772985600000,
+      "feedbackDate": "2026-03-09",
+      "parentRecord": "",
+      "description": "嘉宾列表：嘉宾卡片展示以及交互需与首页嘉宾卡片一致，目前未一致",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdnqxuGB5If",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Whggbqiklo5CL6x1k0acmyg6nQb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Whggbqiklo5CL6x1k0acmyg6nQb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Whggbqiklo5CL6x1k0acmyg6nQb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_8d925e275789/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_0d138091656c",
+      "rowHash": "72bf894f5745e381e0a531f3199b12041f324c6a",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "拨打电话：会员身份，点击弹框按钮“立即解锁”后，目前在当前页弹出了联系方式，正确应立即跳转至私信会话页，且底部弹出“xx家长联系方式/xxxxxxxxxxx”",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdeXHTu1DGL",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "W3W6b7QbLopUuVxPf5bci2FYnYf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/W3W6b7QbLopUuVxPf5bci2FYnYf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=W3W6b7QbLopUuVxPf5bci2FYnYf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_0d138091656c/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_3c47199ee6b8",
+      "rowHash": "83bfeab094bd9bcb2811e1f45d8e169fd899627e",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "孩子照片：现有高斯模糊度太高，导致缺少想象空间，期望对照图 1 进行还原",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdeXLGyZgNj",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "GCgKb6ZsQoeHESxxXJBc5Rlnnif",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/GCgKb6ZsQoeHESxxXJBc5Rlnnif/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=GCgKb6ZsQoeHESxxXJBc5Rlnnif",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_3c47199ee6b8/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "MM8rbZYvvoa1jDxhTYqc9zlCnke",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/MM8rbZYvvoa1jDxhTYqc9zlCnke/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=MM8rbZYvvoa1jDxhTYqc9zlCnke",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_3c47199ee6b8/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_feec4a7b9612",
+      "rowHash": "d1fa6a1ca7386cfac87725320cd60085ccc18467",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "会员身份，点击“打招呼”按钮，现状：仅在当前页有弹框提示；期望：参考图 1，弹框提示的同时跳转到私信页，且私信页底部菜单为锁定状态（给用户解锁立得的感觉）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdfj3hckus7",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "HHfUbYGU1o4bxjxf4l5cdej6nZd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/HHfUbYGU1o4bxjxf4l5cdej6nZd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=HHfUbYGU1o4bxjxf4l5cdej6nZd",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_feec4a7b9612/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_072a4e718515",
+      "rowHash": "34b12243f0ed64a8db6943ecc13cf7bb73973286",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "私信内容：长按对方私信时，需将操作提示的多余背景框裁剪",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdfHk296Hnl",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "FdZobBYknoqYyXxY03kcI2sxnqc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/FdZobBYknoqYyXxY03kcI2sxnqc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=FdZobBYknoqYyXxY03kcI2sxnqc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_072a4e718515/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_82cf2a0378fb",
+      "rowHash": "1e31050ef21d1c9d48df731b59e0c9e2ef4c8fa3",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "私信撤回：点击“撤回”时，需将超出撤回时间时的文案“撤回失败”改为“超出撤回时间”",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdfHsmsSgyP",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "U5DpbVTtXoYNLQxgOyhcEsvxnwc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/U5DpbVTtXoYNLQxgOyhcEsvxnwc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=U5DpbVTtXoYNLQxgOyhcEsvxnwc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_82cf2a0378fb/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_2be167796aaa",
+      "rowHash": "661f712dadda3a56a707641d3df28e92636d28b7",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "私信语音：播放语音时，目前播放动效播完不会自己停，需手动停止，正确应播完即止",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdfMdxAKvcz",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_15c92153897f",
+      "rowHash": "220da2348fdbad087ea26bb4e459450a03b2c0f8",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "黄金会员：开通或升级会员支付成功后，其提醒弹框“恭喜你，成功开通xx会员”错乱，需优化",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhCNKuDIMc",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "CLYHbFMaCoY0vxxi05GcmzLDnRg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/CLYHbFMaCoY0vxxi05GcmzLDnRg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=CLYHbFMaCoY0vxxi05GcmzLDnRg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_15c92153897f/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_3f8ddb3655f7",
+      "rowHash": "4a3e6e8fc97968b4b008e7f8924115061ea42977",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "搜索结果：至尊会员用户，看到的搜索嘉宾列表卡片，和首页卡片一样增加“相亲介绍”内容，以丰富会员权益价值",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhJN0cwIvn",
+      "attachments": [
+        {
+          "name": "ad14e952b13f75c3497e685a44e68d15.jpg",
+          "fileToken": "VHsmbRaMEoLXnXxhCwzc8Tqqn6d",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/VHsmbRaMEoLXnXxhCwzc8Tqqn6d/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=VHsmbRaMEoLXnXxhCwzc8Tqqn6d",
+          "contentType": "image/jpeg",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_3f8ddb3655f7/ad14e952b13f75c3497e685a44e68d15.jpg"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_45bae1caa665",
+      "rowHash": "82832ade386fa0cca447eb6899bb3397d6074458",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 杨璐琳",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "搜索结果：非至尊会员用户的搜索结果页，滑动至第 9-10 个会员时逐渐模糊，详见prd图 2，可参考Ui稿 图 1修改（搜索结果页的蒙层UI稿缺失，需补充下@杨璐琳）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhNv4YBw7p",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "EJw2ba26toAgsgxz8z9cBbWPnvh",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/EJw2ba26toAgsgxz8z9cBbWPnvh/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=EJw2ba26toAgsgxz8z9cBbWPnvh",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_45bae1caa665/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "Id6GbSmJco3N4IxUkpccLSRMnOh",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Id6GbSmJco3N4IxUkpccLSRMnOh/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Id6GbSmJco3N4IxUkpccLSRMnOh",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_45bae1caa665/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "W8nTbQpDKo5HjcxeSmRcQocjnkc",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/W8nTbQpDKo5HjcxeSmRcQocjnkc/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=W8nTbQpDKo5HjcxeSmRcQocjnkc",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_45bae1caa665/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_18c0645e5ecc",
+      "rowHash": "f56766afa1cbb69cb4245a54f60b3f0c02afadb8",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "待发版验证",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "搜索结果：点击底部“开通至尊会员”按钮跳转至会员开通页后，目前选中了“黄金tab”，正确应选中“至尊tab”",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhPkFTIHjW",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "TT5pb4Qg3oydNYxt2oBck14mnNg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/TT5pb4Qg3oydNYxt2oBck14mnNg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=TT5pb4Qg3oydNYxt2oBck14mnNg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_18c0645e5ecc/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_c5afb0f00d28",
+      "rowHash": "e2e44f2c91649eb96933d07712933aaa1bd0d532",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "推荐日期：“左上角实时显示对应嘉宾推荐时的所在日期，精确到月、日”，该需求未实现（交互可以看下完美亲家）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhSxUOheZ3",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "FNZGbK4SCo46c7xcyp8cJ8fsnDf",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/FNZGbK4SCo46c7xcyp8cJ8fsnDf/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=FNZGbK4SCo46c7xcyp8cJ8fsnDf",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_c5afb0f00d28/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_ce598b234577",
+      "rowHash": "91d71ced8a3966b23766c17df0b225adab2d0d47",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772899200000,
+      "feedbackDate": "2026-03-08",
+      "parentRecord": "",
+      "description": "筛选结果：筛选日期推荐嘉宾数为 0的缺省视觉有误（图 1），正确应为图 2-2（左侧为神仙亲家，右侧为完美亲家，在优化时还是期望保留顶部的日期和日期筛选按钮）",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdhUUsoXecr",
+      "attachments": [
+        {
+          "name": "80081792d5ca71855f401f7568326c5c.jpg",
+          "fileToken": "E9Yvb2nYtouqDLx3zOoclab9nVd",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/E9Yvb2nYtouqDLx3zOoclab9nVd/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=E9Yvb2nYtouqDLx3zOoclab9nVd",
+          "contentType": "image/jpeg",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_ce598b234577/80081792d5ca71855f401f7568326c5c.jpg"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "JuzqboKzkozlplxGE3Kcejcqnkb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/JuzqboKzkozlplxGE3Kcejcqnkb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=JuzqboKzkozlplxGE3Kcejcqnkb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_ce598b234577/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_e7278473b129",
+      "rowHash": "fbd5495b4826f73fa72f002f206aafafdcce250d",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "杨璐琳",
+      "feedbackTime": 1772812800000,
+      "feedbackDate": "2026-03-07",
+      "parentRecord": "",
+      "description": "会员阻断弹框：还原度已提高了 70%，但还不够，此处设计老师重点看下",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdbmQXmQutm",
+      "attachments": []
+    },
+    {
+      "issueId": "bug_6ed8309b422b",
+      "rowHash": "e5cf44db1e202aee2e2d7427037adef5bc39bcd2",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1772640000000,
+      "feedbackDate": "2026-03-05",
+      "parentRecord": "",
+      "description": "录制语音：视觉还原度低，需优化",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvd0cDlj6cJn",
+      "attachments": [
+        {
+          "name": "img_v3_02vg_56f996ba-c8dc-4f89-b21a-14fd50127a4g.png",
+          "fileToken": "OM96b5lPbobarYx8TK3cq9DgnLb",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/OM96b5lPbobarYx8TK3cq9DgnLb/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=OM96b5lPbobarYx8TK3cq9DgnLb",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_6ed8309b422b/img_v3_02vg_56f996ba-c8dc-4f89-b21a-14fd50127a4g.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_a8279ba68ef1",
+      "rowHash": "8dfff0b02cf577523e49a4501246c29f34138838",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1770480000000,
+      "feedbackDate": "2026-02-08",
+      "parentRecord": "",
+      "description": "精准查找：其出生年份选择器的交互逻辑、视觉展示，未与prd、视觉稿一致，需对照优化，详见prd【资料编辑--择偶标准--年份要求】",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvaC4oMMVLLV",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "WJXwbGkxGoJOVyxSB0RcDStLnth",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/WJXwbGkxGoJOVyxSB0RcDStLnth/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WJXwbGkxGoJOVyxSB0RcDStLnth",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_a8279ba68ef1/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "KXjDbCQPooI1UDxAI11cyM4Fnke",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/KXjDbCQPooI1UDxAI11cyM4Fnke/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=KXjDbCQPooI1UDxAI11cyM4Fnke",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_a8279ba68ef1/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_370edb20cbcb",
+      "rowHash": "06eaef1cd92838dcd4d9e51055a873efc08b5872",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1770480000000,
+      "feedbackDate": "2026-02-08",
+      "parentRecord": "",
+      "description": "精准查找：其身高选择器的交互逻辑、视觉展示，未与prd、视觉稿一致，需对照优化，详见prd【资料编辑--择偶标准--年份要求】",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvaCazcJbryS",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "HUyDb0U4Row7ddx21kGc0xacnVg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/HUyDb0U4Row7ddx21kGc0xacnVg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=HUyDb0U4Row7ddx21kGc0xacnVg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_370edb20cbcb/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "YL7CbR9R6ovma2xQigoctOFTnDh",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/YL7CbR9R6ovma2xQigoctOFTnDh/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=YL7CbR9R6ovma2xQigoctOFTnDh",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_370edb20cbcb/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_e07369c70e10",
+      "rowHash": "f2c3cc81e6f623a528b2068646a7164c35e233d9",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 1770480000000,
+      "feedbackDate": "2026-02-08",
+      "parentRecord": "",
+      "description": "选项框的上下选项有遮挡，看着体验不好",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdh7JkUvIc3",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "KKbDbBEKuopfaBxbzrBcuUy8nld",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/KKbDbBEKuopfaBxbzrBcuUy8nld/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=KKbDbBEKuopfaBxbzrBcuUy8nld",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e07369c70e10/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_4e09dff2ba68",
+      "rowHash": "836fd4b514beb9baa20049e6df1b17be5b0dccc8",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham",
+      "feedbackTime": 0,
+      "feedbackDate": "",
+      "parentRecord": "",
+      "description": "被屏蔽用户私信：\n1、现状：目前点击进入被屏蔽用户私信页，消息栏会提示“已屏蔽，取消屏蔽后可进入聊天”，且会弹框提示如图 3 ，点击弹框按钮跳转至屏蔽列表，此需求点之前未明确。\n2、期望优化：如图 1、图 2 所示，当对方被屏蔽时，底部提示“您已屏蔽对方，无法发送消息”（可复用锁定状态的UI），点击“取消屏蔽”按钮，弹框提示如图 2，成功取消屏蔽后，底部锁定栏立即恢复正常",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdf4rnwEYgW",
+      "attachments": [
+        {
+          "name": "image.png",
+          "fileToken": "Tb1ab0GDfoXDjmxRW3KcEDZjnNg",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Tb1ab0GDfoXDjmxRW3KcEDZjnNg/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Tb1ab0GDfoXDjmxRW3KcEDZjnNg",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e09dff2ba68/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "Sv2Pb0uAEoLxYoxvw8lcqsadnBE",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/Sv2Pb0uAEoLxYoxvw8lcqsadnBE/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Sv2Pb0uAEoLxYoxvw8lcqsadnBE",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e09dff2ba68/image.png"
+        },
+        {
+          "name": "image.png",
+          "fileToken": "RrdHbsdyno2ccvxvs79c5lD9n9e",
+          "downloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/RrdHbsdyno2ccvxvs79c5lD9n9e/download",
+          "tmpDownloadUrl": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=RrdHbsdyno2ccvxvs79c5lD9n9e",
+          "contentType": "image/png",
+          "downloadedPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e09dff2ba68/image.png"
+        }
+      ]
+    },
+    {
+      "issueId": "bug_ce8cdee11db2",
+      "rowHash": "cadeb3a341356581477aa3a0c1003f5668796d17",
+      "section": "漏洞跟踪记录",
+      "priority": "P2",
+      "status": "新增",
+      "reporter": "dylon",
+      "assignee": "ham, 刘瀚卿",
+      "feedbackTime": 0,
+      "feedbackDate": "",
+      "parentRecord": "",
+      "description": "家庭副号：目前该能力未实现，此优先级最低，可放置 2 期",
+      "notes": "",
+      "review": "",
+      "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+      "recordId": "recvdL8tNjLPQj",
+      "attachments": []
+    }
+  ]
+}

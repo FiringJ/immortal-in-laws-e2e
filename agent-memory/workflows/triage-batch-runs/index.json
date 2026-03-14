@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "updatedAt": "2026-03-14T10:48:41.712Z",
+  "runs": [
+    {
+      "id": "triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "status": "running",
+      "createdAt": "2026-03-14T09:22:14.955Z",
+      "startedAt": "2026-03-14T09:22:14.955Z",
+      "candidateCount": 141,
+      "readyCount": 13,
+      "needsHumanCount": 2,
+      "failedCount": 0,
+      "skippedCount": 6,
+      "currentEntryItemId": "wf-2026-03-13T18-18-12-235Z-o1bnpi"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-305Z-3cjfmc",
+  "kind": "bug",
+  "title": "照片交换无需对方同意，只要照片识别后符合平台要求，则点击“交换照片”按钮后，直接打开对方清晰照，同时将我方清晰照通过私信发送对方。目前截图错误处理成了需对方同意才可交换逻辑，私信错发了交换私信，嘉宾详情页错误显示申请中，正确详见截图红框pr",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_b0e797a77ede\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-05\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n照片交换无需对方同意，只要照片识别后符合平台要求，则点击“交换照片”按钮后，直接打开对方清晰照，同时将我方清晰照通过私信发送对方。目前截图错误处理成了需对方同意才可交换逻辑，私信错发了交换私信，嘉宾详情页错误显示申请中，正确详见截图红框prd\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b0e797a77ede/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b0e797a77ede/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b0e797a77ede/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.305Z",
+  "updatedAt": "2026-03-13T18:18:12.305Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-305Z-3cjfmc/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-305Z-3cjfmc/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-305Z-3cjfmc/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-305Z-3cjfmc/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_b0e797a77ede",
+    "externalRowHash": "ba439669d133f674a3b641639dc324b8275ba09d",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-05",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b0e797a77ede/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=YUW3bDO8uoSscSxDfEVcTUSInnC",
+        "contentType": "image/png"
+      },
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b0e797a77ede/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Afbeb1ySdocRcbxjQ8DcvnyHn6f",
+        "contentType": "image/png"
+      },
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b0e797a77ede/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=PMOvbBwqxoLu0MxQAqEc7vhYn3d",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.305Z"
+  }
+}

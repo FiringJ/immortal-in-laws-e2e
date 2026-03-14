@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-298Z-eazj9m",
+  "kind": "bug",
+  "title": "我解锁的：1）24 小时内解锁我的展示逻辑搞反了，不在当前tab，而在“解锁的的tab”，且按钮没有“已过期”状态；2）我解锁tab的所有嘉宾，无论会员身份与否，都无阻断",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_d4c1f46944dc\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-07\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n我解锁的：1）24 小时内解锁我的展示逻辑搞反了，不在当前tab，而在“解锁的的tab”，且按钮没有“已过期”状态；2）我解锁tab的所有嘉宾，无论会员身份与否，都无阻断\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_d4c1f46944dc/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.298Z",
+  "updatedAt": "2026-03-13T18:18:12.298Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-298Z-eazj9m/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_d4c1f46944dc",
+    "externalRowHash": "3c7b7eb9368a0ef9901339248fe22cc171d998d4",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-07",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_d4c1f46944dc/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=EYErbbdCXoe6Ndx08T7cWDmEnCe",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.298Z"
+  }
+}

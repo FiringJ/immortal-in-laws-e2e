@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-214Z-sju7o3",
+  "kind": "bug",
+  "title": "我收藏的：已建立会话的嘉宾点击后应直达私信并按手机号情况弹出联系方式",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_00ec36e979f1\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-11\n提报人: dylon\n跟进人: dylon\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n我收藏的：点击已建立过会话嘉宾，直接跳转到至私信页并弹出联系方式（没手机号则不弹），目前好像是会阻断，待测点",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.214Z",
+  "updatedAt": "2026-03-14T10:24:26.029Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T10-18-42-328Z-kp7elp",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T10:18:42.328Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-214Z-sju7o3/triage.md",
+      "taskId": "2026-03-14T10-18-42-329Z-2qyfzf",
+      "startedAt": "2026-03-14T10:18:42.332Z",
+      "completedAt": "2026-03-14T10:24:26.028Z",
+      "summary": "**Outcome**\n- Wrote the triage artifact at `/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-214Z-sju7o3/triage.md:1`.\n- Readiness verdict is `needs_human`, with `source_quality: low` and `next_action: manual_triage`.\n\n**Findings**\n- This bug is still a verification note: the source says “好像” and “待测点”, with no screenshot, repro account, tap target, or exact blocking UI.\n- Likely technical gap 1: `pages/message-record/index.ts:432` sends established-contact users to chat with only `guestId`, while the working detail-page pattern at `pages/guest-detail/index.ts:802` uses `autoCall=1` to auto-pop contact info.\n- Likely technical gap 2: `services/api-mapper.ts:1283` coerces missing `can_contact` to `false`, which can make “已建立过会话” detection brittle in record flows after cache loss or cross-device testing.\n- Chat already supports the desired “没手机号则不弹” behavior at `pages/chat/index.ts:538` and `pages/chat/index.ts:2587`.\n\n**Commands Run**\n- Used `rg`/`sed` to inspect AGENTS, workflow metadata, tracker docs, PRD, and the relevant app files; used `apply_patch` to create the triage artifact.\n\n**Verification**\n- Confirmed the file exists and its header matches the required structure; no product code was edited and no app tests were run in this triage-only phase.",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-18-42-329Z-2qyfzf/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-18-42-329Z-2qyfzf/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-18-42-329Z-2qyfzf/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-214Z-sju7o3/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-214Z-sju7o3/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-214Z-sju7o3/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-214Z-sju7o3/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-214Z-sju7o3/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T10-18-42-329Z-2qyfzf"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_00ec36e979f1",
+    "externalRowHash": "a51b9afc271b22aa271efa6617dca5d2613c0215",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "dylon",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-11",
+    "notes": "",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.214Z"
+  },
+  "triage": {
+    "status": "needs_human",
+    "sourceQuality": "low",
+    "nextAction": "manual_triage",
+    "normalizedTitle": "我收藏的：已建立会话的嘉宾点击后应直达私信并按手机号情况弹出联系方式",
+    "summary": "- 问题归一化后可表述为：在 `我收藏的` 记录页中，如果目标嘉宾与当前用户已经建立过私信会话/已具备可联系状态，点击该嘉宾后应直接进入 `pages/chat/index`，并在“对方有手机号”时自动弹出联系方式；若无手机号，则只进入私信页，不弹联系方式。",
+    "updatedAt": "2026-03-14T10:24:26.029Z"
+  }
+}

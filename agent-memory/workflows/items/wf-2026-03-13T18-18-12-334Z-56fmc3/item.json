@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-334Z-56fmc3",
+  "kind": "bug",
+  "title": "延展父问题场景\n1）当非会员身份但解锁次数≥ 1，  则点击“交换照片”按钮，按图 1 的提示内容和按钮文案需分别改为“交换照片需先解锁对方联系方式 / 您是会员，可免费解锁”，和“立即解锁”\n2）当非会员身份且解锁次数=0， 则点击“交换",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_ae0134ae8155\n飞书状态: 新增\n优先级: P1\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n延展父问题场景\n1）当非会员身份但解锁次数≥ 1，  则点击“交换照片”按钮，按图 1 的提示内容和按钮文案需分别改为“交换照片需先解锁对方联系方式 / 您是会员，可免费解锁”，和“立即解锁”\n2）当非会员身份且解锁次数=0， 则点击“交换照片”按钮，按图 1 的提示内容和按钮文案需分别改为“交换照片需先解锁对方联系方式 / 您的联系次数不足，开通会员可无限解锁”，和“开通会员”",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P1",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.334Z",
+  "updatedAt": "2026-03-13T18:18:12.334Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-334Z-56fmc3/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-334Z-56fmc3/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-334Z-56fmc3/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-334Z-56fmc3/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_ae0134ae8155",
+    "externalRowHash": "dcac8b3eb28307996d6f778e721f1345d459574f",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-08",
+    "notes": "",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.334Z"
+  }
+}

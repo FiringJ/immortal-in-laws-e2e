@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-216Z-r58x6y",
+  "kind": "bug",
+  "title": "解锁我 tab 取消会员阻断并保留 24 小时免费查看提醒文案",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_72247ecfcc84\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-11\n提报人: dylon\n跟进人: 刘瀚卿, ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n解锁我：需求变更，因任一方解锁了对方，会话即生成，双方就可以发起聊天，所以无论己方是否会员，在当前tab页都不受会员阻断，即点击嘉宾卡片的“详细资料/照片”按钮，或点击资料卡“联系对方”按钮以外区域，统一跳转“详细资料”页；点击“联系对方”按钮，则跳转私信会话页。顺带强调，文字提醒“24 小时内免费查看 xx：xx：xx”保留，起到吸引用户点击作用（实际24 小时后也可查看）\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_72247ecfcc84/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.216Z",
+  "updatedAt": "2026-03-14T10:38:39.385Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T10-29-59-312Z-smse40",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T10:29:59.312Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-216Z-r58x6y/triage.md",
+      "taskId": "2026-03-14T10-29-59-313Z-4q1z4v",
+      "startedAt": "2026-03-14T10:29:59.315Z",
+      "completedAt": "2026-03-14T10:38:39.382Z",
+      "summary": "**Outcome**\n- 已完成 triage，并写入 `agent-memory/workflows/items/wf-2026-03-13T18-18-12-216Z-r58x6y/triage.md:1`。\n- Readiness 结论：`ready`；建议下一步：`generate_plan`。\n- 关键发现：这不是描述不清的问题，而是“解锁我”规则已变更；前端仍保留旧 24 小时失效语义，见 `pages/message-record/helpers.ts:182`、`services/record.ts:136`。\n- 另一处高风险点在后端：聊天创建权限仍按旧规则判断，见 `/Users/firingj/Projects/GodQinJia/internal/apiserver/service/message.go:1222`；解锁时也没有立即建会话，见 `/Users/firingj/Projects/GodQinJia/internal/apiserver/service/interaction.go:283`。\n\n**Changed Files**\n- `agent-memory/workflows/items/wf-2026-03-13T18-18-12-216Z-r58x6y/triage.md:1`\n\n**Commands Run**\n- 使用了 `rg`、`sed`、`cat`、`test -f` 检查 app/e2e/backend 上下文，并查看了附件图片。\n\n**Verification**\n- 已确认 `triage.md` 存在且首部结构符合要求。\n- 本阶段未修改产品代码，也未运行构建/测试；验证范围仅限 triage 产物与上下文核对。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-29-59-313Z-4q1z4v/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-29-59-313Z-4q1z4v/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-29-59-313Z-4q1z4v/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-216Z-r58x6y/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-216Z-r58x6y/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-216Z-r58x6y/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-216Z-r58x6y/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-216Z-r58x6y/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T10-29-59-313Z-4q1z4v"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_72247ecfcc84",
+    "externalRowHash": "2b632cebfd9f25b50a0e1dcc49d043afa553028a",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "刘瀚卿, ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-11",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_72247ecfcc84/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=JxHZbRTg6oJ3fFxvRVeccfVYnQm",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.216Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "解锁我 tab 取消会员阻断并保留 24 小时免费查看提醒文案",
+    "summary": "- 本缺陷对应 `pages/message-record/index` 的“解锁我”tab（`recordType=unlock` + `direction=other_to_me`），属于消息记录页，不是普通消息列表页。",
+    "updatedAt": "2026-03-14T10:38:39.385Z"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-210Z-1xoumo",
+  "kind": "bug",
+  "title": "实名认证成功后重新进入已认证页时姓名和身份证号消失",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_b1defc9f1265\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-12\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n实名认证：目前实名认证成功后离开已认证状态页，再回到已经认证状态页时，其姓名和身份证号会消失，正确应如之前\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b1defc9f1265/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.210Z",
+  "updatedAt": "2026-03-14T09:57:12.400Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T09-50-26-293Z-2mcn6x",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T09:50:26.293Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-210Z-1xoumo/triage.md",
+      "taskId": "2026-03-14T09-50-26-294Z-kp51o0",
+      "startedAt": "2026-03-14T09:50:26.302Z",
+      "completedAt": "2026-03-14T09:57:12.398Z",
+      "summary": "**Outcome**\n- 已写入 triage 产物：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-210Z-1xoumo/triage.md:1`\n- 结论是 `ready`，`source_quality: high`，`next_action: generate_plan`\n- 本阶段未改动产品代码；只补充了工作流上下文文档\n\n**Key Findings**\n- 已认证页展示直接依赖 `displayRealName` / `displayIdCard`，为空时就会退化成截图中的 `--`：`pages/realname-auth/index.wxml:62`, `pages/realname-auth/index.ts:260`\n- 重进实名页时，逻辑会先 `refreshProfile()` 再读实名详情；若 store 为空才回退到 `fetchRealnameInfo()`，因此对缓存/时序很敏感：`pages/realname-auth/index.ts:267`, `store/userStore.ts:83`\n- `/api/v1/verification/status` 的文档只保证状态字段，不保证返回姓名或脱敏身份证；而 profile mapper 也只保留 `isRealnameVerified`，无法单靠资料接口恢复详情：`services/user.ts:381`, `design/2.接口文档/接口文档.md:4019`, `services/api-mapper.ts:956`\n- PRD 验收明确要求“成功后返回并显示已实名”，且设计目录里存在实名“已完成”状态稿，问题定义足够清晰：`docs/prd-todo.md:185`, `design/DESIGN_DIRECTORY_STRUCTURE.md:118`\n\n**Commands Run**\n- 使用了 `rg`、`sed`、`nl -ba`、`git status --short`、`git log --oneline -- ...` 检查源码与文档\n- 使用 `view_image` 查看本地附件截图\n\n**Verification**\n- 已用 `test -f` 和 `head -n 12` 确认 `triage.md` 存在且开头结构正确\n- Readiness verdict：`ready`，可以直接进入 `generate_plan`",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-50-26-294Z-kp51o0/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-50-26-294Z-kp51o0/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-50-26-294Z-kp51o0/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-210Z-1xoumo/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-210Z-1xoumo/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-210Z-1xoumo/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-210Z-1xoumo/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-210Z-1xoumo/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T09-50-26-294Z-kp51o0"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_b1defc9f1265",
+    "externalRowHash": "6de68535ddb41c72143b1767393eb63f46fee094",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-12",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b1defc9f1265/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=OPnLbNLYxoKlPHxcVd3cf55QnRg",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.209Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "实名认证成功后重新进入已认证页时姓名和身份证号消失",
+    "summary": "- 缺陷发生在 `pages/realname-auth/index` 的“已完成实名认证”状态页。",
+    "updatedAt": "2026-03-14T09:57:12.400Z"
+  }
+}

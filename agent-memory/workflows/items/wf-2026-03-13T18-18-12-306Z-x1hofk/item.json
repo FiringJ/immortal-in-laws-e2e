@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-306Z-x1hofk",
+  "kind": "bug",
+  "title": "编辑资料页：资料无法保存",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_9f520fdce3c0\n飞书状态: 待验收\n优先级: P0\n反馈日期: 2026-03-04\n提报人: dylon\n跟进人: 刘瀚卿, ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n编辑资料页：资料无法保存\n\n备注说明:\n@刘瀚卿 {\"code\":110507,\"message\":\"The gender can only be modified once, and the modification limit has been used up\",\"data\":null} \n@Leo 性别没有办法修改，这个逻辑应该是合理的，你要是想验证可以让后台改一下数据\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_9f520fdce3c0/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.306Z",
+  "updatedAt": "2026-03-13T18:18:12.306Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-306Z-x1hofk/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-306Z-x1hofk/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-306Z-x1hofk/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-306Z-x1hofk/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_9f520fdce3c0",
+    "externalRowHash": "e7641862f8165238918ec0164cccf8df81bf72cd",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "待验收",
+    "reporter": "dylon",
+    "assignee": "刘瀚卿, ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-04",
+    "notes": "@刘瀚卿 {\"code\":110507,\"message\":\"The gender can only be modified once, and the modification limit has been used up\",\"data\":null} \n@Leo 性别没有办法修改，这个逻辑应该是合理的，你要是想验证可以让后台改一下数据",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_9f520fdce3c0/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=KFlKbHWgpo1wnnxYQskcsw0JnVe",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.306Z"
+  }
+}

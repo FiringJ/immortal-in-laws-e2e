@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-237Z-kjqci2",
+  "kind": "bug",
+  "title": "黄金会员：目前点击列表各个权益入口无反应，正确应弹出权益图片弹框，详见UI稿",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_2bb8fdcdff88\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-11\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n黄金会员：目前点击列表各个权益入口无反应，正确应弹出权益图片弹框，详见UI稿\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_2bb8fdcdff88/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.237Z",
+  "updatedAt": "2026-03-13T18:18:12.237Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-237Z-kjqci2/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-237Z-kjqci2/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-237Z-kjqci2/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-237Z-kjqci2/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_2bb8fdcdff88",
+    "externalRowHash": "a3a142575ea381d5e1be39e58e7cf0d704dad2de",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-11",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_2bb8fdcdff88/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=GhJcbQbkSoWXpkxpt0TcQZ5OnVg",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.236Z"
+  }
+}

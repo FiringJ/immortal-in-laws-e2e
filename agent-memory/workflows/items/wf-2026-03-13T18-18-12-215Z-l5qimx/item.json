@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-215Z-l5qimx",
+  "kind": "bug",
+  "title": "收藏我：非会员点击卡片/详细资料/联系对方应统一弹出会员阻断弹框",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_496a05b14dbe\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-11\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n收藏我：非会员身份，目前点击嘉宾卡片以及详细资料按钮、联系对方按钮都是跳转到新的页面，正确应该统一弹出会员开通阻断弹框",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.215Z",
+  "updatedAt": "2026-03-14T10:29:59.308Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T10-24-26-032Z-1lq436",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T10:24:26.032Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-215Z-l5qimx/triage.md",
+      "taskId": "2026-03-14T10-24-26-032Z-56m30w",
+      "startedAt": "2026-03-14T10:24:26.034Z",
+      "completedAt": "2026-03-14T10:29:59.306Z",
+      "summary": "**Outcome**\n- Readiness verdict is `ready`; I created the triage artifact at `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-215Z-l5qimx/triage.md:1`.\n- No product code was edited in this phase; only the tracker artifact was added.\n\n**Key Findings**\n- PRD is explicit that on “收藏我”, non-members clicking card body, `详细资料/照片`, or `联系对方` must all show a member-blocking dialog, not navigate away: `design/1.需求文档/神仙亲家--小程序产品需求文档.md:143`.\n- Current source does not unify those entry points: detail/card uses `confirm-modal` in `pages/message-record/index.ts:376`, contact uses `member-unlock-modal` in `pages/message-record/index.ts:464`.\n- The record page does not even register `block-dialog`: `pages/message-record/index.json:6`.\n- Existing `block-dialog` already fits this flow better because `查看记录` / `联系对方` default to gold-member routing: `components/block-dialog/index.ts:19`.\n\n**Changed Files**\n- Added `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-215Z-l5qimx/triage.md:1`\n\n**Commands Run**\n- Inspected repo instructions/context with `rg`, `cat`, `sed`, `nl`\n- Located relevant logic in `pages/message-record`, `components/pages/message-record`, `components/block-dialog`\n- Verified artifact creation with `sed` and tracker-repo `git status`\n\n**Verification Status**\n- Verified `triage.md` exists and starts with the required structure.\n- Did not run runtime/UI verification, consistent with triage-only scope.",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-24-26-032Z-56m30w/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-24-26-032Z-56m30w/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-24-26-032Z-56m30w/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-215Z-l5qimx/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-215Z-l5qimx/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-215Z-l5qimx/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-215Z-l5qimx/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-215Z-l5qimx/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T10-24-26-032Z-56m30w"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_496a05b14dbe",
+    "externalRowHash": "1b0cfcd2cc0d2bafd713888724fe948f654216a1",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-11",
+    "notes": "",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.215Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "收藏我：非会员点击卡片/详细资料/联系对方应统一弹出会员阻断弹框",
+    "summary": "在 `pages/message-record/index` 的“收藏我”tab（`recordType=favorite` + `direction=other_to_me`）中，非会员用户点击嘉宾卡片主体、`详细资料/照片` 按钮、`联系对方` 按钮时，预期都应停留在当前页并统一弹出会员开通阻断弹框，而不是进入详情页/会话页，或走不同类型的弹框/确认流。",
+    "updatedAt": "2026-03-14T10:29:59.308Z"
+  }
+}

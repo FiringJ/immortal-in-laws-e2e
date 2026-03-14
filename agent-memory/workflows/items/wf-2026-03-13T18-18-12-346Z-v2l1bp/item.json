@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-346Z-v2l1bp",
+  "kind": "bug",
+  "title": "搜索结果：非至尊会员用户的搜索结果页，滑动至第 9-10 个会员时逐渐模糊，详见prd图 2，可参考Ui稿 图 1修改（搜索结果页的蒙层UI稿缺失，需补充下@杨璐琳）",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_45bae1caa665\n飞书状态: 新增\n优先级: P2\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham, 杨璐琳\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n搜索结果：非至尊会员用户的搜索结果页，滑动至第 9-10 个会员时逐渐模糊，详见prd图 2，可参考Ui稿 图 1修改（搜索结果页的蒙层UI稿缺失，需补充下@杨璐琳）\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_45bae1caa665/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_45bae1caa665/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_45bae1caa665/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P2",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.346Z",
+  "updatedAt": "2026-03-13T18:18:12.346Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-346Z-v2l1bp/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-346Z-v2l1bp/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-346Z-v2l1bp/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-346Z-v2l1bp/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_45bae1caa665",
+    "externalRowHash": "82832ade386fa0cca447eb6899bb3397d6074458",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham, 杨璐琳",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-08",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_45bae1caa665/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=EJw2ba26toAgsgxz8z9cBbWPnvh",
+        "contentType": "image/png"
+      },
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_45bae1caa665/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Id6GbSmJco3N4IxUkpccLSRMnOh",
+        "contentType": "image/png"
+      },
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_45bae1caa665/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=W8nTbQpDKo5HjcxeSmRcQocjnkc",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.346Z"
+  }
+}

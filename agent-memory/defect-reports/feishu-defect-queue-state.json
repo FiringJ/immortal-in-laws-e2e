@@ -1,6 +1,1099 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-12T18:08:29.138Z",
-  "items": {},
-  "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h"
+  "updatedAt": "2026-03-14T10:08:06.720Z",
+  "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+  "items": {
+    "bug_6ff9aece5185": {
+      "issueId": "bug_6ff9aece5185",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "a5aafab348528c6dcd8221a9d07596ccccee3d52",
+      "lastAttemptAt": "2026-03-13T19:15:49.146Z",
+      "completedAt": "2026-03-13T19:15:49.146Z"
+    },
+    "bug_a40bc8cb61cc": {
+      "issueId": "bug_a40bc8cb61cc",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "ad51f265b64b119fe724508050a1bcbc3d55102e",
+      "lastAttemptAt": "2026-03-13T18:24:10.298Z",
+      "completedAt": "2026-03-13T18:24:10.298Z"
+    },
+    "bug_72585c20016c": {
+      "issueId": "bug_72585c20016c",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "4bfc0244cdb79efef5ac9ee82f1dd3dee19b35f5",
+      "lastAttemptAt": "2026-03-13T18:16:32.158Z",
+      "completedAt": "2026-03-13T18:16:32.158Z"
+    },
+    "bug_c215bf84b4df": {
+      "issueId": "bug_c215bf84b4df",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "01d6eeeeb4e854463f456149e3aff0a4fdd18a8c",
+      "lastAttemptAt": "2026-03-13T18:28:51.347Z",
+      "completedAt": "2026-03-13T18:28:51.347Z"
+    },
+    "bug_fd9f2f51d843": {
+      "issueId": "bug_fd9f2f51d843",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "81fef3492d059e9f70b44222828adf6e4ee1a95a",
+      "lastAttemptAt": "2026-03-13T19:12:56.439Z",
+      "completedAt": "2026-03-13T19:12:56.439Z"
+    },
+    "bug_89ed396968ae": {
+      "issueId": "bug_89ed396968ae",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "82dea00a839c120cb7e81daa0b8540daee04ffcf",
+      "lastAttemptAt": "2026-03-13T19:17:57.195Z",
+      "completedAt": "2026-03-13T19:17:57.195Z"
+    },
+    "bug_a5bf1dcb402a": {
+      "issueId": "bug_a5bf1dcb402a",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "a2719ab55a7764a0e98173864fd2afe525fd11bb",
+      "lastAttemptAt": "2026-03-13T19:20:47.298Z",
+      "completedAt": "2026-03-13T19:20:47.298Z"
+    },
+    "bug_b8f66056c4d6": {
+      "issueId": "bug_b8f66056c4d6",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "757735d336d0d32c01595bd17a97096198806bb8",
+      "lastAttemptAt": "2026-03-13T19:21:12.963Z",
+      "completedAt": "2026-03-13T19:21:12.963Z"
+    },
+    "bug_d78a7519d4b5": {
+      "issueId": "bug_d78a7519d4b5",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "66bc74bbee95b77231385672c9f203222c426d41",
+      "lastAttemptAt": "2026-03-13T19:21:33.887Z",
+      "completedAt": "2026-03-13T19:21:33.887Z"
+    },
+    "bug_d84787398fde": {
+      "issueId": "bug_d84787398fde",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "2de972620cdc4258fb658ea7e87fff1406bd9ab4",
+      "lastAttemptAt": "2026-03-13T19:24:06.213Z",
+      "completedAt": "2026-03-13T19:24:06.213Z"
+    },
+    "bug_e23809c4a5d3": {
+      "issueId": "bug_e23809c4a5d3",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "14cbe9f7dd4c6d5ceedb212d48320a363fe6ee67",
+      "lastAttemptAt": "2026-03-13T19:24:30.487Z",
+      "completedAt": "2026-03-13T19:24:30.487Z"
+    },
+    "bug_ea8f70f97838": {
+      "issueId": "bug_ea8f70f97838",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "f941215f62cae024a6c8dadd1ce3971734ef36d6",
+      "lastAttemptAt": "2026-03-13T19:24:55.366Z",
+      "completedAt": "2026-03-13T19:24:55.366Z"
+    },
+    "bug_fe54e84d1d4b": {
+      "issueId": "bug_fe54e84d1d4b",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "18e6067d4c6cfb0e2e88f47e41f1828bc07a3833",
+      "lastAttemptAt": "2026-03-13T19:27:30.607Z",
+      "completedAt": "2026-03-13T19:27:30.607Z"
+    },
+    "bug_1d76cb990cbf": {
+      "issueId": "bug_1d76cb990cbf",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "b56a04dca6e514bb65e04b27ff664187d586f176",
+      "lastAttemptAt": "2026-03-13T19:29:04.072Z",
+      "completedAt": "2026-03-13T19:29:04.072Z"
+    },
+    "bug_1f3931a6a594": {
+      "issueId": "bug_1f3931a6a594",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "4532c4b54a0c52e73023ea8c66ade76e7006875c",
+      "lastAttemptAt": "2026-03-13T19:31:51.349Z",
+      "completedAt": "2026-03-13T19:31:51.349Z"
+    },
+    "bug_56b2ded03909": {
+      "issueId": "bug_56b2ded03909",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "d1d8eb67c1506521de79b6890fe4b51e6d39693f",
+      "lastAttemptAt": "2026-03-13T19:33:38.132Z",
+      "completedAt": "2026-03-13T19:33:38.132Z"
+    },
+    "bug_69b845e4b265": {
+      "issueId": "bug_69b845e4b265",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "e6b40f51656f38fc2733502fce1024d25ddd8903",
+      "lastAttemptAt": "2026-03-13T19:35:56.471Z",
+      "completedAt": "2026-03-13T19:35:56.471Z"
+    },
+    "bug_81897b118dec": {
+      "issueId": "bug_81897b118dec",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "cbb70d3b3b51ff94dca37e2ca9e5d6739faa18a2",
+      "lastAttemptAt": "2026-03-13T19:39:16.551Z",
+      "completedAt": "2026-03-13T19:39:16.551Z"
+    },
+    "bug_867eb69e9476": {
+      "issueId": "bug_867eb69e9476",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "c2eb657ce8816bc61568968ea78590bd889434fe",
+      "lastAttemptAt": "2026-03-13T19:42:31.798Z",
+      "completedAt": "2026-03-13T19:42:31.798Z"
+    },
+    "bug_8832f8990fd9": {
+      "issueId": "bug_8832f8990fd9",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "b3dd79b7673e5e0d6a6de1cc0a2fd3333d0fb318",
+      "lastAttemptAt": "2026-03-13T19:43:57.092Z",
+      "completedAt": "2026-03-13T19:43:57.092Z"
+    },
+    "bug_b0167aca9ea9": {
+      "issueId": "bug_b0167aca9ea9",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "1a7aa5376384d877d73f561ea84a444061be944f",
+      "lastAttemptAt": "2026-03-13T20:07:09.515Z",
+      "completedAt": "2026-03-13T20:07:09.515Z"
+    },
+    "bug_bbcf64afe94b": {
+      "issueId": "bug_bbcf64afe94b",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "a011a115317792297ee47c7b616befaece52c887",
+      "lastAttemptAt": "2026-03-13T20:09:41.130Z",
+      "completedAt": "2026-03-13T20:09:41.130Z"
+    },
+    "bug_e84ee96d9a0c": {
+      "issueId": "bug_e84ee96d9a0c",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "8909803cb32eee9a95e4c1ad0379db430ceae525",
+      "lastAttemptAt": "2026-03-13T20:12:50.776Z",
+      "completedAt": "2026-03-13T20:12:50.776Z"
+    },
+    "bug_f5ecf2d7f1ab": {
+      "issueId": "bug_f5ecf2d7f1ab",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "a9cb7ba0e43669cf6e047713b01f010f2e4f9822",
+      "lastAttemptAt": "2026-03-13T20:14:35.329Z",
+      "completedAt": "2026-03-13T20:14:35.329Z"
+    },
+    "bug_0f4382659d79": {
+      "issueId": "bug_0f4382659d79",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "1f71dc401fb4ccad0b26b56b8a2141136a2435b9",
+      "lastAttemptAt": "2026-03-13T21:04:06.859Z",
+      "completedAt": "2026-03-13T21:04:06.859Z"
+    },
+    "bug_61997de1cbd1": {
+      "issueId": "bug_61997de1cbd1",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "29297e36a839c8ae41db6ed7620b38ab50f53944",
+      "lastAttemptAt": "2026-03-13T21:05:31.928Z",
+      "completedAt": "2026-03-13T21:05:31.928Z"
+    },
+    "bug_a4268f56320e": {
+      "issueId": "bug_a4268f56320e",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "fa2ab7952eec6d224eedaf60687b0b7246929fcc",
+      "lastAttemptAt": "2026-03-13T21:08:39.514Z",
+      "completedAt": "2026-03-13T21:08:39.514Z"
+    },
+    "bug_ed0f20458847": {
+      "issueId": "bug_ed0f20458847",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "22e329566d7de117344d799c6fc97ae505c867b3",
+      "lastAttemptAt": "2026-03-13T21:09:46.381Z",
+      "completedAt": "2026-03-13T21:09:46.381Z"
+    },
+    "bug_64e029b78154": {
+      "issueId": "bug_64e029b78154",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "a13ace84ed670661dec43d2eb7e332459c8a6776",
+      "lastAttemptAt": "2026-03-13T21:11:45.282Z",
+      "completedAt": "2026-03-13T21:11:45.282Z"
+    },
+    "bug_20ec794a8446": {
+      "issueId": "bug_20ec794a8446",
+      "result": "blocked",
+      "consecutiveFailures": 2,
+      "rowHash": "83121e71c400de3913cfc9f59427c99d03877fe9",
+      "lastAttemptAt": "2026-03-13T22:11:17.132Z",
+      "lastBlocker": "scope remains umbrella-level after second attempt: fixed surname/occupation/school modal interactions, but phone-verify popup and other sub-flows lack concrete acceptance/attachments; split into child defects for deterministic closure",
+      "blockedAt": "2026-03-13T22:11:17.132Z"
+    },
+    "bug_230d685d052a": {
+      "issueId": "bug_230d685d052a",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "fb92970119f6605942e333b6156a5fe3f62df744",
+      "lastAttemptAt": "2026-03-13T23:03:20.221Z",
+      "completedAt": "2026-03-13T23:03:20.221Z"
+    },
+    "bug_3873b560ca04": {
+      "issueId": "bug_3873b560ca04",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "34f241f296b5403771b83a67298d7f1cb253f28f",
+      "lastAttemptAt": "2026-03-13T23:07:40.360Z",
+      "completedAt": "2026-03-13T23:07:40.360Z"
+    },
+    "bug_6afe0fba1fcf": {
+      "issueId": "bug_6afe0fba1fcf",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "e03450178c34cd538898f3976ceb27ef1bd537d7",
+      "lastAttemptAt": "2026-03-13T23:10:09.250Z",
+      "completedAt": "2026-03-13T23:10:09.250Z"
+    },
+    "bug_8f9b8882ab54": {
+      "issueId": "bug_8f9b8882ab54",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "b4008b1423f4a903afcba96cf8de1515938bbed1",
+      "lastAttemptAt": "2026-03-13T23:11:08.033Z",
+      "completedAt": "2026-03-13T23:11:08.033Z"
+    },
+    "bug_e13087222772": {
+      "issueId": "bug_e13087222772",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "f8a1e7d0d20153fd53fdd63fbe702827e04749c2",
+      "lastAttemptAt": "2026-03-13T23:13:52.046Z",
+      "completedAt": "2026-03-13T23:13:52.046Z"
+    },
+    "bug_1c9d86a9cd54": {
+      "issueId": "bug_1c9d86a9cd54",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "bced7d7dd919b8a20491df0c459201c67f2fe1dc",
+      "lastAttemptAt": "2026-03-13T23:15:23.904Z",
+      "completedAt": "2026-03-13T23:15:23.904Z"
+    },
+    "bug_69fde44b3ab5": {
+      "issueId": "bug_69fde44b3ab5",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "d924a6cb5a75919bd6d2caf337240ce2af26691f",
+      "lastAttemptAt": "2026-03-13T23:16:50.252Z",
+      "completedAt": "2026-03-13T23:16:50.252Z"
+    },
+    "bug_fbc2cd940e55": {
+      "issueId": "bug_fbc2cd940e55",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "5c52ac202c25950bbcd1ec94942eaaed59a229b1",
+      "lastAttemptAt": "2026-03-13T23:18:45.948Z",
+      "completedAt": "2026-03-13T23:18:45.948Z"
+    },
+    "bug_3d9f8d70a72a": {
+      "issueId": "bug_3d9f8d70a72a",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "9571d6400706b941694f4659398b29a2e762472f",
+      "lastAttemptAt": "2026-03-13T23:20:49.450Z",
+      "completedAt": "2026-03-13T23:20:49.450Z"
+    },
+    "bug_b28ab6ccab7a": {
+      "issueId": "bug_b28ab6ccab7a",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "2168cd78e00f4a2c1f361e0617920ef0da17f806",
+      "lastAttemptAt": "2026-03-13T23:22:10.715Z",
+      "completedAt": "2026-03-13T23:22:10.715Z"
+    },
+    "bug_c0bf00347a54": {
+      "issueId": "bug_c0bf00347a54",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "05a2b2a33f10518de0e8de4c0808200dc9ec22ce",
+      "lastAttemptAt": "2026-03-13T23:23:10.558Z",
+      "completedAt": "2026-03-13T23:23:10.558Z"
+    },
+    "bug_c892f5ef223f": {
+      "issueId": "bug_c892f5ef223f",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "1025740be0ebac62eeb440514fb3d8009e0dccf5",
+      "lastAttemptAt": "2026-03-13T23:24:57.140Z",
+      "completedAt": "2026-03-13T23:24:57.140Z"
+    },
+    "bug_d070e86e46f0": {
+      "issueId": "bug_d070e86e46f0",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "59f6211d47878a55505b08d7faf3fce5ad08b662",
+      "lastAttemptAt": "2026-03-13T23:26:42.110Z",
+      "completedAt": "2026-03-13T23:26:42.110Z"
+    },
+    "bug_1744cfbbe973": {
+      "issueId": "bug_1744cfbbe973",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "1fc6be64f733f2a03a0522f4f1ceef644ad931df",
+      "lastAttemptAt": "2026-03-13T23:27:53.533Z",
+      "completedAt": "2026-03-13T23:27:53.533Z"
+    },
+    "bug_1b6d4d7e209e": {
+      "issueId": "bug_1b6d4d7e209e",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "c67a410a9e0db22f486e2adeff602e58d1c2046c",
+      "lastAttemptAt": "2026-03-14T00:08:14.070Z",
+      "completedAt": "2026-03-14T00:08:14.070Z"
+    },
+    "bug_24abea9fd148": {
+      "issueId": "bug_24abea9fd148",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "be5e6195d7aca91f351537ccd7583da2fdcdc0f5",
+      "lastAttemptAt": "2026-03-14T00:10:24.510Z",
+      "completedAt": "2026-03-14T00:10:24.510Z"
+    },
+    "bug_ba7148038722": {
+      "issueId": "bug_ba7148038722",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "9f868fcfd93442f2a027432cdcc2461a351f624a",
+      "lastAttemptAt": "2026-03-14T00:12:43.274Z",
+      "completedAt": "2026-03-14T00:12:43.274Z"
+    },
+    "bug_f69081a6c401": {
+      "issueId": "bug_f69081a6c401",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "be4c73d548fe20e8ee8d600a7f07cb34cf88e1e4",
+      "lastAttemptAt": "2026-03-14T00:15:12.566Z",
+      "completedAt": "2026-03-14T00:15:12.566Z"
+    },
+    "bug_ffcfe349d830": {
+      "issueId": "bug_ffcfe349d830",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "cb7187a6b6db08cd88c0b284013fde19d3bd6667",
+      "lastAttemptAt": "2026-03-14T00:17:28.612Z",
+      "completedAt": "2026-03-14T00:17:28.612Z"
+    },
+    "bug_0bba281ae2c3": {
+      "issueId": "bug_0bba281ae2c3",
+      "result": "blocked",
+      "consecutiveFailures": 2,
+      "rowHash": "23fc4faa2ee067ddb944d08ddafc0eb30132aa6c",
+      "lastAttemptAt": "2026-03-14T00:18:38.813Z",
+      "lastBlocker": "同一阻塞连续两次：缺少可匹配测试数据，当前无法复现“解锁我的”校验场景，需补充可命中的样本会话后再验证",
+      "blockedAt": "2026-03-14T00:18:38.813Z"
+    },
+    "bug_155a00acd573": {
+      "issueId": "bug_155a00acd573",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "9573de96edde1633743d9a35c9bd25b97d15d5d1",
+      "lastAttemptAt": "2026-03-14T03:03:06.667Z",
+      "completedAt": "2026-03-14T03:03:06.667Z"
+    },
+    "bug_3f2663504623": {
+      "issueId": "bug_3f2663504623",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "bd12cab121a06cf74f753d32a1e8af12eff5f828",
+      "lastAttemptAt": "2026-03-14T01:06:43.258Z",
+      "completedAt": "2026-03-14T01:06:43.258Z"
+    },
+    "bug_524d9f9f1864": {
+      "issueId": "bug_524d9f9f1864",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "bdfa572acf85a32d12c1446e61bf07be2d8a0c1e",
+      "lastAttemptAt": "2026-03-14T01:09:08.095Z",
+      "completedAt": "2026-03-14T01:09:08.095Z"
+    },
+    "bug_6c28e95300db": {
+      "issueId": "bug_6c28e95300db",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "e89a405452d832ad78ab193b730d34509e1497f3",
+      "lastAttemptAt": "2026-03-14T01:12:33.574Z",
+      "completedAt": "2026-03-14T01:12:33.574Z"
+    },
+    "bug_cec27390e02e": {
+      "issueId": "bug_cec27390e02e",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "72a4590cbf9823d8534f45651c8afe79fde89053",
+      "lastAttemptAt": "2026-03-14T01:13:41.890Z",
+      "completedAt": "2026-03-14T01:13:41.890Z"
+    },
+    "bug_efb3500370da": {
+      "issueId": "bug_efb3500370da",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "977be704146a588c21b609cc2cefb246b3bc2957",
+      "lastAttemptAt": "2026-03-14T03:03:51.768Z",
+      "completedAt": "2026-03-14T03:03:51.768Z"
+    },
+    "bug_f3ed3d9046fa": {
+      "issueId": "bug_f3ed3d9046fa",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "9c1fb83354fe0df252002dbe6d792564e1349703",
+      "lastAttemptAt": "2026-03-14T01:18:31.328Z",
+      "completedAt": "2026-03-14T01:18:31.328Z"
+    },
+    "bug_92e8f445beff": {
+      "issueId": "bug_92e8f445beff",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "9922377611e688b15f367a5eb1b2d16c956113ba",
+      "lastAttemptAt": "2026-03-14T02:03:18.475Z",
+      "completedAt": "2026-03-14T02:03:18.475Z"
+    },
+    "bug_a8640277c2d5": {
+      "issueId": "bug_a8640277c2d5",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "c86313a7520f5335a8f8a6c2809920ff6060b15a",
+      "lastAttemptAt": "2026-03-14T02:05:22.478Z",
+      "completedAt": "2026-03-14T02:05:22.478Z"
+    },
+    "bug_b22d42f99f8e": {
+      "issueId": "bug_b22d42f99f8e",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "12e2299435edf8426abd1e34afd8f435afdb090c",
+      "lastAttemptAt": "2026-03-14T09:07:11.076Z",
+      "completedAt": "2026-03-14T09:07:11.076Z"
+    },
+    "bug_cf6efa9e3f4e": {
+      "issueId": "bug_cf6efa9e3f4e",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "ee7548a72fa4835370c9091b233814b6ba20b562",
+      "lastAttemptAt": "2026-03-14T10:05:53.179Z",
+      "completedAt": "2026-03-14T10:05:53.179Z"
+    },
+    "bug_ed83a202a998": {
+      "issueId": "bug_ed83a202a998",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "64d1e4c01ee76d32912493a986de8dd24ee73ed2",
+      "lastAttemptAt": "2026-03-14T04:10:40.755Z",
+      "completedAt": "2026-03-14T04:10:40.755Z"
+    },
+    "bug_2c60cb5ea37c": {
+      "issueId": "bug_2c60cb5ea37c",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "090efc0ececf3617cde24f065d711cbbc3983842",
+      "lastAttemptAt": "2026-03-14T02:18:50.088Z",
+      "completedAt": "2026-03-14T02:18:50.088Z"
+    },
+    "bug_792fbb85dd10": {
+      "issueId": "bug_792fbb85dd10",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "abc5d51fb4d21b0de5a548a50f100349097cf34e",
+      "lastAttemptAt": "2026-03-14T02:22:07.932Z",
+      "completedAt": "2026-03-14T02:22:07.932Z"
+    },
+    "bug_12987ba6072e": {
+      "issueId": "bug_12987ba6072e",
+      "result": "blocked",
+      "consecutiveFailures": 2,
+      "rowHash": "64f80043943e044b89d2d056aebd0f17bc5c4d87",
+      "lastAttemptAt": "2026-03-14T03:05:07.148Z",
+      "lastBlocker": "父级需求仅引用‘新需求-3’且无附件/验收边界；子项仍在排队处理中，连续两次同类 blocker，按规则升级 blocked。",
+      "blockedAt": "2026-03-14T03:05:07.148Z"
+    },
+    "bug_1a6ba3ba6ac0": {
+      "issueId": "bug_1a6ba3ba6ac0",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "623e3193fd5abaed628c5b64116f055e58c065e1",
+      "lastAttemptAt": "2026-03-14T04:06:24.465Z",
+      "completedAt": "2026-03-14T04:06:24.465Z"
+    },
+    "bug_1c673d72a40e": {
+      "issueId": "bug_1c673d72a40e",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "0faa7020fa009b3b4ff9cb07a04cd7681e3dc2c4",
+      "lastAttemptAt": "2026-03-14T04:07:00.441Z",
+      "completedAt": "2026-03-14T04:07:00.441Z"
+    },
+    "bug_1c7ce033d9a3": {
+      "issueId": "bug_1c7ce033d9a3",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "ac23327ff85cf5a06252b72a7ea0016644b17b41",
+      "lastAttemptAt": "2026-03-14T04:10:10.096Z",
+      "completedAt": "2026-03-14T04:10:10.096Z"
+    },
+    "bug_79e8f41bc62d": {
+      "issueId": "bug_79e8f41bc62d",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "78804b85abff6e0d01ba5fc6d9748614c47f9602",
+      "lastAttemptAt": "2026-03-14T04:11:32.095Z",
+      "completedAt": "2026-03-14T04:11:32.095Z"
+    },
+    "bug_a5da01907bdd": {
+      "issueId": "bug_a5da01907bdd",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "f2b468d5e95aeef1d91a17d2a7ea04a413be7978",
+      "lastAttemptAt": "2026-03-14T04:16:21.218Z",
+      "completedAt": "2026-03-14T04:16:21.218Z"
+    },
+    "bug_ac6a31661e0c": {
+      "issueId": "bug_ac6a31661e0c",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "619b5d82ec50a37ff48a8ab6b9d290f45e576b8a",
+      "lastAttemptAt": "2026-03-14T04:17:45.912Z",
+      "completedAt": "2026-03-14T04:17:45.912Z"
+    },
+    "bug_2101e11fd4b6": {
+      "issueId": "bug_2101e11fd4b6",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "3321626a1e0cfd271d74967cd1dbff1693d4775b",
+      "lastAttemptAt": "2026-03-14T04:21:55.340Z",
+      "completedAt": "2026-03-14T04:21:55.340Z"
+    },
+    "bug_4270c3d99e6b": {
+      "issueId": "bug_4270c3d99e6b",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "faa66f55376da28462d12369a61ac05ca133ba32",
+      "lastAttemptAt": "2026-03-14T04:25:40.449Z",
+      "completedAt": "2026-03-14T04:25:40.449Z"
+    },
+    "bug_89fb17d46060": {
+      "issueId": "bug_89fb17d46060",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "0bb3a2f1d5d326971faed2a763928fbc0edab5fd",
+      "lastAttemptAt": "2026-03-14T04:27:14.555Z",
+      "completedAt": "2026-03-14T04:27:14.555Z"
+    },
+    "bug_bc58e20adb86": {
+      "issueId": "bug_bc58e20adb86",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "85737522b4e26b9074a88ee0a6e6d4fc6281ae21",
+      "lastAttemptAt": "2026-03-14T04:28:44.636Z",
+      "completedAt": "2026-03-14T04:28:44.636Z"
+    },
+    "bug_0be855d52bd3": {
+      "issueId": "bug_0be855d52bd3",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "ac9dbc6b4822e21a3043b94f70efeddcb6fb7031",
+      "lastAttemptAt": "2026-03-14T04:29:56.384Z",
+      "completedAt": "2026-03-14T04:29:56.384Z"
+    },
+    "bug_42075bac542e": {
+      "issueId": "bug_42075bac542e",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "dceafce51e8e18de2e8e32d25c9a325485a7f767",
+      "lastAttemptAt": "2026-03-14T04:31:33.090Z",
+      "completedAt": "2026-03-14T04:31:33.090Z"
+    },
+    "bug_c31af041d188": {
+      "issueId": "bug_c31af041d188",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "296494524b4050185ad71e811a1254f87dc687ab",
+      "lastAttemptAt": "2026-03-14T05:06:04.921Z",
+      "completedAt": "2026-03-14T05:06:04.921Z"
+    },
+    "bug_f260e206b2f2": {
+      "issueId": "bug_f260e206b2f2",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "cc9fc585745e230b89a028eb2627da51a00a8b20",
+      "lastAttemptAt": "2026-03-14T05:10:12.451Z",
+      "completedAt": "2026-03-14T05:10:12.451Z"
+    },
+    "bug_fb569180eb91": {
+      "issueId": "bug_fb569180eb91",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "22f8255c6048b7c258f1fede5f93185514894d54",
+      "lastAttemptAt": "2026-03-14T05:13:01.024Z",
+      "completedAt": "2026-03-14T05:13:01.024Z"
+    },
+    "bug_04ac29d8ffe8": {
+      "issueId": "bug_04ac29d8ffe8",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "b3171a8e2192ebed3a38ac1f217739fe60d6d565",
+      "lastAttemptAt": "2026-03-14T05:15:19.053Z",
+      "completedAt": "2026-03-14T05:15:19.053Z"
+    },
+    "bug_1fad39d8a2ee": {
+      "issueId": "bug_1fad39d8a2ee",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "2442be17d3051f151a334133147b6c8027b0dc76",
+      "lastAttemptAt": "2026-03-14T05:17:31.518Z",
+      "completedAt": "2026-03-14T05:17:31.518Z"
+    },
+    "bug_5ca3d181be3e": {
+      "issueId": "bug_5ca3d181be3e",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "77c21e7beda68e6037b9c619e58925b5ebe0f351",
+      "lastAttemptAt": "2026-03-14T05:18:49.427Z",
+      "completedAt": "2026-03-14T05:18:49.427Z"
+    },
+    "bug_b85d92552729": {
+      "issueId": "bug_b85d92552729",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "631ea996e3d761b3b254555e9de164e03826d61f",
+      "lastAttemptAt": "2026-03-14T07:11:45.190Z",
+      "completedAt": "2026-03-14T07:11:45.190Z"
+    },
+    "bug_d1704c704101": {
+      "issueId": "bug_d1704c704101",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "1eda35ac14492b5ceee50e42455629352907ac5a",
+      "lastAttemptAt": "2026-03-14T05:23:19.072Z",
+      "completedAt": "2026-03-14T05:23:19.072Z"
+    },
+    "bug_e3a78f98ec32": {
+      "issueId": "bug_e3a78f98ec32",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "f3399e40b77540e7b48792c563e20715229d95ff",
+      "lastAttemptAt": "2026-03-14T05:27:27.470Z",
+      "completedAt": "2026-03-14T05:27:27.470Z"
+    },
+    "bug_57f79d04d2dd": {
+      "issueId": "bug_57f79d04d2dd",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "c49f9c82f193cb90d60b113ec8473ffe74004053",
+      "lastAttemptAt": "2026-03-14T05:28:46.518Z",
+      "completedAt": "2026-03-14T05:28:46.518Z"
+    },
+    "bug_7fbddf46dfe7": {
+      "issueId": "bug_7fbddf46dfe7",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "591c212dca6e63e52d963b4f2435cdabe3dcbd69",
+      "lastAttemptAt": "2026-03-14T05:31:16.789Z",
+      "completedAt": "2026-03-14T05:31:16.789Z"
+    },
+    "bug_910330732d73": {
+      "issueId": "bug_910330732d73",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "919f87d128397f0c649e2e968982d11c43e0d8f3",
+      "lastAttemptAt": "2026-03-14T05:35:17.468Z",
+      "completedAt": "2026-03-14T05:35:17.468Z"
+    },
+    "bug_d2153706ff80": {
+      "issueId": "bug_d2153706ff80",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "6fc71571eec0b7836b0f36ce74f627de5e1167d9",
+      "lastAttemptAt": "2026-03-14T05:39:41.275Z",
+      "completedAt": "2026-03-14T05:39:41.275Z"
+    },
+    "bug_df0973b80ee0": {
+      "issueId": "bug_df0973b80ee0",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "29650ef1fb4b101d23b615ae3b1bf31409f602de",
+      "lastAttemptAt": "2026-03-14T05:43:21.371Z",
+      "completedAt": "2026-03-14T05:43:21.371Z"
+    },
+    "bug_02c2abbfc17f": {
+      "issueId": "bug_02c2abbfc17f",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "e980f30c53f09c5c296c209c5dfd0c352d34dbbf",
+      "lastAttemptAt": "2026-03-14T06:05:53.934Z",
+      "completedAt": "2026-03-14T06:05:53.934Z"
+    },
+    "bug_b74874ee6aa3": {
+      "issueId": "bug_b74874ee6aa3",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "956ce95ffa902ec8d1ba662ff3dd1ddc99be7ad0",
+      "lastAttemptAt": "2026-03-14T06:14:36.430Z",
+      "completedAt": "2026-03-14T06:14:36.430Z"
+    },
+    "bug_9374806676bd": {
+      "issueId": "bug_9374806676bd",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "d4f9b0b2e46b03953d799b1e16685d76c6a8fc28",
+      "lastAttemptAt": "2026-03-14T06:15:00.038Z",
+      "completedAt": "2026-03-14T06:15:00.038Z"
+    },
+    "bug_1f48ad04f1d5": {
+      "issueId": "bug_1f48ad04f1d5",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "4dfbd0f78735d27d88ae037a872a26b13f4055e5",
+      "lastAttemptAt": "2026-03-14T06:16:39.267Z",
+      "completedAt": "2026-03-14T06:16:39.267Z"
+    },
+    "bug_51efc11d8a22": {
+      "issueId": "bug_51efc11d8a22",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "4dddfde9e9913378024bda5765a171ca217a56b1",
+      "lastAttemptAt": "2026-03-14T06:18:57.987Z",
+      "completedAt": "2026-03-14T06:18:57.987Z"
+    },
+    "bug_52ac2e22089b": {
+      "issueId": "bug_52ac2e22089b",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "b629688a618d441c87c9c3902bdcdf7fddde140b",
+      "lastAttemptAt": "2026-03-14T06:22:20.796Z",
+      "completedAt": "2026-03-14T06:22:20.796Z"
+    },
+    "bug_5fe918f08dc2": {
+      "issueId": "bug_5fe918f08dc2",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "be1fc7d3f2bbd2f902a1aaa799857cba2485a6d2",
+      "lastAttemptAt": "2026-03-14T06:24:57.721Z",
+      "completedAt": "2026-03-14T06:24:57.721Z"
+    },
+    "bug_6945fdc12314": {
+      "issueId": "bug_6945fdc12314",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "db8fdef0f06152cffe57305ea94f69059cacf38f",
+      "lastAttemptAt": "2026-03-14T06:27:40.356Z",
+      "completedAt": "2026-03-14T06:27:40.356Z"
+    },
+    "bug_6997ff5cfdb7": {
+      "issueId": "bug_6997ff5cfdb7",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "f50353627901a0b5654bf46d0c9a1967bcc546dc",
+      "lastAttemptAt": "2026-03-14T06:29:37.032Z",
+      "completedAt": "2026-03-14T06:29:37.032Z"
+    },
+    "bug_a55982a89dba": {
+      "issueId": "bug_a55982a89dba",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "8dfb85b82c2953e64072ae9a193a3c1e07acd84b",
+      "lastAttemptAt": "2026-03-14T06:32:56.160Z",
+      "completedAt": "2026-03-14T06:32:56.160Z"
+    },
+    "bug_b78548d9761e": {
+      "issueId": "bug_b78548d9761e",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "16a14ad59f4da135fbef02214c16600fc605c8f6",
+      "lastAttemptAt": "2026-03-14T06:34:49.303Z",
+      "completedAt": "2026-03-14T06:34:49.303Z"
+    },
+    "bug_dd46f3c25ac6": {
+      "issueId": "bug_dd46f3c25ac6",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "037711c7ea927412e43615d936030267bb87376a",
+      "lastAttemptAt": "2026-03-14T06:39:39.737Z",
+      "completedAt": "2026-03-14T06:39:39.737Z"
+    },
+    "bug_e04ea189b369": {
+      "issueId": "bug_e04ea189b369",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "a7031af415a5177238ffa521861222cf0301cd81",
+      "lastAttemptAt": "2026-03-14T06:40:55.518Z",
+      "completedAt": "2026-03-14T06:40:55.518Z"
+    },
+    "bug_efff82ca13da": {
+      "issueId": "bug_efff82ca13da",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "1b5de58d7561fa536c582ef4770e34f2fbf59d33",
+      "lastAttemptAt": "2026-03-14T06:42:03.066Z",
+      "completedAt": "2026-03-14T06:42:03.066Z"
+    },
+    "bug_402c81bc35e2": {
+      "issueId": "bug_402c81bc35e2",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "dbad87c854885b1fa0a64b0f3188c75d891f8ed3",
+      "lastAttemptAt": "2026-03-14T06:42:30.375Z",
+      "completedAt": "2026-03-14T06:42:30.375Z"
+    },
+    "bug_042825834443": {
+      "issueId": "bug_042825834443",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "e80bf4d676eb2bb7603585d3dbdb6e753eac97ec",
+      "lastAttemptAt": "2026-03-14T07:11:41.215Z",
+      "completedAt": "2026-03-14T07:11:41.215Z"
+    },
+    "bug_d0eec0e6ea62": {
+      "issueId": "bug_d0eec0e6ea62",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "390cb235f826b81ade779f29a042e95c3163fd64",
+      "lastAttemptAt": "2026-03-14T07:10:16.728Z",
+      "completedAt": "2026-03-14T07:10:16.728Z"
+    },
+    "bug_1061eabcb7b7": {
+      "issueId": "bug_1061eabcb7b7",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "841fe535da42adc8fc1eb13c10767bdfde4a58ee",
+      "lastAttemptAt": "2026-03-14T07:10:51.381Z",
+      "completedAt": "2026-03-14T07:10:51.381Z"
+    },
+    "bug_5a8ebdd397e3": {
+      "issueId": "bug_5a8ebdd397e3",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "53556f3197729cdb4f8df0a088f60a7010127240",
+      "lastAttemptAt": "2026-03-14T07:11:18.921Z",
+      "completedAt": "2026-03-14T07:11:18.921Z"
+    },
+    "bug_111afb7d5109": {
+      "issueId": "bug_111afb7d5109",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "13363b4e9426cfad488bce5604e92ca142c22b84",
+      "lastAttemptAt": "2026-03-14T07:14:11.139Z",
+      "completedAt": "2026-03-14T07:14:11.139Z"
+    },
+    "bug_81ddcd9144b9": {
+      "issueId": "bug_81ddcd9144b9",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "b96b3dfab720949c08236b95711e48724a1b994b",
+      "lastAttemptAt": "2026-03-14T07:14:15.871Z",
+      "completedAt": "2026-03-14T07:14:15.871Z"
+    },
+    "bug_60d28c216fa9": {
+      "issueId": "bug_60d28c216fa9",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "b84e090417ea8950d05a80bda2b92bb6d8374795",
+      "lastAttemptAt": "2026-03-14T07:18:22.927Z",
+      "completedAt": "2026-03-14T07:18:22.927Z"
+    },
+    "bug_704a939942b2": {
+      "issueId": "bug_704a939942b2",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "f9f410abb3a1570d794a9e2493872f9734e7f6cd",
+      "lastAttemptAt": "2026-03-14T07:19:53.279Z",
+      "completedAt": "2026-03-14T07:19:53.279Z"
+    },
+    "bug_810ac9db9c56": {
+      "issueId": "bug_810ac9db9c56",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "415151a9c85537107f2bb3bcecc596c1edd4bc42",
+      "lastAttemptAt": "2026-03-14T07:21:54.963Z",
+      "completedAt": "2026-03-14T07:21:54.963Z"
+    },
+    "bug_b2416e9f18c8": {
+      "issueId": "bug_b2416e9f18c8",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "f4ac5fe7f0440332f59ea7cb28dff632a5541e7b",
+      "lastAttemptAt": "2026-03-14T07:23:04.399Z",
+      "completedAt": "2026-03-14T07:23:04.399Z"
+    },
+    "bug_d2d2d31fbd8a": {
+      "issueId": "bug_d2d2d31fbd8a",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "eeb915581406273685686bbb7b61d891ab2ef281",
+      "lastAttemptAt": "2026-03-14T07:24:52.287Z",
+      "completedAt": "2026-03-14T07:24:52.287Z"
+    },
+    "bug_f59220398103": {
+      "issueId": "bug_f59220398103",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "d5d0cbe3f871a0ad117c0ded6b290730d965aa6d",
+      "lastAttemptAt": "2026-03-14T07:26:42.999Z",
+      "completedAt": "2026-03-14T07:26:42.999Z"
+    },
+    "bug_fedce3eabf31": {
+      "issueId": "bug_fedce3eabf31",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "af80a657e818336394365ef766f1b6b5180d3953",
+      "lastAttemptAt": "2026-03-14T07:29:25.617Z",
+      "completedAt": "2026-03-14T07:29:25.617Z"
+    },
+    "bug_4a50e0d48187": {
+      "issueId": "bug_4a50e0d48187",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "b425f4672f8f00d0b783cc54a9f809e0b0a66c82",
+      "lastAttemptAt": "2026-03-14T07:31:02.814Z",
+      "completedAt": "2026-03-14T07:31:02.814Z"
+    },
+    "bug_e6c2787c0812": {
+      "issueId": "bug_e6c2787c0812",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "843e9dfcff1592ec4d98f172d51f7d301ec946ef",
+      "lastAttemptAt": "2026-03-14T07:34:32.488Z",
+      "completedAt": "2026-03-14T07:34:32.488Z"
+    },
+    "bug_079d9177bce3": {
+      "issueId": "bug_079d9177bce3",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "50c1a4dcc69a6fea76ee1a63202f7cf25e538750",
+      "lastAttemptAt": "2026-03-14T08:06:30.893Z",
+      "completedAt": "2026-03-14T08:06:30.893Z"
+    },
+    "bug_7a9ebcd0de15": {
+      "issueId": "bug_7a9ebcd0de15",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "9632e5bb096288aa56963c3ce199e6136605f02b",
+      "lastAttemptAt": "2026-03-14T08:08:29.359Z",
+      "completedAt": "2026-03-14T08:08:29.359Z"
+    },
+    "bug_01399aaa989c": {
+      "issueId": "bug_01399aaa989c",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "837918819b135d095cc99527d1845c250cc8e9f2",
+      "lastAttemptAt": "2026-03-14T08:12:26.525Z",
+      "completedAt": "2026-03-14T08:12:26.525Z"
+    },
+    "bug_3c6a4f1b10b3": {
+      "issueId": "bug_3c6a4f1b10b3",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "7feffca8dd785c9599deabf11dcc1f0a16f74889",
+      "lastAttemptAt": "2026-03-14T08:15:42.618Z",
+      "completedAt": "2026-03-14T08:15:42.618Z"
+    },
+    "bug_6dcc46256353": {
+      "issueId": "bug_6dcc46256353",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "3ced470d748e73e25b2c5c4ffc1791fac6c6c3ad",
+      "lastAttemptAt": "2026-03-14T08:18:43.753Z",
+      "completedAt": "2026-03-14T08:18:43.753Z"
+    },
+    "bug_7eefb6f51a99": {
+      "issueId": "bug_7eefb6f51a99",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "8bc9cd2218d4ef9cd6314ded7d0873a5fde7c95c",
+      "lastAttemptAt": "2026-03-14T08:22:35.380Z",
+      "completedAt": "2026-03-14T08:22:35.380Z"
+    },
+    "bug_acdc7586fd46": {
+      "issueId": "bug_acdc7586fd46",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "8b841de8d1d6f15eb09e2df5b8606b595562b0f8",
+      "lastAttemptAt": "2026-03-14T08:24:38.581Z",
+      "completedAt": "2026-03-14T08:24:38.581Z"
+    },
+    "bug_b7931f250f1f": {
+      "issueId": "bug_b7931f250f1f",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "32a2ef899b40417ea99dddd0abf07ae4535bcff4",
+      "lastAttemptAt": "2026-03-14T08:27:54.084Z",
+      "completedAt": "2026-03-14T08:27:54.084Z"
+    },
+    "bug_bb611e2dab22": {
+      "issueId": "bug_bb611e2dab22",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "a12c46b039bf0eabcb71bec29eba3ebae5cbf850",
+      "lastAttemptAt": "2026-03-14T08:31:52.219Z",
+      "completedAt": "2026-03-14T08:31:52.219Z"
+    },
+    "bug_bc68582113b1": {
+      "issueId": "bug_bc68582113b1",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "f39ce6e2d998c83fb0cfb1c1c86c80bde52e1227",
+      "lastAttemptAt": "2026-03-14T08:33:25.910Z",
+      "completedAt": "2026-03-14T08:33:25.910Z"
+    },
+    "bug_c00455f29b64": {
+      "issueId": "bug_c00455f29b64",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "f6302482fafcc3a46781bee6671849b48af6431b",
+      "lastAttemptAt": "2026-03-14T08:38:06.015Z",
+      "completedAt": "2026-03-14T08:38:06.015Z"
+    },
+    "bug_eb6f574c2a38": {
+      "issueId": "bug_eb6f574c2a38",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "cf934107063ed3e24e258bae9a172799a24aa261",
+      "lastAttemptAt": "2026-03-14T09:05:55.379Z",
+      "completedAt": "2026-03-14T09:05:55.379Z"
+    },
+    "bug_17156310c191": {
+      "issueId": "bug_17156310c191",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "cef6b954f06fd4ddbbe1862f690e5f777c4572dc",
+      "lastAttemptAt": "2026-03-14T09:06:37.516Z",
+      "completedAt": "2026-03-14T09:06:37.516Z"
+    },
+    "bug_2a6942701f9a": {
+      "issueId": "bug_2a6942701f9a",
+      "result": "completed",
+      "consecutiveFailures": 0,
+      "rowHash": "519183633f2ee4a6b0e320814c445962099826a5",
+      "lastAttemptAt": "2026-03-14T09:08:48.870Z",
+      "completedAt": "2026-03-14T09:08:48.870Z"
+    },
+    "bug_cd26894852ef": {
+      "issueId": "bug_cd26894852ef",
+      "result": "blocked",
+      "consecutiveFailures": 2,
+      "rowHash": "0277e3b2b4ac031650213d88343f8d185a2ccafc",
+      "lastAttemptAt": "2026-03-14T10:08:06.720Z",
+      "lastBlocker": "仅提供现状截图，缺少录制语音目标UI稿/尺寸/动效验收基线，无法执行确定性视觉优化",
+      "blockedAt": "2026-03-14T10:08:06.720Z"
+    }
+  }
 }

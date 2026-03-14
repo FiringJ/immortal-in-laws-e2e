@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-317Z-q8xk0i",
+  "kind": "bug",
+  "title": "申请注销账号/申请暂停相亲：目前2 栏未开发完整，且功能优先级低，第一期可先隐藏，二期迭代后再上线",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_b2911ce2d8bf\n飞书状态: 新增\n优先级: P1\n反馈日期: 2026-03-13\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n申请注销账号/申请暂停相亲：目前2 栏未开发完整，且功能优先级低，第一期可先隐藏，二期迭代后再上线\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b2911ce2d8bf/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P1",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.317Z",
+  "updatedAt": "2026-03-13T18:18:12.317Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-317Z-q8xk0i/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-317Z-q8xk0i/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-317Z-q8xk0i/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-317Z-q8xk0i/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_b2911ce2d8bf",
+    "externalRowHash": "745c2f26dea3e35dc2b525a2c799b038fc4179d7",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-13",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_b2911ce2d8bf/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=B3z1b9bnoobI5lxjQzicxdmTnwg",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.317Z"
+  }
+}

@@ -1,0 +1,1406 @@
+{
+  "version": 1,
+  "id": "triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+  "status": "running",
+  "createdAt": "2026-03-14T09:22:14.955Z",
+  "candidateCount": 141,
+  "readyCount": 13,
+  "needsHumanCount": 2,
+  "failedCount": 0,
+  "skippedCount": 6,
+  "entries": [
+    {
+      "itemId": "wf-2026-03-13T18-18-12-198Z-4wz8ha",
+      "title": "黄金会员：过期状态，待测点",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.198Z",
+      "externalIssueId": "bug_504c1b571d39",
+      "externalStatus": "新增",
+      "status": "skipped",
+      "reason": "stage awaiting_fix_approval is not intake"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-199Z-qp5ang",
+      "title": "邀请有奖：目前该功能未实现",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.199Z",
+      "externalIssueId": "bug_fd9f2f51d843",
+      "externalStatus": "新增",
+      "status": "skipped",
+      "reason": "stage awaiting_plan_approval is not intake"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-200Z-l7lj1l",
+      "title": "通知权限：目前通知权限交互错误，可参考右侧图 1UI稿和图 2prd优化",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.200Z",
+      "externalIssueId": "bug_4224234a1639",
+      "externalStatus": "新增",
+      "status": "skipped",
+      "reason": "stage awaiting_plan_approval is not intake"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-200Z-ftfdqg",
+      "title": "其他功能：目前该模块缺少了“相亲红豆”、“账号切换”入口，正确应加上其入口，且去掉多余的“联系管家”、“防骗指南”入口，并按右侧UI稿排序",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.200Z",
+      "externalIssueId": "bug_5b4c2c4efb2d",
+      "externalStatus": "新增",
+      "status": "skipped",
+      "reason": "stage awaiting_plan_approval is not intake"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-201Z-ee367d",
+      "title": "实名认证：第一次实名认证时，提示实名认证失败，具体状态提示为姓名、身份证号校对正确，与微信号的校对失败，点击“重新校对”按钮时，才校对成功且提示认证成功",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.201Z",
+      "externalIssueId": "bug_1d273429490e",
+      "externalStatus": "新增",
+      "status": "skipped",
+      "reason": "stage blocked is not intake"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-201Z-8y7qyb",
+      "title": "未支付订单",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.201Z",
+      "externalIssueId": "bug_ae6a8961a8e4",
+      "externalStatus": "新增",
+      "status": "skipped",
+      "reason": "stage awaiting_plan_approval is not intake"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-202Z-3fczdc",
+      "title": "目前会提示多笔订单未支出，正确应至提示最新一笔；",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.202Z",
+      "externalIssueId": "bug_408bbd994edc",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T09:22:14.978Z",
+      "taskId": "2026-03-14T09-22-14-959Z-ht99la",
+      "completedAt": "2026-03-14T09:26:56.116Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-203Z-o1fjc3",
+      "title": "目前待支付订单开通会员未明确，正确应显示“年度/季度/永久黄金会员、至尊会员”",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.203Z",
+      "externalIssueId": "bug_dc838438d8c1",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T09:26:56.119Z",
+      "taskId": "2026-03-14T09-26-56-117Z-qcj3p0",
+      "completedAt": "2026-03-14T09:31:21.061Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-204Z-2bep8w",
+      "title": "目前倒计时直接为 00:00:00，正确应开始 2 小时倒计时",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.204Z",
+      "externalIssueId": "bug_ea04e2519f55",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T09:31:21.064Z",
+      "taskId": "2026-03-14T09-31-21-062Z-tk1s88",
+      "completedAt": "2026-03-14T09:36:17.437Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-205Z-bn5svq",
+      "title": "目前点击“立即支付”按钮以及整栏跳转到了订单列表页，正确应点击按钮再次以最近 1 次订单价重新拉起支付且点击按钮以外不跳转",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.205Z",
+      "externalIssueId": "bug_028c6ceaf388",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T09:36:17.438Z",
+      "taskId": "2026-03-14T09-36-17-438Z-faykv5",
+      "completedAt": "2026-03-14T09:42:07.607Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-206Z-wq5xaf",
+      "title": "目前“叉”掉订单提醒，又退出小程序再回到小程序后，订单提醒栏还在，正确应在回来后不会再显示提醒栏",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.206Z",
+      "externalIssueId": "bug_7143a0f6b055",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T09:42:07.610Z",
+      "taskId": "2026-03-14T09-42-07-608Z-m65yty",
+      "completedAt": "2026-03-14T09:45:44.628Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-207Z-5yhrue",
+      "title": "挽留弹框：目前点击“返回”按钮后未触发挽留弹框，正确应弹出挽留弹框",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.207Z",
+      "externalIssueId": "bug_4e6775761a11",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T09:45:44.631Z",
+      "taskId": "2026-03-14T09-45-44-630Z-v86e87",
+      "completedAt": "2026-03-14T09:50:26.293Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-210Z-1xoumo",
+      "title": "实名认证：目前实名认证成功后离开已认证状态页，再回到已经认证状态页时，其姓名和身份证号会消失，正确应如之前",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.210Z",
+      "externalIssueId": "bug_b1defc9f1265",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T09:50:26.298Z",
+      "taskId": "2026-03-14T09-50-26-294Z-kp51o0",
+      "completedAt": "2026-03-14T09:57:12.404Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-211Z-yndah8",
+      "title": "我收藏的：非会员身份，目前点击“联系对方”弹出的是会员开通阻断弹框，正确应弹框提示“联系次数不足 / 开通会员无限解锁联系方式”，点击“开通会员”弹框按钮，立即跳转至会员开通页（选中黄金会员tab--年度会员）",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.211Z",
+      "externalIssueId": "bug_720585e7607a",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T09:57:12.406Z",
+      "taskId": "2026-03-14T09-57-12-405Z-sr3wse",
+      "completedAt": "2026-03-14T10:02:08.502Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-212Z-9wi6v1",
+      "title": "我收藏的：会员身份，目前点击“联系对方”是直接解锁并跳转到了私信页，正确应弹框提示“您是会员，可免费解锁和对方的聊天”；点击“立即解锁”弹框按钮，toast提示“成功解锁联系方式”，同时立即跳转至私信会话页且底部弹出“xx家长联系方式/xx",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.212Z",
+      "externalIssueId": "bug_6e4eb5547b71",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T10:02:08.504Z",
+      "taskId": "2026-03-14T10-02-08-503Z-pxquar",
+      "completedAt": "2026-03-14T10:09:19.841Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-213Z-p12yxt",
+      "title": "我收藏的：非会员解锁剩余次数≥ 1，点击“联系对方”应弹框提示“您有xx次免费解锁机会，可解锁并查看对方号码”；点击“立即解锁”弹框按钮，后续交互同上（会员条件解锁），此为待测点",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.213Z",
+      "externalIssueId": "bug_992ce36d145c",
+      "externalStatus": "新增",
+      "status": "needs_human",
+      "startedAt": "2026-03-14T10:09:19.843Z",
+      "taskId": "2026-03-14T10-09-19-841Z-6k635r",
+      "completedAt": "2026-03-14T10:18:42.328Z",
+      "triageStatus": "needs_human"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-214Z-sju7o3",
+      "title": "我收藏的：点击已建立过会话嘉宾，直接跳转到至私信页并弹出联系方式（没手机号则不弹），目前好像是会阻断，待测点",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.214Z",
+      "externalIssueId": "bug_00ec36e979f1",
+      "externalStatus": "新增",
+      "status": "needs_human",
+      "startedAt": "2026-03-14T10:18:42.330Z",
+      "taskId": "2026-03-14T10-18-42-329Z-2qyfzf",
+      "completedAt": "2026-03-14T10:24:26.031Z",
+      "triageStatus": "needs_human"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-215Z-l5qimx",
+      "title": "收藏我：非会员身份，目前点击嘉宾卡片以及详细资料按钮、联系对方按钮都是跳转到新的页面，正确应该统一弹出会员开通阻断弹框",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.215Z",
+      "externalIssueId": "bug_496a05b14dbe",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T10:24:26.033Z",
+      "taskId": "2026-03-14T10-24-26-032Z-56m30w",
+      "completedAt": "2026-03-14T10:29:59.312Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-216Z-r58x6y",
+      "title": "解锁我：需求变更，因任一方解锁了对方，会话即生成，双方就可以发起聊天，所以无论己方是否会员，在当前tab页都不受会员阻断，即点击嘉宾卡片的“详细资料/照片”按钮，或点击资料卡“联系对方”按钮以外区域，统一跳转“详细资料”页；点击“联系对方”",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.216Z",
+      "externalIssueId": "bug_72247ecfcc84",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T10:29:59.314Z",
+      "taskId": "2026-03-14T10-29-59-313Z-4q1z4v",
+      "completedAt": "2026-03-14T10:38:39.389Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-234Z-5x4utb",
+      "title": "黄金会员：目前点击“购买说明”跳转到了新页面（图 2），正确应弹框提示（图 1）",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.234Z",
+      "externalIssueId": "bug_6d4ca7d9f4e9",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T10:38:39.392Z",
+      "taskId": "2026-03-14T10-38-39-390Z-27m8ec",
+      "completedAt": "2026-03-14T10:44:18.506Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-234Z-p9t6vi",
+      "title": "通顶交互：目前除了主页面，其他所有二级页、三级页都缺少通顶设计，即下拉页面时，顶部未做通顶处理，右侧操作栏无背景上滑重叠后体验差（可参考完美亲家看看），另外我的首页顶部右侧操作栏有2 个会重叠",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.234Z",
+      "externalIssueId": "bug_7dba4ca9f15a",
+      "externalStatus": "新增",
+      "status": "ready",
+      "startedAt": "2026-03-14T10:44:18.508Z",
+      "taskId": "2026-03-14T10-44-18-507Z-ki6dy7",
+      "completedAt": "2026-03-14T10:48:41.701Z",
+      "triageStatus": "ready"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-235Z-o1bnpi",
+      "title": "黄金会员：权益图片，目前黄金会员的季度、年度、永久tab页会员，其有效期和每天推荐的人数都用了同一个，正确应如截图 1 prd所示",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.235Z",
+      "externalIssueId": "bug_af36e396753f",
+      "externalStatus": "新增",
+      "status": "running",
+      "startedAt": "2026-03-14T10:48:41.709Z",
+      "taskId": "2026-03-14T10-48-41-708Z-qaz7la"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-237Z-kjqci2",
+      "title": "黄金会员：目前点击列表各个权益入口无反应，正确应弹出权益图片弹框，详见UI稿",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.237Z",
+      "externalIssueId": "bug_2bb8fdcdff88",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-240Z-arhiw3",
+      "title": "至尊会员：目前点击列表各个权益入口无反应，正确应弹出权益图片弹框，详见UI稿",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.240Z",
+      "externalIssueId": "bug_35384028f48c",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-241Z-zbhbl8",
+      "title": "单次购买倒计时：在倒计时期间，用户可关闭超级曝光，关闭后倒计时正确应该暂停，目前是直接隐藏了",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.241Z",
+      "externalIssueId": "bug_ad91d21f5069",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-243Z-5n1f42",
+      "title": "会员阻断：我看过/看过我、收藏我/我收藏、解锁我/我解锁的 6 个tab嘉宾列表页，其对应阻断逻辑详见prd，以prd为准",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.243Z",
+      "externalIssueId": "bug_5e0d51145e36",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-246Z-ydd9br",
+      "title": "看过我：至尊/黄金会员身份，目前底部会显示“开通会员 查看全部资料”按钮，正确应不展示",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.246Z",
+      "externalIssueId": "bug_157abc4b4612",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-249Z-gt1q5e",
+      "title": "看过我：非会员身份，目前此页点击嘉宾卡片以及详情资料按钮，跳转到了详情资料页，此页特殊处理，正确应同底部按钮逻辑一样，弹出会员开通阻断弹框",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.249Z",
+      "externalIssueId": "bug_e64aa58c4dd6",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-251Z-s8pasv",
+      "title": "看过我/我看过/收藏我 3 个tab页：嘉宾卡片资料信息目前显示缺失或多出，可对照UI稿自查，比如：缺少年龄、相亲介绍等",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.251Z",
+      "externalIssueId": "bug_4a582a6d3339",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-252Z-miva3e",
+      "title": "搜索结果：非至尊会员身份，有过 1 次搜索记录，次日再点击金刚区进入时，目前是跳转到了搜索查找页，正确应跳转至搜索结果页",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.252Z",
+      "externalIssueId": "bug_2e1530e4ebc9",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-258Z-y0j3um",
+      "title": "注册登录：首次进入小程序，正确应以游客身份进入首页（分享除法），触发注册流程才能完成登录，目前是直接授权手机号直接登入小程序",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.258Z",
+      "externalIssueId": "bug_162fc54a2ea9",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-259Z-writ33",
+      "title": "系统消息：目前点击系统消息无效，正确应点击进去后，有相应的系统消息",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.259Z",
+      "externalIssueId": "bug_27dd952691b3",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-260Z-ssg263",
+      "title": "嘉宾消息：目前消息列表的家长编号与详情页的标号不一致，正确应一致",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.260Z",
+      "externalIssueId": "bug_ce6c773dbadf",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-261Z-yqukke",
+      "title": "解锁会话：对方解锁我后(真人以解锁时间做判断，机器人可以消息触发成功时间做判断)，正确是会话建立后己方无需解锁对方就可以聊天，目前是己方需解锁对方才可聊",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.261Z",
+      "externalIssueId": "bug_16c405698ee2",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-262Z-6c0c3s",
+      "title": "精准查找：非会员身份，此入口应与首页精准搜索入口逻辑、记录保持一致，目前首页搜索查找机会用过后会进入搜索解锁页，但在消息页则进入了精准查找页，正确应同前者进入搜索结果页",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.262Z",
+      "externalIssueId": "bug_d1fd9fefe899",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-263Z-as0phw",
+      "title": "资料编辑页：资料项的交互能力或交互弹框与UI稿不一致",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.263Z",
+      "externalIssueId": "bug_110da6b2392e",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-263Z-fkhzb5",
+      "title": "编辑资料页：上传无人脸的头像，目前点击“确认上传”会报错英文提示（图 2），正确提示应 如图 1 所示",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.263Z",
+      "externalIssueId": "bug_c8b0ad4d605c",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-270Z-p4emb4",
+      "title": "上传照片：首次上传孩子照片时，正确应弹框提示如图 2，目前是 弹框图 1",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.270Z",
+      "externalIssueId": "bug_8d618b6c9f9b",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-271Z-uz8rs7",
+      "title": "父问题补充：其滚筒下拉框样式，以及交互，需对照截图样式实现，图 1 是现有视觉弹框可直接复用UI，图 2 是UI复用后的实现样式（排版交互要一致）",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.271Z",
+      "externalIssueId": "bug_1882b361f30f",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-272Z-cvdk0f",
+      "title": "交换照片：至尊会员身份，点击“交换照片”按钮，错误弹框提示“登记资料”，测试号 15717136585",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.272Z",
+      "externalIssueId": "bug_69f52e9040b0",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-272Z-xqsym5",
+      "title": "历史推荐：点击嘉宾卡片按钮，无反应",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.272Z",
+      "externalIssueId": "bug_ebedaca91144",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-273Z-raxc9h",
+      "title": "发送照片：照片未做人脸校验，目前任何图片都可发送对方，正确应该是符合人脸要求的才可发送，否则应如截图所示进行提示",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.273Z",
+      "externalIssueId": "bug_5fc883436515",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-274Z-7afj4x",
+      "title": "车产要求：正确应只有“不限、已购车/近期购车”2项可选，且 2 项择偶项“已购车、近期购车”匹配 1 项资料项“已购车/近期购车”，“不限”项则匹配“已购车、近期购车、无车” 3项，可参考图 1",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.274Z",
+      "externalIssueId": "bug_1d9d2a48788d",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-275Z-v7wivn",
+      "title": "默认选项：目前所有选项默认选中不限，正确应该除年份和身高要求项默认选中“不限”项外，其他项一律默认不选中（目前选中后的交互无误）",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.275Z",
+      "externalIssueId": "bug_4958d302a546",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-276Z-gck7xd",
+      "title": "黄金会员：选中黄金会员tab时，正确应有第 4 个子tab至尊会员",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.276Z",
+      "externalIssueId": "bug_863185b98485",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-276Z-ne9aet",
+      "title": "搜索结果：非至尊会员用户，正确应有且只有 1 次搜索机会，且搜索完成后立即隐藏“条件设置”入口，目前“条件设置”入口未隐藏，且能重复搜索",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.276Z",
+      "externalIssueId": "bug_b75cd683ea10",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-277Z-08sxfm",
+      "title": "搜索结果：目前黄金会员升级为至尊会员后，其搜索结果页底部的“开通至尊会员”悬浮按钮未及时更新（如图 1），正确应该按钮变为高亮按钮 “点击搜索嘉宾（今日剩1次机会）”，如图 1 的UI稿",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.277Z",
+      "externalIssueId": "bug_e74b83c8b69e",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-278Z-fq1n84",
+      "title": "搜索结果：非至尊会员用户，点击嘉宾卡片以及按钮，正确应统一阻断并跳转至至尊会员开通页，目前点击嘉宾卡片会跳转至资料页，点击“卡片按钮”会弹出会员开通阻断弹框",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.278Z",
+      "externalIssueId": "bug_45590459ba11",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-294Z-9c1o8r",
+      "title": "会员阻断：和点击“日期筛选”弹出会员开通阻断弹框一样（选中至尊tab），正确应点击嘉宾卡片以及卡片按钮也与其保持一致（图 2），目前 点击卡片会弹出莫名弹框（图 1），点击卡片按钮无反应",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.294Z",
+      "externalIssueId": "bug_8e6bf07d0dc7",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-295Z-dl8xeo",
+      "title": "购买说明：说明内容缺失，且排版混乱无内容排版，可参考文档进行修改 神仙亲家购买说明",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.295Z",
+      "externalIssueId": "bug_e0dbe455f178",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-295Z-emo4wo",
+      "title": "购买价格：为测试价格档位是否生效，可将4 档价格分为定为：0.01、0.02、0.03、0.04，以方便测试",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.295Z",
+      "externalIssueId": "bug_15906a83febf",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-296Z-7jar0g",
+      "title": "我看过的：点击顶部“开通至尊会员”按钮，以及绿框蒙层模糊区域，统一跳转至会员开通页（选中至尊tab）；目前问题是前者错误出弹框，后者点击无反应",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.296Z",
+      "externalIssueId": "bug_fc5d5e45ddb6",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-296Z-fbihsv",
+      "title": "收藏我：点击底部按钮正确应跳转至会员开通页（选中黄金tab），且弹框提示“查看详细资料受限 /平台严格保护用户隐私，开通会员方可查看对方详情”，点击弹框按钮“好的”弹框消失（弹框是后续加的，视觉可直接用截图 1 弹框样式套用），目前是直接出",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.296Z",
+      "externalIssueId": "bug_33447f0a24b6",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-297Z-g2qpzx",
+      "title": "解锁我的：目前测试因无法匹配数据，故此处无法验证，此测试点备忘录下",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.297Z",
+      "externalIssueId": "bug_1b55eb5f507c",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-298Z-eazj9m",
+      "title": "我解锁的：1）24 小时内解锁我的展示逻辑搞反了，不在当前tab，而在“解锁的的tab”，且按钮没有“已过期”状态；2）我解锁tab的所有嘉宾，无论会员身份与否，都无阻断",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.298Z",
+      "externalIssueId": "bug_d4c1f46944dc",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-298Z-ocdx6o",
+      "title": "户籍项已去掉，辛苦在资料页去掉该资料项",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.298Z",
+      "externalIssueId": "bug_d67624ba8fb3",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-300Z-4s2xio",
+      "title": "会员身份：当对方有手机号且按钮显示“拨打电话”时，点击“拨打电话”，目前错误解锁并直接弹出了联系方式，正确应弹框提示“您是会员，可免费查看对方号码”；点击“立即解锁”弹框按钮，toast提示“成功解锁对方号码”，同时立即跳转至私信会话页且底",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.300Z",
+      "externalIssueId": "bug_7fd0bcd43461",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-301Z-q8i6up",
+      "title": "当对方有无手机号时，“拨打电话”隐藏，收藏按钮居中展示才正确，错误如截图所示",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.301Z",
+      "externalIssueId": "bug_35d0f7239d83",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-301Z-hyg53z",
+      "title": "首页嘉宾列表页：今日开通完季度黄金会员，回到首页点击联系对方时，弹框错误提示为了联系次数不足（手机号 13995550744）",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.301Z",
+      "externalIssueId": "bug_9b57fd1d66a6",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-302Z-6vh2by",
+      "title": "录制语音：单机按住说话栏应无反应才对，目前错误唤起了语音录制按钮",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.302Z",
+      "externalIssueId": "bug_a590c797de90",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-303Z-f89rvx",
+      "title": "点击播放语音失败",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.303Z",
+      "externalIssueId": "bug_7aa066c2c692",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-304Z-e5z9cr",
+      "title": "点击撤回语音失败",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.304Z",
+      "externalIssueId": "bug_d277cc93a551",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-305Z-3cjfmc",
+      "title": "照片交换无需对方同意，只要照片识别后符合平台要求，则点击“交换照片”按钮后，直接打开对方清晰照，同时将我方清晰照通过私信发送对方。目前截图错误处理成了需对方同意才可交换逻辑，私信错发了交换私信，嘉宾详情页错误显示申请中，正确详见截图红框pr",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.305Z",
+      "externalIssueId": "bug_b0e797a77ede",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-306Z-gc2npl",
+      "title": "精准搜索：非会员账号，通过精准搜索点击“联系对方”却能解锁私信并发送消息（手机号 15356138328），正确应无法联系对方且阻断提醒。若此账号能解锁私信是因有未使用的 3 次解锁机会，则在此处依然错误，正确应跳转至尊会员页（精准搜索为至",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.306Z",
+      "externalIssueId": "bug_2c60cb5ea37c",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-306Z-x1hofk",
+      "title": "编辑资料页：资料无法保存",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.306Z",
+      "externalIssueId": "bug_9f520fdce3c0",
+      "externalStatus": "待验收",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-307Z-cq9ht6",
+      "title": "超级曝光：首页未实现超级曝光专区推荐，详见prd",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.307Z",
+      "externalIssueId": "bug_523eb677b9e6",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-308Z-98jtzh",
+      "title": "目前在不同页面的不同按钮解锁会话时，其实现的交互有些混乱，需要统一梳理，详见下方【新需求--3】",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.308Z",
+      "externalIssueId": "bug_12987ba6072e",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-309Z-hbh3fc",
+      "title": "正确阻断方式，正确应该如父问题的prd截图出阻断解锁弹框，而现在错误出了阻断开通弹框",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.309Z",
+      "externalIssueId": "bug_0f109d4adccb",
+      "externalStatus": "验收未通过",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-310Z-aobfmo",
+      "title": "嘉宾数量：目前每日推荐给至尊会员嘉宾数是 20 位（手机号 15717136585），正确应该为 26 位，其他会员类型对照截图prd自查",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.310Z",
+      "externalIssueId": "bug_90df08803a9c",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-310Z-hve1bd",
+      "title": "会员身份：点击首页的“联系对方”按钮，目前错误解锁并直接跳转至私信会话页了，正确应弹框提示“您是会员，可免费解锁和对方的聊天”；点击“立即解锁”弹框按钮，toast提示“成功解锁联系方式”，同时立即跳转至私信会话页且底部弹出“xx家长联系方",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.310Z",
+      "externalIssueId": "bug_c874ce490a14",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-311Z-oa92u6",
+      "title": "卡片样式：无照片样式的资料展示，测试点备忘录",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.311Z",
+      "externalIssueId": "bug_35e7574534ec",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-312Z-ll6cx4",
+      "title": "会员标签：显示与否，测试点备忘录",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.312Z",
+      "externalIssueId": "bug_6071f4ca5acc",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-313Z-gv2104",
+      "title": "联系对方：目前当用户拥有解锁次数时，点击“联系对方”直接进入私信页且解锁了，正确应该弹框提示“您有xx次免费解锁机会，可免费解锁和对方的聊天”；点击“立即解锁”弹框按钮，后续交互同会员条件解锁",
+      "priority": "P0",
+      "createdAt": "2026-03-13T18:18:12.313Z",
+      "externalIssueId": "bug_7515a2a8d197",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-314Z-qmcpx0",
+      "title": "用户协议/隐私政策：目前 2 个文本内容错误且与UI稿不一致，需对照神仙亲家用户使用协议修改用户协议，对照神仙亲家隐私协议修改隐私协议",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.314Z",
+      "externalIssueId": "bug_6a9997a0ec05",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-315Z-3wasn6",
+      "title": "订单记录：目前购买明细、订单时间、金额展示文案错误（图 1），需对照prd优化（图 2）",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.315Z",
+      "externalIssueId": "bug_dfd7ebf5e4e6",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-316Z-a20cja",
+      "title": "隐私政策摘要/个人信息收集清单/第三方共享个人信息清单：去掉此 3 栏，至保留“用户协议”、“隐私政策”栏即可",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.316Z",
+      "externalIssueId": "bug_5b2c5588cc6b",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-317Z-q8xk0i",
+      "title": "申请注销账号/申请暂停相亲：目前2 栏未开发完整，且功能优先级低，第一期可先隐藏，二期迭代后再上线",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.317Z",
+      "externalIssueId": "bug_b2911ce2d8bf",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-317Z-fm9zt7",
+      "title": "个性化推荐：目前点击入口栏直接从“已开启”变为“已关闭”，正确应点击“已开启”入口栏，弹出推荐开关弹框，弹框提示“关闭后，将不会再为您推荐个性化资料卡，卡片推荐精准度会下降”，按钮：取消/确认；点击按钮“取消”，关闭失败，弹框消失；点击按钮",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.317Z",
+      "externalIssueId": "bug_fb72ee082d4a",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-318Z-8qxygz",
+      "title": "开启实名认证：目前未实名用户，点击该栏直接弹框提醒要先去实名认证，正确应先跳转至实名认证权益介绍页，再点击“开启实名认证”才出弹框提醒，对应UI稿如右图",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.318Z",
+      "externalIssueId": "bug_5546ac50605e",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-318Z-pthhx7",
+      "title": "无门槛联系：目前无门槛联系能力未实现，若本期不做可隐藏入口，若确认在本期实现，可参考图 1prd，图 2 弹框样式做优化",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.318Z",
+      "externalIssueId": "bug_2cb6019cfd64",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-318Z-v0ey3p",
+      "title": "打招呼语：目前打招呼语设置的交互、展示样式与UI稿不一致",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.318Z",
+      "externalIssueId": "bug_0b18ac4ee14d",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-319Z-f8wtc7",
+      "title": "确认承诺书：1、目前点击“承诺并确认”按钮会二次弹框提示，正确应点击“承诺并确认”按钮后立即toast提示“已承诺”，同时，按钮变为置灰“已承诺”，页面打上“已承诺”水印；点击“已承诺”无反应，不可取消承诺书；2、目前承诺书页面UI展示内容",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.319Z",
+      "externalIssueId": "bug_9514af4dc83e",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-320Z-btnewb",
+      "title": "单次购买：目前单次购买成功未在当前页刷新出来一批超级曝光嘉宾，建议购买完成进入此页后，刷新一批",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.320Z",
+      "externalIssueId": "bug_285a3ed46902",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-320Z-ivz030",
+      "title": "看过我/收藏我：点击嘉宾卡片“···”按钮，目前是弹出操作弹框，正确应跳转至会员开通页（选中黄金tab），且弹框提示“查看详细资料受限 /平台严格保护用户隐私，开通会员方可查看对方详情”，点击弹框按钮“好的”弹框消失（弹框是后续加的，视觉可",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.320Z",
+      "externalIssueId": "bug_ab3e5f112edb",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-321Z-76yqig",
+      "title": "看过我/我看过/我收藏的--tab页：会员身份，点击嘉宾卡片“···”按钮触发的弹框按钮，目前点击“屏蔽并删除”是跳过了二次确认弹框直接屏蔽成功，正确应如详情资料页（图 1 ）屏蔽，先填写二次弹框确认",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.321Z",
+      "externalIssueId": "bug_bb72bc8166f0",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-321Z-x05yum",
+      "title": "屏蔽的人：被屏蔽的人在浏览/收藏/解锁记录的 6 个页面里，正确应都隐藏（包括机器人），目前我收藏的人页面会展示（编号 3079540 看第 2 个）",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.321Z",
+      "externalIssueId": "bug_587d4be88b55",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-322Z-dk7brl",
+      "title": "收藏我：会员身份，目前底部会提示开通会员（如图 1），正确应去掉提示语及按钮",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.322Z",
+      "externalIssueId": "bug_81e329e3b369",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-322Z-ewyl2d",
+      "title": "解锁我：目前解锁嘉宾后，“解锁我、我解锁”2 个tab页都显示了我解锁的嘉宾按钮状态，因 2 个页面的嘉宾都可以正常查看，“已解锁”按钮反而会增加理解成本，故去掉该逻辑，正常展示“联系对方”按钮状态",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.322Z",
+      "externalIssueId": "bug_7fe2338ee19d",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-322Z-hd2uzg",
+      "title": "我解锁的：底部不应该有提示“共解锁xxx位·······”，详见图 1",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.322Z",
+      "externalIssueId": "bug_171f42c35ee5",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-323Z-plbd8p",
+      "title": "首页金刚区：有人看过我、收藏我、解锁我后，目前首页人数未增加（进入再返回才增加了），正确应实时显示历史+新增人数",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.323Z",
+      "externalIssueId": "bug_49130109a940",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-324Z-xu8ulc",
+      "title": "看过我：目前对方看过我资料主页多次后，此页顶部只显示了“看了我”，正确应显示“xx月xx日看了我 共看过我xx次”（若累计看过次数≥ 2 且有通过超级曝光看了我，则依然遵从该逻辑）",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.324Z",
+      "externalIssueId": "bug_7c4e0e83f864",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-324Z-7c9dkd",
+      "title": "解锁会话：当底部操作栏是未解锁状态时，目前点击“立即解锁”，以及点击 “交换微信、拨打电话、发送照片”菜单按钮，是跳转到了会员开通页，正确应统一弹出会员阻断弹框，详见截图prd",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.324Z",
+      "externalIssueId": "bug_634001549ca8",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-325Z-vgnv9l",
+      "title": "填写称呼：目前只能在编辑页填写，正确应如图 2 所示，跳转至填写页",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.325Z",
+      "externalIssueId": "bug_cb58ddbf4447",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-194Z-rggi2f",
+      "title": "房产要求：正确应只有“不限、近期购房、家乡地已购房、现居地已购房”4项可选，且择偶项“近期购房”匹配 资料项“近期有购房计划”，择偶项“家乡地已购房、现居地已购房”匹配同理；“不限”项则匹配“家乡地已购房、现居地已购房、近期有购房计划、婚后",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.194Z",
+      "externalIssueId": "bug_69196948a451",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-326Z-g6qsqe",
+      "title": "嘉宾资料：当用户已填 收入和职业时，优先展示收入",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.326Z",
+      "externalIssueId": "bug_27ffe8f1b8d2",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-327Z-kdn618",
+      "title": "私信内容：私信缺少发送时间，以及“未读/已读”状态（若对方为真人，则以实际阅读时间显示状态，若对方为真人，则以回复时间显示）",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.327Z",
+      "externalIssueId": "bug_811a4a0500d5",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-328Z-wbck3r",
+      "title": "私信内容：长按己方私信时，操作提示有遮挡影响体验（固定位置展示就好了）",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.328Z",
+      "externalIssueId": "bug_96164c6eead1",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-330Z-hduthp",
+      "title": "拨打电话：当对方无手机号（如机器人）时，此按钮隐藏，其他按钮自适应左对齐",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.330Z",
+      "externalIssueId": "bug_c142a8380a95",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-330Z-tpjlih",
+      "title": "私信撤回：目前2 分钟内的私信内容会提示撤回失败，正确应按prd撤回，详见截图prd",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.330Z",
+      "externalIssueId": "bug_245d3f132be9",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-331Z-04hnht",
+      "title": "年份筛选：筛选选择框的交互&展示逻辑不对，需对照prd优化 神仙亲家--用户资料/打招呼/任务体系",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.331Z",
+      "externalIssueId": "bug_51865f161582",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-332Z-0v0l19",
+      "title": "身高筛选：筛选选择框的交互&展示逻辑不对，需对照prd优化 神仙亲家--用户资料/打招呼/任务体系",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.332Z",
+      "externalIssueId": "bug_d13301ee33d0",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-332Z-t0c2ow",
+      "title": "截止年份栏，其高亮选中的年份，目前随起始年份错误显示为了“不限”项，正确应选中“不限”项的下一项（N+5cm项）",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.332Z",
+      "externalIssueId": "bug_b5153f86466b",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-333Z-laecqo",
+      "title": "选项框的上下选项有遮挡，看着体验不好",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.333Z",
+      "externalIssueId": "bug_48c69ef268ce",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-333Z-tkt7li",
+      "title": "交换照片：会员身份，点击“交换照片”按钮，目前弹出弹框样式不对（图 2），正确应 如UI稿图 1，但图 1 的提示内容和按钮文案需分别改为“您是会员，可免费解锁”，和“立即解锁”",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.333Z",
+      "externalIssueId": "bug_fe1677781cf4",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-333Z-xmt2tb",
+      "title": "地区选择：目前仅支持 1 个城市（见图 2），正确应支持添加第 2 个城市且单选，详见prd 图 1，视觉稿详见图 2、图 3",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.333Z",
+      "externalIssueId": "bug_c0b31644b9a4",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-334Z-56fmc3",
+      "title": "延展父问题场景\n1）当非会员身份但解锁次数≥ 1，  则点击“交换照片”按钮，按图 1 的提示内容和按钮文案需分别改为“交换照片需先解锁对方联系方式 / 您是会员，可免费解锁”，和“立即解锁”\n2）当非会员身份且解锁次数=0， 则点击“交换",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.334Z",
+      "externalIssueId": "bug_ae0134ae8155",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-334Z-fqt9n9",
+      "title": "屏蔽的人：列表右侧错误显示为了家长头像，正确应为孩子照片（如未解锁还应模糊处理）",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.334Z",
+      "externalIssueId": "bug_94bd86e61a0a",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-335Z-erhuj3",
+      "title": "屏蔽的人：此列表嘉宾卡片错误显示了更多“···”图标，正确应没有",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.335Z",
+      "externalIssueId": "bug_793be1971b3f",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-335Z-ldcet4",
+      "title": "精准搜索：点击嘉宾卡片按钮，或点击底部常驻按钮，可统一跳转至会员开通页，但目前都未正确选中“至尊会员”tab",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.335Z",
+      "externalIssueId": "bug_8fe649498e61",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-335Z-tea9ai",
+      "title": "“xx会员尊享xx大特权”标题，需根据选中的价格档位，文案相应变化，前者“xx”文案分别为“季度、年度、不限时、至尊”，后者“xx”数值分别为“6、6、6、12”",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.335Z",
+      "externalIssueId": "bug_90d46bdba290",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-336Z-wbrjfo",
+      "title": "会员阻断弹窗：标题文案“开通会员解锁联系方式”错误，需根据黄金会员、至尊会员tab的切换而变化，对应标题为“开通黄金会员即可查看 / 开通至尊会员即可查看”  ；",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.336Z",
+      "externalIssueId": "bug_800045a6af94",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-336Z-gsb9zb",
+      "title": "截止年份栏，其与起始年份联动变化的选项，正确应该当起始选项选择的出生年份为“n年”时，截止选项始终依次显示“不限”、 “n年+3 年”，且高亮选中 “n年+3 年”年份（体验完美亲家秒懂）",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.336Z",
+      "externalIssueId": "bug_852e8d599ec6",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-336Z-myo3j2",
+      "title": "截止年份栏，高亮选中的年份项无法与起始年份联动变化",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.336Z",
+      "externalIssueId": "bug_719d02a19dc7",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-337Z-gd0lph",
+      "title": "上传孩子照片时，缺少做人脸验证，需求详见截图 2",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.337Z",
+      "externalIssueId": "bug_e7494c4e770c",
+      "externalStatus": "修复中",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-197Z-1rgloh",
+      "title": "机器人后缀亲属关系字段，建议随机关系，否则清一色都是“母亲”",
+      "priority": "P1",
+      "createdAt": "2026-03-13T18:18:12.197Z",
+      "externalIssueId": "bug_4bfed06e4430",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-337Z-665f5l",
+      "title": "黄金会员：黄金会员身份，在“我的”首页，点击会员入口栏时，目前跳转黄金会员页选中“年卡黄金tab”，正确应在黄金会员页选中“至尊会员tab”",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.337Z",
+      "externalIssueId": "bug_4fa49f433079",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-338Z-zloqls",
+      "title": "邀请好友：入口栏缺少“分享赚钱”标签，对照UI稿优化",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.338Z",
+      "externalIssueId": "bug_9840152c672d",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-338Z-3ad5ra",
+      "title": "收藏我：非会员身份，底部按钮的提醒“最近有xx人收藏我”，前缀“最近有”改为“共有”",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.338Z",
+      "externalIssueId": "bug_d3406025cced",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-338Z-cgos66",
+      "title": "看过我/我看过/我收藏的3 个tab页：会员身份，点击嘉宾卡片“···”按钮触发的弹框按钮，目前点击“举报”是跳过了举报选项页直接举报成功，正确应如详情资料页（图 1 ）举报，先填写举报原因",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.338Z",
+      "externalIssueId": "bug_10164589d4af",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-339Z-pdhph1",
+      "title": "收藏我：目前在此页取消被我屏蔽的嘉宾，无法取消屏蔽，会提示操作失败",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.339Z",
+      "externalIssueId": "bug_e0438693bfff",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-339Z-ucc6zr",
+      "title": "看过我/我看过/收藏我/我收藏/解锁我/我解锁：6 个页面嘉宾顶部的日期，今/昨天的日期用“今天、明天”代替。目前除了“看过我”页面实现，其他 5 个页面未实现",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.339Z",
+      "externalIssueId": "bug_3b4742d86136",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-340Z-jj2h2s",
+      "title": "解锁我/我解锁 2 个tab页：置顶资料，目前点击“···”更多操作框，缺少置顶资料能力，且我解锁的tab页操作框误加了“查看联系方式”操作项（图 1）",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.340Z",
+      "externalIssueId": "bug_4f35c8db8cbf",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-340Z-ti28r8",
+      "title": "至尊会员：目前点击入口栏的“查看特权”，跳转至会员中心页且选中了“黄金会员tab”，正确应选中“至尊会员”tab",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.340Z",
+      "externalIssueId": "bug_a83fb0d12f25",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-341Z-af9nr4",
+      "title": "滚动弹幕：无论选中哪个tab，希望用户在浏览权益信息时，滚动弹幕能随通顶标题一起固定住，确保用户浏览同时能感受其他人也在买，加速家长支付决策",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.341Z",
+      "externalIssueId": "bug_94dda34e6aa9",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-341Z-3kgjtw",
+      "title": "超级曝光提醒：所有通过己方在首页超级曝光推荐专区或超级曝光嘉宾列表页资料卡片“看过我、收藏我、解锁我、私信我”的异性嘉宾，在己方视角的浏览记录、收藏记录、解锁记录、私信会话里正确应都会提醒“通过超级曝光xx”，目前没有除了浏览记录有提醒，收",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.341Z",
+      "externalIssueId": "bug_b9883fea7490",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-341Z-3r06n3",
+      "title": "目前看过我/我看过、收藏我/我收藏、解锁我/我解锁的 6 个页面，都缺少嘉宾为 0 的缺省提醒，正确应如图 1的prd提醒（图 2 是UI稿）",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.341Z",
+      "externalIssueId": "bug_4abb28ceb29d",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-342Z-0l4z2z",
+      "title": "超级曝光--开关设置页：若用户单次购买超级曝光次数或时长未用完时，此时购买了至尊会员，则正确做法是顶部“剩余曝光次数”和“曝光倒计时”提示不再显示，开关状态延续之前，但目前还会显示“剩余曝光次数”和“曝光倒计时”",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.342Z",
+      "externalIssueId": "bug_040afd34f542",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-342Z-ge8su6",
+      "title": "嘉宾列表：嘉宾卡片展示以及交互需与首页嘉宾卡片一致，目前未一致",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.342Z",
+      "externalIssueId": "bug_8d925e275789",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-342Z-hdyplj",
+      "title": "拨打电话：会员身份，点击弹框按钮“立即解锁”后，目前在当前页弹出了联系方式，正确应立即跳转至私信会话页，且底部弹出“xx家长联系方式/xxxxxxxxxxx”",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.342Z",
+      "externalIssueId": "bug_0d138091656c",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-343Z-hb06ni",
+      "title": "会员身份，点击“打招呼”按钮，现状：仅在当前页有弹框提示；期望：参考图 1，弹框提示的同时跳转到私信页，且私信页底部菜单为锁定状态（给用户解锁立得的感觉）",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.343Z",
+      "externalIssueId": "bug_feec4a7b9612",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-343Z-xxdeww",
+      "title": "孩子照片：现有高斯模糊度太高，导致缺少想象空间，期望对照图 1 进行还原",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.343Z",
+      "externalIssueId": "bug_3c47199ee6b8",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-344Z-5aee90",
+      "title": "私信内容：长按对方私信时，需将操作提示的多余背景框裁剪",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.344Z",
+      "externalIssueId": "bug_072a4e718515",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-344Z-mfufgp",
+      "title": "私信语音：播放语音时，目前播放动效播完不会自己停，需手动停止，正确应播完即止",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.344Z",
+      "externalIssueId": "bug_2be167796aaa",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-344Z-o3xuvv",
+      "title": "私信撤回：点击“撤回”时，需将超出撤回时间时的文案“撤回失败”改为“超出撤回时间”",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.344Z",
+      "externalIssueId": "bug_82cf2a0378fb",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-345Z-9inxkq",
+      "title": "黄金会员：开通或升级会员支付成功后，其提醒弹框“恭喜你，成功开通xx会员”错乱，需优化",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.345Z",
+      "externalIssueId": "bug_15c92153897f",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-345Z-tx5jpp",
+      "title": "搜索结果：至尊会员用户，看到的搜索嘉宾列表卡片，和首页卡片一样增加“相亲介绍”内容，以丰富会员权益价值",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.345Z",
+      "externalIssueId": "bug_3f8ddb3655f7",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-346Z-j4guny",
+      "title": "搜索结果：点击底部“开通至尊会员”按钮跳转至会员开通页后，目前选中了“黄金tab”，正确应选中“至尊tab”",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.346Z",
+      "externalIssueId": "bug_18c0645e5ecc",
+      "externalStatus": "待发版验证",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-346Z-v2l1bp",
+      "title": "搜索结果：非至尊会员用户的搜索结果页，滑动至第 9-10 个会员时逐渐模糊，详见prd图 2，可参考Ui稿 图 1修改（搜索结果页的蒙层UI稿缺失，需补充下@杨璐琳）",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.346Z",
+      "externalIssueId": "bug_45bae1caa665",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-347Z-ko164u",
+      "title": "筛选结果：筛选日期推荐嘉宾数为 0的缺省视觉有误（图 1），正确应为图 2-2（左侧为神仙亲家，右侧为完美亲家，在优化时还是期望保留顶部的日期和日期筛选按钮）",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.347Z",
+      "externalIssueId": "bug_ce598b234577",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-347Z-uvwt0g",
+      "title": "推荐日期：“左上角实时显示对应嘉宾推荐时的所在日期，精确到月、日”，该需求未实现（交互可以看下完美亲家）",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.347Z",
+      "externalIssueId": "bug_c5afb0f00d28",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-348Z-582065",
+      "title": "会员阻断弹框：还原度已提高了 70%，但还不够，此处设计老师重点看下",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.348Z",
+      "externalIssueId": "bug_e7278473b129",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-348Z-99n2a8",
+      "title": "录制语音：视觉还原度低，需优化",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.348Z",
+      "externalIssueId": "bug_6ed8309b422b",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-349Z-d9r7ht",
+      "title": "精准查找：其身高选择器的交互逻辑、视觉展示，未与prd、视觉稿一致，需对照优化，详见prd【资料编辑--择偶标准--年份要求】",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.349Z",
+      "externalIssueId": "bug_370edb20cbcb",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-349Z-n8x9i8",
+      "title": "精准查找：其出生年份选择器的交互逻辑、视觉展示，未与prd、视觉稿一致，需对照优化，详见prd【资料编辑--择偶标准--年份要求】",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.349Z",
+      "externalIssueId": "bug_a8279ba68ef1",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-350Z-wau3ko",
+      "title": "选项框的上下选项有遮挡，看着体验不好",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.350Z",
+      "externalIssueId": "bug_e07369c70e10",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-350Z-x7ptvs",
+      "title": "被屏蔽用户私信：\n1、现状：目前点击进入被屏蔽用户私信页，消息栏会提示“已屏蔽，取消屏蔽后可进入聊天”，且会弹框提示如图 3 ，点击弹框按钮跳转至屏蔽列表，此需求点之前未明确。\n2、期望优化：如图 1、图 2 所示，当对方被屏蔽时，底部提示",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.350Z",
+      "externalIssueId": "bug_4e09dff2ba68",
+      "externalStatus": "新增",
+      "status": "pending"
+    },
+    {
+      "itemId": "wf-2026-03-13T18-18-12-351Z-cu7vpb",
+      "title": "家庭副号：目前该能力未实现，此优先级最低，可放置 2 期",
+      "priority": "P2",
+      "createdAt": "2026-03-13T18:18:12.351Z",
+      "externalIssueId": "bug_ce8cdee11db2",
+      "externalStatus": "新增",
+      "status": "pending"
+    }
+  ],
+  "startedAt": "2026-03-14T09:22:14.955Z",
+  "currentEntryItemId": "wf-2026-03-13T18-18-12-235Z-o1bnpi"
+}

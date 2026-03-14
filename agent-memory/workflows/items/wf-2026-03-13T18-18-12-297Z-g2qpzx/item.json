@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-297Z-g2qpzx",
+  "kind": "bug",
+  "title": "解锁我的：目前测试因无法匹配数据，故此处无法验证，此测试点备忘录下",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_1b55eb5f507c\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-07\n提报人: dylon\n跟进人: dylon\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n解锁我的：目前测试因无法匹配数据，故此处无法验证，此测试点备忘录下",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.297Z",
+  "updatedAt": "2026-03-13T18:18:12.297Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-297Z-g2qpzx/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-297Z-g2qpzx/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-297Z-g2qpzx/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-297Z-g2qpzx/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_1b55eb5f507c",
+    "externalRowHash": "e8106d18f06198e289512997770262eb5410c969",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "dylon",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-07",
+    "notes": "",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.297Z"
+  }
+}

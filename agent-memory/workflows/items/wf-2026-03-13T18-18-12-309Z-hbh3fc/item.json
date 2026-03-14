@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-309Z-hbh3fc",
+  "kind": "bug",
+  "title": "正确阻断方式，正确应该如父问题的prd截图出阻断解锁弹框，而现在错误出了阻断开通弹框",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_0f109d4adccb\n飞书状态: 验收未通过\n优先级: P0\n反馈日期: 未填写\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n正确阻断方式，正确应该如父问题的prd截图出阻断解锁弹框，而现在错误出了阻断开通弹框\n\n备注说明:\n@ham 之前父问题prd表达有误，辛苦以当前子问题prd截图红框需求为准\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_0f109d4adccb/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_0f109d4adccb/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.309Z",
+  "updatedAt": "2026-03-13T18:18:12.309Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-309Z-hbh3fc/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-309Z-hbh3fc/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-309Z-hbh3fc/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-309Z-hbh3fc/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_0f109d4adccb",
+    "externalRowHash": "47dc65b5cd3277feb583fabf3d1f3c2d9663b21d",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "验收未通过",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "",
+    "notes": "@ham 之前父问题prd表达有误，辛苦以当前子问题prd截图红框需求为准",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_0f109d4adccb/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=D63MbxkSLoiQixxh0aicm05nnvd",
+        "contentType": "image/png"
+      },
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_0f109d4adccb/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=TZKnbh6fAoYFcQxTap1cRL9HnWd",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.309Z"
+  }
+}

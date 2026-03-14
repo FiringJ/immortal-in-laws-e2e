@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-211Z-yndah8",
+  "kind": "bug",
+  "title": "我收藏的页非会员点击联系对方应提示联系次数不足并跳转黄金年度会员",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_720585e7607a\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-11\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n我收藏的：非会员身份，目前点击“联系对方”弹出的是会员开通阻断弹框，正确应弹框提示“联系次数不足 / 开通会员无限解锁联系方式”，点击“开通会员”弹框按钮，立即跳转至会员开通页（选中黄金会员tab--年度会员）",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.211Z",
+  "updatedAt": "2026-03-14T10:02:08.499Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T09-57-12-404Z-x65asv",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T09:57:12.404Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-211Z-yndah8/triage.md",
+      "taskId": "2026-03-14T09-57-12-405Z-sr3wse",
+      "startedAt": "2026-03-14T09:57:12.407Z",
+      "completedAt": "2026-03-14T10:02:08.496Z",
+      "summary": "**Outcome**\n- 已写入 triage artifact：`/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-211Z-yndah8/triage.md:1`\n- Readiness 结论：`ready`；建议下一步：`generate_plan`\n- 本阶段未改动任何产品代码\n\n**Key Findings**\n- PRD 对该场景要求很明确：非会员且联系次数不足时，应提示“联系次数不足 / 开通会员无限解锁联系方式”：`design/1.需求文档/神仙亲家--小程序产品需求文档.md:88`\n- “我收藏的”入口与页面定位清晰：`pages/profile/index.ts:434` -> `pages/message-record/index`\n- 当前源码里其实已存在目标分支：`pages/message-record/index.ts:447` 会弹 `showContactLimitModal`，`pages/message-record/index.wxml:172` / `pages/message-record/index.wxml:173` 已是目标文案，`pages/message-record/index.ts:577` 会跳 `/pages/member-center/index?tab=gold&plan=year`\n- 会员中心也支持预选年度黄金会员：`pages/member-center/index.ts:238`、`pages/member-center/index.ts:363`\n- 可执行排查建议：优先核对运行包是否为最新构建、`interaction/unlock-quota` 返回是否正确、以及点击时 `recordType/direction/memberStore` 状态是否真命中“我收藏的 + 非会员 + 0 次额度”分支\n\n**Commands / Verification**\n- 已运行：`rg`、`cat`、`sed`、`nl -ba`、`apply_patch`\n- 已验证：`triage.md` 存在且头部结构符合要求；内容已补充产品/技术上下文\n- 未运行应用构建或测试；本阶段仅做 triage 与上下文富化，验证范围限于 artifact 完整性与仓库证据核对",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-57-12-405Z-sr3wse/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-57-12-405Z-sr3wse/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-57-12-405Z-sr3wse/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-211Z-yndah8/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-211Z-yndah8/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-211Z-yndah8/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-211Z-yndah8/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-211Z-yndah8/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T09-57-12-405Z-sr3wse"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_720585e7607a",
+    "externalRowHash": "aab9de27b6c50e9cd9ddd428963089a04099d9c1",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-11",
+    "notes": "",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.211Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "我收藏的页非会员点击联系对方应提示联系次数不足并跳转黄金年度会员",
+    "summary": "用户从“我的”进入“我收藏的”列表后，在非会员且剩余联系次数不足的前提下，点击卡片上的“联系对方”。当前飞书反馈称页面弹出的是通用会员开通阻断弹层；期望行为是弹出文案为“联系次数不足 / 开通会员无限解锁联系方式”的确认弹框，并在点击“开通会员”后立即跳转到会员中心，默认选中黄金会员页签且预选年度会员套餐。",
+    "updatedAt": "2026-03-14T10:02:08.499Z"
+  }
+}

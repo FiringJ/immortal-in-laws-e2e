@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-336Z-wbrjfo",
+  "kind": "bug",
+  "title": "会员阻断弹窗：标题文案“开通会员解锁联系方式”错误，需根据黄金会员、至尊会员tab的切换而变化，对应标题为“开通黄金会员即可查看 / 开通至尊会员即可查看”  ；",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_800045a6af94\n飞书状态: 新增\n优先级: P1\n反馈日期: 2026-02-12\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n会员阻断弹窗：标题文案“开通会员解锁联系方式”错误，需根据黄金会员、至尊会员tab的切换而变化，对应标题为“开通黄金会员即可查看 / 开通至尊会员即可查看”  ；",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P1",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.336Z",
+  "updatedAt": "2026-03-13T18:18:12.336Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-336Z-wbrjfo/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-336Z-wbrjfo/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-336Z-wbrjfo/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-336Z-wbrjfo/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_800045a6af94",
+    "externalRowHash": "7c6e513de2cfd4a61bbf184f9df43b8cf0b3fdcf",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-02-12",
+    "notes": "",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.336Z"
+  }
+}

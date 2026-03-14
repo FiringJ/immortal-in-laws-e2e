@@ -97,6 +97,12 @@ curl http://localhost:3000/tasks
 飞书文档抓取：
 - `npm run feishu:fetch -- "<飞书 Wiki 链接>"` - 抓取 Wiki/文档/表格文本内容
 
+飞书缺陷队列（漏洞跟踪记录）：
+- `npm run feishu:queue:next -- --json` - 从飞书表格读取未关闭 BUG，返回下一条可执行 issue
+- `npm run feishu:queue:mark -- --issue-id <id> --result completed|failed|blocked` - 回写本地执行状态（支持失败自动熔断）
+- 队列状态文件：`agent-memory/defect-reports/feishu-defect-queue-state.json`
+- 队列快照文件：`agent-memory/defect-reports/feishu-defect-queue-latest.json`
+
 ### Daemon 管理
 
 - `npm run daemon:start` - 启动 daemon

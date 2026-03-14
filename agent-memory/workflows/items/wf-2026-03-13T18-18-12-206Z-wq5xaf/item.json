@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-206Z-wq5xaf",
+  "kind": "bug",
+  "title": "首页关闭订单提醒后，退出并重新进入小程序仍再次显示提醒栏",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_7143a0f6b055\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-12\n提报人: dylon\n跟进人: 刘瀚卿, ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n目前“叉”掉订单提醒，又退出小程序再回到小程序后，订单提醒栏还在，正确应在回来后不会再显示提醒栏\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_7143a0f6b055/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.206Z",
+  "updatedAt": "2026-03-14T09:45:44.625Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T09-42-07-608Z-c5kpmg",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T09:42:07.608Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-206Z-wq5xaf/triage.md",
+      "taskId": "2026-03-14T09-42-07-608Z-m65yty",
+      "startedAt": "2026-03-14T09:42:07.610Z",
+      "completedAt": "2026-03-14T09:45:44.623Z",
+      "summary": "**结果**\n- 已写入分诊产物：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-206Z-wq5xaf/triage.md:1`\n- readiness 判定为 `ready`，`source_quality` 为 `high`，建议下一步 `generate_plan`\n- 未改动产品代码；本阶段只补充了工单上下文与技术落点\n\n**关键发现**\n- 首页未支付提醒栏就在 `pages/index/index.wxml:73`，关闭按钮绑定 `onCloseUnpaidBanner`\n- 当前源码已做“关闭态持久化”：`pages/index/index.ts:863` 会把 `home_unpaid_banner_dismiss_key` 写入本地存储\n- 重新进入首页时一定会重算提醒：`pages/index/index.ts:231` 的 `onShow()` 调用 `refreshStatusBanners()`\n- 是否继续隐藏取决于 `dismissedIdentity === unpaidOrderIdentity`：`pages/index/index.ts:764`\n- 订单 identity 依赖订单列表映射字段：`services/order.ts:56`；若 `order_no` 缺失或主订单字段不稳定，关闭态会失效\n- 存储封装本身是持久同步存储，不像是前后台切换直接丢失：`utils/storage.ts:19`, `utils/storage.ts:34`\n\n**建议修复方向**\n- 优先核查 `unpaidOrderIdentity` 是否在重进后变化，尤其是 `orderNo / createdAt / expireAt / count`\n- 若 identity 目前会退化到易变 fallback，后续实现应改为基于稳定订单主键持久化，必要时存“已关闭订单号集合”\n\n**执行与验证**\n- 运行了 `rg`、`sed`、`nl -ba` 做代码定位，另查看了附件截图与必读上下文文档\n- 已确认 `triage.md` 存在且首段结构符合要求\n- 验证状态：分诊产物已完成，尚未进入修复实现/运行验证阶段",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-42-07-608Z-m65yty/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-42-07-608Z-m65yty/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-42-07-608Z-m65yty/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-206Z-wq5xaf/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-206Z-wq5xaf/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-206Z-wq5xaf/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-206Z-wq5xaf/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-206Z-wq5xaf/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T09-42-07-608Z-m65yty"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_7143a0f6b055",
+    "externalRowHash": "da2b24f6546d3b7caa83494f53230fe4b408b944",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "刘瀚卿, ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-12",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_7143a0f6b055/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WKknbfoFRos9LVxOMe7cS0nanZc",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.206Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "首页关闭订单提醒后，退出并重新进入小程序仍再次显示提醒栏",
+    "summary": "用户在首页看到“待支付订单”固定提醒栏后，点击右上角关闭按钮（“叉”）将其关闭；随后退出小程序并重新进入，同一笔/同一批未支付订单的提醒栏再次出现。期望行为是：对同一未支付订单提醒，用户本次关闭后，在重新进入小程序时不应再次显示，除非未支付订单集合发生变化（如出现新订单、原订单状态变化或提醒对象发生变化）。",
+    "updatedAt": "2026-03-14T09:45:44.625Z"
+  }
+}

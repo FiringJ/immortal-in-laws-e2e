@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-201Z-ee367d",
+  "kind": "bug",
+  "title": "实名认证：第一次实名认证时，提示实名认证失败，具体状态提示为姓名、身份证号校对正确，与微信号的校对失败，点击“重新校对”按钮时，才校对成功且提示认证成功",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_1d273429490e\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-12\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n实名认证：第一次实名认证时，提示实名认证失败，具体状态提示为姓名、身份证号校对正确，与微信号的校对失败，点击“重新校对”按钮时，才校对成功且提示认证成功",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "blocked",
+  "createdAt": "2026-03-13T18:18:12.201Z",
+  "updatedAt": "2026-03-13T19:21:43.085Z",
+  "approvals": [
+    {
+      "action": "block",
+      "actor": "plan-batch",
+      "note": "plan.md missing headings: ## Initial Fix Direction",
+      "at": "2026-03-13T19:21:43.085Z",
+      "fromStage": "blocked",
+      "toStage": "blocked"
+    }
+  ],
+  "phaseRuns": [
+    {
+      "id": "phase-planning-2026-03-13T19-20-38-445Z-p6ewol",
+      "phase": "planning",
+      "status": "completed",
+      "createdAt": "2026-03-13T19:20:38.445Z",
+      "triggeredBy": "plan-batch",
+      "note": "batch plan-batch-2026-03-13T18-42-26-239Z-7c4x45",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-201Z-ee367d/plan.md",
+      "taskId": "2026-03-13T19-20-38-445Z-ixwrg2",
+      "startedAt": "2026-03-13T19:20:38.447Z",
+      "completedAt": "2026-03-13T19:21:43.078Z",
+      "summary": "\n--- REALNAME PAGE KEY BLOCK ---\n    || normalized.includes('id_card');\n  const hasMismatchToken = normalized.includes('不一致')\n    || normalized.includes('不匹配')\n    || normalized.includes('不通过')\n    || normalized.includes('错误')\n    || normalized.includes('failed')\n    || normalized.includes('mismatch');\n  const hasExplicitIdentityPassToken = normalized.includes('校对正确')\n    || normalized.includes('比对正确')\n    || normalized.includes('核验通过')\n    || normalized.includes('验证通过')\n    || normalized.includes('一致');\n  // “姓名/身份证正确，但微信/手机号校验失败”属于可重试场景，不应归为硬失败。\n  if (hasContactToken || hasExplicitIdentityPassToken) {\n    return false;\n  }\n  return hasIdentityToken && hasMismatchToken;\n};",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T19-20-38-445Z-ixwrg2/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T19-20-38-445Z-ixwrg2/stderr.log"
+    }
+  ],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-201Z-ee367d/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-201Z-ee367d/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-201Z-ee367d/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-201Z-ee367d/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-13T19-20-38-445Z-ixwrg2"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_1d273429490e",
+    "externalRowHash": "0a135adc7b86d033bd9cb80d180eec1864df26f8",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-12",
+    "notes": "",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.201Z"
+  },
+  "blocker": "plan.md missing headings: ## Initial Fix Direction"
+}

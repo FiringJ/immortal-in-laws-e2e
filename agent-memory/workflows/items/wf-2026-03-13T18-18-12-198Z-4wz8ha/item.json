@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-198Z-4wz8ha",
+  "kind": "bug",
+  "title": "黄金会员：过期状态，待测点",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_504c1b571d39\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-13\n提报人: dylon\n跟进人: dylon\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n黄金会员：过期状态，待测点\n\n截图/附件:\n- img_v3_02vo_98ac2632-795a-42d6-97e3-097104d569bg.jpg -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_504c1b571d39/img_v3_02vo_98ac2632-795a-42d6-97e3-097104d569bg.jpg",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "awaiting_fix_approval",
+  "createdAt": "2026-03-13T18:18:12.198Z",
+  "updatedAt": "2026-03-13T19:01:00.752Z",
+  "approvals": [
+    {
+      "action": "approve_plan",
+      "actor": "web-ui",
+      "at": "2026-03-13T18:55:13.619Z",
+      "fromStage": "awaiting_plan_approval",
+      "toStage": "reproducing"
+    }
+  ],
+  "phaseRuns": [
+    {
+      "id": "phase-planning-2026-03-13T18-42-26-239Z-9my0lf",
+      "phase": "planning",
+      "status": "completed",
+      "createdAt": "2026-03-13T18:42:26.239Z",
+      "triggeredBy": "plan-batch",
+      "note": "batch plan-batch-2026-03-13T18-42-26-239Z-7c4x45",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-198Z-4wz8ha/plan.md",
+      "taskId": "2026-03-13T18-42-26-241Z-vmysrt",
+      "startedAt": "2026-03-13T18:42:26.241Z",
+      "completedAt": "2026-03-13T18:50:13.788Z",
+      "summary": "**Outcome**\n- 已生成规划产物：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-198Z-4wz8ha/plan.md:1`\n- 未编辑产品代码；本阶段只落了计划文档到跟踪仓库。\n\n**Findings**\n- 附件截图显示的是黄金会员“未过期”态，不是过期态；当前缺陷单更像“过期场景待补证/待验证”。\n- 前端“我的”页和邀请页都已写过期分支：`pages/profile/index.ts:476`、`pages/invite/index.ts:218`。\n- 会员状态映射层已做过期兜底：`services/api-mapper.ts:984` 会结合 `status`、`end_at`、`days_left` 推导 `isExpired`。\n- 会员中心页拿了 `memberStatus`，但实际页面未消费该状态；仅有未使用的备用文案方法 `pages/member-center/index.ts:437`，页面结构也只展示开通/升级内容 `pages/member-center/index.wxml:1`。\n- 后端状态出口在 `/Users/firingj/Projects/GodQinJia/internal/apiserver/service/membership.go:436`，若测试账号应过期却未过期，需先核对这里的返回与测试数据。\n\n**Actionable Fixes**\n- 先抓真实 `/api/v1/membership/status` 返回，确认是数据问题还是前端展示问题。\n- 若接口已返回过期，优先补 `pages/member-center/index.ts:437` / `pages/member-center/index.wxml:1` 的过期态展示闭环。\n- 若接口未返回过期，转后端排查 `/Users/firingj/Projects/GodQinJia/internal/apiserver/service/membership.go:436` 的状态计算与测试账号到期时间。\n\n**Commands**\n- 运行了仓库与规则检查、关键代码检索、设计稿定位、后端状态实现检索，以及产物存在性校验。\n- 代表性命令包括：`rg -n \"黄金会员|过期|membership/status\" ...`、`find design -name '*黄金会员*已过期*.png'`、`sed -n ...`、`test -f .../plan.md`。\n\n**Verification**\n- 已确认文件存在，且标题结构完整：`# Plan`、`## Problem`、`## Impact`、`## Reproduction Hypothesis`、`## Evidence To Collect`、`## Initial Fix Direction`。\n- 未做应用运行或产品级测试；当前验证范围仅限计划产物与代码/设计证据梳理。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-42-26-241Z-vmysrt/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-42-26-241Z-vmysrt/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-42-26-241Z-vmysrt/summary.txt"
+    },
+    {
+      "id": "phase-reproducing-2026-03-13T18-55-15-755Z-sfly9i",
+      "phase": "reproducing",
+      "status": "completed",
+      "createdAt": "2026-03-13T18:55:15.755Z",
+      "triggeredBy": "web-ui",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-198Z-4wz8ha/reproduction.md",
+      "taskId": "2026-03-13T18-55-15-757Z-gl93v7",
+      "startedAt": "2026-03-13T18:55:23.728Z",
+      "completedAt": "2026-03-13T19:01:00.750Z",
+      "summary": "**Outcome**\n- 已写复现产物：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-198Z-4wz8ha/reproduction.md:1`\n- 当前附件本身**不能直接复现**“过期态”问题：截图显示的是“黄金会员 有效期至:2026.06.14”，属于未过期状态。\n- 代码证据表明前端**能识别过期数据**：`services/api-mapper.ts:984` 已做过期推导，`services/member.spec.ts:205` 已覆盖兜底过期场景，本地 `tsx` 探针也输出了 `isExpired: true`。\n- 更可能的根因是**会员中心页未消费会员状态**：`pages/member-center/index.ts:160`/`pages/member-center/index.ts:288` 会拿到 `memberStatus`，但 `pages/member-center/index.wxml:15` 与 `components/pages/member-center/member-center-hero/index.ts:7` 没有任何过期态渲染，`pages/member-center/index.ts:437` 还是未接入的死代码。\n- 后端接口契约本身支持过期返回：`/Users/firingj/Projects/GodQinJia/internal/apiserver/service/membership.go:436`\n\n**Changed Files**\n- `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-198Z-4wz8ha/reproduction.md:1`\n\n**Commands Run**\n- `find`, `sed`, `rg` 检查工单、附件、设计稿、前后端实现\n- `npx tsx -e \"import { mapMembershipStatus } from './services/api-mapper' ...\"` 做过期态本地探针\n- `npm run type-check`\n- `test -f .../reproduction.md` 与 `rg -n \"^# Reproduction|^## Steps|^## Evidence|^## Root Cause|^## Fix Plan$\" ...`\n\n**Verification**\n- `reproduction.md` 已存在，且包含要求的 5 个标题\n- `npm run type-check` 通过\n- 本阶段**未应用最终修复**\n\n结论：这单目前的硬 blocker 是**缺少真实过期账号/正确附件**；一旦接口返回过期，前端最值得先修的是 `pages/member-center/index.wxml:15` 的过期态展示闭环。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-55-15-757Z-gl93v7/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-55-15-757Z-gl93v7/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-55-15-757Z-gl93v7/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-198Z-4wz8ha/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-198Z-4wz8ha/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-198Z-4wz8ha/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-198Z-4wz8ha/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-13T18-42-26-241Z-vmysrt",
+    "2026-03-13T18-55-15-757Z-gl93v7"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_504c1b571d39",
+    "externalRowHash": "9543d720b51df61b5a94993cadc75217ac081d00",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "dylon",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-13",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "img_v3_02vo_98ac2632-795a-42d6-97e3-097104d569bg.jpg",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_504c1b571d39/img_v3_02vo_98ac2632-795a-42d6-97e3-097104d569bg.jpg",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=ICDBbPluEop45axUNhpcYxljnnc",
+        "contentType": "image/jpeg"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.198Z"
+  }
+}

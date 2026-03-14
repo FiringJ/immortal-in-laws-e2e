@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-277Z-08sxfm",
+  "kind": "bug",
+  "title": "搜索结果：目前黄金会员升级为至尊会员后，其搜索结果页底部的“开通至尊会员”悬浮按钮未及时更新（如图 1），正确应该按钮变为高亮按钮 “点击搜索嘉宾（今日剩1次机会）”，如图 1 的UI稿",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_e74b83c8b69e\n飞书状态: 待发版验证\n优先级: P0\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n搜索结果：目前黄金会员升级为至尊会员后，其搜索结果页底部的“开通至尊会员”悬浮按钮未及时更新（如图 1），正确应该按钮变为高亮按钮 “点击搜索嘉宾（今日剩1次机会）”，如图 1 的UI稿\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e74b83c8b69e/image.png\n- 1f6282883d3ada70427a2215748d2d52.jpg -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e74b83c8b69e/1f6282883d3ada70427a2215748d2d52.jpg",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.277Z",
+  "updatedAt": "2026-03-13T18:18:12.277Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-277Z-08sxfm/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_e74b83c8b69e",
+    "externalRowHash": "4c0a9c78eb583a7d649d28371b912b8ada083dc9",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "待发版验证",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-08",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e74b83c8b69e/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Si77bVnqrosqflxPO02ct4QqnXg",
+        "contentType": "image/png"
+      },
+      {
+        "name": "1f6282883d3ada70427a2215748d2d52.jpg",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e74b83c8b69e/1f6282883d3ada70427a2215748d2d52.jpg",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Cr25b5dPbot626x7WWnc37I1nmb",
+        "contentType": "image/jpeg"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.277Z"
+  }
+}

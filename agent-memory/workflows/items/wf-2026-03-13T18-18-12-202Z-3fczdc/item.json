@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-202Z-3fczdc",
+  "kind": "bug",
+  "title": "首页未支付订单横幅应只提示最新一笔订单",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_408bbd994edc\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-12\n提报人: dylon\n跟进人: 刘瀚卿, ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n目前会提示多笔订单未支出，正确应至提示最新一笔；\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_408bbd994edc/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.202Z",
+  "updatedAt": "2026-03-14T09:26:56.109Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T09-22-14-956Z-ep8cb0",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T09:22:14.956Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-202Z-3fczdc/triage.md",
+      "taskId": "2026-03-14T09-22-14-959Z-ht99la",
+      "startedAt": "2026-03-14T09:22:14.959Z",
+      "completedAt": "2026-03-14T09:26:56.103Z",
+      "summary": "**Outcome**\n- 已完成分诊产物，结论为 `readiness: ready`、`next_action: generate_plan`，文件在 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-202Z-3fczdc/triage.md:1`。\n- 本阶段未改动产品代码，只写入了 tracker 侧分诊文件。\n\n**Key Findings**\n- 首页未支付横幅当前确实会先统计全部待支付订单数量，再选一笔做详情展示，所以会出现“您有2笔订单未支付”：`pages/index/index.ts:127`、`pages/index/index.ts:764`。\n- 当前“主订单”选择规则不是“最新一笔”，而是“最早过期优先”，这与缺陷描述直接冲突：`pages/index/index.ts:127`。\n- 后端订单列表已按 `created_at` 倒序返回，后续计划可直接基于“最新创建的一笔 pending 订单”落方案，不需要先补后端排序能力：`/Users/firingj/Projects/GodQinJia/internal/apiserver/service/order.go:159`、`/Users/firingj/Projects/GodQinJia/internal/apiserver/service/order.go:745`。\n- 历史还原记录曾明确把首页横幅实现成“您有{n}笔订单未支付”，说明这是一个可进入计划阶段的产品纠偏项，而不是无法落地的模糊问题：`../immortal-in-laws-e2e/agent-memory/restoration-runs/2026-03-05-home-unpaid-banner-ui.md:1`。\n\n**Changed Files**\n- `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-202Z-3fczdc/triage.md:1`\n\n**Commands Run**\n- `rg`、`sed`：检查 `agent-memory` 文档、首页横幅实现、订单接口与后端排序逻辑。\n- `node`：校验 `triage.md` 是否包含要求的标题结构。\n- 查看了附件截图 `image.png`，确认当前表现与提报一致。\n\n**Verification**\n- 已确认 `triage.md` 存在且以要求的结构开头。\n- 已确认必需章节齐全。\n- readiness verdict：`ready`。\n- 进入计划阶段时仅需补充两个非阻塞澄清：`“最新一笔”` 的精确定义，以及单笔横幅的最终文案口径。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-22-14-959Z-ht99la/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-22-14-959Z-ht99la/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-22-14-959Z-ht99la/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-202Z-3fczdc/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-202Z-3fczdc/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-202Z-3fczdc/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-202Z-3fczdc/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-202Z-3fczdc/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T09-22-14-959Z-ht99la"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_408bbd994edc",
+    "externalRowHash": "e1e96e146a1626287c63968f04c25a5827e0246e",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "刘瀚卿, ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-12",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_408bbd994edc/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WKknbfoFRos9LVxOMe7cS0nanZc",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.202Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "首页未支付订单横幅应只提示最新一笔订单",
+    "summary": "- 现象：首页底部未支付订单横幅会按全部待支付订单聚合提示，出现“您有2笔订单未支付”。",
+    "updatedAt": "2026-03-14T09:26:56.109Z"
+  }
+}

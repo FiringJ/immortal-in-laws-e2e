@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-205Z-bn5svq",
+  "kind": "bug",
+  "title": "首页待支付横幅点击范围错误，立即支付应仅按钮触发并按最近待支付订单重新拉起支付",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_028c6ceaf388\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-12\n提报人: dylon\n跟进人: 刘瀚卿, ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n目前点击“立即支付”按钮以及整栏跳转到了订单列表页，正确应点击按钮再次以最近 1 次订单价重新拉起支付且点击按钮以外不跳转\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_028c6ceaf388/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.205Z",
+  "updatedAt": "2026-03-14T09:42:07.605Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T09-36-17-437Z-76jghz",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T09:36:17.437Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-205Z-bn5svq/triage.md",
+      "taskId": "2026-03-14T09-36-17-438Z-faykv5",
+      "startedAt": "2026-03-14T09:36:17.439Z",
+      "completedAt": "2026-03-14T09:42:07.603Z",
+      "summary": "**Outcome**\n- 已完成 triage，产物写入 `agent-memory/workflows/items/wf-2026-03-13T18-18-12-205Z-bn5svq/triage.md:1`。\n- readiness 结论是 `ready`，next_action 是 `generate_plan`。\n\n**Findings**\n- 当前已提交实现的错误入口已定位：`pages/index/index.ts:827` 的 `onViewUnpaidOrders()` 会跳到订单记录页，而缺陷描述对应的整栏误跳转来自首页待支付横幅。\n- 工作区里已存在未提交候选修复线索：`pages/index/index.wxml:73` 现为整栏无点击、按钮单独绑定；`pages/index/index.ts:833` 新增 `onPayLatestOrderTap()` 用于重新拉起支付。\n- 仍需在后续计划里确认一处语义：`services/order.ts:35` 的 `createOrder()` 只支持 `order_type + plan_type`，没有 `order_no`，所以“按最近 1 次订单价”是否要求严格复用历史金额，需核对后端语义。\n\n**Changed Files**\n- 新增 `agent-memory/workflows/items/wf-2026-03-13T18-18-12-205Z-bn5svq/triage.md:1`\n- 本阶段未改动产品代码；但我发现 app 仓库已有未提交改动：`pages/index/index.ts:1`、`pages/index/index.wxml:1`\n\n**Commands & Verification**\n- 运行了 `sed`、`rg`、`git diff`、`git blame`、`git status`、`test -f`，并查看了本地截图附件。\n- 验证状态：`triage.md` 已存在；未运行产品测试，符合 triage 阶段“不改产品代码”的要求。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-36-17-438Z-faykv5/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-36-17-438Z-faykv5/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-36-17-438Z-faykv5/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-205Z-bn5svq/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-205Z-bn5svq/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-205Z-bn5svq/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-205Z-bn5svq/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-205Z-bn5svq/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T09-36-17-438Z-faykv5"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_028c6ceaf388",
+    "externalRowHash": "048edff6fda9428b0dd4b754b900d7c7b709fa84",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "刘瀚卿, ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-12",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_028c6ceaf388/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WKknbfoFRos9LVxOMe7cS0nanZc",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.205Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "首页待支付横幅点击范围错误，立即支付应仅按钮触发并按最近待支付订单重新拉起支付",
+    "summary": "- 缺陷发生在首页底部的待支付订单横幅，截图显示为固定在 tabBar 上方的红色横幅，包含文案“您有2笔订单未支付”和 CTA“立即支付”。",
+    "updatedAt": "2026-03-14T09:42:07.605Z"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-199Z-qp5ang",
+  "kind": "bug",
+  "title": "邀请有奖：目前该功能未实现",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_fd9f2f51d843\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-13\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n邀请有奖：目前该功能未实现",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "awaiting_plan_approval",
+  "createdAt": "2026-03-13T18:18:12.199Z",
+  "updatedAt": "2026-03-13T18:55:23.721Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-planning-2026-03-13T18-50-13-792Z-f7na9m",
+      "phase": "planning",
+      "status": "completed",
+      "createdAt": "2026-03-13T18:50:13.793Z",
+      "triggeredBy": "plan-batch",
+      "note": "batch plan-batch-2026-03-13T18-42-26-239Z-7c4x45",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-199Z-qp5ang/plan.md",
+      "taskId": "2026-03-13T18-50-13-793Z-ivdn9x",
+      "startedAt": "2026-03-13T18:50:13.795Z",
+      "completedAt": "2026-03-13T18:55:23.720Z",
+      "summary": "**Outcome**\n- 已生成计划产物：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-199Z-qp5ang/plan.md:1`\n- 未修改产品代码；本阶段只做了仓库检查与计划落盘。\n\n**Findings**\n- 当前 `pages/invite/index` 实现的是“邀请家人帮孩子找对象”，不是 PRD 要求的“分享领现金/邀请有奖”页，证据在 `pages/invite/index.wxml:17`、`pages/invite/index.wxml:61`、`pages/invite/index.ts:2`\n- 页面只拉 `generateInvite()` 和 `fetchFamilyAccounts()`，缺少邀请统计、收益明细、我的邀请、催认证、提现、提现记录等链路，证据在 `pages/invite/index.ts:302`、`pages/invite/index.ts:313`、`services/family.ts:73`\n- 交互仍停留在“分享邀请码”层：`showShareMenu + toast`，没有 PRD 的邀请奖励闭环，证据在 `pages/invite/index.ts:434`、`pages/invite/index.ts:463`\n- PRD/待办/设计稿都明确了 `INV-01 ~ INV-04`，但 OpenAPI 目前只明确有 `/api/v1/invite/code`，说明更像模块未落地而非单点页面缺陷，证据在 `design/1.需求文档/神仙亲家--小程序产品需求文档.md:210`、`docs/prd-todo.md:218`、`docs/默认模块.openapi.json:2384`\n- `README.md` 仍把“邀请好友”标为完成，状态与实际不符，见 `README.md:158`\n\n**Actionable Fixes**\n- 先将问题定性为“邀请有奖模块未实现”，不要按普通 UI 缺陷处理\n- 按计划拆成 `INV-01 ~ INV-04`：邀请首页、收益明细、我的邀请+催认证、现金提现\n- 新增独立 `services/invite.ts`/`types`，不要继续复用 `services/family.ts`\n- 接口未齐前，至少关闭红豆任务对该页的误导入口或明确“建设中”\n- 同步修正文档状态，尤其是 `README.md` 和排期说明\n\n**Commands Run**\n- 使用了 `find`、`rg`、`sed`、`nl`、`cat > .../plan.md` 检查实现、对照 PRD/设计稿并写入产物\n\n**Verification**\n- 已确认文件存在\n- 已校验标题结构完整：`# Plan`、`## Problem`、`## Impact`、`## Reproduction Hypothesis`、`## Evidence To Collect`、`## Initial Fix Direction`",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-50-13-793Z-ivdn9x/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-50-13-793Z-ivdn9x/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-50-13-793Z-ivdn9x/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-199Z-qp5ang/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-199Z-qp5ang/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-199Z-qp5ang/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-199Z-qp5ang/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-13T18-50-13-793Z-ivdn9x"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_fd9f2f51d843",
+    "externalRowHash": "3a3d3cf57c81b024590b122673b880910c995f11",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-13",
+    "notes": "",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.199Z"
+  }
+}

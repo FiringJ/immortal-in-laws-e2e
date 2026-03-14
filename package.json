@@ -5,6 +5,7 @@
   "scripts": {
     "test": "npm run verify:typecheck",
     "verify:typecheck": "tsc --noEmit",
+    "verify:workflow": "tsx --test src/tests/workflow-service.test.ts",
     "verify:e2e": "tsx src/tests/run-e2e.ts",
     "verify:calibrate": "tsx src/tools/debug/debug-calibrate.ts",
     "verify:all": "npm run verify:typecheck && npm run verify:e2e",
@@ -17,6 +18,7 @@
     "notify:feishu": "tsx src/tools/feishu/send-feishu-webhook.ts",
     "feishu:fetch": "tsx src/tools/feishu/feishu-fetch-doc.ts",
     "feishu:defects": "tsx src/tools/feishu/feishu-analyze-defects.ts",
+    "feishu:defects:sync": "tsx src/tools/feishu/feishu-defect-source.ts",
     "feishu:queue:next": "tsx src/tools/feishu/feishu-defect-queue.ts next",
     "feishu:queue:mark": "tsx src/tools/feishu/feishu-defect-queue.ts mark",
     "daemon": "npm run daemon:start",

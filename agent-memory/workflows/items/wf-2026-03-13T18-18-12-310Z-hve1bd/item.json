@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-310Z-hve1bd",
+  "kind": "bug",
+  "title": "会员身份：点击首页的“联系对方”按钮，目前错误解锁并直接跳转至私信会话页了，正确应弹框提示“您是会员，可免费解锁和对方的聊天”；点击“立即解锁”弹框按钮，toast提示“成功解锁联系方式”，同时立即跳转至私信会话页且底部弹出“xx家长联系方",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_c874ce490a14\n飞书状态: 新增\n优先级: P0\n反馈日期: 未填写\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n会员身份：点击首页的“联系对方”按钮，目前错误解锁并直接跳转至私信会话页了，正确应弹框提示“您是会员，可免费解锁和对方的聊天”；点击“立即解锁”弹框按钮，toast提示“成功解锁联系方式”，同时立即跳转至私信会话页且底部弹出“xx家长联系方式/xxxxxxxxxxx”；\n\n备注说明:\n@刘瀚卿@ham会员身份：黄金与至尊会员用户，也要有阻断（即非会员需解锁并阻断的场景），会员都要先阻断后解锁才能获得解锁聊天，此举是为了透传会员权益价值。",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.310Z",
+  "updatedAt": "2026-03-13T18:18:12.310Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-310Z-hve1bd/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-310Z-hve1bd/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-310Z-hve1bd/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-310Z-hve1bd/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_c874ce490a14",
+    "externalRowHash": "ac2747100c7b899e79f4f1a82f65eeaba41a4548",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "",
+    "notes": "@刘瀚卿@ham会员身份：黄金与至尊会员用户，也要有阻断（即非会员需解锁并阻断的场景），会员都要先阻断后解锁才能获得解锁聊天，此举是为了透传会员权益价值。",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.310Z"
+  }
+}

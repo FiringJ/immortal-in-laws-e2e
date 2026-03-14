@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-350Z-x7ptvs",
+  "kind": "bug",
+  "title": "被屏蔽用户私信：\n1、现状：目前点击进入被屏蔽用户私信页，消息栏会提示“已屏蔽，取消屏蔽后可进入聊天”，且会弹框提示如图 3 ，点击弹框按钮跳转至屏蔽列表，此需求点之前未明确。\n2、期望优化：如图 1、图 2 所示，当对方被屏蔽时，底部提示",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_4e09dff2ba68\n飞书状态: 新增\n优先级: P2\n反馈日期: 未填写\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n被屏蔽用户私信：\n1、现状：目前点击进入被屏蔽用户私信页，消息栏会提示“已屏蔽，取消屏蔽后可进入聊天”，且会弹框提示如图 3 ，点击弹框按钮跳转至屏蔽列表，此需求点之前未明确。\n2、期望优化：如图 1、图 2 所示，当对方被屏蔽时，底部提示“您已屏蔽对方，无法发送消息”（可复用锁定状态的UI），点击“取消屏蔽”按钮，弹框提示如图 2，成功取消屏蔽后，底部锁定栏立即恢复正常\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e09dff2ba68/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e09dff2ba68/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e09dff2ba68/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P2",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.350Z",
+  "updatedAt": "2026-03-13T18:33:50.176Z",
+  "approvals": [
+    {
+      "action": "block",
+      "actor": "web-ui",
+      "note": "manually blocked",
+      "at": "2026-03-13T18:33:45.722Z",
+      "fromStage": "blocked",
+      "toStage": "blocked"
+    },
+    {
+      "action": "reopen",
+      "actor": "web-ui",
+      "at": "2026-03-13T18:33:50.176Z",
+      "fromStage": "blocked",
+      "toStage": "intake"
+    }
+  ],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-350Z-x7ptvs/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-350Z-x7ptvs/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-350Z-x7ptvs/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-350Z-x7ptvs/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_4e09dff2ba68",
+    "externalRowHash": "836fd4b514beb9baa20049e6df1b17be5b0dccc8",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e09dff2ba68/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Tb1ab0GDfoXDjmxRW3KcEDZjnNg",
+        "contentType": "image/png"
+      },
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e09dff2ba68/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Sv2Pb0uAEoLxYoxvw8lcqsadnBE",
+        "contentType": "image/png"
+      },
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e09dff2ba68/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=RrdHbsdyno2ccvxvs79c5lD9n9e",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.350Z"
+  }
+}

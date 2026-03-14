@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-200Z-ftfdqg",
+  "kind": "bug",
+  "title": "其他功能：目前该模块缺少了“相亲红豆”、“账号切换”入口，正确应加上其入口，且去掉多余的“联系管家”、“防骗指南”入口，并按右侧UI稿排序",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_5b4c2c4efb2d\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-13\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n其他功能：目前该模块缺少了“相亲红豆”、“账号切换”入口，正确应加上其入口，且去掉多余的“联系管家”、“防骗指南”入口，并按右侧UI稿排序\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_5b4c2c4efb2d/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "awaiting_plan_approval",
+  "createdAt": "2026-03-13T18:18:12.200Z",
+  "updatedAt": "2026-03-13T19:07:13.126Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-planning-2026-03-13T18-55-23-723Z-8gc85x",
+      "phase": "planning",
+      "status": "completed",
+      "createdAt": "2026-03-13T18:55:23.723Z",
+      "triggeredBy": "plan-batch",
+      "note": "batch plan-batch-2026-03-13T18-42-26-239Z-7c4x45",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-ftfdqg/plan.md",
+      "taskId": "2026-03-13T18-55-23-724Z-udlmgl",
+      "startedAt": "2026-03-13T19:01:00.754Z",
+      "completedAt": "2026-03-13T19:07:13.125Z",
+      "summary": "**Outcome**\n- 已生成规划产物：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-ftfdqg/plan.md:1`\n- 本阶段未改业务代码，只做了仓库检查与计划落档。\n\n**Findings**\n- `HEAD` 基线里“我的”页菜单仍是旧配置，见 `pages/profile/index.ts:50`，包含 `联系管家`、`防骗指南`，缺少 `相亲红豆`、`账号切换`。\n- 对照页已存在正确实现，见 `pages/invite/index.ts:69` 和 `pages/invite/index.ts:438`，说明可直接复用其菜单顺序与点击分发。\n- 自动化验收口径已明确写好，见 `../immortal-in-laws-e2e/src/tools/probes/profile-other-functions-probe.ts:34`。\n- 文档/设计稿存在过期风险，见 `design/1.需求文档/神仙亲家--小程序产品需求文档.md:197`；当前缺陷应以附件与验收探针为准。\n\n**Actionable Fix**\n- 后续实现阶段应把 `pages/profile/index.ts:50` 的 `OTHER_FUNCTIONS` 对齐为：`邀请好友 / 相亲红豆 / 实名认证 / 通知状态 / 账号切换 / 设置`。\n- 同步补齐 `beans -> /pages/beans/index` 与 `switch` 的点击处理，做法可参考 `pages/invite/index.ts:438`。\n\n**Commands Run**\n- `rg` 检索菜单文案与探针\n- `sed` / `cat` 查看实现、设计稿与日志\n- `git diff` / `git log` / `git blame` 对比 `HEAD`、工作区与历史修复线索\n- `test -f` 校验计划文件存在\n\n**Verification**\n- 计划文件已存在并已人工复核结构与内容。\n- 未运行产品构建/测试；但计划中已写明建议验证命令：`npm run type-check`、`npm run build`、`npx tsx src/tools/probes/profile-other-functions-probe.ts`。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-55-23-724Z-udlmgl/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-55-23-724Z-udlmgl/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T18-55-23-724Z-udlmgl/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-ftfdqg/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-ftfdqg/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-ftfdqg/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-ftfdqg/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-13T18-55-23-724Z-udlmgl"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_5b4c2c4efb2d",
+    "externalRowHash": "be54000c580b1d4992288c9fecb94dd2545dd7f1",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-13",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_5b4c2c4efb2d/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=VKcObxBeHo6HkWxfRJic8srnnbG",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.200Z"
+  }
+}

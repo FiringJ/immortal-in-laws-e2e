@@ -25,7 +25,7 @@ async function run() {
 
   // 滚动到页面最底部
   for (let i = 0; i < 15; i++) {
-    await ctx.device.scroll('down', 4);
+    await ctx.device.scroll('down', 3);
     await sleep(120);
   }
   await sleep(800);

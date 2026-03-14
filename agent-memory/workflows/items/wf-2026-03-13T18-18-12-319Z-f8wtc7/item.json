@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-319Z-f8wtc7",
+  "kind": "bug",
+  "title": "确认承诺书：1、目前点击“承诺并确认”按钮会二次弹框提示，正确应点击“承诺并确认”按钮后立即toast提示“已承诺”，同时，按钮变为置灰“已承诺”，页面打上“已承诺”水印；点击“已承诺”无反应，不可取消承诺书；2、目前承诺书页面UI展示内容",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_9514af4dc83e\n飞书状态: 新增\n优先级: P1\n反馈日期: 2026-03-12\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n确认承诺书：1、目前点击“承诺并确认”按钮会二次弹框提示，正确应点击“承诺并确认”按钮后立即toast提示“已承诺”，同时，按钮变为置灰“已承诺”，页面打上“已承诺”水印；点击“已承诺”无反应，不可取消承诺书；2、目前承诺书页面UI展示内容错误，正确详见UI稿，且页面展示字段信息含：家长编号、当日承诺时间（实时更新，精确到年月日）、承诺状态\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_9514af4dc83e/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P1",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.319Z",
+  "updatedAt": "2026-03-13T18:18:12.319Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-319Z-f8wtc7/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-319Z-f8wtc7/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-319Z-f8wtc7/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-319Z-f8wtc7/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_9514af4dc83e",
+    "externalRowHash": "9e2e418504849ba57a50574fab4a4274f2890b27",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-12",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_9514af4dc83e/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=O5ZabNH0ko1Kb2xbYFgc81vbnHf",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.319Z"
+  }
+}

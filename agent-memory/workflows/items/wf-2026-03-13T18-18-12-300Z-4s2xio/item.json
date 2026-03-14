@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-300Z-4s2xio",
+  "kind": "bug",
+  "title": "会员身份：当对方有手机号且按钮显示“拨打电话”时，点击“拨打电话”，目前错误解锁并直接弹出了联系方式，正确应弹框提示“您是会员，可免费查看对方号码”；点击“立即解锁”弹框按钮，toast提示“成功解锁对方号码”，同时立即跳转至私信会话页且底",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_7fd0bcd43461\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-07\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n会员身份：当对方有手机号且按钮显示“拨打电话”时，点击“拨打电话”，目前错误解锁并直接弹出了联系方式，正确应弹框提示“您是会员，可免费查看对方号码”；点击“立即解锁”弹框按钮，toast提示“成功解锁对方号码”，同时立即跳转至私信会话页且底部弹出“xx家长联系方式/xxxxxxxxxxx”；",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.300Z",
+  "updatedAt": "2026-03-13T18:18:12.300Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-300Z-4s2xio/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-300Z-4s2xio/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-300Z-4s2xio/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-300Z-4s2xio/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_7fd0bcd43461",
+    "externalRowHash": "9b3faddfcc5d80f5b4d7000f28c65968e7318189",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-07",
+    "notes": "",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.300Z"
+  }
+}

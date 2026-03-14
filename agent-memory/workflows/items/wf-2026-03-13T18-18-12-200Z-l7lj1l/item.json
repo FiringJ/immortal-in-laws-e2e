@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-200Z-l7lj1l",
+  "kind": "bug",
+  "title": "通知权限：目前通知权限交互错误，可参考右侧图 1UI稿和图 2prd优化",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_4224234a1639\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-13\n提报人: dylon\n跟进人: 刘瀚卿, ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n通知权限：目前通知权限交互错误，可参考右侧图 1UI稿和图 2prd优化\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4224234a1639/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4224234a1639/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "awaiting_plan_approval",
+  "createdAt": "2026-03-13T18:18:12.200Z",
+  "updatedAt": "2026-03-13T19:12:58.184Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-planning-2026-03-13T19-07-13-128Z-f9qggw",
+      "phase": "planning",
+      "status": "completed",
+      "createdAt": "2026-03-13T19:07:13.128Z",
+      "triggeredBy": "plan-batch",
+      "note": "batch plan-batch-2026-03-13T18-42-26-239Z-7c4x45",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-l7lj1l/plan.md",
+      "taskId": "2026-03-13T19-07-13-129Z-9jx3pk",
+      "startedAt": "2026-03-13T19:07:13.130Z",
+      "completedAt": "2026-03-13T19:12:58.184Z",
+      "summary": "**Outcome**\n- 已生成规划产物：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-l7lj1l/plan.md:1`\n- 本阶段未修改业务代码；只写入了 workflow artifact，符合“planning phase / do not edit product code”。\n\n**Key Findings**\n- 存在“假成功”风险：`utils/notify-subscribe.ts:47` 在模板 ID 缺失时直接返回成功，可能未授权也跳到通知状态页。\n- 当前交互多了一层自定义“去开启”按钮：`pages/profile/index.ts:316`、`pages/profile/index.wxml:88`，与附件/设计稿的权限交互不一致。\n- 状态页仍是占位实现：`pages/notify-status/index.ts:5` 默认天数是 `5`，且“增加订阅天数”未实现。\n- 首页提醒绑错了能力：`pages/index/index.ts:648`、`pages/index/index.wxml:135` 现在用的是“个性化推荐”banner，不是 PRD 要的“通知权限提醒”。\n- 现有待办和设计稿已明确目标流程：`docs/0. 代办/2026.2.1-2.md:3`、`design/DESIGN_DIRECTORY_STRUCTURE.md:158`。\n\n**Changed File**\n- `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-l7lj1l/plan.md:1`\n\n**Commands Run**\n- 使用了 `rg` 检索通知权限相关代码与文档。\n- 使用了 `sed` / `nl -ba` 查看关键实现与行号。\n- 使用了 `view_image` 查看缺陷附件和 4 张通知状态设计稿。\n- 使用了 `apply_patch` 创建计划文件，并用 `test -f` + `sed` 校验产物存在与内容。\n\n**Verification**\n- 已确认 artifact 文件存在且内容满足指定标题结构。\n- 未运行构建/测试；本任务为计划产物生成，验证范围限定为证据收集与 `plan.md` 落盘校验。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T19-07-13-129Z-9jx3pk/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T19-07-13-129Z-9jx3pk/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T19-07-13-129Z-9jx3pk/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-l7lj1l/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-l7lj1l/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-l7lj1l/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-200Z-l7lj1l/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-13T19-07-13-129Z-9jx3pk"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_4224234a1639",
+    "externalRowHash": "9604add7e47c663974926dc40e2f16bee8aa73c4",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "刘瀚卿, ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-13",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4224234a1639/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=QnR1bssxpoZiDpxdSq8ccclLnke",
+        "contentType": "image/png"
+      },
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4224234a1639/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=VkSJbNp1Eo9y6pxKODTcUhFjnDd",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.200Z"
+  }
+}

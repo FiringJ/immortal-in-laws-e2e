@@ -15,6 +15,8 @@ export type TaskRequest = {
   addDirs?: string[];
   timeoutMs?: number;
   model?: string;
+  workflowItemId?: string;
+  workflowPhase?: string;
 };
 
 export type TaskRecord = TaskRequest & {
@@ -118,6 +120,14 @@ function buildAutomationPrompt(task: TaskRecord): string {
 
   if (task.userId) {
     sections.splice(2, 0, `User ID: ${task.userId}`);
+  }
+
+  if (task.workflowItemId) {
+    sections.splice(3, 0, `Workflow item ID: ${task.workflowItemId}`);
+  }
+
+  if (task.workflowPhase) {
+    sections.splice(4, 0, `Workflow phase: ${task.workflowPhase}`);
   }
 
   return sections.join('\n\n');

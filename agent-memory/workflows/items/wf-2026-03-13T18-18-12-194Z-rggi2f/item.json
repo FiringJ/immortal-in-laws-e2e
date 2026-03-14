@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-194Z-rggi2f",
+  "kind": "bug",
+  "title": "房产要求：正确应只有“不限、近期购房、家乡地已购房、现居地已购房”4项可选，且择偶项“近期购房”匹配 资料项“近期有购房计划”，择偶项“家乡地已购房、现居地已购房”匹配同理；“不限”项则匹配“家乡地已购房、现居地已购房、近期有购房计划、婚后",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_69196948a451\n飞书状态: 待发版验证\n优先级: 未标记\n反馈日期: 2026-03-08\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n房产要求：正确应只有“不限、近期购房、家乡地已购房、现居地已购房”4项可选，且择偶项“近期购房”匹配 资料项“近期有购房计划”，择偶项“家乡地已购房、现居地已购房”匹配同理；“不限”项则匹配“家乡地已购房、现居地已购房、近期有购房计划、婚后购房、父母同住、租房” 6项\n\n备注说明:\n@ham后端已完成，等待前端接入",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P1",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.194Z",
+  "updatedAt": "2026-03-13T18:18:12.194Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-194Z-rggi2f/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-194Z-rggi2f/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-194Z-rggi2f/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-194Z-rggi2f/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_69196948a451",
+    "externalRowHash": "684977f06e0b7f45bf5fdf177adcf9a84ac39c5a",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "待发版验证",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-08",
+    "notes": "@ham后端已完成，等待前端接入",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.193Z"
+  }
+}

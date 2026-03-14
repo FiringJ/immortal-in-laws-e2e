@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-197Z-1rgloh",
+  "kind": "bug",
+  "title": "机器人后缀亲属关系字段，建议随机关系，否则清一色都是“母亲”",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_4bfed06e4430\n飞书状态: 新增\n优先级: 未标记\n反馈日期: 未填写\n提报人: dylon\n跟进人: 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n机器人后缀亲属关系字段，建议随机关系，否则清一色都是“母亲”\n\n备注说明:\n@刘瀚卿 看看这个问题",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P1",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.197Z",
+  "updatedAt": "2026-03-13T18:18:12.197Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-197Z-1rgloh/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-197Z-1rgloh/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-197Z-1rgloh/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-197Z-1rgloh/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_4bfed06e4430",
+    "externalRowHash": "ea0aa09c9423941d41d93f289577f137cf4588fb",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "",
+    "notes": "@刘瀚卿 看看这个问题",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.197Z"
+  }
+}

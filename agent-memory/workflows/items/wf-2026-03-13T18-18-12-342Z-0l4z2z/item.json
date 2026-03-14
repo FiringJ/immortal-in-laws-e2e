@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-342Z-0l4z2z",
+  "kind": "bug",
+  "title": "超级曝光--开关设置页：若用户单次购买超级曝光次数或时长未用完时，此时购买了至尊会员，则正确做法是顶部“剩余曝光次数”和“曝光倒计时”提示不再显示，开关状态延续之前，但目前还会显示“剩余曝光次数”和“曝光倒计时”",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_040afd34f542\n飞书状态: 待发版验证\n优先级: P2\n反馈日期: 2026-03-09\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n超级曝光--开关设置页：若用户单次购买超级曝光次数或时长未用完时，此时购买了至尊会员，则正确做法是顶部“剩余曝光次数”和“曝光倒计时”提示不再显示，开关状态延续之前，但目前还会显示“剩余曝光次数”和“曝光倒计时”\n\n截图/附件:\n- c4c4e3b3336183e7e0eea25b8c71cf23.jpg -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_040afd34f542/c4c4e3b3336183e7e0eea25b8c71cf23.jpg",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P2",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.342Z",
+  "updatedAt": "2026-03-13T18:18:12.342Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-342Z-0l4z2z/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-342Z-0l4z2z/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-342Z-0l4z2z/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-342Z-0l4z2z/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_040afd34f542",
+    "externalRowHash": "e80d1cb9aafaf1886b228954e08613c4a7e9f05b",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "待发版验证",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-09",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "c4c4e3b3336183e7e0eea25b8c71cf23.jpg",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_040afd34f542/c4c4e3b3336183e7e0eea25b8c71cf23.jpg",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=LroLbBlILopfV8xeJPAc1N65nxe",
+        "contentType": "image/jpeg"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.342Z"
+  }
+}

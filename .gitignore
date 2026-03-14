@@ -16,6 +16,8 @@ node_modules/
 
 # 截图和运行产物
 screenshots/
+agent-memory/defect-reports/feishu-defect-queue-state.json
+agent-memory/defect-reports/feishu-defect-queue-latest.json
 
 # Midscene 运行报告
 midscene_run/

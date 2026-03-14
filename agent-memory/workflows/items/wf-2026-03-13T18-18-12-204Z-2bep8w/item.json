@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-204Z-2bep8w",
+  "kind": "bug",
+  "title": "首页未支付订单横幅倒计时错误显示为 00:00:00，应从 2 小时开始倒计时",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_ea04e2519f55\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-12\n提报人: dylon\n跟进人: 刘瀚卿, ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n目前倒计时直接为 00:00:00，正确应开始 2 小时倒计时\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_ea04e2519f55/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.204Z",
+  "updatedAt": "2026-03-14T09:36:17.435Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T09-31-21-062Z-1nvbek",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T09:31:21.062Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-204Z-2bep8w/triage.md",
+      "taskId": "2026-03-14T09-31-21-062Z-tk1s88",
+      "startedAt": "2026-03-14T09:31:21.066Z",
+      "completedAt": "2026-03-14T09:36:17.433Z",
+      "summary": "**Outcome**\n- 已完成 triage，并写入 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-204Z-2bep8w/triage.md:1`。\n- Readiness verdict 是 `ready`，下一步建议 `generate_plan`。\n- 本阶段未改动产品代码，只做问题清洗、上下文补全和风险判断。\n\n**Concrete Findings**\n- 缺陷可明确定位到首页未支付订单横幅：`pages/index/index.ts:764`、`pages/index/index.wxml:73`。\n- PRD 明确要求该横幅展示“精确到时分秒、总时长 2 小时”的倒计时：`design/1.需求文档/神仙亲家--小程序产品需求文档.md:181`。\n- 前端首页依赖订单列表里的 `expire_at / product_name / plan_type`：`services/order.ts:57`；但后端订单列表类型和装配未返回这些字段：`/Users/firingj/Projects/GodQinJia/internal/pkg/types/order_types.go:75`、`/Users/firingj/Projects/GodQinJia/internal/apiserver/service/order.go:745`。\n- 截图里标题退化为“会员开通·0.01元”也印证了套餐字段缺失；`00:00:00` 则高概率与过期时间缺失后走 `created_at` 兜底、而时间字符串解析链路脆弱有关。\n\n**Actionable Fixes**\n- 优先对齐 `/api/v1/order/list` 契约，直接返回 `expire_at / product_name / plan_type`。\n- 前端保留兜底，但不要直接裸用 `Date.parse('YYYY-MM-DD HH:mm:ss')`；需做小程序兼容解析。\n- 回归点应覆盖“新建未支付会员订单后首页初始显示约 `02:00:00` 且按秒递减”。\n\n**Commands Run**\n- 用 `rg`/`sed` 检查了 `agent-memory/page-topology.md`、`agent-memory/project-knowledge.md`、首页订单横幅代码、订单服务与后端订单实现。\n- 查看了缺陷附件 `image.png` 和设计稿 `design/3.设计稿/神仙亲家-首页-待支付1.png`。\n- 用 `test -f` + `sed` 验证了 triage 文件已落盘且头部结构正确。\n\n**Verification**\n- 已确认 `triage.md` 存在且满足指定结构。\n- 验证状态：triage 产物完成；未进行产品运行态验证。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-31-21-062Z-tk1s88/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-31-21-062Z-tk1s88/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-31-21-062Z-tk1s88/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-204Z-2bep8w/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-204Z-2bep8w/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-204Z-2bep8w/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-204Z-2bep8w/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-204Z-2bep8w/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T09-31-21-062Z-tk1s88"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_ea04e2519f55",
+    "externalRowHash": "79ba625f9605246d20f9eab73b9a42a5a4ef17da",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "刘瀚卿, ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-12",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_ea04e2519f55/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WKknbfoFRos9LVxOMe7cS0nanZc",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.204Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "首页未支付订单横幅倒计时错误显示为 00:00:00，应从 2 小时开始倒计时",
+    "summary": "- 缺陷对象已可定位为首页 `pages/index/index` 底部的未支付订单提醒横幅，而非每日推荐或超级曝光倒计时。",
+    "updatedAt": "2026-03-14T09:36:17.435Z"
+  }
+}

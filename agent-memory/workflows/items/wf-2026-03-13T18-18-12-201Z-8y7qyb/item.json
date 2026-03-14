@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-201Z-8y7qyb",
+  "kind": "bug",
+  "title": "未支付订单",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_ae6a8961a8e4\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-12\n提报人: dylon\n跟进人: 刘瀚卿, ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n未支付订单",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "awaiting_plan_approval",
+  "createdAt": "2026-03-13T18:18:12.201Z",
+  "updatedAt": "2026-03-13T19:20:38.444Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-planning-2026-03-13T19-12-58-189Z-4qehak",
+      "phase": "planning",
+      "status": "completed",
+      "createdAt": "2026-03-13T19:12:58.189Z",
+      "triggeredBy": "plan-batch",
+      "note": "batch plan-batch-2026-03-13T18-42-26-239Z-7c4x45",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-201Z-8y7qyb/plan.md",
+      "taskId": "2026-03-13T19-12-58-189Z-ba73e0",
+      "startedAt": "2026-03-13T19:12:58.191Z",
+      "completedAt": "2026-03-13T19:20:38.442Z",
+      "summary": "**Outcome**\n- 已生成计划产物：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-201Z-8y7qyb/plan.md:1`\n- 本阶段未改动产品代码，只写入了工作流计划文件。\n\n**Key Findings**\n- 订单是在拉起微信支付前就创建的，但用户取消/失败后前端没有取消订单，导致残留 `pending` 未支付单：`pages/member-center/index.ts:346`、`pages/realname-auth/index.ts:607`、`pages/exposure/index.ts:266`\n- 每次重试都会生成新幂等键，前端天然会堆积重复未支付单：`services/order.ts:13`、`services/order.ts:35`、`services/member.ts:71`、`services/exposure.ts:111`\n- 首页会主动聚合未支付订单并显示“立即支付”，但订单页没有继续支付/取消动作，形成死路：`pages/index/index.ts:23`、`pages/index/index.ts:709`、`pages/index/index.ts:772`、`pages/settings-orders/index.ts:52`\n- 后端已具备取消订单能力，且仅相同幂等键才复用旧单：`/Users/firingj/Projects/GodQinJia/internal/apiserver/service/order.go:110`、`/Users/firingj/Projects/GodQinJia/internal/apiserver/service/order.go:210`\n- 还发现两个一致性问题：实名认证类型映射写成了 `realname` 而非 `verification`，且缺少 `expired` 状态映射：`pages/settings-orders/index.ts:17`、`pages/settings-orders/index.ts:23`\n\n**Plan Summary**\n- 先止血：支付取消/失败时补调 `order/cancel`\n- 再补闭环：订单页为 `pending` 增加处理动作\n- 需确认“继续支付”方案：取消旧单后重建，或后端补 `repay` 能力\n- 顺手修正订单类型/状态映射与分页 `has_more` 使用\n\n**Commands Run**\n- 用 `rg`、`sed` 检查前端订单/支付代码、OpenAPI 与后端订单服务\n- 用 `view_image` 查看相关设计稿\n- 用 `test -f` 校验计划文件存在，并回读内容确认结构\n\n**Verification**\n- 已确认 `plan.md` 存在\n- 已确认包含要求的 6 个标题：`# Plan`、`## Problem`、`## Impact`、`## Reproduction Hypothesis`、`## Evidence To Collect`、`## Initial Fix Direction`",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T19-12-58-189Z-ba73e0/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T19-12-58-189Z-ba73e0/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-13T19-12-58-189Z-ba73e0/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-201Z-8y7qyb/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-201Z-8y7qyb/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-201Z-8y7qyb/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-201Z-8y7qyb/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-13T19-12-58-189Z-ba73e0"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_ae6a8961a8e4",
+    "externalRowHash": "eaabc23480b7c9ab83ea390555b349944b5081d8",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "刘瀚卿, ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-12",
+    "notes": "",
+    "review": "",
+    "attachments": [],
+    "syncedAt": "2026-03-13T18:18:12.201Z"
+  }
+}

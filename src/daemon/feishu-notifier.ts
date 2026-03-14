@@ -248,18 +248,14 @@ async function notifyWebhook(text: string): Promise<void> {
   }
 }
 
-export async function notifyTaskResult(task: TaskRecord): Promise<void> {
-  if (!shouldNotifyTask(task)) {
-    return;
-  }
-
-  const text = buildText(task);
-  const context = extractMessageContext(task);
-
+export async function sendFeishuText(context: FeishuMessageContext, text: string, uuidPrefix: string = 'daemon-note'): Promise<void> {
   if (hasOpenApiChannel()) {
     if (context.messageId) {
+      const taskLike = {
+        id: uuidPrefix,
+      } as TaskRecord;
       try {
-        await replyOriginalMessage(task, context.messageId, text);
+        await replyOriginalMessage(taskLike, context.messageId, text);
         return;
       } catch (error) {
         console.warn('[Feishu] reply 原消息失败，尝试回退到同会话发送。', error);
@@ -267,8 +263,11 @@ export async function notifyTaskResult(task: TaskRecord): Promise<void> {
     }
 
     if (context.chatId) {
+      const taskLike = {
+        id: uuidPrefix,
+      } as TaskRecord;
       try {
-        await sendToOriginalChat(task, context.chatId, text);
+        await sendToOriginalChat(taskLike, context.chatId, text);
         return;
       } catch (error) {
         console.warn('[Feishu] 发送到同会话失败，尝试回退到 webhook。', error);
@@ -282,4 +281,14 @@ export async function notifyTaskResult(task: TaskRecord): Promise<void> {
   }
 
   throw new Error('[Feishu] 无可用通知通道，请配置 FEISHU_APP_ID/FEISHU_APP_SECRET 或 FEISHU_WEBHOOK_URL');
+}
+
+export async function notifyTaskResult(task: TaskRecord): Promise<void> {
+  if (!shouldNotifyTask(task)) {
+    return;
+  }
+
+  const text = buildText(task);
+  const context = extractMessageContext(task);
+  await sendFeishuText(context, text, `${task.id}-notify`);
 }

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-234Z-p9t6vi",
+  "kind": "bug",
+  "title": "二三级页面缺少通顶头部交互，且“我的”页顶部右侧操作区与系统胶囊重叠",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_7dba4ca9f15a\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-11\n提报人: dylon\n跟进人: ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n通顶交互：目前除了主页面，其他所有二级页、三级页都缺少通顶设计，即下拉页面时，顶部未做通顶处理，右侧操作栏无背景上滑重叠后体验差（可参考完美亲家看看），另外我的首页顶部右侧操作栏有2 个会重叠\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_7dba4ca9f15a/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.234Z",
+  "updatedAt": "2026-03-14T10:48:41.696Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T10-44-18-506Z-77ulfs",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T10:44:18.506Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-234Z-p9t6vi/triage.md",
+      "taskId": "2026-03-14T10-44-18-507Z-ki6dy7",
+      "startedAt": "2026-03-14T10:44:18.510Z",
+      "completedAt": "2026-03-14T10:48:41.692Z",
+      "summary": "**Outcome**\n- 已完成 triage，结论为 `ready`，建议下一步 `generate_plan`。\n- 产物已写入 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-234Z-p9t6vi/triage.md:1`。\n- 本阶段未改动产品代码；只补充了缺陷上下文和仓库定位。\n\n**Key Findings**\n- `我的` 页顶部重叠是明确可定位的实现问题：`pages/profile/index.wxml:4` 手写了顶部栏和右侧操作区，`pages/profile/index.wxss:23` 又自行控制右侧留白，和系统胶囊区并存，和截图现象一致。\n- 仓库确实存在“首页/部分内页自定义导航、其他内页原生导航”的混搭：`pages/profile/index.json:1` 是 `custom`，但 `pages/profile-preview/index.json:1`、`pages/profile-edit/index.json:1`、`pages/settings/index.json:1`、`pages/history/index.json:1` 仍是默认导航。\n- 项目已有统一基座可复用：`components/custom-navbar/index.wxss:1` 已处理固定通顶和胶囊预留，`utils/layout.ts:1` 已统一输出状态栏/胶囊尺寸。\n\n**Actionable Fixes**\n- 先把 `pages/profile/index.wxml:4` / `pages/profile/index.wxss:23` 收敛到统一头部方案，去掉重复右侧操作区或完全按胶囊区避让。\n- 再把 `pages/profile-preview/index.json:1`、`pages/profile-edit/index.json:1` 等默认导航内页迁移到统一通顶头部。\n- 计划阶段建议先覆盖“我的 / 预览资料 / 编辑资料 / 设置 / 历史推荐”，再扩到其余二三级页。\n\n**Commands & Verification**\n- 运行了 `rg`/`sed`/`cat` 做 AGENTS、页面拓扑、导航实现和路由审计；用一个 Node 脚本汇总了各页面 `navigationStyle`。\n- 最终用 `test -f` 确认 `triage.md` 已存在。\n- 未运行构建或测试；这是 triage-only 阶段，验证状态为“文档已落盘，待后续计划/实现阶段继续”。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-44-18-507Z-ki6dy7/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-44-18-507Z-ki6dy7/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T10-44-18-507Z-ki6dy7/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-234Z-p9t6vi/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-234Z-p9t6vi/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-234Z-p9t6vi/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-234Z-p9t6vi/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-234Z-p9t6vi/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T10-44-18-507Z-ki6dy7"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_7dba4ca9f15a",
+    "externalRowHash": "304f62af72c0a5c2d89f28416d10e3ef0ade2f57",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-11",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_7dba4ca9f15a/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=HPWmbTKKlo13cax1M3UcOddNnRd",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.234Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "medium",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "二三级页面缺少通顶头部交互，且“我的”页顶部右侧操作区与系统胶囊重叠",
+    "summary": "当前小程序只有首页具备相对完整的通顶/沉浸式顶部处理，多个二级、三级页面仍在使用原生导航栏或各自为政的头部实现。结果是页面下拉或内容上滑时，顶部背景不能连续延展到状态栏/胶囊区域，右侧操作区缺少统一背景承接，视觉上会与正文发生重叠。另一个已被附件截图明确证实的子问题是：`pages/profile/index`（我的首页）顶部右侧自绘操作区与系统右上角胶囊区域发生重叠，出现双层按钮/胶囊并存。期望行为是：主要二级、三级页面统一采用通顶头部方案，下拉和滚动时顶部背景连续、右上操作区有完整背景承接且不与系统胶囊冲突；“我的”页右侧只保留一套位置正确的操作区。",
+    "updatedAt": "2026-03-14T10:48:41.696Z"
+  }
+}

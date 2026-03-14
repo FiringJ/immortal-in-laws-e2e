@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-203Z-o1fjc3",
+  "kind": "bug",
+  "title": "待支付会员订单文案未区分会员档位，应显示年度/季度/永久黄金会员或至尊会员",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_dc838438d8c1\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-12\n提报人: dylon\n跟进人: 刘瀚卿, ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n目前待支付订单开通会员未明确，正确应显示“年度/季度/永久黄金会员、至尊会员”\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_dc838438d8c1/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.203Z",
+  "updatedAt": "2026-03-14T09:31:21.057Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T09-26-56-116Z-rnvuoe",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T09:26:56.116Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-203Z-o1fjc3/triage.md",
+      "taskId": "2026-03-14T09-26-56-117Z-qcj3p0",
+      "startedAt": "2026-03-14T09:26:56.128Z",
+      "completedAt": "2026-03-14T09:31:21.054Z",
+      "summary": "**Outcome**\n- 已完成分诊产物，结论为 `ready`，可直接进入计划生成：`../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-203Z-o1fjc3/triage.md:1`\n- 清洗后的核心判断：截图命中的是首页待支付横幅，不是会员中心本页；主问题是“待支付会员订单标题泛化为 `会员开通`”，期望改为具体档位。\n- 关键代码面已定位：首页会员订单标题映射在 `pages/index/index.ts:65`、待支付横幅刷新在 `pages/index/index.ts:764`，订单字段来源在 `services/order.ts:56`，订单记录页也有同类风险在 `pages/settings-orders/index.ts:48`\n\n**Changed Files**\n- 新增 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-203Z-o1fjc3/triage.md:1`\n\n**Commands / Verification**\n- 运行了 `rg`、`sed`、`nl`、`cat`、`ls`，并查看了本地附件图片，补齐了页面、服务、文档和证据上下文。\n- 已验证 `triage.md` 存在且头部结构符合要求；未修改任何产品代码。\n- readiness verdict：`ready`；next action：`generate_plan`。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-26-56-117Z-qcj3p0/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-26-56-117Z-qcj3p0/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-26-56-117Z-qcj3p0/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-203Z-o1fjc3/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-203Z-o1fjc3/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-203Z-o1fjc3/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-203Z-o1fjc3/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-203Z-o1fjc3/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T09-26-56-117Z-qcj3p0"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_dc838438d8c1",
+    "externalRowHash": "1d3981cce3e2787508952a685d81c6bc6c2fc21f",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "刘瀚卿, ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-12",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_dc838438d8c1/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=WKknbfoFRos9LVxOMe7cS0nanZc",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.203Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "待支付会员订单文案未区分会员档位，应显示年度/季度/永久黄金会员或至尊会员",
+    "summary": "- 当前缺陷不是“会员中心套餐文案”本身，而是**待支付会员订单的展示文案过于泛化**。附件截图显示首页固定待支付横幅展示为 `会员开通·0.01元`，无法让用户识别具体开通的是哪种会员。",
+    "updatedAt": "2026-03-14T09:31:21.057Z"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "updatedAt": "2026-03-13T19:45:47.470Z",
+  "runs": [
+    {
+      "id": "plan-batch-2026-03-13T18-42-26-239Z-7c4x45",
+      "status": "failed",
+      "createdAt": "2026-03-13T18:42:26.239Z",
+      "startedAt": "2026-03-13T18:42:26.239Z",
+      "completedAt": "2026-03-13T19:21:43.086Z",
+      "candidateCount": 97,
+      "successCount": 5,
+      "failedCount": 1,
+      "skippedCount": 50,
+      "failedItemId": "wf-2026-03-13T18-18-12-201Z-ee367d",
+      "failedReason": "plan.md missing headings: ## Initial Fix Direction"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-235Z-o1bnpi",
+  "kind": "bug",
+  "title": "黄金会员：权益图片，目前黄金会员的季度、年度、永久tab页会员，其有效期和每天推荐的人数都用了同一个，正确应如截图 1 prd所示",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_af36e396753f\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-11\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n黄金会员：权益图片，目前黄金会员的季度、年度、永久tab页会员，其有效期和每天推荐的人数都用了同一个，正确应如截图 1 prd所示\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "triaging",
+  "createdAt": "2026-03-13T18:18:12.235Z",
+  "updatedAt": "2026-03-14T10:48:41.713Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T10-48-41-701Z-zykqla",
+      "phase": "triaging",
+      "status": "running",
+      "createdAt": "2026-03-14T10:48:41.701Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-235Z-o1bnpi/triage.md",
+      "taskId": "2026-03-14T10-48-41-708Z-qaz7la",
+      "startedAt": "2026-03-14T10:48:41.713Z"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-235Z-o1bnpi/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-235Z-o1bnpi/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-235Z-o1bnpi/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-235Z-o1bnpi/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-235Z-o1bnpi/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T10-48-41-708Z-qaz7la"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_af36e396753f",
+    "externalRowHash": "9f383c341f3dd88d560711fd1223000753197751",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-11",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=MllwbI3yIoPAKQx9V3zcHOZ9nff",
+        "contentType": "image/png"
+      },
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=OCMGb3HmUoGZhzxw3CLc3PYSn2c",
+        "contentType": "image/png"
+      },
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_af36e396753f/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=GfD9bZLYGo7WlTxWCm3ctfgxnBb",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.235Z"
+  },
+  "triage": {
+    "status": "running",
+    "updatedAt": "2026-03-14T10:48:41.708Z"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-337Z-gd0lph",
+  "kind": "bug",
+  "title": "上传孩子照片时，缺少做人脸验证，需求详见截图 2",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_e7494c4e770c\n飞书状态: 修复中\n优先级: P1\n反馈日期: 2026-02-07\n提报人: dylon\n跟进人: ham, 刘瀚卿\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n上传孩子照片时，缺少做人脸验证，需求详见截图 2\n\n备注说明:\n@ham\n前端接入按这 3 步：\n先拿上传预签名 URL\nPOST /object/upload（需 Bearer）\n代码：object.go (line 33)\nbody 示例：\n{ \"module\": \"child_photo\", \"file_number\": 1 }\n前端直传图片到预签名 URL（PUT）\n回调业务接口保存照片\nPOST /api/v1/profile/child/{child_id}/photo\nbody 示例：\n{ \"url\": \"child_photo/xxx.jpg\", \"is_primary\": false }\n（也可传可访问的 https URL）\n联调时前端重点处理这些错误码：\n110607：未检测到人脸\n110608：检测到多人脸\n110602：上传/检测服务异常（稍后重试）\n110603：最多 6 张\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e7494c4e770c/image.png\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e7494c4e770c/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P1",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.337Z",
+  "updatedAt": "2026-03-13T18:18:12.337Z",
+  "approvals": [],
+  "phaseRuns": [],
+  "artifactPaths": {
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-337Z-gd0lph/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-337Z-gd0lph/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-337Z-gd0lph/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-337Z-gd0lph/writeback.md"
+  },
+  "linkedDaemonTaskIds": [],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_e7494c4e770c",
+    "externalRowHash": "d2f827ecd495b79e8387caf2a03c8922a9d4c905",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "修复中",
+    "reporter": "dylon",
+    "assignee": "ham, 刘瀚卿",
+    "parentRecord": "",
+    "feedbackDate": "2026-02-07",
+    "notes": "@ham\n前端接入按这 3 步：\n先拿上传预签名 URL\nPOST /object/upload（需 Bearer）\n代码：object.go (line 33)\nbody 示例：\n{ \"module\": \"child_photo\", \"file_number\": 1 }\n前端直传图片到预签名 URL（PUT）\n回调业务接口保存照片\nPOST /api/v1/profile/child/{child_id}/photo\nbody 示例：\n{ \"url\": \"child_photo/xxx.jpg\", \"is_primary\": false }\n（也可传可访问的 https URL）\n联调时前端重点处理这些错误码：\n110607：未检测到人脸\n110608：检测到多人脸\n110602：上传/检测服务异常（稍后重试）\n110603：最多 6 张",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e7494c4e770c/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=YhUfbgmKvotSWvx8uRfcxLcUnGb",
+        "contentType": "image/png"
+      },
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_e7494c4e770c/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=AA35bOsYiornGux4eqHcpNmAnOf",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.337Z"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "wf-2026-03-13T18-18-12-207Z-5yhrue",
+  "kind": "bug",
+  "title": "会员中心返回按钮未触发挽留弹框",
+  "source": "feishu",
+  "rawInput": "飞书缺陷 ID: bug_4e6775761a11\n飞书状态: 新增\n优先级: P0\n反馈日期: 2026-03-12\n提报人: dylon\n跟进人: 刘瀚卿, ham\n父记录: 未填写\n来源链接: https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h\n\n问题描述:\n挽留弹框：目前点击“返回”按钮后未触发挽留弹框，正确应弹出挽留弹框\n\n截图/附件:\n- image.png -> /Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e6775761a11/image.png",
+  "cwd": "/Users/firingj/Projects/immortal-in-laws",
+  "priority": "P0",
+  "stage": "intake",
+  "createdAt": "2026-03-13T18:18:12.207Z",
+  "updatedAt": "2026-03-14T09:50:26.285Z",
+  "approvals": [],
+  "phaseRuns": [
+    {
+      "id": "phase-triaging-2026-03-14T09-45-44-629Z-ol8k98",
+      "phase": "triaging",
+      "status": "completed",
+      "createdAt": "2026-03-14T09:45:44.629Z",
+      "triggeredBy": "triage-batch",
+      "note": "batch triage-batch-2026-03-14T09-22-14-955Z-5yo0zy",
+      "artifactPath": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-207Z-5yhrue/triage.md",
+      "taskId": "2026-03-14T09-45-44-630Z-v86e87",
+      "startedAt": "2026-03-14T09:45:44.633Z",
+      "completedAt": "2026-03-14T09:50:26.282Z",
+      "summary": "**Outcome**\n- 已完成 triage，结论是 `ready`，下一步可直接进入 `generate_plan`。\n- 产物已写入 `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-207Z-5yhrue/triage.md:1`。\n- 本阶段未修改产品代码；仅新增追踪文档。\n\n**Concrete Findings**\n- 会员中心返回挽留交互在 PRD 中是明确需求，不是待确认项；见 `design/1.需求文档/神仙亲家--小程序产品需求文档.md:181`。\n- 页面已存在挽留弹框链路：`pages/member-center/index.wxml:3` 绑定了返回事件，`pages/member-center/index.wxml:79` 已挂载 `showRetainModal` 对应弹框。\n- 返回逻辑已实现但有风险点：`pages/member-center/index.ts:419` 的 `onBackTap()` 会依赖 `shouldShowRetainModal()`，而 `pages/member-center/index.ts:428` 只在“非有效会员”时弹框。\n- 明确代码问题：`pages/member-center/index.ts:421` 把 `_retainPromptShown` 置为 `true`，但 `pages/member-center/index.ts:448` 和 `pages/member-center/index.ts:452` 关闭/停留时未重置，后续再次点返回会绕过弹框。\n- 当前弹框文案也与 PRD 不一致，且缺少 PRD 要求的底部滚动弹幕。\n\n**Actionable Fixes**\n- 修复 `pages/member-center/index.ts:448` 和 `pages/member-center/index.ts:452`，在“关闭/再想想”时重置 `_retainPromptShown`。\n- 复核 `pages/member-center/index.ts:428` 的门槛；如果产品要求所有会员中心购买流返回都弹挽留框，需要放宽 `memberStatus` 判定。\n- 对齐 `pages/member-center/index.wxml:79` 的文案与按钮文案到 PRD。\n- 如按 PRD 收口完整体验，补上挽留弹框底部滚动弹幕提醒。\n\n**Changed File**\n- `../immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-207Z-5yhrue/triage.md:1`\n\n**Commands Run**\n- 使用了 `rg`、`sed`、`nl` 检索 PRD、页面入口、返回链路与会员状态映射。\n- 使用了 `view_image` 查看缺陷截图。\n- 使用了 `apply_patch` 写入 triage 文档。\n- 使用了 `git status` 确认本次仅新增追踪产物。\n\n**Verification**\n- 已验证 `triage.md` 存在且头部结构符合要求。\n- 未运行产品测试或修改业务代码；本任务为 triage/清洗阶段。",
+      "stdoutPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-45-44-630Z-v86e87/stdout.log",
+      "stderrPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-45-44-630Z-v86e87/stderr.log",
+      "summaryPath": "/Users/firingj/Projects/immortal-in-laws-e2e/logs/daemon-runs/2026-03-14T09-45-44-630Z-v86e87/summary.txt"
+    }
+  ],
+  "artifactPaths": {
+    "triage": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-207Z-5yhrue/triage.md",
+    "plan": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-207Z-5yhrue/plan.md",
+    "reproduction": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-207Z-5yhrue/reproduction.md",
+    "verification": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-207Z-5yhrue/verification.md",
+    "writeback": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/workflows/items/wf-2026-03-13T18-18-12-207Z-5yhrue/writeback.md"
+  },
+  "linkedDaemonTaskIds": [
+    "2026-03-14T09-45-44-630Z-v86e87"
+  ],
+  "sourceMeta": {
+    "kind": "feishu-defect",
+    "externalIssueId": "bug_4e6775761a11",
+    "externalRowHash": "f2e4241a566383cd0df6e3e9803d8fc546f54068",
+    "sourceUrl": "https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h",
+    "externalStatus": "新增",
+    "reporter": "dylon",
+    "assignee": "刘瀚卿, ham",
+    "parentRecord": "",
+    "feedbackDate": "2026-03-12",
+    "notes": "",
+    "review": "",
+    "attachments": [
+      {
+        "name": "image.png",
+        "path": "/Users/firingj/Projects/immortal-in-laws-e2e/agent-memory/defect-reports/attachments/bug_4e6775761a11/image.png",
+        "url": "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=ZiNeb1POiow6k5xzc0IcAXULnyb",
+        "contentType": "image/png"
+      }
+    ],
+    "syncedAt": "2026-03-13T18:18:12.207Z"
+  },
+  "triage": {
+    "status": "ready",
+    "sourceQuality": "high",
+    "nextAction": "generate_plan",
+    "normalizedTitle": "会员中心返回按钮未触发挽留弹框",
+    "summary": "- 缺陷页面可定位为 `pages/member-center/index` 会员中心页，截图明确指向左上角返回按钮。",
+    "updatedAt": "2026-03-14T09:50:26.285Z"
+  }
+}

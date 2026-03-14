@@ -51,6 +51,7 @@ type QueueState = {
 type NextSummary = {
   generatedAt: string;
   sourceUrl: string;
+  targetSection: string;
   totalOpenCount: number;
   actionableCount: number;
   blockedCount: number;
@@ -64,6 +65,7 @@ type NextSummary = {
 type NextArgs = {
   command: 'next';
   sourceUrl: string;
+  targetSection: string;
   tsvFile?: string;
   outDir: string;
   stateFile: string;
@@ -93,6 +95,7 @@ const STATUS_ORDER: Record<string, number> = {
 };
 const FAILURE_THRESHOLD = 2;
 const DEFAULT_SOURCE_URL = 'https://gcncs1osaunb.feishu.cn/wiki/PlLrwARUNixHOXkpflxcPTi9nLh?table=tblSdvRVaxTpHlRY&view=vewLgt4u2h';
+const DEFAULT_TARGET_SECTION = '漏洞跟踪记录';
 const DEFAULT_OUT_DIR = 'agent-memory/defect-reports';
 const DEFAULT_STATE_FILE = 'agent-memory/defect-reports/feishu-defect-queue-state.json';
 const DEFAULT_SNAPSHOT_FILE = 'agent-memory/defect-reports/feishu-defect-queue-latest.json';
@@ -238,13 +241,13 @@ function sortIssues(issues: QueueIssue[]): QueueIssue[] {
     const pB = PRIORITY_ORDER[normalizeText(b.priority).toUpperCase()] ?? 99;
     if (pA !== pB) return pA - pB;
 
-    const sA = STATUS_ORDER[normalizeText(a.status)] ?? 99;
-    const sB = STATUS_ORDER[normalizeText(b.status)] ?? 99;
-    if (sA !== sB) return sA - sB;
-
     if (a.feedbackTime !== b.feedbackTime) {
       return b.feedbackTime - a.feedbackTime;
     }
+
+    const sA = STATUS_ORDER[normalizeText(a.status)] ?? 99;
+    const sB = STATUS_ORDER[normalizeText(b.status)] ?? 99;
+    if (sA !== sB) return sA - sB;
 
     return a.issueId.localeCompare(b.issueId, 'en');
   });
@@ -252,6 +255,7 @@ function sortIssues(issues: QueueIssue[]): QueueIssue[] {
 
 function parseNextArgs(): NextArgs {
   const sourceUrl = getArgValue('--source-url') || DEFAULT_SOURCE_URL;
+  const targetSection = getArgValue('--section') || DEFAULT_TARGET_SECTION;
   const tsvFile = getArgValue('--tsv-file');
   const outDir = path.resolve(process.cwd(), getArgValue('--out-dir') || DEFAULT_OUT_DIR);
   const stateFile = path.resolve(process.cwd(), getArgValue('--state-file') || DEFAULT_STATE_FILE);
@@ -262,6 +266,7 @@ function parseNextArgs(): NextArgs {
   return {
     command: 'next',
     sourceUrl,
+    targetSection,
     tsvFile: tsvFile ? path.resolve(process.cwd(), tsvFile) : undefined,
     outDir,
     stateFile,
@@ -301,7 +306,7 @@ function parseCommand(): QueueCommand {
   }
   throw new Error(
     'Usage:\n' +
-    '  npm run feishu:queue:next -- [--source-url "<url>"] [--tsv-file <path>] [--json]\n' +
+    '  npm run feishu:queue:next -- [--source-url "<url>"] [--section "漏洞跟踪记录"] [--tsv-file <path>] [--json]\n' +
     '  npm run feishu:queue:mark -- --issue-id <id> --result <completed|failed|blocked|pending|reset> [--blocker "..."]',
   );
 }
@@ -384,7 +389,11 @@ function dedupeIssues(issues: QueueIssue[]): QueueIssue[] {
 function buildSummary(args: NextArgs): NextSummary {
   const rawText = loadRawInput(args);
   const rows = toIssueRows(rawText);
-  const defects = rows.filter(isDefect).map((row) => toQueueIssue(row, args.sourceUrl)).filter(Boolean) as QueueIssue[];
+  const sectionName = normalizeText(args.targetSection);
+  const defects = rows
+    .filter((row) => isDefect(row) && normalizeText(row.section || '') === sectionName)
+    .map((row) => toQueueIssue(row, args.sourceUrl))
+    .filter(Boolean) as QueueIssue[];
   const openDefects = defects.filter((issue) => !isClosedStatus(issue.status));
   const uniqueOpenDefects = sortIssues(dedupeIssues(openDefects));
 
@@ -404,6 +413,7 @@ function buildSummary(args: NextArgs): NextSummary {
   const summary: NextSummary = {
     generatedAt: new Date().toISOString(),
     sourceUrl: args.sourceUrl,
+    targetSection: sectionName,
     totalOpenCount: uniqueOpenDefects.length,
     actionableCount: actionable.length,
     blockedCount,
@@ -428,6 +438,7 @@ function formatSummary(summary: NextSummary): string {
   lines.push('# Feishu Defect Queue');
   lines.push('');
   lines.push(`- generatedAt: ${summary.generatedAt}`);
+  lines.push(`- targetSection: ${summary.targetSection}`);
   lines.push(`- totalOpenCount: ${summary.totalOpenCount}`);
   lines.push(`- actionableCount: ${summary.actionableCount}`);
   lines.push(`- blockedCount: ${summary.blockedCount}`);
